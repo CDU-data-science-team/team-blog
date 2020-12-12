@@ -1,1 +1,0 @@
-[This blog is hosted here](https://cdu-data-science-team.github.io/team-blog/)
