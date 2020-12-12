@@ -1,0 +1,10 @@
+name: "cdu-data-science-team-blog"
+title: "CDU data science team blog"
+description: |
+  CDU data science team blog
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+output: distill::distill_article
