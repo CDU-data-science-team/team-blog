@@ -1,7 +1,7 @@
 ---
 title: "Classification of patient feedback"
 description: |
-  An NHSE funded project to devise an application to automatically tag the meaning of patient feedback
+  An NHSE funded project to devise an application to automatically tag the content of patient feedback
 author:
   - name: Andreas Soteriades
 date: 11-14-2020
