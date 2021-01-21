@@ -1,0 +1,52 @@
+---
+title: "A new GitHub release and future projects"
+description: |
+  We have a new project out and would like to tell you about some more of our future work.
+author:
+  - name: Chris Beeley
+date: 01-20-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+
+library(emojifont)
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+If you've read the about section of this blog then you'll know that our team believes in (and practises!) open source data science. We strive to put as much code and (sometimes synthetic) data out as possible, with an open source licence (MIT, usually), and where we can we try to make our code reasonably easy to re-use (although this is not always simple). We have just pushed out a prototype version of an application and this seemed like a timely moment to talk about the application, and what else we have coming up on the open source side of things. It's worth saying that some of our team members work really, really hard doing lots of stuff that is very difficult to share so although you might not see as much of them on the GitHub they're doing sterling work for the Trust and the team is dependent on their expertise for all of our work, whether it's open source or not.
+
+## Text mining application
+
+We already have a [blog post about this work](https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/) and we have come to the point where we have produced a [release version (0.1.0) for the dashboard](https://github.com/CDU-data-science-team/positiveAboutChangeTextClassificationDashboard/releases/tag/0.1.0) which summarises the acccuracy of the models and helps to show the kinds of decisions that it's making. Please read the blog post for details of this work but our ambition in brief is to produce a text mining algorithm for patient experience that can be used in any NHS organisation in the country. The actual algorithm work (which is in Python mainly) has not yet stabilised to a release version just yet but is [available on GitHub](https://github.com/CDU-data-science-team/positive_about_change_text_mining).
+
+We will be shipping another dashboard that helps trusts to visualise their feedback as part of the project. We're currently working on that but we're not quite ready to share it yet, keep an eye on our Twitter and blog for more details. We have a lot more to come in the way of working with staff and patient experience data, too, it's not just this work, so please feel free to follow along with the code once it's all open and maybe even send us a pull request `r emoji("wink")`.
+
+## Forecasting of patient numbers
+
+We're also involved in a [Health Foundation funded project](https://www.health.org.uk/improvement-projects/system-wide-early-warning-tool-for-acute-pathways-based-on-actionable) which looks at predicting numbers of certain types of patients in the hospital. It takes the form of a dashboard which can predict the numbers of patients likely to fall into particular categories in the next 1-10 days based on previous data of this kind. The model has complex seasonality (although currently it achieves better results if you constrain it to results since April because of COVID) and a TBATS model produced the best results. [The code is MIT open source](https://github.com/CDU-data-science-team/systemews) and could be easily adapted to predict lots of different univariate series. There are lots of other people involved in this project and written materials from them are forthcoming, I will add them to this blog post once they are available. Our role was just to help with the forecasting and write the dashboard, lots of other work has gone into it.
+
+## Forecasting pharmacy dispensing
+
+This is another [Health Foundation funded forecasting project](https://www.health.org.uk/funding-and-partnerships/programmes/open-source-analytics-for-better-pharmacy-stock-control) which attempts to predict the amount of many different medications which will be dispensed from a pharmacy in order to better manage stock levels. Again the [code for our bit](https://github.com/CDU-data-science-team/pharmacy_forecasting) is open source MIT, although it is very early days for this project so there will be much more to come. There is much more to this project than just the code, and I will update this blog post with more details once more of the outputs are ready.
+
+## A Shiny interface to EndomineR
+
+This work relates to another [Health Foundation funded project](https://www.health.org.uk/funding-and-partnerships/programmes/improving-lesion-recognition-using-routinely-collected-endos) but it was funded by [NHS-R](https://nhsrcommunity.com/). EndomineR is a clinical text mining system which works with endoscopic reports and helps to collate and analyse data from free text reports automatically. This work replicates an existing Shiny interface but uses the [{golem}](https://cran.r-project.org/web/packages/golem/index.html) package to rewrite the code within modules and to make the application run as an R package. This will make the code easier to maintain, update, and generalise to other clinical settings. This project is currently in active development but it should be ready for a first release in February some time, the [code again available](https://github.com/CDU-data-science-team/shinyEndomineR) open source on GitHub.
+
+## {golem}, gitflow, and production data science
+
+We are all still learning but we are trying to use good methods to make sure that our code is robust and easy to deploy, and to help us collaborate with each other. To this end we:
+
+-   Use the {golem} package for a lot of our Shiny work, and modularise our Shiny code
+-   Use RStudio Connect (I have written some stuff about this on [my own blog](https://chrisbeeley.net/?p=1380))
+-   Use [gitflow](https://nvie.com/posts/a-successful-git-branching-model/)
+-   Have regular (two weekly) code review sessions
+
+I'm really interested in understanding how to get better at working together in the open and tools to help code easy to deploy and generalise. If you're interested in that too, especially if you work in the NHS (some of the hurdles are the same size and height everywhere in the NHS `r emoji("laughing")`).
+
+We have lots of stuff planned including better analysis of [HoNOS](https://www.rcpsych.ac.uk/events/in-house-training/health-of-nation-outcome-scales) data, more to come on staff and patient experience, methods for summarising clinical outcomes and health inequalities, and other stuff from team members where I'm not quite sure how close they are to launch. Please watch out for regular updates if you would like to see more stuff from us, on [our Twitter](https://twitter.com/DataScienceNott?s=20) and on this blog.
