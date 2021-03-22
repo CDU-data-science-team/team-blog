@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://cdu-data-science-team.github.io/team-blog/about.html</loc>
+    <lastmod>2021-03-22T12:02:49+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cdu-data-science-team.github.io/team-blog/</loc>
+    <lastmod>2021-02-27T20:36:30+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cdu-data-science-team.github.io/team-blog/uyd.html</loc>
+    <lastmod>2021-03-22T12:32:18+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/</loc>
+    <lastmod>2021-03-22T12:36:21+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-20-a-new-github-release-and-future-projects/</loc>
+    <lastmod>2021-03-22T12:03:34+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/</loc>
+    <lastmod>2021-03-22T11:29:07+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/</loc>
+    <lastmod>2021-03-22T11:28:03+00:00</lastmod>
+  </url>
+</urlset>

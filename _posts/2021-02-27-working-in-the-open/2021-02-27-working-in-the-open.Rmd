@@ -1,5 +1,7 @@
 ---
 title: "Working in the open"
+description: |
+  What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?
 author:
   - name: Zoë Turner
     url: {https://twitter.com/Letxuga007}
@@ -7,6 +9,8 @@ date: 02-27-2021
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - Open source    
 ---
 
 # What is working out in the open?

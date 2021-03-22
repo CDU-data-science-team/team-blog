@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CDU data science team blog</title>
+    <link>https://cdu-data-science-team.github.io/team-blog/</link>
+    <atom:link href="https://cdu-data-science-team.github.io/team-blog/index.xml" rel="self" type="application/rss+xml"/>
+    <description>CDU data science team blog
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Sat, 27 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Working in the open</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open</link>
+      <description>What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?</description>
+      <category>Open source</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open</guid>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/img/chris-beeley-tweet.PNG" medium="image" type="image/png" width="611" height="390"/>
+    </item>
+    <item>
+      <title>A new GitHub release and future projects</title>
+      <dc:creator>Chris Beeley</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-20-a-new-github-release-and-future-projects</link>
+      <description>We have a new project out and would like to tell you about some more of our future work.</description>
+      <category>Open source</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-20-a-new-github-release-and-future-projects</guid>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Data clinics in Nottinghamshire Healthcare</title>
+      <dc:creator>Lori Edwards Suárez</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare</link>
+      <description>We have been working with teams to help them with their data problems. This post describes some of the clinics and what has come about as a result of this work.</description>
+      <category>Data clinics</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare</guid>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Classification of patient feedback</title>
+      <dc:creator>Andreas Soteriades</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback</link>
+      <description>An NHSE funded project to devise an application to automatically tag the content of patient feedback</description>
+      <category>Patient feedback</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback</guid>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

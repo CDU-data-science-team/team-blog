@@ -8,6 +8,8 @@ date: 01-20-2021
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - Open source    
 ---
 
 ```{r setup, include=FALSE}

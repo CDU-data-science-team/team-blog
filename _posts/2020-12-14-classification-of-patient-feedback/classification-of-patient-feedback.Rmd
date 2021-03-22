@@ -8,6 +8,8 @@ date: 11-14-2020
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - Patient feedback    
 ---
 
 ```{r setup, include=FALSE}

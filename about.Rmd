@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 We are the data science team within the clinical development unit of [Nottinghamshire Healthcare NHS Trust](https://www.nottinghamshirehealthcare.nhs.uk/). We have recently grown to five members:
 
 * [Chris Beeley](https://twitter.com/ChrisBeeley)
-* [Zo`r "\u00EB"` Turner](https://twitter.com/Letxuga007)
+* [Zo`r "\u00EB"` Turner](https://lextuga007.github.io/Postcard/)
 * [Lori Edwards Suárez](https://twitter.com/Lori_E_S_)
 * [Andreas Soteriades](https://uk.linkedin.com/in/andreas-diomedes-soteriades-05b26319?trk=people-guest_people_search-card)
 * [Milan Wiedemann](https://twitter.com/milanwiedemann)

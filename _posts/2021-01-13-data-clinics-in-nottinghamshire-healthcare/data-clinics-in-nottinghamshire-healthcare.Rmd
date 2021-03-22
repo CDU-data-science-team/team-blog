@@ -9,6 +9,8 @@ date: 01-13-2021
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - Data clinics    
 ---
 
 ```{r setup, include=FALSE}

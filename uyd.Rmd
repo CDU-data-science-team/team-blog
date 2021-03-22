@@ -1,12 +1,9 @@
 ---
 title: "Understanding Your Data"
-description: |
-  An article on the initiative in the Trust to Understand Your Data. The Trust analyst functions want to get feedback on their solutions and to offer help for staff to understand their own data. 
-author:
-  - name: Zoë Turner
-    affiliation: CDU Data Science Team
-date: "`r Sys.Date()`"
-output: distill::distill_article
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2   
 ---
 
 ```{r setup, include=FALSE}
@@ -23,10 +20,10 @@ The Understanding Your Data also links into the initiative of Data Clinics where
 
 # Initial request
 
-• Are you interested in understanding your data better?
-• Do you have questions about what is going on in your service you feel like you currently can't answer?
-• Do you have ideas for ways of presenting and understanding data that you don't have the time to make a reality?
-• Would you be interested in looking at data, analyses, and dashboards and feeding back your opinions about them?
+* Are you interested in understanding your data better?
+* Do you have questions about what is going on in your service you feel like you currently can't answer?
+* Do you have ideas for ways of presenting and understanding data that you don't have the time to make a reality?
+* Would you be interested in looking at data, analyses, and dashboards and feeding back your opinions about them?
 
 Applied Information and the Clinical Development Unit work together to collate, process, and analyse all sorts of datasets for national reporting as well as internal analysis, audit, evaluation, and research. We are trying to make sense of the data in the Trust but we need to hear from people out in services who can tell us what they want and don't want, and can look at analytic products that we make and give us feedback on them.
 
@@ -48,14 +45,18 @@ Shiny training is being offered through [NHS-R Community](https://nhsrcommunity.
 
 Help for R can be sought from the Slack channel nhsrcommunity.slack.com. Also note that there is a Government Data Science Slack channel govdatascience.slack.com but access to this is restricted to certain email addresses like nhs.net and not individual Trust accounts.
 
-### Mapping
+## Mapping
 
 Another general interest that came from the group was mapping data and tools used for this are often QGIS. This is also available through the Software Centre but specific access may be required through IT.
 
-#### Public Health Mapping tools
+### Public Health Mapping tools
 
-There are a couple of Public Health mapping tools that are [available](https://cdu-data-science-team.github.io/miscellany/Mapping.html):
+There are a couple of Public Health mapping tools that are available and more information can be found [here](https://cdu-data-science-team.github.io/miscellany/Mapping.html):
 
+## Data clinics
 
+Some individual pieces of work have come out of the Understanding your data meeting and have moved into the data clinic initiative discussed more [here](https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/)
 
+## Patient Feedback
 
+Nottinghamshire Healthcare NHS Foundation Trust's Patient Feedback (including [Care Opinion](https://www.careopinion.org.uk/services/rha) information) can be found [here](http://suce.co.uk:8080/apps/SUCE/).
