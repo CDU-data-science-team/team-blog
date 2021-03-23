@@ -35,10 +35,7 @@ The video of the presentation by Chris Beeley is viewable in on the Trust's Micr
 
 https://cdu-data-science-team.github.io/team-blog/roadmap.html#1
 
-Also, xaringan allows for slides to appear within a webpage and retain their interactivity so they can be viewed in the page (no requirement to open in another page):
-
 <iframe src="https://cdu-data-science-team.github.io/team-blog/roadmap.html#1" width="600" height="400" loading="lazy" allowfullscreen></iframe> <script>fitvids('.shareagain', {players: 'iframe'});</script>
-
 
 # Themes from the events
 
@@ -62,7 +59,7 @@ Another general interest that came from the group was mapping data and tools use
 
 ### Public Health Mapping tools
 
-There are a couple of Public Health mapping tools that are available and more information can be found [here](https://cdu-data-science-team.github.io/miscellany/Mapping.html):
+There are a couple of Public Health mapping tools that are available and more information can be found [here](https://cdu-data-science-team.github.io/miscellany/Mapping.html).
 
 ## Data clinics
 
@@ -81,4 +78,5 @@ To try to accommodate as many diaries as possible the day of the meeting will ch
 * Thurs 6th May
 * Fri 4th June
 
-To book on the meeting which will be on MS Teams, please [email](mailto:zoe.turner2@nottshc.nhs.uk).
+
+To book on the meeting which will be on MS Teams, please email [Zoë Turner](mailto:zoe.turner2@nottshc.nhs.uk).
