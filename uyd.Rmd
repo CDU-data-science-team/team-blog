@@ -29,6 +29,11 @@ Applied Information and the Clinical Development Unit work together to collate, 
 
 If you're interested in being a part of the way that the Trust develops its tools for analysing data there are lots of ways you can be involved- coming to a workshop, testing tools in your own time and feeding back your opinions, coming with your own ideas about tools or analyses you would like to see or just commenting on our plans and helping to shape the future of what we produce.
 
+# CDU Data Science Roadmap
+
+The video of the presentation by Chris Beeley is viewable in on the Trust's Microsoft Stream site: https://web.microsoftstream.com/video/41df2da8-eac3-4391-8e0c-a4ef0a853688?list=studio (will require an authorised log in).
+
+
 # Themes from the events
 
 ## Training
@@ -60,3 +65,14 @@ Some individual pieces of work have come out of the Understanding your data meet
 ## Patient Feedback
 
 Nottinghamshire Healthcare NHS Foundation Trust's Patient Feedback (including [Care Opinion](https://www.careopinion.org.uk/services/rha) information) can be found [here](http://suce.co.uk:8080/apps/SUCE/).
+
+# Meeting dates
+
+To try to accommodate as many diaries as possible the day of the meeting will change each month and always be at the same time (1130-1230):
+
+* Tues 2nd March 
+* Wed 7th April
+* Thurs 6th May
+* Fri 4th June
+
+To book on the meeting which will be on MS Teams, please [email](mailto:zoe.turner2@nottshc.nhs.uk).
