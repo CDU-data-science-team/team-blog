@@ -102,11 +102,9 @@ xaringanExtra::use_logo(
 
 # Patient and staff experience 
 
-.left-column[
+.pull-left[
 
-]
-
-.left-column[
+.pull-left[
 ## Done
 
 * [R Shiny dashboard](http://suce.co.uk:8080/apps/SUCE/) summarising patient experience
@@ -114,14 +112,16 @@ xaringanExtra::use_logo(
 * Automatic reports for number of responses and quality of experience
 ]
 
-.left-column[
+.pull-right[
 ## Doing
 
 * [Text mining](https://github.com/CDU-data-science-team/positive_about_change_text_mining) patient experience comments to tag by theme and sentiment
 * Sharing text mining with five other provider trusts
 ]
 
-.left-column[
+]
+
+.pull-right[
 ## Considering
 
 * General purpose machine learning system which can learn any tags for any dataset (with some human input)
@@ -132,26 +132,25 @@ xaringanExtra::use_logo(
 
 # Routine outcomes
 
-.left-column[
-
-]
-
-.left-column[
+.pull-left[
+  
+.pull-left[
 ## Done
 
 * Summary of mortality
 * Scoping of datasets and outcomes in mental health services
 ]
-
-.left-column[
+  
+.pull-right[
 ## Doing
 
 * Analysis of HoNOS, referral and activity information, mortality, and staff patient experience
 * Analysis of health inequalities
 
 ]
+]
 
-.left-column[
+.pull-right[
 ## Considering
 
 * Analysis of system outcomes and activity from GPRCC
@@ -164,26 +163,25 @@ xaringanExtra::use_logo(
 
 # Clinical need and </br> workload prioritisation
 
-.left-column[
-
-]
-
-.left-column[
+.pull-left[
+  
+.pull-left[
 ## Done
 
 * Activity summaries (HealthCARD)
 * Review of caseload rank score (from HealthCARD)
 
-]
-
-.left-column[
+   ]
+  
+.pull-right[
 ## Doing
 
 * Produce and validate acuity score
 
+    ]
 ]
 
-.left-column[
+.pull-right[
 ## Considering
 
 * Prediction of hospitalisation, service use, readmission, and clinical risk
@@ -194,25 +192,24 @@ xaringanExtra::use_logo(
 
 # Forecasting
 
-.left-column[
-
-]
-
-.left-column[
+.pull-left[
+  
+.pull-left[
 ## Done
 
 * Prediction of numbers of clinically safe beds in Nottingham University Hospitals
 
-]
-
-.left-column[
+    ]
+  
+.pull-right[
 ## Doing
 
 * Predicting drug issues in pharmacies in Nottinghamshire Healthcare
 
+    ]
 ]
 
-.left-column[
+.pull-right[
 ## Considering
 
 * ???
@@ -223,25 +220,24 @@ xaringanExtra::use_logo(
 
 # Statistical Process Control Charts </br> (SPC)
 
-.left-column[
-
-]
-
-.left-column[
+.pull-left[
+  
+.pull-left[
 ## Done
 
 * [Prototype SPC dashboard](https://github.com/CDU-data-science-team/healthcareSPC) (R/ Shiny)
 
-]
-
-.left-column[
+    ]
+  
+.pull-right[
 ## Doing
 
 * Funding application to produce an SPC dashboard for the whole NHS
 
+    ]
 ]
 
-.left-column[
+.pull-right[
 ## Considering
 
 * ???
@@ -252,27 +248,26 @@ xaringanExtra::use_logo(
 
 # R Training
 
-.left-column[
-
-]
-
-.left-column[
+.pull-left[
+  
+.pull-left[
 ## Done
 
 * [Delivered intro to R](https://nhsrcommunity.com/events/) to 100+ trainees around the country
 * Developed and delivered[ intro to Shiny course](https://github.com/nhs-r-community/shiny-training) and for [R beginners](https://github.com/ChrisBeeley/shiny_beginners)
 * Delivered ["R for SPSS users"](https://github.com/ChrisBeeley/r-for-spss) to 10 staff in the Trust
 
-]
-
-.left-column[
+    ]
+  
+.pull-right[
 ## Doing
 
 * Funding application for Advanced Shiny and Introduction to Git training course
 
+    ]
 ]
 
-.left-column[
+.pull-right[
 ## Considering
 
 * ???
@@ -283,27 +278,26 @@ xaringanExtra::use_logo(
 
 # Statistics and machine learning </br> training and clinics
 
-.left-column[
-
-]
-
-.left-column[
+.pull-left[
+  
+.pull-left[
 ## Done
 
 * Delivered Understanding Data courses to 50+ attendees
 * Delivered statistics tutorials for 5 analysts
 * Run ["Help with data"](https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/) clinics for 3 teams in the trust
 
-]
-
-.left-column[
+    ]
+  
+.pull-right[
 ## Doing
 
 * Working with Research and Evaluation to offer advice to their monthly clinics
 
 ]
+]
 
-.left-column[
+.pull-right[
 ## Considering
 
 * Mentoring offered to analysts across the ICS
@@ -315,25 +309,24 @@ xaringanExtra::use_logo(
 
 # Predicting Did Not Attend </br> with machine learning
 
-.left-column[
-
-]
-
-.left-column[
+.pull-left[
+  
+.pull-left[
 ## Done
 
 * Basic algorithm complete
 
-]
-
-.left-column[
+    ]
+  
+.pull-right[
 ## Doing
 
 * Producing a dashboard to work with the data and handing the work over to Applied Information
 
+    ]
 ]
 
-.left-column[
+.pull-right[
 ## Considering
 
 * Predict other healthcare events using machine learning (including free text)
