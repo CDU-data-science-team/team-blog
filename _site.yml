@@ -12,6 +12,8 @@ navbar:
       href: about.html
     - text: "Understanding Your Data"
       href: uyd.html
+    - text: "Roadmap"
+      href: roadmap.html
     - icon: fab fa-github
       href: https://github.com/CDU-data-science-team
     - icon: fab fa-twitter
