@@ -89,6 +89,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <meta property="description" itemprop="description" content="An NHSE funded project to devise an application to automatically tag the content of patient feedback"/>
 
+<link rel="canonical" href="https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/"/>
 
 <!--  https://schema.org/Article -->
 <meta property="article:published" itemprop="datePublished" content="2020-11-14"/>
@@ -99,6 +100,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="og:title" content="CDU data science team blog: Classification of patient feedback"/>
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="An NHSE funded project to devise an application to automatically tag the content of patient feedback"/>
+<meta property="og:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="CDU data science team blog"/>
 
@@ -106,12 +108,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="twitter:card" content="summary"/>
 <meta property="twitter:title" content="CDU data science team blog: Classification of patient feedback"/>
 <meta property="twitter:description" content="An NHSE funded project to devise an application to automatically tag the content of patient feedback"/>
+<meta property="twitter:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/"/>
 
+<!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
+<meta name="citation_title" content="CDU data science team blog: Classification of patient feedback"/>
+<meta name="citation_fulltext_html_url" content="https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/"/>
+<meta name="citation_online_date" content="2020/11/14"/>
+<meta name="citation_publication_date" content="2020/11/14"/>
+<meta name="citation_author" content="Andreas Soteriades"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Classification of patient feedback"]},{"type":"character","attributes":{},"value":["An NHSE funded project to devise an application to automatically tag the content of patient feedback"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Andreas Soteriades"]}]}]},{"type":"character","attributes":{},"value":["11-14-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Classification of patient feedback"]},{"type":"character","attributes":{},"value":["An NHSE funded project to devise an application to automatically tag the content of patient feedback"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Andreas Soteriades"]}]}]},{"type":"character","attributes":{},"value":["11-14-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Patient feedback"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2040,8 +2049,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
   <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -2071,6 +2084,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="nav-right">
 <a href="../../index.html">Home</a>
 <a href="../../about.html">About</a>
+<a href="../../uyd.html">Understanding Your Data</a>
+<a href="https://github.com/CDU-data-science-team">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
+<a href="https://twitter.com/DataScienceNott">
+<i class="fab fa-twitter" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2082,6 +2102,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="d-title">
 <h1>Classification of patient feedback</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:Patient_feedback" class="dt-tag">Patient feedback</a>
+</div>
 <!--/radix_placeholder_categories-->
 <p><p>An NHSE funded project to devise an application to automatically tag the content of patient feedback</p></p>
 </div>
@@ -2121,7 +2144,20 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+  <h3 id="updates-and-corrections">Corrections</h3>
+  <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/CDU-data-science-team/team-blog/issues/new">create an issue</a> on the source repository.</p>
+  <h3 id="citation">Citation</h3>
+  <p>For attribution, please cite this work as</p>
+  <pre class="citation-appendix short">Soteriades (2020, Nov. 14). CDU data science team blog: Classification of patient feedback. Retrieved from https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/</pre>
+  <p>BibTeX citation</p>
+  <pre class="citation-appendix long">@misc{soteriades2020classification,
+  author = {Soteriades, Andreas},
+  title = {CDU data science team blog: Classification of patient feedback},
+  url = {https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/},
+  year = {2020}
+}</pre>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

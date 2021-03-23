@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://cdu-data-science-team.github.io/team-blog/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -86,26 +85,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>CDU data science team blog</title>
+  <title>CDU data science team blog: Understanding Your Data</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="CDU data science team blog"/>
+  <meta property="og:title" content="CDU data science team blog: Understanding Your Data"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="CDU data science team blog"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="CDU data science team blog"/>
+  <meta property="twitter:title" content="CDU data science team blog: Understanding Your Data"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["CDU data science team blog"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Understanding Your Data"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2045,12 +2044,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"CDU data science team blog","authors":[]}
+{"title":"Understanding Your Data","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2078,249 +2077,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="CDU data science team blog">CDU data science team blog</h1>
-<a href="posts/2021-02-27-working-in-the-open/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Open source"]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 27, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Zoë Turner</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-02-27-working-in-the-open/img/chris-beeley-tweet.PNG"/>
-</div>
-<div class="description">
-<h2>Working in the open</h2>
-<div class="dt-tags">
-<div class="dt-tag">Open source</div>
-</div>
-<p>What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?</p>
-</div>
-</a>
-<a href="posts/2021-01-20-a-new-github-release-and-future-projects/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Open source"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 20, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Chris Beeley</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>A new GitHub release and future projects</h2>
-<div class="dt-tags">
-<div class="dt-tag">Open source</div>
-</div>
-<p>We have a new project out and would like to tell you about some more of our future work.</p>
-</div>
-</a>
-<a href="posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Data clinics"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 13, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Lori Edwards Suárez</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Data clinics in Nottinghamshire Healthcare</h2>
-<div class="dt-tags">
-<div class="dt-tag">Data clinics</div>
-</div>
-<p>We have been working with teams to help them with their data problems. This post describes some of the clinics and what has come about as a result of this work.</p>
-</div>
-</a>
-<a href="posts/2020-12-14-classification-of-patient-feedback/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Patient feedback"]}</script>
-<div class="metadata">
-<div class="publishedDate">Nov. 14, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Andreas Soteriades</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Classification of patient feedback</h2>
-<div class="dt-tags">
-<div class="dt-tag">Patient feedback</div>
-</div>
-<p>An NHSE funded project to devise an application to automatically tag the content of patient feedback</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(4)</span>
-</li>
-<li>
-<a href="#category:Data_clinics">Data clinics</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:Open_source">Open source</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:Patient_feedback">Patient feedback</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>CDU data science team blog</h1>
+<h1>Understanding Your Data</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2328,6 +2087,51 @@ function init_posts_list() {
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#background">Background</a></li>
+<li><a href="#initial-request">Initial request</a></li>
+<li><a href="#themes-from-the-events">Themes from the events</a>
+<ul>
+<li><a href="#training">Training</a></li>
+<li><a href="#mapping">Mapping</a></li>
+<li><a href="#data-clinics">Data clinics</a></li>
+<li><a href="#patient-feedback">Patient Feedback</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h1 id="background">Background</h1>
+<p>The CDU Data Science team and Applied Information team initiated a workshop meeting with those interested in “understanding your data” in the first week of March 2021. This was started in response to our need to ensure that the solutions we create are understood by everyone and that we are concentrating on the right problems.</p>
+<p>This will be a continuous two-way discussion facilitated by the CDU Data Science Team and will also include analysts from Applied Information and Performance.</p>
+<p>The Understanding Your Data also links into the initiative of Data Clinics where particular specific support has been given to teams with their data. This has been facilitated by our Clinical Analyst.</p>
+<h1 id="initial-request">Initial request</h1>
+<ul>
+<li>Are you interested in understanding your data better?</li>
+<li>Do you have questions about what is going on in your service you feel like you currently can’t answer?</li>
+<li>Do you have ideas for ways of presenting and understanding data that you don’t have the time to make a reality?</li>
+<li>Would you be interested in looking at data, analyses, and dashboards and feeding back your opinions about them?</li>
+</ul>
+<p>Applied Information and the Clinical Development Unit work together to collate, process, and analyse all sorts of datasets for national reporting as well as internal analysis, audit, evaluation, and research. We are trying to make sense of the data in the Trust but we need to hear from people out in services who can tell us what they want and don’t want, and can look at analytic products that we make and give us feedback on them.</p>
+<p>If you’re interested in being a part of the way that the Trust develops its tools for analysing data there are lots of ways you can be involved- coming to a workshop, testing tools in your own time and feeding back your opinions, coming with your own ideas about tools or analyses you would like to see or just commenting on our plans and helping to shape the future of what we produce.</p>
+<h1 id="themes-from-the-events">Themes from the events</h1>
+<h2 id="training">Training</h2>
+<p>Training was something we hadn’t considered but came up as a theme. Analysts main software tools are Excel, PowerBI, SQL and R.</p>
+<h3 id="r">R</h3>
+<p>Nottinghamshire Healthcare NHS Foundation Trust allows all staff to access R and R Studio for download through the Software Centre (accessible through the Windows Start button).</p>
+<p>Training is offered through <a href="https://nhsrcommunity.com/events/">NHS-R Community</a> every month. The course is led by Zoë Turner. Course materials are available <a href="https://philosopher-analyst.netlify.app/collection/">here</a>.</p>
+<p>Shiny training is being offered through <a href="https://nhsrcommunity.com/events/">NHS-R Community</a> and is being designed and led by Chris Beeley. Course materials are available <a href="https://github.com/ChrisBeeley/shinyworkshop">here</a> and specifically for <a href="https://github.com/ChrisBeeley/shiny_beginners">beginners</a>.</p>
+<p>Help for R can be sought from the Slack channel nhsrcommunity.slack.com. Also note that there is a Government Data Science Slack channel govdatascience.slack.com but access to this is restricted to certain email addresses like nhs.net and not individual Trust accounts.</p>
+<h2 id="mapping">Mapping</h2>
+<p>Another general interest that came from the group was mapping data and tools used for this are often QGIS. This is also available through the Software Centre but specific access may be required through IT.</p>
+<h3 id="public-health-mapping-tools">Public Health Mapping tools</h3>
+<p>There are a couple of Public Health mapping tools that are available and more information can be found <a href="https://cdu-data-science-team.github.io/miscellany/Mapping.html">here</a>:</p>
+<h2 id="data-clinics">Data clinics</h2>
+<p>Some individual pieces of work have come out of the Understanding your data meeting and have moved into the data clinic initiative discussed more <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/">here</a></p>
+<h2 id="patient-feedback">Patient Feedback</h2>
+<p>Nottinghamshire Healthcare NHS Foundation Trust’s Patient Feedback (including <a href="https://www.careopinion.org.uk/services/rha">Care Opinion</a> information) can be found <a href="http://suce.co.uk:8080/apps/SUCE/">here</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

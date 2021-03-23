@@ -110,7 +110,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Data clinics in Nottinghamshire Healthcare"]},{"type":"character","attributes":{},"value":["We have been working with teams to help them with their data problems. This post describes some of the clinics and what has come about as a result of this work.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Lori Edwards Suárez"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/Lori_E_S_"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["01-13-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Data clinics in Nottinghamshire Healthcare"]},{"type":"character","attributes":{},"value":["We have been working with teams to help them with their data problems. This post describes some of the clinics and what has come about as a result of this work.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Lori Edwards Suárez"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/Lori_E_S_"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["01-13-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Data clinics"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -307,6 +307,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-decoration: underline;
   }
 
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
   @media(min-width: 768px) {
 
   d-article pre,
@@ -461,6 +466,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   div.hanging-indent{
     margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
   }
 
 
@@ -1128,7 +1144,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       var layout = $(this).attr('data-layout');
 
       // apply layout to markdown level block elements
-      var elements = $(this).children().not('div.sourceCode, pre, script');
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
       elements.each(function(i, el) {
         var layout_div = $('<div class="' + layout + '"></div>');
         if (layout_div.hasClass('shaded')) {
@@ -1243,6 +1259,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // move appendix-bottom entries to the bottom
       $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
       $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
 
       // clear polling timer
       clearInterval(tid);
@@ -1403,8 +1433,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="data-clinics-in-nottinghamshire-healthcare_files/header-attrs-2.6/header-attrs.js"></script>
+  <script src="data-clinics-in-nottinghamshire-healthcare_files/header-attrs-2.7/header-attrs.js"></script>
   <script src="data-clinics-in-nottinghamshire-healthcare_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="data-clinics-in-nottinghamshire-healthcare_files/popper-2.6.0/popper.min.js"></script>
+  <link href="data-clinics-in-nottinghamshire-healthcare_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="data-clinics-in-nottinghamshire-healthcare_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="data-clinics-in-nottinghamshire-healthcare_files/tippy-6.2.7/tippy.umd.min.js"></script>
   <script src="data-clinics-in-nottinghamshire-healthcare_files/anchor-4.2.2/anchor.min.js"></script>
   <script src="data-clinics-in-nottinghamshire-healthcare_files/bowser-1.9.3/bowser.min.js"></script>
   <script src="data-clinics-in-nottinghamshire-healthcare_files/webcomponents-2.0.0/webcomponents.js"></script>
@@ -1432,6 +1466,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-title">
 <h1>Data clinics in Nottinghamshire Healthcare</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">Data clinics</div>
+</div>
 <!--/radix_placeholder_categories-->
 <p><p>We have been working with teams to help them with their data problems. This post describes some of the clinics and what has come about as a result of this work.</p></p>
 </div>
