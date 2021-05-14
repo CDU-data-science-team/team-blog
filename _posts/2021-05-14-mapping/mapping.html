@@ -85,635 +85,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>CDU data science team blog: Understanding Your Data</title>
+  <title>Mapping</title>
+
+  <meta property="description" itemprop="description" content="Mapping using public health tools"/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-05-14"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-05-14"/>
+  <meta name="article:author" content="Zoë Turner"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="CDU data science team blog: Understanding Your Data"/>
+  <meta property="og:title" content="Mapping"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Mapping using public health tools"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="CDU data science team blog"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="CDU data science team blog: Understanding Your Data"/>
+  <meta property="twitter:title" content="Mapping"/>
+  <meta property="twitter:description" content="Mapping using public health tools"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Understanding Your Data"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Mapping"]},{"type":"character","attributes":{},"value":["Mapping using public health tools\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Zoë Turner"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/Letxuga007"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["05-14-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Resources"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"NULL"}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2029,15 +1433,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="mapping_files/header-attrs-2.8/header-attrs.js"></script>
+  <script src="mapping_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="mapping_files/popper-2.6.0/popper.min.js"></script>
+  <link href="mapping_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="mapping_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="mapping_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="mapping_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="mapping_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="mapping_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="mapping_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -2049,107 +1454,44 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Understanding Your Data","authors":[]}
+{"title":"Mapping","description":"Mapping using public health tools","authors":[{"author":"Zoë Turner","authorURL":{"https://twitter.com/Letxuga007":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-14T00:00:00.000+01:00","citationText":"Turner, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">CDU data science team blog</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="uyd.html">Understanding Your Data</a>
-<a href="https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1">Roadmap</a>
-<a href="https://github.com/CDU-data-science-team">
-<i class="fab fa-github" aria-hidden="true"></i>
-</a>
-<a href="https://twitter.com/DataScienceNott">
-<i class="fab fa-twitter" aria-hidden="true"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Understanding Your Data</h1>
+<h1>Mapping</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">Resources</div>
+</div>
 <!--/radix_placeholder_categories-->
-
+<p><p>Mapping using public health tools</p></p>
 </div>
 
+<div class="d-byline">
+  Zoë Turner true 
+  
+<br/>05-14-2021
+</div>
 
 <div class="d-article">
-<div class="d-contents d-contents-float">
-<nav class="l-text toc figcaption" id="TOC">
-<h3>Contents</h3>
-<ul>
-<li><a href="#background">Background</a></li>
-<li><a href="#initial-request">Initial request</a></li>
-<li><a href="#cdu-data-science-roadmap">CDU Data Science Roadmap</a></li>
-<li><a href="#themes-from-the-events">Themes from the events</a>
-<ul>
-<li><a href="#training">Training</a></li>
-<li><a href="#mapping">Mapping</a></li>
-<li><a href="#data-clinics">Data clinics</a></li>
-<li><a href="#patient-feedback">Patient Feedback</a></li>
-</ul></li>
-<li><a href="#meeting-dates">Meeting dates</a></li>
-</ul>
-</nav>
-</div>
-<h1 id="background">Background</h1>
-<p>The CDU Data Science team and Applied Information team initiated a workshop meeting with those interested in “understanding your data” in the first week of March 2021. This was started in response to our need to ensure that the solutions we create are understood by everyone and that we are concentrating on the right problems.</p>
-<p>This will be a continuous two-way discussion facilitated by the CDU Data Science Team and will also include analysts from Applied Information and Performance.</p>
-<p>The Understanding Your Data also links into the initiative of Data Clinics where particular specific support has been given to teams with their data. This has been facilitated by our Clinical Analyst.</p>
-<h1 id="initial-request">Initial request</h1>
-<ul>
-<li>Are you interested in understanding your data better?</li>
-<li>Do you have questions about what is going on in your service you feel like you currently can’t answer?</li>
-<li>Do you have ideas for ways of presenting and understanding data that you don’t have the time to make a reality?</li>
-<li>Would you be interested in looking at data, analyses, and dashboards and feeding back your opinions about them?</li>
-</ul>
-<p>Applied Information and the Clinical Development Unit work together to collate, process, and analyse all sorts of datasets for national reporting as well as internal analysis, audit, evaluation, and research. We are trying to make sense of the data in the Trust but we need to hear from people out in services who can tell us what they want and don’t want, and can look at analytic products that we make and give us feedback on them.</p>
-<p>If you’re interested in being a part of the way that the Trust develops its tools for analysing data there are lots of ways you can be involved- coming to a workshop, testing tools in your own time and feeding back your opinions, coming with your own ideas about tools or analyses you would like to see or just commenting on our plans and helping to shape the future of what we produce.</p>
-<h1 id="cdu-data-science-roadmap">CDU Data Science Roadmap</h1>
-<p>The video of the presentation by Chris Beeley is viewable in on the Trust’s Microsoft Stream site: <a href="https://web.microsoftstream.com/video/41df2da8-eac3-4391-8e0c-a4ef0a853688?list=studio" class="uri">https://web.microsoftstream.com/video/41df2da8-eac3-4391-8e0c-a4ef0a853688?list=studio</a> (will require an authorised log in).</p>
-<p><a href="https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1" class="uri">https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1</a></p>
-<iframe src="https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1" width="600" height="400" loading="lazy" allowfullscreen>
-</iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
-<h1 id="themes-from-the-events">Themes from the events</h1>
-<h2 id="training">Training</h2>
-<p>Training was something we hadn’t considered but came up as a theme. Analysts main software tools are Excel, PowerBI, SQL and R.</p>
-<h3 id="r">R</h3>
-<p>Nottinghamshire Healthcare NHS Foundation Trust allows all staff to access R and R Studio for download through the Software Centre (accessible through the Windows Start button).</p>
-<p>Training is offered through <a href="https://nhsrcommunity.com/events/">NHS-R Community</a> every month. The course is led by Zoë Turner. Course materials are available <a href="https://philosopher-analyst.netlify.app/collection/">here</a>.</p>
-<p>Shiny training is being offered through <a href="https://nhsrcommunity.com/events/">NHS-R Community</a> and is being designed and led by Chris Beeley. Course materials are available <a href="https://github.com/ChrisBeeley/shinyworkshop">here</a> and specifically for <a href="https://github.com/ChrisBeeley/shiny_beginners">beginners</a>.</p>
-<p>Help for R can be sought from the Slack channel nhsrcommunity.slack.com. Also note that there is a Government Data Science Slack channel govdatascience.slack.com but access to this is restricted to certain email addresses like nhs.net and not individual Trust accounts.</p>
-<h2 id="mapping">Mapping</h2>
-<p>Another general interest that came from the group was mapping data and tools used for this are often QGIS. This is also available through the Software Centre but specific access may be required through IT.</p>
-<h3 id="public-health-mapping-tools">Public Health Mapping tools</h3>
-<p>There are a couple of Public Health mapping tools that are available and more information can be found <a href="https://cdu-data-science-team.github.io/miscellany/Mapping.html">here</a>.</p>
-<h2 id="data-clinics">Data clinics</h2>
-<p>Some individual pieces of work have come out of the Understanding your data meeting and have moved into the data clinic initiative discussed more <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/">here</a></p>
-<h2 id="patient-feedback">Patient Feedback</h2>
-<p>Nottinghamshire Healthcare NHS Foundation Trust’s Patient Feedback (including <a href="https://www.careopinion.org.uk/services/rha">Care Opinion</a> information) can be found <a href="http://suce.co.uk:8080/apps/SUCE/">here</a>.</p>
-<h1 id="meeting-dates">Meeting dates</h1>
-<p>To try to accommodate as many diaries as possible the day of the meeting will change each month and always be at the same time (1130-1230):</p>
-<ul>
-<li>Tues 2nd March</li>
-<li>Wed 7th April</li>
-<li>Thurs 6th May</li>
-<li>Fri 4th June</li>
-</ul>
-<p>To book on the meeting which will be on MS Teams, please email <a href="mailto:zoe.turner2@nottshc.nhs.uk">Zoë Turner</a>.</p>
+<h1 id="mapping">Mapping</h1>
+<h3 id="public-health-tools">Public Health Tools</h3>
+<p>As Public Health is based within Local Authorities many of their boundaries are related to government rather than health boundaries. Smaller areas related to GPs will be included but data becomes patchy at Trust boundary level. For example, Nottinghamshire Healthcare NHS Foundation Trust covers Nottinghamshire, Nottingham and some areas outside of these boundaries.</p>
+<p><a href="http://www.localhealth.org.uk">Local Health</a></p>
+<p>Public Health use the following to overlay data such as life expectancy over IMD scores. It is possible to upload data to this site but this has not been approved by IG.</p>
+<p><a href="https://shapeatlas.net/">Shape</a></p>
+<p>This requires creating an account but is freely available to NHS staff.</p>
+<p>This has Trust locations already in the account and data can be overlayed. Drive time and public transport within so many minutes is particularly useful.</p>
+<h3 id="centroid-mapping">Centroid mapping</h3>
+<p>Sometimes you have a set of addresses but no way of mapping them. The <a href="http://geoportal.statistics.gov.uk/datasets/ons-postcode-directory-latest-centroids">Office for National Statistics’ Open Geography Portal</a> provides the centroids for all UK postcodes.</p>
+<p>Using R to get centroid information: <a href="https://www.trafforddatalab.io/recipes/gis/postcodes.html#" class="uri">https://www.trafforddatalab.io/recipes/gis/postcodes.html#</a></p>
+<p>Or weighted by LSOA area: <a href="https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-areas-december-2011-population-weighted-centroids" class="uri">https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-areas-december-2011-population-weighted-centroids</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2162,10 +1504,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="updates-and-corrections">Corrections</h3>
-<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/CDU-data-science-team/team-blog/issues/new">create an issue</a> on the source repository.</p>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
