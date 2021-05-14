@@ -7,7 +7,25 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 27 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 May 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Index of Multiple Deprivation</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-index-of-multiple-deprivation</link>
+      <description>The measure of relative deprivation in small areas in England called lower-layer super output areas</description>
+      <category>Resources</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-index-of-multiple-deprivation</guid>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mapping</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-mapping</link>
+      <description>Mapping using public health tools</description>
+      <category>Resources</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-mapping</guid>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Working in the open</title>
       <dc:creator>Zoë Turner</dc:creator>

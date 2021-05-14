@@ -1,0 +1,44 @@
+---
+title: "Mapping"
+description: |
+  Mapping using public health tools
+author:
+  - name: Zoë Turner
+    url: {https://twitter.com/Letxuga007}
+date: 05-14-2021
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Resources 
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Mapping
+
+### Public Health Tools
+
+As Public Health is based within Local Authorities many of their boundaries are related to government rather than health boundaries. Smaller areas related to GPs will be included but data becomes patchy at Trust boundary level. For example, Nottinghamshire Healthcare NHS Foundation Trust covers Nottinghamshire, Nottingham and some areas outside of these boundaries.
+
+[Local Health](http://www.localhealth.org.uk)
+
+Public Health use the following to overlay data such as life expectancy over IMD scores. It is possible to upload data to this site but this has not been approved by IG.
+
+[Shape](https://shapeatlas.net/)
+
+This requires creating an account but is freely available to NHS staff. 
+
+This has Trust locations already in the account and data can be overlayed. Drive time and public transport within so many minutes is particularly useful.
+
+
+### Centroid mapping
+ 
+Sometimes you have a set of addresses but no way of mapping them. The [Office for National Statistics’ Open Geography Portal](http://geoportal.statistics.gov.uk/datasets/ons-postcode-directory-latest-centroids) provides the centroids for all UK postcodes.  
+
+Using R to get centroid information: https://www.trafforddatalab.io/recipes/gis/postcodes.html#
+
+Or weighted by LSOA area: https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-areas-december-2011-population-weighted-centroids
