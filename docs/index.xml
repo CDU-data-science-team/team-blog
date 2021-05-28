@@ -63,5 +63,16 @@
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback</guid>
       <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
     </item>
+    <item>
+      <title>Understanding Your Data May Meeting</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-06-uyd-meeting</link>
+      <description>A summary of the discussions at the May Meeting, the frustrations, challenges and considerations of data</description>
+      <category>Understanding Your Data</category>
+      <category>HoNOS</category>
+      <category>Training</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-06-uyd-meeting</guid>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+    </item>
   </channel>
 </rss>
