@@ -1,0 +1,39 @@
+---
+title: "Making presentation slides into a GitHub repository template"
+description: |
+  One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.
+author:
+  - name: Zoë Turner
+    url: {https://twitter.com/Lextuga007}
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+categories:
+  - Open source
+  - GitHub
+  - Presentations
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Creating a template GitHub repository
+
+After creating {xaringan} presentations slides for the CDU Data Science Team using the branding from Nottinghamshire Healthcare NHS Foundation Trust, I wanted to share the files used as a template. There are quite a few used in {xaringan} slides because it relies upon CSS and images to give the 'professional' look similar to PowerPoint. 
+
+One of the new features in GitHub is to make your repository a template:
+
+![](img/template-github.PNG)
+
+And the nice thing about this, is when someone selects the template button:
+
+![](img/use-this-template.PNG)
+
+It means they can fork the repository (get a copy) but all of the commit history is removed giving the next person - if they want - a clean repository to work from. People still have the option to clone the repository with the history by following the usual cloning:
+
+![](img/cloning-repo.PNG)
+
