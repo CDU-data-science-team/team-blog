@@ -7,7 +7,7 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Making an RStudio presentation template</title>
       <dc:creator>Zoë Turner</dc:creator>
@@ -17,6 +17,17 @@
       <category>RStudio</category>
       <category>Presentations</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template</guid>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Making presentation slides into a GitHub repository template</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-a-presentation-repo-github-template</link>
+      <description>One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.</description>
+      <category>Open source</category>
+      <category>GitHub</category>
+      <category>Presentations</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-a-presentation-repo-github-template</guid>
       <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
     </item>
     <item>

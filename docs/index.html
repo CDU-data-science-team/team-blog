@@ -1,538 +1,538 @@
 <!DOCTYPE html>
-  
-  <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-    
-    <head>
-    <meta charset="utf-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-          <meta name="generator" content="distill" />
-            <link rel="alternate" type="application/rss+xml" href="https://cdu-data-science-team.github.io/team-blog/index.xml" />
-              
-              <style type="text/css">
-                /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
-                body {
-                  visibility: hidden;
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+  <link rel="alternate" type="application/rss+xml" href="https://cdu-data-science-team.github.io/team-blog/index.xml" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>CDU data science team blog</title>
+
+
+
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="CDU data science team blog"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="CDU data science team blog"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="CDU data science team blog"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["CDU data science team blog"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+  <script type="application/javascript">
+
+  function getMeta(metaName) {
+    var metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute('name') === metaName) {
+        return metas[i].getAttribute('content');
+      }
+    }
+    return '';
+  }
+
+  function offsetURL(url) {
+    var offset = getMeta('distill:offset');
+    return offset ? offset + '/' + url : url;
+  }
+
+  function createFuseIndex() {
+
+    // create fuse index
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
+    var fuse = new window.Fuse([], options);
+
+    // fetch the main search.json
+    return fetch(offsetURL('search.json'))
+      .then(function(response) {
+        if (response.status == 200) {
+          return response.json().then(function(json) {
+            // index main articles
+            json.articles.forEach(function(article) {
+              fuse.add(article);
+            });
+            // download collections and index their articles
+            return Promise.all(json.collections.map(function(collection) {
+              return fetch(offsetURL(collection)).then(function(response) {
+                if (response.status === 200) {
+                  return response.json().then(function(articles) {
+                    articles.forEach(function(article) {
+                      fuse.add(article);
+                    });
+                  })
+                } else {
+                  return Promise.reject(
+                    new Error('Unexpected status from search index request: ' +
+                              response.status)
+                  );
                 }
-              </style>
-                
-                <!--radix_placeholder_import_source-->
-                <!--/radix_placeholder_import_source-->
-                
-                <style type="text/css">code{white-space: pre;}</style>
-                  <style type="text/css" data-origin="pandoc">
-                    pre > code.sourceCode { white-space: pre; position: relative; }
-                  pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-                  pre > code.sourceCode > span:empty { height: 1.2em; }
-                  code.sourceCode > span { color: inherit; text-decoration: inherit; }
-                  div.sourceCode { margin: 1em 0; }
-                  pre.sourceCode { margin: 0; }
-                  @media screen {
-                    div.sourceCode { overflow: auto; }
-                  }
-                  @media print {
-                    pre > code.sourceCode { white-space: pre-wrap; }
-                    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-                  }
-                  pre.numberSource code
-                  { counter-reset: source-line 0; }
-                  pre.numberSource code > span
-                  { position: relative; left: -4em; counter-increment: source-line; }
-                  pre.numberSource code > span > a:first-child::before
-                  { content: counter(source-line);
-                    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-                    border: none; display: inline-block;
-                    -webkit-touch-callout: none; -webkit-user-select: none;
-                    -khtml-user-select: none; -moz-user-select: none;
-                    -ms-user-select: none; user-select: none;
-                    padding: 0 4px; width: 4em;
-                    color: #aaaaaa;
-                  }
-                  pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-                    div.sourceCode
-                    {   }
-                    @media screen {
-                      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-                    }
-                    code span.al { color: #ad0000; } /* Alert */
-                        code span.an { color: #5e5e5e; } /* Annotation */
-                            code span.at { color: #20794d; } /* Attribute */
-                                code span.bn { color: #ad0000; } /* BaseN */
-                                    code span.bu { } /* BuiltIn */
-                                    code span.cf { color: #007ba5; } /* ControlFlow */
-                                        code span.ch { color: #20794d; } /* Char */
-                                            code span.cn { color: #8f5902; } /* Constant */
-                                                code span.co { color: #5e5e5e; } /* Comment */
-                                                    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-                                                        code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-                                                            code span.dt { color: #ad0000; } /* DataType */
-                                                                code span.dv { color: #ad0000; } /* DecVal */
-                                                                    code span.er { color: #ad0000; } /* Error */
-                                                                        code span.ex { } /* Extension */
-                                                                        code span.fl { color: #ad0000; } /* Float */
-                                                                            code span.fu { color: #4758ab; } /* Function */
-                                                                                code span.im { } /* Import */
-                                                                                code span.in { color: #5e5e5e; } /* Information */
-                                                                                    code span.kw { color: #007ba5; } /* Keyword */
-                                                                                        code span.op { color: #5e5e5e; } /* Operator */
-                                                                                            code span.ot { color: #007ba5; } /* Other */
-                                                                                                code span.pp { color: #ad0000; } /* Preprocessor */
-                                                                                                    code span.sc { color: #20794d; } /* SpecialChar */
-                                                                                                        code span.ss { color: #20794d; } /* SpecialString */
-                                                                                                            code span.st { color: #20794d; } /* String */
-                                                                                                                code span.va { color: #111111; } /* Variable */
-                                                                                                                    code span.vs { color: #20794d; } /* VerbatimString */
-                                                                                                                        code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-                                                                                                                            </style>
-                                                                                                                            
-                                                                                                                            <!--radix_placeholder_meta_tags-->
-                                                                                                                            <title>CDU data science team blog</title>
-                                                                                                                            
-                                                                                                                            
-                                                                                                                            
-                                                                                                                            
-                                                                                                                            <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-                                                                                                                          <meta property="og:title" content="CDU data science team blog"/>
-                                                                                                                            <meta property="og:type" content="article"/>
-                                                                                                                              <meta property="og:locale" content="en_US"/>
-                                                                                                                                <meta property="og:site_name" content="CDU data science team blog"/>
-                                                                                                                                  
-                                                                                                                                  <!--  https://dev.twitter.com/cards/types/summary -->
-                                                                                                                                  <meta property="twitter:card" content="summary"/>
-                                                                                                                                    <meta property="twitter:title" content="CDU data science team blog"/>
-                                                                                                                                      
-                                                                                                                                      <!--/radix_placeholder_meta_tags-->
-                                                                                                                                      <!--radix_placeholder_rmarkdown_metadata-->
-                                                                                                                                      
-                                                                                                                                      <script type="text/json" id="radix-rmarkdown-metadata">
-                                                                                                                                        {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["CDU data science team blog"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
-                                                                                                                                      </script>
-                                                                                                                                        <!--/radix_placeholder_rmarkdown_metadata-->
-                                                                                                                                        <!--radix_placeholder_navigation_in_header-->
-                                                                                                                                        <meta name="distill:offset" content=""/>
-                                                                                                                                          
-                                                                                                                                          <script type="application/javascript">
-                                                                                                                                            
-                                                                                                                                            window.headroom_prevent_pin = false;
-                                                                                                                                            
-                                                                                                                                            window.document.addEventListener("DOMContentLoaded", function (event) {
-                                                                                                                                              
-                                                                                                                                              // initialize headroom for banner
-                                                                                                                                              var header = $('header').get(0);
-                                                                                                                                              var headerHeight = header.offsetHeight;
-                                                                                                                                              var headroom = new Headroom(header, {
-                                                                                                                                                tolerance: 5,
-                                                                                                                                                onPin : function() {
-                                                                                                                                                  if (window.headroom_prevent_pin) {
-                                                                                                                                                    window.headroom_prevent_pin = false;
-                                                                                                                                                    headroom.unpin();
-                                                                                                                                                  }
-                                                                                                                                                }
-                                                                                                                                              });
-                                                                                                                                              headroom.init();
-                                                                                                                                              if(window.location.hash)
-                                                                                                                                                headroom.unpin();
-                                                                                                                                              $(header).addClass('headroom--transition');
-                                                                                                                                              
-                                                                                                                                              // offset scroll location for banner on hash change
-                                                                                                                                              // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-                                                                                                                                              window.addEventListener("hashchange", function(event) {
-                                                                                                                                                window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-                                                                                                                                              });
-                                                                                                                                              
-                                                                                                                                              // responsive menu
-                                                                                                                                              $('.distill-site-header').each(function(i, val) {
-                                                                                                                                                var topnav = $(this);
-                                                                                                                                                var toggle = topnav.find('.nav-toggle');
-                                                                                                                                                toggle.on('click', function() {
-                                                                                                                                                  topnav.toggleClass('responsive');
-                                                                                                                                                });
-                                                                                                                                              });
-                                                                                                                                              
-                                                                                                                                              // nav dropdowns
-                                                                                                                                              $('.nav-dropbtn').click(function(e) {
-                                                                                                                                                $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-                                                                                                                                                $(this).parent().siblings('.nav-dropdown')
-                                                                                                                                                .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-                                                                                                                                              });
-                                                                                                                                              $("body").click(function(e){
-                                                                                                                                                $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-                                                                                                                                              });
-                                                                                                                                              $(".nav-dropdown").click(function(e){
-                                                                                                                                                e.stopPropagation();
-                                                                                                                                              });
-                                                                                                                                            });
-                                                                                                                                            </script>
-                                                                                                                                              
-                                                                                                                                              <style type="text/css">
-                                                                                                                                                
-                                                                                                                                                /* Theme (user-documented overrideables for nav appearance) */
-                                                                                                                                                
-                                                                                                                                                .distill-site-nav {
-                                                                                                                                                  color: rgba(255, 255, 255, 0.8);
-                                                                                                                                                  background-color: #0F2E3D;
-                                                                                                                                                    font-size: 15px;
-                                                                                                                                                  font-weight: 300;
-                                                                                                                                                }
-                                                                                                                                              
-                                                                                                                                              .distill-site-nav a {
-                                                                                                                                                color: inherit;
-                                                                                                                                                text-decoration: none;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .distill-site-nav a:hover {
-                                                                                                                                                color: white;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              @media print {
-                                                                                                                                                .distill-site-nav {
-                                                                                                                                                  display: none;
-                                                                                                                                                }
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .distill-site-header {
-                                                                                                                                                
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .distill-site-footer {
-                                                                                                                                                
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              
-                                                                                                                                              /* Site Header */
-                                                                                                                                                
-                                                                                                                                                .distill-site-header {
-                                                                                                                                                  width: 100%;
-                                                                                                                                                  box-sizing: border-box;
-                                                                                                                                                  z-index: 3;
-                                                                                                                                                }
-                                                                                                                                              
-                                                                                                                                              .distill-site-header .nav-left {
-                                                                                                                                                display: inline-block;
-                                                                                                                                                margin-left: 8px;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              @media screen and (max-width: 768px) {
-                                                                                                                                                .distill-site-header .nav-left {
-                                                                                                                                                  margin-left: 0;
-                                                                                                                                                }
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              
-                                                                                                                                              .distill-site-header .nav-right {
-                                                                                                                                                float: right;
-                                                                                                                                                margin-right: 8px;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .distill-site-header a,
-                                                                                                                                              .distill-site-header .title {
-                                                                                                                                                display: inline-block;
-                                                                                                                                                text-align: center;
-                                                                                                                                                padding: 14px 10px 14px 10px;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .distill-site-header .title {
-                                                                                                                                                font-size: 18px;
-                                                                                                                                                min-width: 150px;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .distill-site-header .logo {
-                                                                                                                                                padding: 0;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .distill-site-header .logo img {
-                                                                                                                                                display: none;
-                                                                                                                                                max-height: 20px;
-                                                                                                                                                width: auto;
-                                                                                                                                                margin-bottom: -4px;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .distill-site-header .nav-image img {
-                                                                                                                                                max-height: 18px;
-                                                                                                                                                width: auto;
-                                                                                                                                                display: inline-block;
-                                                                                                                                                margin-bottom: -3px;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              
-                                                                                                                                              
-                                                                                                                                              @media screen and (min-width: 1000px) {
-                                                                                                                                                .distill-site-header .logo img {
-                                                                                                                                                  display: inline-block;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header .nav-left {
-                                                                                                                                                  margin-left: 20px;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header .nav-right {
-                                                                                                                                                  margin-right: 20px;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header .title {
-                                                                                                                                                  padding-left: 12px;
-                                                                                                                                                }
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              
-                                                                                                                                              .distill-site-header .nav-toggle {
-                                                                                                                                                display: none;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown {
-                                                                                                                                                display: inline-block;
-                                                                                                                                                position: relative;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown .nav-dropbtn {
-                                                                                                                                                border: none;
-                                                                                                                                                outline: none;
-                                                                                                                                                color: rgba(255, 255, 255, 0.8);
-                                                                                                                                                padding: 16px 10px;
-                                                                                                                                                background-color: transparent;
-                                                                                                                                                font-family: inherit;
-                                                                                                                                                font-size: inherit;
-                                                                                                                                                font-weight: inherit;
-                                                                                                                                                margin: 0;
-                                                                                                                                                margin-top: 1px;
-                                                                                                                                                z-index: 2;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown-content {
-                                                                                                                                                display: none;
-                                                                                                                                                position: absolute;
-                                                                                                                                                background-color: white;
-                                                                                                                                                min-width: 200px;
-                                                                                                                                                border: 1px solid rgba(0,0,0,0.15);
-                                                                                                                                                border-radius: 4px;
-                                                                                                                                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-                                                                                                                                                z-index: 1;
-                                                                                                                                                margin-top: 2px;
-                                                                                                                                                white-space: nowrap;
-                                                                                                                                                padding-top: 4px;
-                                                                                                                                                padding-bottom: 4px;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown-content hr {
-                                                                                                                                                margin-top: 4px;
-                                                                                                                                                margin-bottom: 4px;
-                                                                                                                                                border: none;
-                                                                                                                                                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown-active {
-                                                                                                                                                display: block;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-                                                                                                                                                color: black;
-                                                                                                                                                padding: 6px 24px;
-                                                                                                                                                text-decoration: none;
-                                                                                                                                                display: block;
-                                                                                                                                                text-align: left;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown-content .nav-dropdown-header {
-                                                                                                                                                display: block;
-                                                                                                                                                padding: 5px 24px;
-                                                                                                                                                padding-bottom: 0;
-                                                                                                                                                text-transform: uppercase;
-                                                                                                                                                font-size: 14px;
-                                                                                                                                                color: #999999;
-                                                                                                                                                  white-space: nowrap;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown:hover .nav-dropbtn {
-                                                                                                                                                color: white;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-dropdown-content a:hover {
-                                                                                                                                                background-color: #ddd;
-                                                                                                                                                  color: black;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .nav-right .nav-dropdown-content {
-                                                                                                                                                margin-left: -45%;
-                                                                                                                                                right: 0;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              @media screen and (max-width: 768px) {
-                                                                                                                                                .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-                                                                                                                                                .distill-site-header a.nav-toggle {
-                                                                                                                                                  float: right;
-                                                                                                                                                  display: block;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header .title {
-                                                                                                                                                  margin-left: 0;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header .nav-right {
-                                                                                                                                                  margin-right: 0;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header {
-                                                                                                                                                  overflow: hidden;
-                                                                                                                                                }
-                                                                                                                                                .nav-right .nav-dropdown-content {
-                                                                                                                                                  margin-left: 0;
-                                                                                                                                                }
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              
-                                                                                                                                              @media screen and (max-width: 768px) {
-                                                                                                                                                .distill-site-header.responsive {position: relative; min-height: 500px; }
-                                                                                                                                                .distill-site-header.responsive a.nav-toggle {
-                                                                                                                                                  position: absolute;
-                                                                                                                                                  right: 0;
-                                                                                                                                                  top: 0;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header.responsive a,
-                                                                                                                                                .distill-site-header.responsive .nav-dropdown {
-                                                                                                                                                  display: block;
-                                                                                                                                                  text-align: left;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header.responsive .nav-left,
-                                                                                                                                                .distill-site-header.responsive .nav-right {
-                                                                                                                                                  width: 100%;
-                                                                                                                                                }
-                                                                                                                                                .distill-site-header.responsive .nav-dropdown {float: none;}
-                                                                                                                                                .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-                                                                                                                                                .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-                                                                                                                                                  display: block;
-                                                                                                                                                  width: 100%;
-                                                                                                                                                  text-align: left;
-                                                                                                                                                }
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              /* Site Footer */
-                                                                                                                                                
-                                                                                                                                                .distill-site-footer {
-                                                                                                                                                  width: 100%;
-                                                                                                                                                  overflow: hidden;
-                                                                                                                                                  box-sizing: border-box;
-                                                                                                                                                  z-index: 3;
-                                                                                                                                                  margin-top: 30px;
-                                                                                                                                                  padding-top: 30px;
-                                                                                                                                                  padding-bottom: 30px;
-                                                                                                                                                  text-align: center;
-                                                                                                                                                }
-                                                                                                                                              
-                                                                                                                                              /* Headroom */
-                                                                                                                                                
-                                                                                                                                                d-title {
-                                                                                                                                                  padding-top: 6rem;
-                                                                                                                                                }
-                                                                                                                                              
-                                                                                                                                              @media print {
-                                                                                                                                                d-title {
-                                                                                                                                                  padding-top: 4rem;
-                                                                                                                                                }
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .headroom {
-                                                                                                                                                z-index: 1000;
-                                                                                                                                                position: fixed;
-                                                                                                                                                top: 0;
-                                                                                                                                                left: 0;
-                                                                                                                                                right: 0;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .headroom--transition {
-                                                                                                                                                transition: all .4s ease-in-out;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .headroom--unpinned {
-                                                                                                                                                top: -100px;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              .headroom--pinned {
-                                                                                                                                                top: 0;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              /* adjust viewport for navbar height */
-                                                                                                                                                /* helps vertically center bootstrap (non-distill) content */
-                                                                                                                                                .min-vh-100 {
-                                                                                                                                                  min-height: calc(100vh - 100px) !important;
-                                                                                                                                                }
-                                                                                                                                              
-                                                                                                                                              </style>
-                                                                                                                                                
-                                                                                                                                                <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-                                                                                                                                                <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-                                                                                                                                                <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-                                                                                                                                                <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-                                                                                                                                                <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-                                                                                                                                                <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-                                                                                                                                                
-                                                                                                                                                <script type="application/javascript">
-                                                                                                                                                
-                                                                                                                                                function getMeta(metaName) {
-                                                                                                                                                  var metas = document.getElementsByTagName('meta');
-                                                                                                                                                  for (let i = 0; i < metas.length; i++) {
-                                                                                                                                                    if (metas[i].getAttribute('name') === metaName) {
-                                                                                                                                                      return metas[i].getAttribute('content');
-                                                                                                                                                    }
-                                                                                                                                                  }
-                                                                                                                                                  return '';
-                                                                                                                                                }
-                                                                                                                                              
-                                                                                                                                              function offsetURL(url) {
-                                                                                                                                                var offset = getMeta('distill:offset');
-                                                                                                                                                return offset ? offset + '/' + url : url;
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              function createFuseIndex() {
-                                                                                                                                                
-                                                                                                                                                // create fuse index
-                                                                                                                                                var options = {
-                                                                                                                                                  keys: [
-                                                                                                                                                    { name: 'title', weight: 20 },
-                                                                                                                                                    { name: 'categories', weight: 15 },
-                                                                                                                                                    { name: 'description', weight: 10 },
-                                                                                                                                                    { name: 'contents', weight: 5 },
-                                                                                                                                                  ],
-                                                                                                                                                  ignoreLocation: true,
-                                                                                                                                                  threshold: 0
-                                                                                                                                                };
-                                                                                                                                                var fuse = new window.Fuse([], options);
-                                                                                                                                                
-                                                                                                                                                // fetch the main search.json
-                                                                                                                                                return fetch(offsetURL('search.json'))
-                                                                                                                                                .then(function(response) {
-                                                                                                                                                  if (response.status == 200) {
-                                                                                                                                                    return response.json().then(function(json) {
-                                                                                                                                                      // index main articles
-                                                                                                                                                      json.articles.forEach(function(article) {
-                                                                                                                                                        fuse.add(article);
-                                                                                                                                                      });
-                                                                                                                                                      // download collections and index their articles
-                                                                                                                                                      return Promise.all(json.collections.map(function(collection) {
-                                                                                                                                                        return fetch(offsetURL(collection)).then(function(response) {
-                                                                                                                                                          if (response.status === 200) {
-                                                                                                                                                            return response.json().then(function(articles) {
-                                                                                                                                                              articles.forEach(function(article) {
-                                                                                                                                                                fuse.add(article);
-                                                                                                                                                              });
-                                                                                                                                                            })
-                                                                                                                                                          } else {
-                                                                                                                                                            return Promise.reject(
-                                                                                                                                                              new Error('Unexpected status from search index request: ' +
-                                                                                                                                                                          response.status)
-                                                                                                                                                            );
-                                                                                                                                                          }
-                                                                                                                                                        });
-                                                                                                                                                      })).then(function() {
-                                                                                                                                                        return fuse;
-                                                                                                                                                      });
-                                                                                                                                                    });
-                                                                                                                                                    
-                                                                                                                                                  } else {
-                                                                                                                                                    return Promise.reject(
-                                                                                                                                                      new Error('Unexpected status from search index request: ' +
-                                                                                                                                                                  response.status)
-                                                                                                                                                    );
-                                                                                                                                                  }
-                                                                                                                                                });
-                                                                                                                                              }
-                                                                                                                                              
-                                                                                                                                              window.document.addEventListener("DOMContentLoaded", function (event) {
-                                                                                                                                                
-                                                                                                                                                // get search element (bail if we don't have one)
+              });
+            })).then(function() {
+              return fuse;
+            });
+          });
+
+        } else {
+          return Promise.reject(
+            new Error('Unexpected status from search index request: ' +
+                        response.status)
+          );
+        }
+      });
+  }
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // get search element (bail if we don't have one)
     var searchEl = window.document.getElementById('distill-search');
     if (!searchEl)
       return;
@@ -1681,28 +1681,28 @@
     // create front matter
     var front_matter = $('<d-front-matter></d-front-matter>');
     $('#distill-front-matter').wrap(front_matter);
-  
-  // create d-title
-  $('.d-title').changeElementType('d-title');
-  
-  // create d-byline
-  var byline = $('<d-byline></d-byline>');
-  $('.d-byline').replaceWith(byline);
-  
-  // create d-article
-  var article = $('<d-article></d-article>');
-  $('.d-article').wrap(article).children().unwrap();
-  
-  // move posts container into article
-  $('.posts-container').appendTo($('d-article'));
-  
-  // create d-appendix
-  $('.d-appendix').changeElementType('d-appendix');
-  
-  // flag indicating that we have appendix items
-  var appendix = $('.appendix-bottom').children('h3').length > 0;
-  
-  // replace footnotes with <d-footnote>
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
     $('.footnote-ref').each(function(i, val) {
       appendix = true;
       var href = $(this).attr('href');
@@ -1715,194 +1715,194 @@
       dtfn.html(text);
       $(this).replaceWith(dtfn);
     });
-  // remove footnotes
-  $('.footnotes').remove();
-  
-  // move refs into #references-listing
-  $('#references-listing').replaceWith($('#refs'));
-  
-  $('h1.appendix, h2.appendix').each(function(i, val) {
-    $(this).changeElementType('h3');
-  });
-  $('h3.appendix').each(function(i, val) {
-    var id = $(this).attr('id');
-    $('.d-contents a[href="#' + id + '"]').parent().remove();
-    appendix = true;
-    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
-  });
-  
-  // show d-appendix if we have appendix content
-  $("d-appendix").css('display', appendix ? 'grid' : 'none');
-  
-  // localize layout chunks to just output
-  $('.layout-chunk').each(function(i, val) {
-    
-    // capture layout
-    var layout = $(this).attr('data-layout');
-    
-    // apply layout to markdown level block elements
-    var elements = $(this).children().not('details, div.sourceCode, pre, script');
-    elements.each(function(i, el) {
-      var layout_div = $('<div class="' + layout + '"></div>');
-      if (layout_div.hasClass('shaded')) {
-        var shaded_content = $('<div class="shaded-content"></div>');
-        $(this).wrap(shaded_content);
-        $(this).parent().wrap(layout_div);
-      } else {
-        $(this).wrap(layout_div);
-      }
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
     });
-    
-    
-    // unwrap the layout-chunk div
-    $(this).children().unwrap();
-  });
-  
-  // remove code block used to force  highlighting css
-  $('.distill-force-highlighting-css').parent().remove();
-  
-  // remove empty line numbers inserted by pandoc when using a
-  // custom syntax highlighting theme
-  $('code.sourceCode a:empty').remove();
-  
-  // load distill framework
-  load_distill_framework();
-  
-  // wait for window.distillRunlevel == 4 to do post processing
-  function distill_post_process() {
-    
-    if (!window.distillRunlevel || window.distillRunlevel < 4)
-      return;
-    
-    // hide author/affiliations entirely if we have no authors
-    var front_matter = JSON.parse($("#distill-front-matter").html());
-    var have_authors = front_matter.authors && front_matter.authors.length > 0;
-    if (!have_authors)
-      $('d-byline').addClass('hidden');
-    
-    // article with toc class
-    $('.d-contents').parent().addClass('d-article-with-toc');
-    
-    // strip links that point to #
-    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
-    
-    // add orcid ids
-    $('.authors-affiliations').find('.author').each(function(i, el) {
-      var orcid_id = front_matter.authors[i].orcidID;
-      if (orcid_id) {
-        var a = $('<a></a>');
-        a.attr('href', 'https://orcid.org/' + orcid_id);
-        var img = $('<img></img>');
-        img.addClass('orcid-id');
-        img.attr('alt', 'ORCID ID');
-        img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
-        a.append(img);
-        $(this).append(a);
-      }
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
     });
-    
-    // hide elements of author/affiliations grid that have no value
-    function hide_byline_column(caption) {
-      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
-    }
-    
-    // affiliations
-    var have_affiliations = false;
-    for (var i = 0; i<front_matter.authors.length; ++i) {
-      var author = front_matter.authors[i];
-      if (author.affiliation !== "&nbsp;") {
-        have_affiliations = true;
-        break;
-      }
-    }
-    if (!have_affiliations)
-      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
-    
-    // published date
-    if (!front_matter.publishedDate)
-      hide_byline_column("Published");
-    
-    // document object identifier
-    var doi = $('d-byline').find('h3:contains("DOI")');
-    var doi_p = doi.next().empty();
-    if (!front_matter.doi) {
-      // if we have a citation and valid citationText then link to that
-      if ($('#citation').length > 0 && front_matter.citationText) {
-        doi.html('Citation');
-        $('<a href="#citation"></a>')
-        .text(front_matter.citationText)
-        .appendTo(doi_p);
-      } else {
-        hide_byline_column("DOI");
-      }
-    } else {
-      $('<a></a>')
-      .attr('href', "https://doi.org/" + front_matter.doi)
-      .html(front_matter.doi)
-      .appendTo(doi_p);
-    }
-    
-    // change plural form of authors/affiliations
-    if (front_matter.authors.length === 1) {
-      var grid = $('.authors-affiliations');
-      grid.children('h3:contains("Authors")').text('Author');
-      grid.children('h3:contains("Affiliations")').text('Affiliation');
-    }
-    
-    // remove d-appendix and d-footnote-list local styles
-    $('d-appendix > style:first-child').remove();
-    $('d-footnote-list > style:first-child').remove();
-    
-    // move appendix-bottom entries to the bottom
-    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
-    $('.appendix-bottom').remove();
-    
-    // hoverable references
-    $('span.citation[data-cites]').each(function() {
-      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
-      window.tippy(this, {
-        allowHTML: true,
-        content: refHtml,
-        maxWidth: 500,
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'light-border',
-        placement: 'bottom-start'
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
       });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
     });
-    
-    // clear polling timer
-    clearInterval(tid);
-    
-    // show body now that everything is ready
-    on_load_complete();
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
   }
-  
-  var tid = setInterval(distill_post_process, 50);
-  distill_post_process();
-  
-                                                                                                        }
-  
+
   function init_downlevel() {
-    
+
     init_common();
-    
-    // insert hr after d-title
+
+     // insert hr after d-title
     $('.d-title').after($('<hr class="section-separator"/>'));
-    
+
     // check if we have authors
     var front_matter = JSON.parse($("#distill-front-matter").html());
     var have_authors = front_matter.authors && front_matter.authors.length > 0;
-    
+
     // manage byline/border
     if (!have_authors)
       $('.d-byline').remove();
     $('.d-byline').after($('<hr class="section-separator"/>'));
     $('.d-byline a').remove();
-    
+
     // remove toc
     $('.d-contents').remove();
-    
+
     // move appendix elements
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
@@ -1910,21 +1910,21 @@
     $('h3.appendix').each(function(i, val) {
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
     });
-    
-    
+
+
     // inject headers into references and footnotes
     var refs_header = $('<h3></h3>');
     refs_header.text('References');
     $('#refs').prepend(refs_header);
-    
+
     var footnotes_header = $('<h3></h3');
     footnotes_header.text('Footnotes');
     $('.footnotes').children('hr').first().replaceWith(footnotes_header);
-    
+
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
-    
+
     // remove appendix if it's empty
     if ($('.d-appendix').children().length === 0)
       $('.d-appendix').remove();
@@ -2010,423 +2010,448 @@
     $('.disqus-comment-count').click(function() {
       window.headroom_prevent_pin = true;
       $('#disqus_thread').toggleClass('hidden');
-    if (!$('#disqus_thread').hasClass('hidden')) {
-      var offset = $(this).offset();
-      $(window).resize();
-      $('html, body').animate({
-        scrollTop: offset.top - 35
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body class="layout-listing">
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"CDU data science team blog","authors":[]}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">CDU data science team blog</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="uyd.html">Understanding Your Data</a>
+<a href="https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1">Roadmap</a>
+<a href="https://github.com/CDU-data-science-team">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
+<a href="https://twitter.com/DataScienceNott">
+<i class="fab fa-twitter" aria-hidden="true"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+<!--radix_placeholder_article_listing-->
+
+
+<script type="application/javascript">
+
+function init_posts_list() {
+
+  function load_image(img) {
+    var src = $(img).attr('data-src');
+    if (src) {
+      $(img).attr('src', src);
+      $(img).load(function() {
+        img.removeAttribute('data-src');
       });
     }
+  }
+
+  function set_posts_visible(posts, visible) {
+    if (visible) {
+
+      // show bottom border by default
+      $(posts).removeClass('post-preview-last');
+
+      // apply limits if need be
+      var max_posts = 25;
+      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
+      if (apply_limits && posts.length > max_posts) {
+        posts = $(posts).slice(0, max_posts);
+      } else {
+        $('.posts-more a').addClass('hidden');
+      }
+
+      // apply last style
+      $(posts.slice(-1)[0]).addClass('post-preview-last');
+
+      $(posts).removeClass('hidden');
+      $(posts).find('img[data-src]').each(function(i, img) {
+        load_image(img);
+      });
+    } else {
+      $(posts).addClass('hidden');
+    }
+  }
+
+  function apply_hash_filter() {
+
+    // clear active state
+    $('.categories .active').removeClass('active');
+
+    // mark all posts invisible to start
+    set_posts_visible($('.posts-list').children('a'), false);
+
+    // if we have a hash filter
+    if (window.location.hash && window.location.hash.startsWith("#category:")) {
+
+      // mark posts that match the category visible
+      var page_category = window.location.hash.replace(/^#category:/, "");
+      var posts = $('.post-metadata').map(function(idx, script) {
+        var metadata = $.parseJSON($(script).html());
+        var post = null;
+        $.each(metadata.categories, function(idx, category) {
+          category = category.replace(/ /g,"_");
+          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
+            post = $(script).parent().get();
+            return false;
+          }
+        });
+        return post;
+      });
+      set_posts_visible(posts, true);
+
+      // mark the hash active
+      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
+
+      // update the list_caption
+      var list_caption = $('.posts-list-caption');
+      var caption = (page_category || '').toLowerCase() === "articles"
+        ? list_caption.attr('data-caption')
+        : ('Category: ' + page_category.replace(/_/g," "));
+      list_caption.text(caption);
+
+    } else {
+
+      // no hash filter, make all posts visible (subject to max display)
+      set_posts_visible($('.posts-list').children(), true);
+
+      // reset list caption
+      var list_caption = $('.posts-list-caption');
+      list_caption.text(list_caption.attr('data-caption'));
+
+
+    }
+  }
+
+  // more articles
+  function apply_post_limits(apply) {
+    if (apply) {
+      $('.posts-container').addClass('posts-apply-limit');
+      $('.posts-more a').removeClass('hidden');
+    } else {
+      $('.posts-container').removeClass('posts-apply-limit');
+      $('.posts-more a').addClass('hidden');
+    }
+  }
+
+  // click handling for tags
+  $('.dt-tag').click(function(ev) {
+    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
+    return false;
+  })
+
+  // hash filter handling
+  apply_hash_filter();
+  $(window).on('hashchange',function() {
+    apply_post_limits(true);
+    apply_hash_filter();
   });
-                                                                                                }
-                                                                                                                      
-                                                                                                                      document.addEventListener('DOMContentLoaded', function() {
-                                                                                                                        if (is_downlevel_browser())
-                                                                                                                          init_downlevel();
-                                                                                                                        else
-                                                                                                                          window.addEventListener('WebComponentsReady', init_distill);
-                                                                                                                      });
-                                                                                                                      
-                                                                                                                      </script>
-                                                                                                                        
-                                                                                                                        <!--/radix_placeholder_distill-->
-                                                                                                                        <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-                                                                                                                        <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-                                                                                                                        <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-                                                                                                                        <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-                                                                                                                        <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-                                                                                                                        <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-                                                                                                                        <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-                                                                                                                        <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-                                                                                                                        <script src="site_libs/distill-2.2.21/template.v2.js"></script>
-                                                                                                                        <!--radix_placeholder_site_in_header-->
-                                                                                                                        <!--/radix_placeholder_site_in_header-->
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        </head>
-                                                                                                                        
-                                                                                                                        <body class="layout-listing">
-                                                                                                                        
-                                                                                                                        <!--radix_placeholder_front_matter-->
-                                                                                                                        
-                                                                                                                        <script id="distill-front-matter" type="text/json">
-                                                                                                                        {"title":"CDU data science team blog","authors":[]}
-                                                                                                                      </script>
-                                                                                                                        
-                                                                                                                        <!--/radix_placeholder_front_matter-->
-                                                                                                                        <!--radix_placeholder_navigation_before_body-->
-                                                                                                                        <header class="header header--fixed" role="banner">
-                                                                                                                        <nav class="distill-site-nav distill-site-header">
-                                                                                                                        <div class="nav-left">
-                                                                                                                        <a href="index.html" class="title">CDU data science team blog</a>
-                                                                                                                        <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-                                                                                                                        </div>
-                                                                                                                        <div class="nav-right">
-                                                                                                                        <a href="index.html">Home</a>
-                                                                                                                        <a href="about.html">About</a>
-                                                                                                                        <a href="uyd.html">Understanding Your Data</a>
-                                                                                                                        <a href="https://cdu-data-science-team.github.io/presentations/roadmap/roadmap.html#1">Roadmap</a>
-                                                                                                                        <a href="https://github.com/CDU-data-science-team">
-                                                                                                                        <i class="fab fa-github" aria-hidden="true"></i>
-                                                                                                                        </a>
-                                                                                                                        <a href="https://twitter.com/DataScienceNott">
-                                                                                                                        <i class="fab fa-twitter" aria-hidden="true"></i>
-                                                                                                                        </a>
-                                                                                                                        <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-                                                                                                                        </div>
-                                                                                                                        </nav>
-                                                                                                                        </header>
-                                                                                                                        <!--/radix_placeholder_navigation_before_body-->
-                                                                                                                        <!--radix_placeholder_site_before_body-->
-                                                                                                                        <!--/radix_placeholder_site_before_body-->
-                                                                                                                        <!--radix_placeholder_article_listing-->
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        <script type="application/javascript">
-                                                                                                                        
-                                                                                                                        function init_posts_list() {
-                                                                                                                          
-                                                                                                                          function load_image(img) {
-                                                                                                                            var src = $(img).attr('data-src');
-                                                                                                                            if (src) {
-                                                                                                                              $(img).attr('src', src);
-                                                                                                                              $(img).load(function() {
-                                                                                                                                img.removeAttribute('data-src');
-                                                                                                                              });
-                                                                                                                            }
-                                                                                                                          }
-                                                                                                                          
-                                                                                                                          function set_posts_visible(posts, visible) {
-                                                                                                                            if (visible) {
-                                                                                                                              
-                                                                                                                              // show bottom border by default
-                                                                                                                              $(posts).removeClass('post-preview-last');
-                                                                                                                              
-                                                                                                                              // apply limits if need be
-                                                                                                                              var max_posts = 25;
-                                                                                                                              var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-                                                                                                                              if (apply_limits && posts.length > max_posts) {
-                                                                                                                                posts = $(posts).slice(0, max_posts);
-                                                                                                                              } else {
-                                                                                                                                $('.posts-more a').addClass('hidden');
-                                                                                                                              }
-                                                                                                                              
-                                                                                                                              // apply last style
-                                                                                                                              $(posts.slice(-1)[0]).addClass('post-preview-last');
-                                                                                                                              
-                                                                                                                              $(posts).removeClass('hidden');
-                                                                                                                              $(posts).find('img[data-src]').each(function(i, img) {
-                                                                                                                                load_image(img);
-                                                                                                                              });
-                                                                                                                            } else {
-                                                                                                                              $(posts).addClass('hidden');
-                                                                                                                            }
-                                                                                                                          }
-                                                                                                                          
-                                                                                                                          function apply_hash_filter() {
-                                                                                                                            
-                                                                                                                            // clear active state
-                                                                                                                            $('.categories .active').removeClass('active');
-                                                                                                                            
-                                                                                                                            // mark all posts invisible to start
-                                                                                                                            set_posts_visible($('.posts-list').children('a'), false);
-                                                                                                                            
-                                                                                                                            // if we have a hash filter
-                                                                                                                            if (window.location.hash && window.location.hash.startsWith("#category:")) {
-                                                                                                                              
-                                                                                                                              // mark posts that match the category visible
-                                                                                                                              var page_category = window.location.hash.replace(/^#category:/, "");
-                                                                                                                                                                                 var posts = $('.post-metadata').map(function(idx, script) {
-                                                                                                                                                                                   var metadata = $.parseJSON($(script).html());
-                                                                                                                                                                                   var post = null;
-                                                                                                                                                                                   $.each(metadata.categories, function(idx, category) {
-                                                                                                                                                                                     category = category.replace(/ /g,"_");
-                                                                                                                                                                                     if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-                                                                                                                                                                                       post = $(script).parent().get();
-                                                                                                                                                                                       return false;
-                                                                                                                                                                                     }
-                                                                                                                                                                                   });
-                                                                                                                                                                                   return post;
-                                                                                                                                                                                 });
-                                                                                                                                                                               set_posts_visible(posts, true);
-                                                                                                                                                                               
-                                                                                                                                                                               // mark the hash active
-                                                                                                                                                                               $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-                                                                                                                                                                               
-                                                                                                                                                                               // update the list_caption
-                                                                                                                                                                               var list_caption = $('.posts-list-caption');
-                                                                                                                                                                               var caption = (page_category || '').toLowerCase() === "articles"
-                                                                                                                                                                               ? list_caption.attr('data-caption')
-                                                                                                                                                                               : ('Category: ' + page_category.replace(/_/g," "));
-                                                                                                                                                                               list_caption.text(caption);
-                                                                                                                                                                               
-                                                                                                            } else {
-                                                                                                              
-                                                                                                              // no hash filter, make all posts visible (subject to max display)
-                                                                                                              set_posts_visible($('.posts-list').children(), true);
-                                                                                                              
-                                                                                                              // reset list caption
-                                                                                                              var list_caption = $('.posts-list-caption');
-                                                                                                              list_caption.text(list_caption.attr('data-caption'));
-                                                                                                              
-                                                                                                              
-                                                                                                            }
-                                                                                                                            }
-                                                                                                                          
-                                                                                                                          // more articles
-                                                                                                                          function apply_post_limits(apply) {
-                                                                                                                            if (apply) {
-                                                                                                                              $('.posts-container').addClass('posts-apply-limit');
-                                                                                                                              $('.posts-more a').removeClass('hidden');
-                                                                                                                            } else {
-                                                                                                                              $('.posts-container').removeClass('posts-apply-limit');
-                                                                                                                              $('.posts-more a').addClass('hidden');
-                                                                                                                            }
-                                                                                                                          }
-                                                                                                                          
-                                                                                                                          // click handling for tags
-                                                                                                                          $('.dt-tag').click(function(ev) {
-                                                                                                                            window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-                                                                                                                            return false;
-                                                                                                                          })
-                                                                                                                          
-                                                                                                                          // hash filter handling
-                                                                                                                          apply_hash_filter();
-                                                                                                                          $(window).on('hashchange',function() {
-                                                                                                                            apply_post_limits(true);
-                                                                                                                            apply_hash_filter();
-                                                                                                                          });
-                                                                                                                          
-                                                                                                                          // more articles link
-                                                                                                                          $('.posts-more a').click(function(e) {
-                                                                                                                            e.preventDefault();
-                                                                                                                            apply_post_limits(false);
-                                                                                                                            apply_hash_filter();
-                                                                                                                            return false;
-                                                                                                                          });
-                                                                                                                          
-                                                                                                                          }
-                                                                                                                      
-                                                                                                                      </script>
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-                                                                                                                        <div class="posts-list">
-                                                                                                                        <h1 class="posts-list-caption" data-caption="CDU data science team blog">CDU data science team blog</h1>
-                                                                                                                        <a href="posts/2021-06-10-making-an-rstudio-presentation-template/" class="post-preview">
-                                                                                                                        <script class="post-metadata" type="text/json">{"categories":["Open source","RStudio","Presentations"]}</script>
-                                                                                                                        <div class="metadata">
-                                                                                                                        <div class="publishedDate">June 9, 2021</div>
-                                                                                                                        <div class="dt-authors">
-                                                                                                                        <div class="dt-author">Zoë Turner</div>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="thumbnail"></div>
-                                                                                                                        <div class="description">
-                                                                                                                        <h2>Making an RStudio presentation template</h2>
-                                                                                                                        <div class="dt-tags">
-                                                                                                                        <div class="dt-tag">Open source</div>
-                                                                                                                        <div class="dt-tag">RStudio</div>
-                                                                                                                        <div class="dt-tag">Presentations</div>
-                                                                                                                        </div>
-                                                                                                                        <p>One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.</p>
-                                                                                                                        </div>
-                                                                                                                        </a>
-                                                                                                                        <a href="posts/2021-05-14-index-of-multiple-deprivation/" class="post-preview">
-                                                                                                                        <script class="post-metadata" type="text/json">{"categories":["Resources"]}</script>
-                                                                                                                        <div class="metadata">
-                                                                                                                        <div class="publishedDate">May 14, 2021</div>
-                                                                                                                        <div class="dt-authors">
-                                                                                                                        <div class="dt-author">Zoë Turner</div>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="thumbnail">
-                                                                                                                        <img/>
-                                                                                                                        </div>
-                                                                                                                        <div class="description">
-                                                                                                                        <h2>Index of Multiple Deprivation</h2>
-                                                                                                                        <div class="dt-tags">
-                                                                                                                        <div class="dt-tag">Resources</div>
-                                                                                                                        </div>
-                                                                                                                        <p>The measure of relative deprivation in small areas in England called lower-layer super output areas</p>
-                                                                                                                        </div>
-                                                                                                                        </a>
-                                                                                                                        <a href="posts/2021-05-14-mapping/" class="post-preview">
-                                                                                                                        <script class="post-metadata" type="text/json">{"categories":["Resources"]}</script>
-                                                                                                                        <div class="metadata">
-                                                                                                                        <div class="publishedDate">May 14, 2021</div>
-                                                                                                                        <div class="dt-authors">
-                                                                                                                        <div class="dt-author">Zoë Turner</div>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="thumbnail">
-                                                                                                                        <img/>
-                                                                                                                        </div>
-                                                                                                                        <div class="description">
-                                                                                                                        <h2>Mapping</h2>
-                                                                                                                        <div class="dt-tags">
-                                                                                                                        <div class="dt-tag">Resources</div>
-                                                                                                                        </div>
-                                                                                                                        <p>Mapping using public health tools</p>
-                                                                                                                        </div>
-                                                                                                                        </a>
-                                                                                                                        <a href="posts/2021-02-27-working-in-the-open/" class="post-preview">
-                                                                                                                        <script class="post-metadata" type="text/json">{"categories":["Open source"]}</script>
-                                                                                                                        <div class="metadata">
-                                                                                                                        <div class="publishedDate">Feb. 27, 2021</div>
-                                                                                                                        <div class="dt-authors">
-                                                                                                                        <div class="dt-author">Zoë Turner</div>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="thumbnail">
-                                                                                                                        <img src="posts/2021-02-27-working-in-the-open/img/chris-beeley-tweet.PNG"/>
-                                                                                                                        </div>
-                                                                                                                        <div class="description">
-                                                                                                                        <h2>Working in the open</h2>
-                                                                                                                        <div class="dt-tags">
-                                                                                                                        <div class="dt-tag">Open source</div>
-                                                                                                                        </div>
-                                                                                                                        <p>What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?</p>
-                                                                                                                        </div>
-                                                                                                                        </a>
-                                                                                                                        <a href="posts/2021-01-20-a-new-github-release-and-future-projects/" class="post-preview">
-                                                                                                                        <script class="post-metadata" type="text/json">{"categories":["Open source"]}</script>
-                                                                                                                        <div class="metadata">
-                                                                                                                        <div class="publishedDate">Jan. 20, 2021</div>
-                                                                                                                        <div class="dt-authors">
-                                                                                                                        <div class="dt-author">Chris Beeley</div>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="thumbnail">
-                                                                                                                        <img/>
-                                                                                                                        </div>
-                                                                                                                        <div class="description">
-                                                                                                                        <h2>A new GitHub release and future projects</h2>
-                                                                                                                        <div class="dt-tags">
-                                                                                                                        <div class="dt-tag">Open source</div>
-                                                                                                                        </div>
-                                                                                                                        <p>We have a new project out and would like to tell you about some more of our future work.</p>
-                                                                                                                        </div>
-                                                                                                                        </a>
-                                                                                                                        <a href="posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/" class="post-preview">
-                                                                                                                        <script class="post-metadata" type="text/json">{"categories":["Data clinics"]}</script>
-                                                                                                                        <div class="metadata">
-                                                                                                                        <div class="publishedDate">Jan. 13, 2021</div>
-                                                                                                                        <div class="dt-authors">
-                                                                                                                        <div class="dt-author">Lori Edwards Suárez</div>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="thumbnail">
-                                                                                                                        <img/>
-                                                                                                                        </div>
-                                                                                                                        <div class="description">
-                                                                                                                        <h2>Data clinics in Nottinghamshire Healthcare</h2>
-                                                                                                                        <div class="dt-tags">
-                                                                                                                        <div class="dt-tag">Data clinics</div>
-                                                                                                                        </div>
-                                                                                                                        <p>We have been working with teams to help them with their data problems. This post describes some of the clinics and what has come about as a result of this work.</p>
-                                                                                                                        </div>
-                                                                                                                        </a>
-                                                                                                                        <a href="posts/2020-12-14-classification-of-patient-feedback/" class="post-preview">
-                                                                                                                        <script class="post-metadata" type="text/json">{"categories":["Patient feedback"]}</script>
-                                                                                                                        <div class="metadata">
-                                                                                                                        <div class="publishedDate">Nov. 14, 2020</div>
-                                                                                                                        <div class="dt-authors">
-                                                                                                                        <div class="dt-author">Andreas Soteriades</div>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="thumbnail">
-                                                                                                                        <img/>
-                                                                                                                        </div>
-                                                                                                                        <div class="description">
-                                                                                                                        <h2>Classification of patient feedback</h2>
-                                                                                                                        <div class="dt-tags">
-                                                                                                                        <div class="dt-tag">Patient feedback</div>
-                                                                                                                        </div>
-                                                                                                                        <p>An NHSE funded project to devise an application to automatically tag the content of patient feedback</p>
-                                                                                                                        </div>
-                                                                                                                        </a>
-                                                                                                                        </div>
-                                                                                                                        <div class="posts-sidebar">
-                                                                                                                        <div class="sidebar-section categories">
-                                                                                                                        <h3>Categories</h3>
-                                                                                                                        <ul>
-                                                                                                                        <li>
-                                                                                                                        <a href="#category:Articles">Articles</a>
-                                                                                                                        <span class="category-count">(7)</span>
-                                                                                                                        </li>
-                                                                                                                        <li>
-                                                                                                                        <a href="#category:Data_clinics">Data clinics</a>
-                                                                                                                        <span class="category-count">(1)</span>
-                                                                                                                        </li>
-                                                                                                                        <li>
-                                                                                                                        <a href="#category:Open_source">Open source</a>
-                                                                                                                        <span class="category-count">(3)</span>
-                                                                                                                        </li>
-                                                                                                                        <li>
-                                                                                                                        <a href="#category:Patient_feedback">Patient feedback</a>
-                                                                                                                        <span class="category-count">(1)</span>
-                                                                                                                        </li>
-                                                                                                                        <li>
-                                                                                                                        <a href="#category:Presentations">Presentations</a>
-                                                                                                                        <span class="category-count">(1)</span>
-                                                                                                                        </li>
-                                                                                                                        <li>
-                                                                                                                        <a href="#category:Resources">Resources</a>
-                                                                                                                        <span class="category-count">(2)</span>
-                                                                                                                        </li>
-                                                                                                                        <li>
-                                                                                                                        <a href="#category:RStudio">RStudio</a>
-                                                                                                                        <span class="category-count">(1)</span>
-                                                                                                                        </li>
-                                                                                                                        </ul>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="posts-more">
-                                                                                                                        <a href="#">More articles &raquo;</a>
-                                                                                                                        </div>
-                                                                                                                        </div>
-                                                                                                                        <!--/radix_placeholder_article_listing-->
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        <div class="d-title">
-                                                                                                                        <h1>CDU data science team blog</h1>
-                                                                                                                        <!--radix_placeholder_categories-->
-                                                                                                                        <!--/radix_placeholder_categories-->
-                                                                                                                        
-                                                                                                                        </div>
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        <div class="d-article">
-                                                                                                                        <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-                                                                                                                        <!--radix_placeholder_article_footer-->
-                                                                                                                        <!--/radix_placeholder_article_footer-->
-                                                                                                                        </div>
-                                                                                                                        
-                                                                                                                        <div class="d-appendix">
-                                                                                                                        </div>
-                                                                                                                        
-                                                                                                                        
-                                                                                                                        <!--radix_placeholder_site_after_body-->
-                                                                                                                        <!--/radix_placeholder_site_after_body-->
-                                                                                                                        <!--radix_placeholder_appendices-->
-                                                                                                                        <div class="appendix-bottom">
-                                                                                                                        <h3 id="updates-and-corrections">Corrections</h3>
-                                                                                                                        <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/CDU-data-science-team/team-blog/issues/new">create an issue</a> on the source repository.</p>
-                                                                                                                        </div>
-                                                                                                                        <!--/radix_placeholder_appendices-->
-                                                                                                                        <!--radix_placeholder_navigation_after_body-->
-                                                                                                                        <!--/radix_placeholder_navigation_after_body-->
-                                                                                                                        
-                                                                                                                        </body>
-                                                                                                                        
-                                                                                                                        </html>
-                                                                                                                       
+
+  // more articles link
+  $('.posts-more a').click(function(e) {
+    e.preventDefault();
+    apply_post_limits(false);
+    apply_hash_filter();
+    return false;
+  });
+
+}
+
+</script>
+
+
+
+<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
+<div class="posts-list">
+<h1 class="posts-list-caption" data-caption="CDU data science team blog">CDU data science team blog</h1>
+<a href="posts/2021-06-10-making-an-rstudio-presentation-template/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Open source","RStudio","Presentations"]}</script>
+<div class="metadata">
+<div class="publishedDate">June 10, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Zoë Turner</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Making an RStudio presentation template</h2>
+<div class="dt-tags">
+<div class="dt-tag">Open source</div>
+<div class="dt-tag">RStudio</div>
+<div class="dt-tag">Presentations</div>
+</div>
+<p>One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.</p>
+</div>
+</a>
+<a href="posts/2021-06-10-making-a-presentation-repo-github-template/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Open source","GitHub","Presentations"]}</script>
+<div class="metadata">
+<div class="publishedDate">June 9, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Zoë Turner</div>
+</div>
+</div>
+<div class="thumbnail"></div>
+<div class="description">
+<h2>Making presentation slides into a GitHub repository template</h2>
+<div class="dt-tags">
+<div class="dt-tag">Open source</div>
+<div class="dt-tag">GitHub</div>
+<div class="dt-tag">Presentations</div>
+</div>
+<p>One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.</p>
+</div>
+</a>
+<a href="posts/2021-05-14-index-of-multiple-deprivation/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Resources"]}</script>
+<div class="metadata">
+<div class="publishedDate">May 14, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Zoë Turner</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Index of Multiple Deprivation</h2>
+<div class="dt-tags">
+<div class="dt-tag">Resources</div>
+</div>
+<p>The measure of relative deprivation in small areas in England called lower-layer super output areas</p>
+</div>
+</a>
+<a href="posts/2021-05-14-mapping/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Resources"]}</script>
+<div class="metadata">
+<div class="publishedDate">May 14, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Zoë Turner</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Mapping</h2>
+<div class="dt-tags">
+<div class="dt-tag">Resources</div>
+</div>
+<p>Mapping using public health tools</p>
+</div>
+</a>
+<a href="posts/2021-02-27-working-in-the-open/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Open source"]}</script>
+<div class="metadata">
+<div class="publishedDate">Feb. 27, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Zoë Turner</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-02-27-working-in-the-open/img/chris-beeley-tweet.PNG"/>
+</div>
+<div class="description">
+<h2>Working in the open</h2>
+<div class="dt-tags">
+<div class="dt-tag">Open source</div>
+</div>
+<p>What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?</p>
+</div>
+</a>
+<a href="posts/2021-01-20-a-new-github-release-and-future-projects/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Open source"]}</script>
+<div class="metadata">
+<div class="publishedDate">Jan. 20, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Chris Beeley</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>A new GitHub release and future projects</h2>
+<div class="dt-tags">
+<div class="dt-tag">Open source</div>
+</div>
+<p>We have a new project out and would like to tell you about some more of our future work.</p>
+</div>
+</a>
+<a href="posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Data clinics"]}</script>
+<div class="metadata">
+<div class="publishedDate">Jan. 13, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Lori Edwards Suárez</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Data clinics in Nottinghamshire Healthcare</h2>
+<div class="dt-tags">
+<div class="dt-tag">Data clinics</div>
+</div>
+<p>We have been working with teams to help them with their data problems. This post describes some of the clinics and what has come about as a result of this work.</p>
+</div>
+</a>
+<a href="posts/2020-12-14-classification-of-patient-feedback/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Patient feedback"]}</script>
+<div class="metadata">
+<div class="publishedDate">Nov. 14, 2020</div>
+<div class="dt-authors">
+<div class="dt-author">Andreas Soteriades</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Classification of patient feedback</h2>
+<div class="dt-tags">
+<div class="dt-tag">Patient feedback</div>
+</div>
+<p>An NHSE funded project to devise an application to automatically tag the content of patient feedback</p>
+</div>
+</a>
+</div>
+<div class="posts-sidebar">
+<div class="sidebar-section categories">
+<h3>Categories</h3>
+<ul>
+<li>
+<a href="#category:Articles">Articles</a>
+<span class="category-count">(8)</span>
+</li>
+<li>
+<a href="#category:Data_clinics">Data clinics</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:GitHub">GitHub</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Open_source">Open source</a>
+<span class="category-count">(4)</span>
+</li>
+<li>
+<a href="#category:Patient_feedback">Patient feedback</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Presentations">Presentations</a>
+<span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:Resources">Resources</a>
+<span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:RStudio">RStudio</a>
+<span class="category-count">(1)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="posts-more">
+<a href="#">More articles &raquo;</a>
+</div>
+</div>
+<!--/radix_placeholder_article_listing-->
+
+
+
+
+
+
+
+
+
+
+<div class="d-title">
+<h1>CDU data science team blog</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+
+</div>
+
+
+<div class="d-article">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/CDU-data-science-team/team-blog/issues/new">create an issue</a> on the source repository.</p>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
