@@ -23,6 +23,29 @@
     "input_file": "making-an-rstudio-presentation-template.knit.md"
   },
   {
+    "path": "posts/2021-06-10-making-a-presentation-repo-github-template/",
+    "title": "Making presentation slides into a GitHub repository template",
+    "description": "One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.",
+    "author": [
+      {
+        "name": "Zoë Turner",
+        "url": {
+          "https://twitter.com/Lextuga007": {}
+        }
+      }
+    ],
+    "date": "2021-06-10",
+    "categories": [
+      "Open source",
+      "GitHub",
+      "Presentations"
+    ],
+    "contents": "\r\nCreating a template GitHub repository\r\nAfter creating {xaringan} presentations slides for the CDU Data Science Team using the branding from Nottinghamshire Healthcare NHS Foundation Trust, I wanted to share the files used as a template. There are quite a few used in {xaringan} slides because it relies upon CSS and images to give the ‘professional’ look similar to PowerPoint.\r\nOne of the new features in GitHub is to make your repository a template:\r\n\r\nAnd the nice thing about this, is when someone selects the template button:\r\n\r\nIt means they can fork the repository (get a copy) but all of the commit history is removed giving the next person - if they want - a clean repository to work from. People still have the option to clone the repository with the history by following the usual cloning:\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-06-10T11:44:14+01:00",
+    "input_file": "making-a-presentation-repo-github-template.knit.md"
+  },
+  {
     "path": "posts/2021-05-14-index-of-multiple-deprivation/",
     "title": "Index of Multiple Deprivation",
     "description": "The measure of relative deprivation in small areas in England called lower-layer super output areas",
