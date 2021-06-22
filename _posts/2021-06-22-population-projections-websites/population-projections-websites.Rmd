@@ -1,0 +1,60 @@
+---
+title: "Population Projections"
+description: |
+  Links for population projection data.
+author:
+  - name: Zoë Turner
+    url: {https://twitter.com/Lextuga007}
+date: 06-22-2021
+output:
+  distill::distill_article:
+    css: hospital_header.css
+    self_contained: false
+draft: false    
+categories: Resources
+preview: allgemeine-erdbeschreibung.jpg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Population projections
+
+The ONS run the census once every 10 years in England and are estimated between censuses. These are used for resource allocation and planning as well as providing denominator population groups for some analyses. 
+
+# Office of National Statistics (ONS) Mid Year Estimates
+ 
+The mid year estimates are available [here](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland).
+
+The [Analysis Tool](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesanalysistool) ins an interactive tool that creates a population pyramid in excel.
+
+## By CCG 
+
+Mid-year (30 June) estimates of the usual resident population for clinical commissioning groups (CCGs) in England: [link](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/clinicalcommissioninggroupmidyearpopulationestimates)
+
+Population figures over a 25-year period, by five-year age groups and sex for clinical commissioning groups (CCGs) in England. 2018-based estimates are the latest principal projection: [link](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/clinicalcommissioninggroupsinenglandtable3)
+
+ 
+# Specific Population Projections
+
+## POPPI and PANSI 
+### Projecting Older People Population Information and Projecting Adult Needs and Service Information
+
+There are two specific websites designed to help explore the possible impact that demography and certain conditions on populations either aged 65 and over: [POPPI](https://www.poppi.org.uk/) or populations aged 18 to 64: [PANSI](https://www.pansi.org.uk/). 
+
+> Originally developed for the Department of Health, this system provides population data by age band, gender, ethnic group, and tenure, for English local authorities.
+
+These require an account to access but only one account is required to access both site and is free to register.
+
+Projections are by Region and cover age groups but also gender, ethnic groups, health (including mental health) and learning disability.
+
+# Journal articles
+
+## Lancet Public Health
+
+[Forecasting the care needs of the older population in England over the next 20 years estimates from the Population Ageing and Care Simulation (PACSim) modelling study. Aug 2018) ](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(18)30118-X/fulltext)
+
+[Modelling the growing need for social care in older people](https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(18)30143-9/fulltext) 
+

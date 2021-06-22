@@ -1,0 +1,107 @@
+---
+title: "Age bands methodology"
+description: |
+  A blog compiling all the age bands methodology that can be used for comparing analysis populations against.
+author:
+  - name: Zoë Turner
+    url: {https://twitter.com/Lextuga007}
+date: 06-22-2021
+output:
+  distill::distill_article:
+    css: hospital_header.css
+    self_contained: false
+draft: false
+categories: Resources
+preview: voyageurs-anciens-et-modernes.jpg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Age Bands
+
+On the face of it applying age bands to data analysis is simple, you need to consider the start and end ages and group up the rest into reasonable groups. However, if you want to use the data to compare to other sources of aggregate data it needs to be grouped in a similar way.
+ 
+## Friends and Family questionnaires 
+
+Trusts can control some of the data they collect for the Friends and Family questionnaires and Nottinghamshire Healthcare NHS Foundation Trust have used a grouped age question to anonymise responses from patients. Our feedback can be analysed through the [shiny app](https://involve.nottshc.nhs.uk:8443/experiencesdashboard/) with code [here](https://github.com/CDU-data-science-team/experiencesdashboard).
+
+### SUCE (Service User and Carers Experience) survey:
+
+Under 12
+</br>12-17
+</br>18-25
+</br>26-39
+</br>40-64
+</br>65-79
+</br>80+ years
+</br>Refused
+</br>Missing
+
+### SUCE (Service User and Carers Experience) survey - under 12 years specific
+
+Under 6
+</br>6 to 8
+</br>9 to 11
+</br>2 to 17
+</br>18+ years
+
+# National Workforce Dataset
+ 
+The National Workforce Dataset (ESR values) use ages grouped like from the [Age profile projection model](https://www.nhsemployers.org/your-workforce/need-to-know/working-longer-group/working-longer-group-tools-and-resources/age-awareness-toolkit/age-profile) which uses:
+
+<20
+</br>20-24
+</br>25-29
+</br>30-34
+</br>35-39
+</br>40-44
+</br>45-49
+</br>50-54
+</br>55-59
+</br>60-64
+</br>65-69
+</br>70+
+
+ 
+# Office of National Statistics (ONS) - population projections
+
+Also see: https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites/
+
+Age bands from population projections are:
+
+0-4
+</br>5-9
+</br>10-14
+</br>15-19
+</br>20-24
+</br>25-29
+</br>30-34
+</br>35-39
+</br>40-44
+</br>45-49
+</br>50-54
+</br>55-59
+</br>60-64
+</br>65-69
+</br>70-74
+</br>75-79
+</br>80-84
+</br>85-89
+</br>90 and over
+
+# Office of National Statistics (ONS) - survey best practice
+
+There are various suggested age bands for surveys which are listed on this [Wikimedia page](https://meta.wikimedia.org/wiki/Survey_best_practices).
+
+# NHS Staff Survey
+
+Information on the NHS Staff Survey has changed in how it was published but the latest website (as of June 2021) has the [dashboard](https://www.nhsstaffsurveyresults.com/homepage/national-results-2020/breakdowns-questions-2020/) with age bands as:
+
+16-20
+</br>21-30
+</br>31-40
+</br>41-50
+</br>51-65
+</br>66+
