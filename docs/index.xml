@@ -7,14 +7,26 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Age bands methodology</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-age-bands-methodology</link>
+      <description>A blog compiling all the age bands methodology that can be used for comparing analysis populations against.</description>
+      <category>Resources</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-age-bands-methodology</guid>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-age-bands-methodology/voyageurs-anciens-et-modernes.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Population Projections</title>
       <dc:creator>Zoë Turner</dc:creator>
       <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites</link>
       <description>Links for population projection data.</description>
+      <category>Resources</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites</guid>
-      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites/allgemeine-erdbeschreibung.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Making an RStudio presentation template</title>

@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2021-06-22-age-bands-methodology/",
+    "title": "Age bands methodology",
+    "description": "A blog compiling all the age bands methodology that can be used for comparing analysis populations against.",
+    "author": [
+      {
+        "name": "Zoë Turner",
+        "url": {
+          "https://twitter.com/Lextuga007": {}
+        }
+      }
+    ],
+    "date": "2021-06-22",
+    "categories": [
+      "Resources"
+    ],
+    "contents": "\r\nAge Bands\r\nOn the face of it applying age bands to data analysis is simple, you need to consider the start and end ages and group up the rest into reasonable groups. However, if you want to use the data to compare to other sources of aggregate data it needs to be grouped in a similar way.\r\nFriends and Family questionnaires\r\nTrusts can control some of the data they collect for the Friends and Family questionnaires and Nottinghamshire Healthcare NHS Foundation Trust have used a grouped age question to anonymise responses from patients. Our feedback can be analysed through the shiny app with code here.\r\nSUCE (Service User and Carers Experience) survey:\r\nUnder 12 12-17 18-25 26-39 40-64 65-79 80+ years Refused Missing\r\nSUCE (Service User and Carers Experience) survey - under 12 years specific\r\nUnder 6 6 to 8 9 to 11 2 to 17 18+ years\r\nNational Workforce Dataset\r\nThe National Workforce Dataset (ESR values) use ages grouped like from the Age profile projection model which uses:\r\n<20 20-24 25-29 30-34 35-39 40-44 45-49 50-54 55-59 60-64 65-69 70+\r\nOffice of National Statistics (ONS) - population projections\r\nAlso see: https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites/\r\nAge bands from population projections are:\r\n0-4 5-9 10-14 15-19 20-24 25-29 30-34 35-39 40-44 45-49 50-54 55-59 60-64 65-69 70-74 75-79 80-84 85-89 90 and over\r\nOffice of National Statistics (ONS) - survey best practice\r\nThere are various suggested age bands for surveys which are listed on this Wikimedia page.\r\nNHS Staff Survey\r\nInformation on the NHS Staff Survey has changed in how it was published but the latest website (as of June 2021) has the dashboard with age bands as:\r\n16-20 21-30 31-40 41-50 51-65 66+\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-06-22-age-bands-methodology/voyageurs-anciens-et-modernes.jpg",
+    "last_modified": "2021-06-22T20:02:22+01:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-06-22-population-projections-websites/",
     "title": "Population Projections",
     "description": "Links for population projection data.",
@@ -12,11 +33,13 @@
       }
     ],
     "date": "2021-06-22",
-    "categories": [],
-    "contents": "\r\nPopulation projections\r\nThe ONS run the census once every 10 years in England and are estimated between censuses. These are used for resource allocation and planning as well as providing denominator population groups for some analyses.\r\nOffice of National Statistics (ONS) Mid Year Estimates\r\nThe mid year estimates are available here.\r\nThe Analysis Tool ins an interactive tool that creates a population pyramid in excel.\r\nBy CCG\r\nMid-year (30 June) estimates of the usual resident population for clinical commissioning groups (CCGs) in England:\r\nhttps://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/clinicalcommissioninggroupmidyearpopulationestimates\r\nPopulation figures over a 25-year period, by five-year age groups and sex for clinical commissioning groups (CCGs) in England. 2018-based estimates are the latest principal projection:\r\nhttps://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/clinicalcommissioninggroupsinenglandtable3\r\nSpecific Population Projections\r\nPOPPI and PANSI\r\nProjecting Older People Population Information and Projecting Adult Needs and Service Information\r\nThere are two specific websites designed to help explore the possible impact that demography and certain conditions on populations either aged 65 and over: POPPI or populations aged 18 to 64: PANSI.\r\n\r\nOriginally developed for the Department of Health, this system provides population data by age band, gender, ethnic group, and tenure, for English local authorities.\r\n\r\nThese require an account to access but only one account is required to access both site and is free to register.\r\nProjections are by Region and cover age groups but also gender, ethnic groups, health (including mental health) and learning disability.\r\nJournal articles\r\nLancet Public Health\r\nForecasting the care needs of the older population in England over the next 20 years estimates from the Population Ageing and Care Simulation (PACSim) modelling study. Aug 2018)\r\nModelling the growing need for social care in older people\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2021-06-22T17:22:24+01:00",
-    "input_file": "population-projections-websites.knit.md"
+    "categories": [
+      "Resources"
+    ],
+    "contents": "\r\nPopulation projections\r\nThe ONS run the census once every 10 years in England and are estimated between censuses. These are used for resource allocation and planning as well as providing denominator population groups for some analyses.\r\nOffice of National Statistics (ONS) Mid Year Estimates\r\nThe mid year estimates are available here.\r\nThe Analysis Tool ins an interactive tool that creates a population pyramid in excel.\r\nBy CCG\r\nMid-year (30 June) estimates of the usual resident population for clinical commissioning groups (CCGs) in England: link\r\nPopulation figures over a 25-year period, by five-year age groups and sex for clinical commissioning groups (CCGs) in England. 2018-based estimates are the latest principal projection: link\r\nSpecific Population Projections\r\nPOPPI and PANSI\r\nProjecting Older People Population Information and Projecting Adult Needs and Service Information\r\nThere are two specific websites designed to help explore the possible impact that demography and certain conditions on populations either aged 65 and over: POPPI or populations aged 18 to 64: PANSI.\r\n\r\nOriginally developed for the Department of Health, this system provides population data by age band, gender, ethnic group, and tenure, for English local authorities.\r\n\r\nThese require an account to access but only one account is required to access both site and is free to register.\r\nProjections are by Region and cover age groups but also gender, ethnic groups, health (including mental health) and learning disability.\r\nJournal articles\r\nLancet Public Health\r\nForecasting the care needs of the older population in England over the next 20 years estimates from the Population Ageing and Care Simulation (PACSim) modelling study. Aug 2018)\r\nModelling the growing need for social care in older people\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-06-22-population-projections-websites/allgemeine-erdbeschreibung.jpg",
+    "last_modified": "2021-06-22T19:50:30+01:00",
+    "input_file": {}
   },
   {
     "path": "posts/2021-06-10-making-an-rstudio-presentation-template/",

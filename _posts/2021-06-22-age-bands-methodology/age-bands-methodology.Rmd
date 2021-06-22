@@ -8,10 +8,12 @@ author:
 date: 06-22-2021
 output:
   distill::distill_article:
+    css: hospital_header.css
     self_contained: false
-draft: true
+draft: false
+categories: Resources
+preview: voyageurs-anciens-et-modernes.jpg
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -64,6 +66,8 @@ The National Workforce Dataset (ESR values) use ages grouped like from the [Age 
 
  
 # Office of National Statistics (ONS) - population projections
+
+Also see: https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites/
 
 Age bands from population projections are:
 

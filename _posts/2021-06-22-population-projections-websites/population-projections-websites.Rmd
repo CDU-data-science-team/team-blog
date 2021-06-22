@@ -8,8 +8,11 @@ author:
 date: 06-22-2021
 output:
   distill::distill_article:
+    css: hospital_header.css
     self_contained: false
 draft: false    
+categories: Resources
+preview: allgemeine-erdbeschreibung.jpg
 ---
 
 
@@ -29,13 +32,9 @@ The [Analysis Tool](https://www.ons.gov.uk/peoplepopulationandcommunity/populati
 
 ## By CCG 
 
-Mid-year (30 June) estimates of the usual resident population for clinical commissioning groups (CCGs) in England: 
+Mid-year (30 June) estimates of the usual resident population for clinical commissioning groups (CCGs) in England: [link](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/clinicalcommissioninggroupmidyearpopulationestimates)
 
-https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/clinicalcommissioninggroupmidyearpopulationestimates
-
-Population figures over a 25-year period, by five-year age groups and sex for clinical commissioning groups (CCGs) in England. 2018-based estimates are the latest principal projection:
-
-https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/clinicalcommissioninggroupsinenglandtable3
+Population figures over a 25-year period, by five-year age groups and sex for clinical commissioning groups (CCGs) in England. 2018-based estimates are the latest principal projection: [link](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/clinicalcommissioninggroupsinenglandtable3)
 
  
 # Specific Population Projections

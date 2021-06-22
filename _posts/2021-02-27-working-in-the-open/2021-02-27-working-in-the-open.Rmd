@@ -24,7 +24,7 @@ library(kableExtra)
 
 "Working in the open" isn't a technical term; it's just my simple way of explaining a concept without having to mention all the tools that are available to do this. 
 
-```{r pic, fig.cap="Tweet from Chris Beeley on working writing stuff in the open", echo=FALSE, eval=TRUE}
+```{r pic, fig.alt="Tweet from Chris Beeley on working writing stuff in the open", echo=FALSE, eval=TRUE}
 
 knitr::include_graphics("img/chris-beeley-tweet.PNG")
 
