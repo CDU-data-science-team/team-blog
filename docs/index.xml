@@ -7,7 +7,15 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Population Projections</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites</link>
+      <description>Links for population projection data.</description>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites</guid>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Making an RStudio presentation template</title>
       <dc:creator>Zoë Turner</dc:creator>

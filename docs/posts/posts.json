@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2021-06-22-population-projections-websites/",
+    "title": "Population Projections",
+    "description": "Links for population projection data.",
+    "author": [
+      {
+        "name": "Zoë Turner",
+        "url": {
+          "https://twitter.com/Lextuga007": {}
+        }
+      }
+    ],
+    "date": "2021-06-22",
+    "categories": [],
+    "contents": "\r\nPopulation projections\r\nThe ONS run the census once every 10 years in England and are estimated between censuses. These are used for resource allocation and planning as well as providing denominator population groups for some analyses.\r\nOffice of National Statistics (ONS) Mid Year Estimates\r\nThe mid year estimates are available here.\r\nThe Analysis Tool ins an interactive tool that creates a population pyramid in excel.\r\nBy CCG\r\nMid-year (30 June) estimates of the usual resident population for clinical commissioning groups (CCGs) in England:\r\nhttps://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/clinicalcommissioninggroupmidyearpopulationestimates\r\nPopulation figures over a 25-year period, by five-year age groups and sex for clinical commissioning groups (CCGs) in England. 2018-based estimates are the latest principal projection:\r\nhttps://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/clinicalcommissioninggroupsinenglandtable3\r\nSpecific Population Projections\r\nPOPPI and PANSI\r\nProjecting Older People Population Information and Projecting Adult Needs and Service Information\r\nThere are two specific websites designed to help explore the possible impact that demography and certain conditions on populations either aged 65 and over: POPPI or populations aged 18 to 64: PANSI.\r\n\r\nOriginally developed for the Department of Health, this system provides population data by age band, gender, ethnic group, and tenure, for English local authorities.\r\n\r\nThese require an account to access but only one account is required to access both site and is free to register.\r\nProjections are by Region and cover age groups but also gender, ethnic groups, health (including mental health) and learning disability.\r\nJournal articles\r\nLancet Public Health\r\nForecasting the care needs of the older population in England over the next 20 years estimates from the Population Ageing and Care Simulation (PACSim) modelling study. Aug 2018)\r\nModelling the growing need for social care in older people\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-06-22T17:22:24+01:00",
+    "input_file": "population-projections-websites.knit.md"
+  },
+  {
     "path": "posts/2021-06-10-making-an-rstudio-presentation-template/",
     "title": "Making an RStudio presentation template",
     "description": "One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.",
