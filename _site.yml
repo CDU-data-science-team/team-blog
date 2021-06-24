@@ -1,5 +1,6 @@
 name: "cdu-data-science-team-blog"
 title: "CDU data science team blog"
+theme: hospital-theme.css
 description: |
   CDU data science team blog
 output_dir: "docs"

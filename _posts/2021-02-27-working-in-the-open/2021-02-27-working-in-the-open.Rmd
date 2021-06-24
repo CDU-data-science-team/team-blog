@@ -11,6 +11,7 @@ output:
     self_contained: false
 categories:
   - Open source    
+preview: img/letters-from-high-latitudes.jpg  
 ---
 
 # What is working out in the open?

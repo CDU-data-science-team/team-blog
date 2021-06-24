@@ -12,7 +12,7 @@ output:
     self_contained: false
 draft: false    
 categories: Resources
-preview: allgemeine-erdbeschreibung.jpg
+preview: img/allgemeine-erdbeschreibung.jpg
 ---
 
 

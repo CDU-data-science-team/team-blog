@@ -11,6 +11,7 @@ output:
     self_contained: false
 categories:
   - Resources    
+preview: img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection-93.jpg  
 ---
 
 ```{r setup, include=FALSE}

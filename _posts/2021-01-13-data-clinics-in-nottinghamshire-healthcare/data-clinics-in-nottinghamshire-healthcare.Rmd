@@ -11,6 +11,7 @@ output:
     self_contained: false
 categories:
   - Data clinics    
+preview: img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection-106.jpg  
 ---
 
 ```{r setup, include=FALSE}

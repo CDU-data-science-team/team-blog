@@ -10,6 +10,7 @@ output:
     self_contained: false
 categories:
   - Open source    
+preview: img/admiralty-manual-for-the-deviations-of-the-compass.jpg  
 ---
 
 ```{r setup, include=FALSE}
