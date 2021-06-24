@@ -1,0 +1,15 @@
+.distill-site-nav {
+  color: #ffffff; 
+    background-color: #8A1538;
+}
+
+/* Use specific font in the body of the text */
+html, body, p {
+  
+  font-family: Verdana, Helvetica, sans-serif;
+}
+
+/* Change appearance of headers */
+h1, h2, h3, h4, h5 {
+  font-family: Verdana, Helvetica, sans-serif;
+}
