@@ -10,6 +10,7 @@ output:
     self_contained: false
 categories:
   - Patient feedback    
+preview: img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection-96.jpg
 ---
 
 ```{r setup, include=FALSE}
@@ -28,7 +29,7 @@ Here in Nottinghamshire Healthcare NHS Foundation Trust, we (the Data Science te
 
 Machine Learning is a wider concept, but here we will talk about the so-called _supervised_ Machine Learning. Say a child is playing with a hole cube:
 
-![](hole_cube.png){ width=50% }
+![Photo of a child's sorting toy with the sorting shapes stacked to the side of the sorting box](img/hole_cube.png){ width=50% }
 
 By trying to pass different shapes through different holes, the child follows a process of "training" or "learning", through which they learn to identify the right shape for each hole. Once they have been "trained", they can easily predict what shape is the right one for a specific hole, on this or any other hole cube.
 

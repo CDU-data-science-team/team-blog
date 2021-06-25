@@ -11,6 +11,7 @@ output:
     self_contained: false
 categories:
   - Resources 
+preview: img/half-hour-library-of-travel-nature-and-science-for-young-readers.jpg  
 ---
 
 

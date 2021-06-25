@@ -1,5 +1,6 @@
 name: "cdu-data-science-team-blog"
 title: "CDU data science team blog"
+theme: hospital-theme.css
 description: |
   CDU data science team blog
 output_dir: "docs"
@@ -24,4 +25,7 @@ navbar:
     creator: "DataScienceNott"  
 base_url: https://cdu-data-science-team.github.io/team-blog/    
 repository_url: https://github.com/CDU-data-science-team/team-blog
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    css: styles.css
+
