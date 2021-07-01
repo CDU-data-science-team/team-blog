@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>CDU data science team blog</title>
+    <link>https://cdu-data-science-team.github.io/team-blog/</link>
+    <atom:link href="https://cdu-data-science-team.github.io/team-blog/index.xml" rel="self" type="application/rss+xml"/>
+    <description>CDU data science team blog
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Age bands methodology</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-age-bands-methodology</link>
+      <description>A blog compiling all the age bands methodology that can be used for comparing analysis populations against.</description>
+      <category>Resources</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-age-bands-methodology</guid>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-age-bands-methodology/voyageurs-anciens-et-modernes.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Population Projections</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites</link>
+      <description>Links for population projection data.</description>
+      <category>Resources</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites</guid>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-22-population-projections-websites/img/allgemeine-erdbeschreibung.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Making presentation slides into a GitHub repository template</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-a-presentation-repo-github-template</link>
+      <description>One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.</description>
+      <category>Open source</category>
+      <category>GitHub</category>
+      <category>Presentations</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-a-presentation-repo-github-template</guid>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-a-presentation-repo-github-template/img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Making an RStudio presentation template</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template</link>
+      <description>One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.</description>
+      <category>Open source</category>
+      <category>RStudio</category>
+      <category>Presentations</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template</guid>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/img/bibliothek-geographischer-handbücher-107.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Index of Multiple Deprivation</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-index-of-multiple-deprivation</link>
+      <description>The measure of relative deprivation in small areas in England called lower-layer super output areas</description>
+      <category>Resources</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-index-of-multiple-deprivation</guid>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-index-of-multiple-deprivation/img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection-93.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Mapping</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-mapping</link>
+      <description>Mapping using public health tools</description>
+      <category>Resources</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-mapping</guid>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-05-14-mapping/img/half-hour-library-of-travel-nature-and-science-for-young-readers.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Working in the open</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open</link>
+      <description>What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?</description>
+      <category>Open source</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open</guid>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/img/letters-from-high-latitudes.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>A new GitHub release and future projects</title>
+      <dc:creator>Chris Beeley</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-20-a-new-github-release-and-future-projects</link>
+      <description>We have a new project out and would like to tell you about some more of our future work.</description>
+      <category>Open source</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-20-a-new-github-release-and-future-projects</guid>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-01-20-a-new-github-release-and-future-projects/img/admiralty-manual-for-the-deviations-of-the-compass.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Data clinics in Nottinghamshire Healthcare</title>
+      <dc:creator>Lori Edwards Suárez</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare</link>
+      <description>We have been working with teams to help them with their data problems. This post describes some of the clinics and what has come about as a result of this work.</description>
+      <category>Data clinics</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare</guid>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-01-13-data-clinics-in-nottinghamshire-healthcare/img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection-106.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Classification of patient feedback</title>
+      <dc:creator>Andreas Soteriades</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback</link>
+      <description>An NHSE funded project to devise an application to automatically tag the content of patient feedback</description>
+      <category>Patient feedback</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback</guid>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection-96.jpg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>
