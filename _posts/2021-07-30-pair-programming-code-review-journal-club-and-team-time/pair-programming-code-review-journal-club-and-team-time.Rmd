@@ -22,10 +22,70 @@ there's [six of us](https://cdu-data-science-team.github.io/team-blog/about.html
 at the moment which is GREAT and we're starting to review some of the stuff that 
 we've been doing to make sure that it's serving a purpose. I'm sort of writing 
 this for our benefit just as a way of recording what the plan is (and to discuss 
-the plan via pull request `r emojifont::emoji("sunglasses")` but we work in the 
+the plan via pull request `r emojifont::emoji("sunglasses")`) but we work in the 
 open so why not talk about this in the open too.
 
+Fairly near the process we kicked off "Code review" sessions which would take place 
+fortnightly and team members would bring stuff, taking it in turns to do one each. I 
+hardly think I can improve on [Google's guide to code review](https://google.github.io/eng-practices/review/reviewer/looking-for.html) 
+but I'll summarise the main points here for those who don't click through. Code review 
+is the process of one or more people who have not written the code in question to 
+read it and check that it's okay, before the code is merged into the codebase. Code 
+reviewers are considering:
 
+* Design
+* Functionality
+* Complexity
+* Tests
+* Good naming practices (variables, functions)
+* Comments
+* Style (judged against a style guide like the [tidyverse style guide](https://style.tidyverse.org/))
+* Consistency
+* Documentation
 
+In the linked document Google emphasise that you should read every line- not scan 
+over things and assume they're okay. It's worth remembering as well that we are 
+doing data science- so we need to be reviewing statistical and ML methods as well. 
+People (including me) fall into the trap of thinking that data science is just 
+programming and they stop asking themselves hard questions about the methods they 
+are using and that is very dangerous.
 
+I put code review in quotes advisedly because although we went into them thinking 
+we would be doing code review over the weeks and months we ended up doing something 
+totally different. Sometimes we would pretty much do code review. Sometimes we would 
+spend a long time discussing code style. Other times we would start off doing code 
+review and end up doing an ad hoc lesson in a particular method that the person 
+who came to code review. Sometimes we would have such a good time doing one of 
+these things that we couldn't fit all the excitement into an hour and would call 
+extraordinary code review meetings so we could carry on discussing it and not have to 
+wait two weeks. 
+
+It was pretty anarchic but we were all learning and having fun in a supportive 
+environment so I thought we may as well just see where we ended up. After a year I 
+thought it was time to review what we were doing around assuring our code so I 
+kicked off a discussion about it which this blog post is part of. 
+
+We have had a pretty wide ranging discussion about it and the first point of interest 
+is that everybody wanted to keep the fortnightly sessions but everybody agreed that 
+however awesome they were they weren't really "code review". We boiled down what 
+we feel we need to four distinct activities. For the sake of brevity I will summarise 
+them here- I could probably do a blog post on each and if anybody would like to 
+hear more then find me on Twitter, have a look at the about page.
+
+### Pair programming
+
+Pair programming is what it sounds like- programming in pairs. It's a great way of 
+teaching and helping each other, and solving problems together, but it's also 
+a way of reviewing code too. The maxim we came up with today is simple.
+
+> Every line of code should have been read by two people
+
+You can do that in a pair, live, or you can do it by review (or you can do both). 
+Interestingly enough the team just spontaneously started doing pair programming. 
+Nobody mentioned the word, nobody asked them to. It just makes sense to do that 
+so they just started doing it, which I absolutely love. 
+
+* Code review
+* Journal club
+* Team time
 
