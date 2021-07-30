@@ -1,0 +1,23 @@
+---
+title: "Pair programming, code review, journal club, 
+                     and team time"
+description:
+  What can the CDU data science team do to verify its outputs, disseminate 
+  learning, and support individual development in team sessions.
+author:
+  - name: Chris Beeley
+date: 07-30-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+We've been a proper data science team for a year now, there's [six of us](https://cdu-data-science-team.github.io/team-blog/about.html) at the moment which is GREAT and we're starting to review some of the stuff that we've been doing to make sure that it's serving a purpose. I'm sort of writing this for our benefit just as a way of recording what the plan is (and to discuss the plan via pull request `r emojifont::emoji("sunglasses")` but we work in the open so why not talk about this in the open too.
+
+
+
