@@ -1,0 +1,167 @@
+---
+title: "`nottshcverse`: Developing tools that redefine how we work with healthcare data in R"
+description: |
+  ***TLTR:*** 
+  Our goal was to make it easier for our team and other people in the Trust to work with healthcare data in a reproducible and collaborative way .
+  We started by formalising common and recurring analytical tasks using code so that they can be turned into functions and packages.
+  This post describes our development of a new set of tools that redefine the way we analyse healthcare data -- it's open, reproducible, and fun!
+author:
+  - name: Milan Wiedemann
+    url: {}
+date: 08-06-2021
+output:
+  distill::distill_article:
+    self_contained: false
+draft: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## What we do
+
+Our team works with routinely collected NHS patient data.
+Currently we mainly focus on how patients are using the service, clinical outcome measures, as well as patient experiences.
+What works for whom and how does it work?
+What doesn’t work? In this post I’ll try to explain the ideas behind the tools we build that help us analyse these questions.
+
+In the past months we developed a set of different data science tools that work together and help us be better at our job. 
+We automate the things that can be automated so that we can spend more time thinking about how to approach the hard problems. We believe that best practices from (1) open source software development and (2) open research principles from academia are the future of healthcare analytics. 
+
+Working in the open can feel scary and and requires some understanding of the complexities but ... combination of these two worlds in the context of healthcare analytics combination  transparency, (2) scrutiny by experts in the field, (3) collaborations and sharing of resources, (4) ...
+
+## Why?
+
+We use scripts and notebooks and they are great.
+But we want to make sure everyone uses the same methods so that work is comparable.
+Developing these tools takes time, but if not now ... then when? If not today, why make the promise to answer these questions?
+
+- Why one package?
+- What are the advantages of a package?
+- Why is one package not enough?
+- We want to build an entire universe of packages that help us AND OTHERS to understand and improve clinical care.
+
+Watch the way we navigate NHS data - Get data, tidy data, analyse data, report data, document everything, test everything, open as much as possible!
+
+This figure illustrates how our packages work together, the packages can be categories roughly like this:
+
+`nottshcData`, Specific, Access to databases (unified framework to load, transform, and aggregate data)
+`nottshcMethods`, specific (but also some general) tools that help us tidy shit up
+`honos`, `LSOApop`, packages that are designed in a very generic way that help our `nottshcOpenData` package tidy the data (e.g., HoNOS)
+A whole new layer is our dashboards, that use all of the necessary packages mentioned already + special packages developed specifically to support the dashboards with helper functions
+
+NEED SOME PRETTY PICTURES HERE!!!!!
+
+
+## Example
+
+Imagine we have a database callded **RiA** with three different tables that we need for our analysis, in this example we will use:
+
+- `[RiA].[contacts]`: Information about contacts
+- `[RiA].[outcome_measures]`: Clinical outcomes assessed using Patient Reported Outcome Measures ([PROMS](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/patient-reported-outcome-measures-proms))
+- `[RiA].[demographics]`: Further demographic information about the patients
+
+```{r}
+library(DBI)
+library(tidyverse)
+library(RSQLite)
+
+# RiA
+con_ria <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
+```
+
+
+```{r echo=FALSE}
+contacts <- tibble(client_id = c(1, 1, 1, 2), 
+                   contact_id = c(123, 124, 125, 156), 
+                   referral_id = c(456, 459, 500, 501), 
+                   referral_date = c("2018-04-19", "2019-05-23", 
+                                     "2019-07-01", "2018-12-11"),
+                   contact_date = c("2018-05-19", "2019-06-05", 
+                                    "2019-07-08", "2019-01-15"),
+                   team_id = c("tm1", "tm2", "tm1", "tm1"), 
+                   hcp_id = c("hcp1", "hcp1", "hcp1", "hcp1"), 
+                   contact_type = c("phone", "f2f", "video", "phone"),
+                   assessment_id = c(321, 322, 344, NA))
+
+outcome_measures <- tibble(client_id = c(1, 1, 1, 1, 2),
+                           contact_id = c(123, 123, 124, 125, 156),
+                           assessment_id = c(321, 322, 344, 355, 366),
+                           assessment_date = c("2018-05-19", "2018-05-19", 
+                                               "2019-06-05", "2019-07-08", 
+                                               "2019-01-15"),
+                           assessment_stage = c("pre", "pre", 
+                                                "post", "fu", 
+                                                "pre"),
+                           proms_type = c("anxiety", "depression", 
+                                          "depression", "depression",
+                                          "pain"),
+                           proms_answer = c("low", "high", 
+                                            "medium", "low", 
+                                            "high"))
+
+demographics <- tibble(client_id = c(1, 2), 
+                       dob = c("1988-01-01", "1965-01-01"),
+                       gender = c("f", "m"),
+                       dod = c(NA, NA))
+
+db_contacts <- copy_to(con_ria, contacts)
+db_outcome_measures <- copy_to(con_ria, outcome_measures)
+db_demographics <- copy_to(con_ria, demographics)
+```
+
+
+```{r }
+db_contacts %>% 
+  left_join(db_demographics) %>% 
+  mutate(age = today() - as.Date(dob),
+         age_contact = contact_date - as.Date(dob)) # %>% 
+  # show_query()
+```
+
+
+## `nottshcsverse`
+
+yeyeye intro to nottshcData
+
+### 1. Trying to connect with something
+
+After loading our packages Connecting to different databases
+
+
+### 2. Getting some data
+
+Getting data from different tables and views  to database
+
+
+### 3. Tidying data
+
+Data is a mess, and a lot of data feels like an even bigger mess
+Tidying data so it can be analysed appropriately is an important part 
+
+HoNOS R package
+
+### 4. Analysing data
+
+we want to Analyse tidy data
+
+### 5. Communication of results
+
+Reports, recommendations, discussions, …
+
+## Watch out now
+
+DOCUMENT EVERYTHING, absolutely everything! Document messy data, document tidy data, document every function, document EVERY SINGLE CHANGE (GIT FOR THE WIN AND GITHUB FOR THE WIN).
+
+We work together trying to improve the service, learning more about what patients want and what could be improved ... lots more exciting stuff, small and big problems, finding more questions, and finding some answers.
+
+Why do we not work together, implement similar structures for analysing code, share resources, work multidisciplinary.
+
+My aim is to start a conversation about the importance of proper documenting data as well as recurring analytical tasks.
+Moving towards a more open and shared way of working, EVERYONE wins.
+Some people are already working like this, it's time others do it as well.
+If not now, when then?
+We hope others will join a more open and collaborative way of working in healthcare analytics.
+I hope people making the decisions about the direction of healthcare analytics in the NHS will start to understand and act, hopefully soon! 
