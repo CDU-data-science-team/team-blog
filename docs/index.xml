@@ -7,7 +7,18 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 30 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>A Text Mining Pipeline for NHS Patient Experience Feedback</title>
+      <dc:creator>Andreas Soteriades</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-09-14-text-mining-pipeline</link>
+      <description>This blog post is a more technical description of the pipeline that we have built to analyse patient feedback text data from the NHS.</description>
+      <category>Text Mining</category>
+      <category>Patient Experience</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-09-14-text-mining-pipeline</guid>
+      <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-09-14-text-mining-pipeline/img/a-treatise-on-map-projections-p88.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Pair programming, code review, journal club, and team time</title>
       <dc:creator>Chris Beeley</dc:creator>

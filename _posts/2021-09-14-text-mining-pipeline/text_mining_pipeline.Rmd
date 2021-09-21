@@ -1,7 +1,24 @@
-# A Text Mining Pipeline for NHS Patient Experience Feedback
+---
+title: "A Text Mining Pipeline for NHS Patient Experience Feedback"
+description: |
+  This blog post is a more technical description of the pipeline that we have built to analyse patient feedback text data from the NHS.
+author:
+  - name: Andreas Soteriades
+date: 09-14-2021
+output:
+  distill::distill_article:
+    self_contained: false
+categories:   
+    - Text Mining
+    - Patient Experience
+preview: img/a-treatise-on-map-projections-p88.jpg
+---
 
-This blog post is a more technical description of the pipeline that we have 
-built to analyse patient feedback text data from the NHS. The pipeline consists
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The pipeline consists
 of two distinct modules:
 
 - A [text classification pipeline](https://pypi.org/project/pxtextmining/) for 
