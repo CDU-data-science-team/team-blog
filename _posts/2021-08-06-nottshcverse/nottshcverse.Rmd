@@ -3,12 +3,12 @@ title: "Development of tools for querying, tidying, and analysing data in R"
 description: |
   ***TLTR:*** 
   Our goal was to make it easier for our team and other people to work with healthcare data in a reproducible and collaborative way.
-  We started by formalising common and recurring analytical tasks so that they can be turned into functions and grouped into R packages.
-  This allowed us to make use of many advantages that cannot be done easily using other approaches such as *(i)* good documentation of code and analytical tasks, *(ii)* formal testing of code, *(iii)* easy distribution of updates across across all analysists, and *(iv)* modular integration of common data manipulations or analyses in interactive dashboards.
+  We started by writing functiuons for recurring analytical tasks and grouped these functions into R packages.
+  This allowed us to make use of many advantages that cannot be done easily using other approaches, such as *(i)* good documentation of code and analytical tasks, *(ii)* formal testing of code, *(iii)* easy distribution of updates across across all team members, and *(iv)* modular integration of common data manipulations (or analyses) in interactive dashboards.
 author:
   - name: Milan Wiedemann
     url: {}
-date: 09-09-2021
+date: 2021-09-29
 output:
   distill::distill_article:
     self_contained: false
@@ -19,58 +19,54 @@ draft: true
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Our team works with routinely collected NHS patient data.
-Currently we focus on understanding better how patients are using the service, clinical outcome measures, and patient experiences.
-The main questions that guide our work are *'What works for whom and how does it work?'*, *'What doesn't work?'*, and *'How can we integrate patient experiences into our analyses?'*. 
-We developed a set of different tools to help us look at these questions by automating recurring and time-consuming tasks so that we can spend more time thinking about hard problems.
-
-## Challanges and solutions
-
-PROBLEM!!!
-
-<!-- We use scripts and notebooks and they are great. -->
-<!-- But we want to make sure everyone uses the same methods so that work is comparable. -->
-<!-- Developing these tools takes time, but if not now ... then when?  -->
-
-<!-- This figure illustrates how our packages work together, the packages can be categories roughly like this: -->
-
-<!-- - `nottshcData`, Specific, Access to databases (unified framework to load, transform, and aggregate data) -->
-<!-- - `nottshcMethods`, specific (but also some general) tools that help us tidy shit up -->
-<!-- - `honos`, `LSOApop`, packages that are designed in a very generic way that help our `nottshcData` package tidy the data (e.g., HoNOS) -->
-<!-- A whole new layer is our dashboards, that use all of the necessary packages mentioned already + special packages developed specifically to support the dashboards with helper functions -->
-
-
 ```{r, echo=FALSE}
 knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse.png"))
 ```
 
-```{r, echo=FALSE}
-knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_overview_pkgs.png"))
+Our team works with routinely collected NHS patient data.
+Currently we focus on understanding better how patients are using the service, changes in clinical outcome measures, and analysis of patient experiences.
+The main questions that guide our work are *'What works for whom and how does it work?'*, *'What doesn't work?'*, and *'How can we integrate patient experiences into our analyses?'*. 
+We developed a set of different tools, the **`{nottshcverse}`**, to help us look at these questions by automating recurring and time-consuming tasks so that we can spend more time thinking the clinical questions.
+
+## Challanges and Solutions
+
+It's hard to get data.
+Data is a fucking mess!
+Analyses are undocumented untested and not documented.
+
+Figure \@ref(fig:fig-nottshcverse-overview-funs) shows the main goals that guided the development of our functions and packages.
+
+```{r fig-nottshcverse-overview-funs, echo=FALSE, fig.cap="Main goals that guided the development of our functions and packages."}
+knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_overview_functions.png"))
 ```
-
-
-<!-- # ```{r, echo=FALSE} -->
-<!-- # knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_overview_functions.png")) -->
-<!-- # ``` -->
 
 ### 1. Connecting with a database
 
-<!-- After loading our packages Connecting to different databases -->
+After loading our packages Connecting to different databases
 
 ### 2. Getting some data
 
-<!-- Getting data from different tables and views  to database -->
+Getting data from different tables and views to database
 
 ### 3. Tidying data
 
-<!-- Data is a mess, and a lot of data feels like an even bigger mess -->
-<!-- Tidying data so it can be analysed appropriately is an important part  -->
-
-<!-- HoNOS R package -->
+Data is a mess, and a lot of data feels like an even bigger mess
+Tidying data so it can be analysed appropriately is an important part
 
 ### 4. Analysing / visualising data
 
-<!-- we want to Analyse tidy data -->
+we want to Analyse tidy data!
+
+## {nottshcverse}
+
+```{r fig-nottshcverse-overview-pkgs, echo=FALSE, fig.cap="Overview of some R Packages developed by the Clinical Development Unit Data Science Team."}
+knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_overview_pkgs.png"))
+```
+
+- `{nottshcData}`:  Unified framework to query, transform, and aggregate data from different databases
+- `{nottshcMethods}`: Tools for performing common analytical tasks (e.g., grouping continuous age into groups)
+- `{honos}`, `{LSOApop}`: Packages designed in generic way to help use and others `{nottshcData}` work with specific questionnaires (e.g., Health of the Nation Outcome Scales, HoNOS) or open data sets (e.g., LSOA population estimates)
+- `{outcomesdashboard}`: Our dashboards use all the packages mentioned above + special packages developed specifically to support the dashboards with helper functions
 
 ## Simplified example
 
@@ -79,8 +75,6 @@ Imagine we're working with a database called `SystmTwo` `(S2)` and need to use t
 
 - `[S2].[contacts]`: Information about contacts with clinical teams
 - `[S2].[demographics]`: Some demographic information
-
-
 
 ```{r echo=FALSE}
 # Load packages
@@ -93,23 +87,41 @@ library(RSQLite)
 
 ```{r}
 # Set up example contacts table
-contacts <- tibble(client_id = c(1, 1, 1, 2), 
-                   contact_id = c(123, 124, 125, 156), 
-                   referral_id = c(456, 459, 500, 501), 
-                   referral_date = c("2018-04-19", "2019-05-23", 
-                                     "2020-06-01", "2018-12-11"),
-                   contact_date = c("2018-05-19", "2019-06-05", 
-                                    "2020-07-08", "2019-01-15"),
-                   team_id = c("tm1", "tm2", "tm1", "tm1"), 
-                   hcp_id = c("hcp1", "hcp2", "hcp1", "hcp1"), 
-                   contact_type = c("phone", "f2f", "video", "phone"),
-                   assessment_id = c(321, 322, 344, NA))
+contacts_s2 <- tibble(client_id = c(1, 1, 1, 2), 
+                      contact_id = c(123, 124, 125, 156), 
+                      referral_id = c(456, 459, 500, 501), 
+                      referral_date = c("2018-04-19", "2019-05-23", 
+                                        "2020-06-01", "2018-12-11"),
+                      contact_date = c("2018-05-19", "2019-06-05", 
+                                       "2020-07-08", "2019-01-15"),
+                      team_id = c("tm1", "tm2", "tm1", "tm1"), 
+                      hcp_id = c("hcp1", "hcp2", "hcp1", "hcp1"), 
+                      contact_type = c("phone", "f2f", "video", "phone"),
+                      assessment_id = c(321, 322, 344, NA))
+
+# Set up example table with outcomes measures
+# Here PROMS (Patient Reported Outcome Measures)
+proms_s2 <- tibble(client_id = c(1, 1, 1, 1, 2),
+                   contact_id = c(123, 123, 124, 125, 156),
+                   assessment_id = c(321, 322, 344, 355, 366),
+                   assessment_date = c("2018-05-19", "2018-05-19", 
+                                       "2019-06-05", "2019-07-08", 
+                                       "2019-01-15"),
+                   assessment_stage = c("pre", "pre", 
+                                        "post", "fu", 
+                                        "pre"),
+                   proms_type = c("anxiety", "depression", 
+                                  "depression", "depression",
+                                  "pain"),
+                   proms_answer = c("low", "high", 
+                                    "medium", "low", 
+                                    "high"))
 
 # Set up example demographics table with 2 patients
-demographics <- tibble(client_id = c(1, 2), 
-                       dob = c("1988-01-01", "1965-01-01"),
-                       dod = c(NA, NA),
-                       sex = c("f", "m"))
+demographics_s2 <- tibble(client_id = c(1, 2), 
+                          dob = c("1988-01-01", "1965-01-01"),
+                          dod = c(NA, NA),
+                          sex = c("f", "m"))
 ```
 
 ### Create `SQLite` connection
@@ -119,16 +131,19 @@ demographics <- tibble(client_id = c(1, 2),
 conn_s2 <- DBI::dbConnect(RSQLite::SQLite(), ":memory:")
 
 # Copy local data frame to conn_s2 database
-db_contacts <- copy_to(conn_s2, contacts)
-db_demographics <- copy_to(conn_s2, demographics)
+db_s2_contacts <- copy_to(conn_s2, contacts_s2)
+db_s2_demographics <- copy_to(conn_s2, demographics_s2)
 ```
 
 ### Example analysis
 
+Here we join the contacts with the demographics information to calculate the
+age at the time a patient has their contact (`age_at_contact`).
+
 ```{r }
 # Calculate age at time of contact
-db_age_at_contacts <- db_contacts %>% 
-  left_join(db_demographics) %>% 
+db_age_at_contacts <- db_s2_contacts %>% 
+  left_join(db_s2_demographics) %>% 
   mutate(age = today() - as.Date(dob),
          age_at_contact = contact_date - as.Date(dob)) %>% 
   select(client_id, contact_id, contact_date, dob, dod, age_at_contact)
@@ -150,21 +165,44 @@ db_age_at_contacts
 
 ## Watch out now
 
-somthing at the end
+So what's coming next and where can we take this?
+Is this perfect? 
+I don't know exactly what's coming next and this is definitely not perfect.
+But it's the best approach my colleagues and I could come up with in the time that we spent working on this.
+Maybe I'll improve this one day, maybe someone else will?
+Until then let's share ideas and work together to improve healthcare analytics in the NHS!
+Ohhh, some people are already working like this `r emo::ji("eyes")` it's time others join them!
+I hope those who make decisions about the direction of healthcare analytics in the NHS will start to understand the problems and opportunities and act soon!
+If not now, when then?
+
+We urgently need to move towards a more open and modern way of healthcare analytics.
 
 <!-- - We want to build an entire universe of packages that help us AND OTHERS to understand and improve clinical care. -->
 
 <!-- We believe that best practices from (1) open source software development and (2) open research principles from academia are the future of healthcare analytics.  -->
 
-<!-- DOCUMENT EVERYTHING, absolutely everything! Document messy data, document tidy data, document every function, document EVERY SINGLE CHANGE (GIT FOR THE WIN AND GITHUB FOR THE WIN). -->
+<!-- . -->
 
 <!-- We work together trying to improve the service, learning more about what patients want and what could be improved ... lots more exciting stuff, small and big problems, finding more questions, and finding some answers. -->
 
 <!-- Why do we not work together, implement similar structures for analysing code, share resources, work multidisciplinary. -->
-
 <!-- My aim is to start a conversation about the importance of proper documenting data as well as recurring analytical tasks. -->
-<!-- Moving towards a more open and shared way of working, EVERYONE wins. -->
-<!-- Some people are already working like this, it's time others do it as well. -->
-<!-- If not now, when then? -->
-<!-- We hope others will join a more open and collaborative way of working in healthcare analytics. -->
-<!-- I hope people making the decisions about the direction of healthcare analytics in the NHS will start to understand and act, hopefully soon!  -->
+<!--  -->
+
+## ALL CAPS SUMMARY
+
+> **DOCUMENT** EVERYTHING!
+> ABSOLUTELY EVERYTHING!
+> MESSY DATA and TIDY DATA!
+> MESSY CODE and TIDY CODE
+> EVERY FUNCTION!
+> EVERY SINGLE CHANGE!
+
+> **AUTOMATE** COMMON ANALYTICAL TASKS! WRITE FUNCTIONS AND PACKAGES!
+
+> EXPECT MITSAKES, THERE WILL BE `r emo::ji("bug")``r emo::ji("bug")``r emo::ji("bug")` IN YOUR CODE or PROBLEMS IN THE DATA ... **TEST** EVERYTHING!
+
+> **SHARE** MUCH AS YOU CAN!
+
+Of course this doesn't always work `r emo::ji("doubt")`!
+There will always be some messy data, inconsistent variable names, undocumented code, and ...
