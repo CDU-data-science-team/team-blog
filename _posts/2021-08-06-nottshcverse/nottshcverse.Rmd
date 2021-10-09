@@ -3,8 +3,8 @@ title: "Development of tools for querying, tidying, and analysing data in R"
 description: |
   ***TLTR:*** 
   Our goal was to make it easier to work with healthcare data that is stored in databases in a reproducible and collaborative way.
-  We wrote lots of R functions for recurring analytical tasks that get automatically translated into SQL code and grouped these functions into R packages.
-  This allowed us to communicate with large databases through R and make use of many advantages that cannot be done easily using other approaches, such as *(i)* good documentation of code and analytical tasks, *(ii)* formal testing of code, *(iii)* easy distribution of updates across across all team members, and *(iv)* modular integration of common data manipulations (or analyses) in interactive dashboards.
+  We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.
+  All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* formally test our code, *(iii)* easily distribute updates across all team members, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.
 author:
   - name: Milan Wiedemann
 date: 2021-09-29
