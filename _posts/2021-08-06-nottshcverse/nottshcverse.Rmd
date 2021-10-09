@@ -234,8 +234,9 @@ There will always be some messy data, inconsistent variable names, undocumented 
 
 ## Related work and resources
 
-- `r emo::ji("book")` [RStudio (2021). Databases using R from RStudio](https://db.rstudio.com/)
-- `r emo::ji("book")` [RStudio (2021). Using an ODBC driver](https://db.rstudio.com/r-packages/odbc/)
+- `r emo::ji("book")` [Chris Mainey (2019). SQL Server Database connections in R.](https://nhsrcommunity.com/blog/sql-server-database-connections-in-r/)
+- `r emo::ji("book")` [Emily Riederer (2021). Workflows for querying databases via R - Tricks for modularizing and refactoring your projects SQL/R interface.](https://emilyriederer.netlify.app/post/sql-r-flow/)
 - `r emo::ji("book")` [Hadley Wickham, Maximilian Girlich and Edgar Ruiz (2021). dbplyr: A 'dplyr' Back End for Databases.](https://dbplyr.tidyverse.org/articles/dbplyr.html)
-- `r emo::ji("video")` [Edgar Ruiz (2018). Best practices for working with databases](https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/)
-- FIND THE LINK TO THE BLOG POST I SAW ON TWITTER
+- `r emo::ji("book")` [RStudio (2021). Databases using R from RStudio.](https://db.rstudio.com/)
+- `r emo::ji("book")` [RStudio (2021). Using an ODBC driver](https://db.rstudio.com/r-packages/odbc/)
+- `r emo::ji("video")` [Edgar Ruiz (2018). Best practices for working with databases.](https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/)
