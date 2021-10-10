@@ -1599,24 +1599,6 @@ Figure 2: Overview of some R packages developed by the Clinical Development Unit
                       contact_type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"phone"</span>, <span class='st'>"f2f"</span>, <span class='st'>"video"</span>, <span class='st'>"phone"</span><span class='op'>)</span>,
                       assessment_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>321</span>, <span class='fl'>322</span>, <span class='fl'>344</span>, <span class='cn'>NA</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='co'># Set up example table with outcomes measures</span>
-<span class='co'># Here PROMS (Patient Reported Outcome Measures)</span>
-<span class='va'>proms_s2</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span>client_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>,
-                   contact_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>123</span>, <span class='fl'>123</span>, <span class='fl'>124</span>, <span class='fl'>125</span>, <span class='fl'>156</span><span class='op'>)</span>,
-                   assessment_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>321</span>, <span class='fl'>322</span>, <span class='fl'>344</span>, <span class='fl'>355</span>, <span class='fl'>366</span><span class='op'>)</span>,
-                   assessment_date <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2018-05-19"</span>, <span class='st'>"2018-05-19"</span>, 
-                                       <span class='st'>"2019-06-05"</span>, <span class='st'>"2019-07-08"</span>, 
-                                       <span class='st'>"2019-01-15"</span><span class='op'>)</span>,
-                   assessment_stage <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"pre"</span>, <span class='st'>"pre"</span>, 
-                                        <span class='st'>"post"</span>, <span class='st'>"fu"</span>, 
-                                        <span class='st'>"pre"</span><span class='op'>)</span>,
-                   proms_type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"anxiety"</span>, <span class='st'>"depression"</span>, 
-                                  <span class='st'>"depression"</span>, <span class='st'>"depression"</span>,
-                                  <span class='st'>"pain"</span><span class='op'>)</span>,
-                   proms_answer <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"low"</span>, <span class='st'>"high"</span>, 
-                                    <span class='st'>"medium"</span>, <span class='st'>"low"</span>, 
-                                    <span class='st'>"high"</span><span class='op'>)</span><span class='op'>)</span>
-
 <span class='co'># Set up example demographics table with 2 patients</span>
 <span class='va'>demographics_s2</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span>client_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>, 
                           dob <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1988-01-01"</span>, <span class='st'>"1965-01-01"</span><span class='op'>)</span>,
@@ -1649,7 +1631,7 @@ Figure 2: Overview of some R packages developed by the Clinical Development Unit
 </div>
 </div>
 <h3 id="writing-a-function">Writing a function</h3>
-<p>We can also write our own functions and use them in a modular way whenever we need them. Here’s a simple example to demonstrate how this can be done. In this example the function arguments take the variable names for date of birth (<code>dob</code>) and the contact date (<code>contact_date</code>).</p>
+<p>We can also write our own functions and use them in a modular way whenever we need them. Here’s a simple example to demonstrate how we can do the same calculation as shown above using our own function. In this example the function arguments take the variable names for date of birth (<code>dob</code>) and the contact date (<code>contact_date</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>calc_age_at_contact</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>var_dob</span>, <span class='va'>var_contact_date</span><span class='op'>)</span> <span class='op'>{</span>
@@ -1661,6 +1643,7 @@ Figure 2: Overview of some R packages developed by the Clinical Development Unit
 </div>
 </div>
 <h3 id="example-sql-code">Example <code>SQL</code> code</h3>
+<p>As mentioned above (Challenges and solutions, Point 1), the object that we work with most of the time are just SQL queries and not real data stored in your R environment. We can look at the underlying SQL code using the <code>dplyr::show_query()</code> function. I don’t really know SQL very well myself, but some people who do have created a great package that translates R code into SQL code (see the <a href="https://dbplyr.tidyverse.org/articles/dbplyr.html">dbplyr</a> package for more).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Use dplyr::show_query() function to see underlying SQL code</span>
@@ -1675,6 +1658,7 @@ LEFT JOIN `demographics_s2` AS `RHS`
 ON (`LHS`.`client_id` = `RHS`.`client_id`)
 )</code></pre>
 </div>
+<p>Note that we can also see the SQL code from our own functions.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>db_age_at_contacts</span> <span class='op'>%&gt;%</span> 
@@ -1709,7 +1693,7 @@ ON (`LHS`.`client_id` = `RHS`.`client_id`)
 3         1 2020-07-08   1988-01-01             32
 4         2 2019-01-15   1965-01-01             54</code></pre>
 </div>
-<p>There are many other examples out there showing how to work with databases in RStudio. I added some links that I found useful at the end of this post.</p>
+<p>Of course this is a VERY simple example. This can get way more complex, think BIG and solve BIG problems. There are many other examples out there showing how to work with databases in RStudio. I added some links that I found useful at the end of this post.</p>
 <h2 id="watch-out-now">Watch out now</h2>
 <p>So what’s coming next and where can we take this? Is this perfect? I don’t know exactly what’s coming next and this is definitely far from perfect. But it’s the best approach my colleagues and I could come up with in the time that we spent working on this. Maybe I’ll improve this one day, maybe someone else will? Until then let’s share ideas and work together to improve healthcare analytics in the NHS. Ohhh, some people are already working like this 👀 it’s time others join them. I hope those who make decisions about the direction of healthcare analytics in the NHS will start to understand the problems and opportunities and act soon. If not now, when then? We need to move towards a more open and modern way of healthcare analytics!</p>
 <!-- - We want to build an entire universe of packages that help us AND OTHERS to understand and improve clinical care. -->
@@ -1735,7 +1719,7 @@ ON (`LHS`.`client_id` = `RHS`.`client_id`)
 <li>📖 <a href="https://dbplyr.tidyverse.org/articles/dbplyr.html">Hadley Wickham, Maximilian Girlich and Edgar Ruiz (2021). dbplyr: A ‘dplyr’ Back End for Databases.</a></li>
 <li>📖 <a href="https://db.rstudio.com/">RStudio (2021). Databases using R from RStudio.</a></li>
 <li>📖 <a href="https://db.rstudio.com/r-packages/odbc/">RStudio (2021). Using an ODBC driver</a></li>
-<li>📺 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
+<li>📽 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
 <li>🧙 <a href="https://chrisbeeley.net/">Chris Beeley (2011 ’Til Infinity). Random bits of related and unrelated statistics, programming, and healthcare wizardry.</a></li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

@@ -121,24 +121,6 @@ contacts_s2 <- tibble(client_id = c(1, 1, 1, 2),
                       contact_type = c("phone", "f2f", "video", "phone"),
                       assessment_id = c(321, 322, 344, NA))
 
-# Set up example table with outcomes measures
-# Here PROMS (Patient Reported Outcome Measures)
-proms_s2 <- tibble(client_id = c(1, 1, 1, 1, 2),
-                   contact_id = c(123, 123, 124, 125, 156),
-                   assessment_id = c(321, 322, 344, 355, 366),
-                   assessment_date = c("2018-05-19", "2018-05-19", 
-                                       "2019-06-05", "2019-07-08", 
-                                       "2019-01-15"),
-                   assessment_stage = c("pre", "pre", 
-                                        "post", "fu", 
-                                        "pre"),
-                   proms_type = c("anxiety", "depression", 
-                                  "depression", "depression",
-                                  "pain"),
-                   proms_answer = c("low", "high", 
-                                    "medium", "low", 
-                                    "high"))
-
 # Set up example demographics table with 2 patients
 demographics_s2 <- tibble(client_id = c(1, 2), 
                           dob = c("1988-01-01", "1965-01-01"),
@@ -169,12 +151,10 @@ db_age_at_contacts <- db_s2_contacts %>%
   mutate(age_at_contact = as.Date(contact_date) - as.Date(dob))
 ```
 
-
-
 ### Writing a function
 
 We can also write our own functions and use them in a modular way whenever we need them.
-Here's a simple example to demonstrate how this can be done.
+Here's a simple example to demonstrate how we can do the same calculation as shown above using our own function.
 In this example the function arguments take the variable names for date of birth (`dob`) and the contact date (`contact_date`).
 
 ```{r}
@@ -186,22 +166,25 @@ calc_age_at_contact <- function(data, var_dob, var_contact_date) {
   }
 ```
 
-
-
 ### Example `SQL` code
+
+As mentioned above (Challenges and solutions, Point 1), the object that we work with most of the time are just SQL queries and not real data stored in your R environment.
+We can look at the underlying SQL code using the `dplyr::show_query()` function.
+I don't really know SQL very well myself, but some people who do have created a great package that translates R code into SQL code (see the [dbplyr](https://dbplyr.tidyverse.org/articles/dbplyr.html) package for more).
 
 ```{r}
 # Use dplyr::show_query() function to see underlying SQL code
 show_query(db_age_at_contacts)
 ```
+
+Note that we can also see the SQL code from our own functions.
+
 ```{r}
 db_age_at_contacts %>% 
   calc_age_at_contact(var_dob = dob, 
                       var_contact_date = contact_date) %>% 
   show_query()
 ```
-
-
 
 ### Example results
 
@@ -211,6 +194,8 @@ db_age_at_contacts %>%
   select(client_id, contact_date, dob, age_at_contact)
 ```
 
+Of course this is a VERY simple example.
+This can get way more complex, think BIG and solve BIG problems.
 There are many other examples out there showing how to work with databases in RStudio.
 I added some links that I found useful at the end of this post.
 
