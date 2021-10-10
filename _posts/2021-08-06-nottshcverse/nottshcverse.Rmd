@@ -1,10 +1,10 @@
 ---
-title: "Development of tools for querying, tidying, and analysing data in R"
+title: "Development of open tools for analysing healthcare data in R"
 description: |
   ***TLTR:*** 
-  Our goal was to make it easier to work with healthcare data that is stored in databases in a reproducible and collaborative way.
+  Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way.
   We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.
-  All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* formally test our code, *(iii)* easily distribute updates across all team members, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.
+  All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.
 author:
   - name: Milan Wiedemann
 date: 2021-09-29
@@ -31,22 +31,57 @@ We developed a set of different tools, the **`{nottshcverse}`**, to help us look
 ## Challenges and solutions
 
 Real data is messy but we should do our best to tidy the mess, where possible in an automated way.
-There are many challenges when working with healthcare data, here is only a small selection of challenges that I think underlay most analyses.
+There are many challenges when working with healthcare data, here is only a small selection of those that I think underlay most analyses.
 Figure \@ref(fig:fig-nottshcverse-overview-funs) shows our solutions to these challenges.
 
-```{r fig-nottshcverse-overview-funs, echo=FALSE, fig.cap="Main goals that guided the development of the packages that are part of the {nottshcverse}."}
+```{r fig-nottshcverse-overview-funs, echo=FALSE, fig.cap="Main goals that guided the development of the {nottshcverse} packages."}
 knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_overview_functions.png"))
 ```
 
-1. `r emo::ji("thinking")` It's really hard to get the clinical data that is needed in a reproducible way that is consistent across different people who work on the same (or related) analysis. This is particularly true because most of the data is stored on SQL servers and only starts to make sense after joining multiple different datasets. `r emo::ji("nerd")` **lalala**
-1. `r emo::ji("thinking")` Most of the time, the data is not in the format that is needed for further analyses. There may be specific data manipulations that are needed to make sense of the data and analyses it properly. `r emo::ji("nerd")` **lalala**
-1. `r emo::ji("thinking")` The methods of data analyses and visualisations should be understandable, reproducible, and available to other people. Unfortunately this is not the case for most of the work that I've seen because the software tools that are used (e.g., Excel, PowerBI, and other silly solutions that are not worth their money) are not script based and usually shared in private emails. `r emo::ji("nerd")` **lalala**
-1. `r emo::ji("thinking")` Code should be really well documented so that it is easy to understand what's going on. This includes the current version of the code as well as all previous versions and changes. This can be done using tools like Git and GitHub, but unfortunately most code is currently shared undocumented in private emails. `r emo::ji("nerd")` **lalala**
-1. `r emo::ji("thinking")` Mistakes happen! Sometimes things that you have no control over can change and break your code that previously worked fine (e.g., the format of the raw data or a functions that someone else wrote). Therefore, it's important to continuously test whether the code is still working the way it's supposed to work. `r emo::ji("nerd")` **lalala**
+1. `r emo::ji("thinking")` It's really hard to get the clinical data that is needed in a reproducible way that is consistent across different people who work on the same (or related) analysis. This is particularly true because most of the data is stored on SQL servers and only starts to make sense after joining multiple different datasets. `r emo::ji("nerd")` **We wrote functions that made it very easy and secure to *(i)* connect to and *(ii)* query data from different databases that we are working with. This way we could get the data we needed for our analyses using very few lines of code in R.**
 
-## {nottshcverse}
+```{r, eval=FALSE}
+# First, create connection to databases
+conn_s1 <- connect_sql(server = "SystmOne")
+conn_iapt <- connect_sql(server = "IAPTus")
 
-```{r fig-nottshcverse-overview-pkgs, echo=FALSE, fig.cap="Overview of some R packages developed by the Clinical Development Unit Data Science Team and the NHS-R Community."}
+# Now we can use the connection to get contacts data from SystmOne ...
+db_contacts_s1 <- get_s1_contacts(from = "2020-01-01", 
+                                  to = "2020-12-31", 
+                                  conn = conn_s1)
+
+# ... and IAPTus databases
+db_contacts_iapt <- get_iapt_contacts(from = "2020-01-01", 
+                                      to = "2020-12-31", 
+                                      conn = conn_iapt)
+
+# Note that the objects 'contacts_s1' and 'contacts_iapt' are just pointing to 
+# the databases (I like to use the prefix db) and not actually downloaded to the
+# environment on your computer.
+```
+
+2. `r emo::ji("thinking")` Most of the time, the data is not in the format that is needed for further analyses. There may be specific data manipulations that are needed to make sense of the data and analyses it properly. Also, different databases might be set up in ways that it is hard to merge data. `r emo::ji("nerd")` **We wrote function that tidy the raw data from the databases so that it is more consistent across databases and easier to analyse. All of this still happens within the server so that our computers don't have to do all of this work.**
+
+```{r, eval=FALSE}
+# Each get_*_data() function comes with a tidy_*_data(), here tidy_s1_contacts()
+# Here I use the connection to the raw (messy) contacts  data that I created above
+# and tidy it using the tidy_s1_contacts() function
+db_contacts_s1 <- db_contacts_s1 %>% 
+  tidy_s1_contacts()
+
+db_contacts_iapt <- db_contacts_iapt %>% 
+  tidy_iapt_contacts()
+```
+
+3. `r emo::ji("thinking")` The methods of data analyses and visualisations should be understandable, reproducible, and available to other people. Unfortunately this is not always the case yet because the software tools that are used (e.g., Excel, PowerBI, and other silly solutions that are not worth their money) are not script based and usually shared in private emails. `r emo::ji("nerd")` **We wrote R functions for common analytical tasks and visualisations.**
+
+4. `r emo::ji("thinking")` Code should be really well documented so that it is easy to understand what's going on. This includes the current version of the code as well as all previous versions and changes. This can be done using tools like Git and GitHub, but unfortunately most code is currently shared undocumented in private emails. `r emo::ji("nerd")` **We created detailed documentations that are easily accessible to everyone who uses our R packages. Also, because develop our tools on GitHub, every change to our code is documented.**
+
+5. `r emo::ji("thinking")` Mistakes happen! Sometimes things that you have no control over can change and break your code that previously worked fine (e.g., the format of the raw data or a functions that someone else wrote). Therefore, it's important to continuously test whether the code is still working the way it's supposed to work. `r emo::ji("nerd")` **R packages (or similar solutions in other statistical programming languages) are relatively easy to test, for example using the [{testthat}](https://testthat.r-lib.org/) package. We started to implement tests into our work so that we can check if changes that we make to our code don't break anything.**
+
+## Overview of the {nottshcverse}
+
+```{r fig-nottshcverse-overview-pkgs, echo=FALSE, fig.cap=paste0("Overview of some R packages developed by the Clinical Development Unit Data Science Team ", emo::ji("star"), "and the NHS-R Community ", emo::ji("red_heart"))}
 knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_overview_pkgs.png"))
 ```
 
@@ -55,7 +90,7 @@ knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_
 - `{honos}`, `{LSOApop}`: Packages designed in generic way to help use and others `{nottshcData}` work with specific questionnaires (e.g., Health of the Nation Outcome Scales, HoNOS) or open data sets (e.g., LSOA population estimates)
 - `{outcomesdashboard}`: Our dashboards use all the packages mentioned above + special packages developed specifically to support the dashboards with helper functions
 
-## Simplified example
+## Simplified working example
 
 To illustrate how R can be used to work with databases I'll use the following example.
 Imagine we're working with a database called `SystmTwo` `(S2)` and need to use two different tables for our analysis:
@@ -206,13 +241,15 @@ We need to move towards a more open and modern way of healthcare analytics!
 
 ## Summary
 
+Here's a short summary in **BOLD AND ALL CAPS**:
+
 - **DOCUMENT** everything, absolutely everything! Every function and every single change!
 - **AUTOMATE** common analytical tasks! Write functions and packages!
 - **TEST** everything! Expect mistakes, there will be `r emo::ji("bug")``r emo::ji("bug")``r emo::ji("bug")`
-- **SHARE** as much as you can!
+- **SHARE** as much as we can!
 
-Of course this doesn't always work ...
-There will always be some messy data, inconsistent variable names, undocumented code, and ...
+Of course this doesn't always work.
+There will always be some messy data, inconsistent variable names, undocumented code, and ... blablabla.
 
 ## Related work and resources {#resources}
 
@@ -222,3 +259,4 @@ There will always be some messy data, inconsistent variable names, undocumented 
 - `r emo::ji("book")` [RStudio (2021). Databases using R from RStudio.](https://db.rstudio.com/)
 - `r emo::ji("book")` [RStudio (2021). Using an ODBC driver](https://db.rstudio.com/r-packages/odbc/)
 - `r emo::ji("video")` [Edgar Ruiz (2018). Best practices for working with databases.](https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/)
+- 🧙 [Chris Beeley (2011 'Til Infinity). Random bits of related and unrelated statistics, programming, and healthcare wizardry.](https://chrisbeeley.net/)
