@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
 <title>CDU data science team blog: Development of open tools for analysing healthcare data in R</title>
@@ -102,9 +103,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="***TLTR: (Too Long To Read)*** &#10;Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way.&#10;We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.&#10;All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way."/>
 <meta property="og:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/"/>
-<meta property="og:image" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/img/nottshcverse.png"/>
-<meta property="og:image:width" content="2354"/>
-<meta property="og:image:height" content="560"/>
+<meta property="og:image" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/img/Principes-de-Logique-p435.jpg"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="CDU data science team blog"/>
 
@@ -113,9 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="twitter:title" content="CDU data science team blog: Development of open tools for analysing healthcare data in R"/>
 <meta property="twitter:description" content="***TLTR: (Too Long To Read)*** &#10;Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way.&#10;We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.&#10;All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way."/>
 <meta property="twitter:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/"/>
-<meta property="twitter:image" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/img/nottshcverse.png"/>
-<meta property="twitter:image:width" content="2354"/>
-<meta property="twitter:image:height" content="560"/>
+<meta property="twitter:image" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/img/Principes-de-Logique-p435.jpg"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
 <meta name="citation_title" content="CDU data science team blog: Development of open tools for analysing healthcare data in R"/>
@@ -127,12 +124,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Development of open tools for analysing healthcare data in R"]},{"type":"character","attributes":{},"value":["***TLTR: (Too Long To Read)*** \nOur goal was to make it easier to work with healthcare data in a reproducible and collaborative way.\nWe wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.\nAll our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Milan Wiedemann"]}]}]},{"type":"character","attributes":{},"value":["2021-09-29"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["Open source","Team working","Packages"]},{"type":"character","attributes":{},"value":["img/`Principes de Logique p435.jpg`"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Development of open tools for analysing healthcare data in R"]},{"type":"character","attributes":{},"value":["***TLTR: (Too Long To Read)*** \nOur goal was to make it easier to work with healthcare data in a reproducible and collaborative way.\nWe wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.\nAll our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Milan Wiedemann"]}]}]},{"type":"character","attributes":{},"value":["2021-09-29"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["Open source","Team working","Packages"]},{"type":"character","attributes":{},"value":["img/Principes-de-Logique-p435.jpg"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["img/nottshcverse.png","img/nottshcverse_overview_functions.png","img/nottshcverse_overview_pkgs.png","img/nottshcverse_problem.png","img/Principes de Logique p435.jpg"]}
+  {"type":"character","attributes":{},"value":["img/nottshcverse.png","img/nottshcverse_overview_functions.png","img/nottshcverse_overview_pkgs.png","img/nottshcverse_problem.png","img/Principes-de-Logique-p435.jpg","nottshcverse_files/anchor-4.2.2/anchor.min.js","nottshcverse_files/bowser-1.9.3/bowser.min.js","nottshcverse_files/distill-2.2.21/template.v2.js","nottshcverse_files/header-attrs-2.11.3/header-attrs.js","nottshcverse_files/header-attrs-2.11/header-attrs.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.min.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.min.map","nottshcverse_files/popper-2.6.0/popper.min.js","nottshcverse_files/tippy-6.2.7/tippy-bundle.umd.min.js","nottshcverse_files/tippy-6.2.7/tippy-light-border.css","nottshcverse_files/tippy-6.2.7/tippy.css","nottshcverse_files/tippy-6.2.7/tippy.umd.min.js","nottshcverse_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -1885,7 +1882,10 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      var refs = $(this).attr('data-cites').split(" ");
+      var refHtml = refs.map(function(ref) {
+        return "<p>" + $('#ref-' + ref).html() + "</p>";
+      }).join("\n");
       window.tippy(this, {
         allowHTML: true,
         content: refHtml,
@@ -2387,7 +2387,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.11.3/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2496,7 +2496,7 @@ h1, h2, h3, h4, h5 {
 </nav>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="img/nottshcverse.png" width="1177" /></p>
+<p><img src="img/nottshcverse.png" title="Image of the words nottshcverse with curly brackets around it" alt="Image of the words nottshcverse with curly brackets around it" width="1177" /></p>
 </div>
 <p>Our team works with routinely collected NHS patient data. Currently we focus on understanding better how patients are using the service, changes in clinical outcome measures, and analysis of patient experiences. The main questions that guide our work are <em>‘What works for whom and how does it work?’</em>, <em>‘What doesn’t work?’</em>, and <em>‘How can we integrate patient experiences into our analyses?’</em>. We developed a set of different tools, the <strong><code>{nottshcverse}</code></strong>, to help us look at these questions by automating recurring and time-consuming tasks so that we can spend more time thinking the clinical questions.</p>
 <h2 id="challenges-and-solutions">Challenges and solutions</h2>
@@ -2715,7 +2715,7 @@ ON (`LHS`.`client_id` = `RHS`.`client_id`)
 <li>📖 <a href="https://dbplyr.tidyverse.org/articles/dbplyr.html">Hadley Wickham, Maximilian Girlich and Edgar Ruiz (2021). dbplyr: A ‘dplyr’ Back End for Databases.</a></li>
 <li>📖 <a href="https://db.rstudio.com/">RStudio (2021). Databases using R from RStudio.</a></li>
 <li>📖 <a href="https://db.rstudio.com/r-packages/odbc/">RStudio (2021). Using an ODBC driver</a></li>
-<li>📻 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
+<li>📽 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
 <li>🧙 <a href="https://chrisbeeley.net/">Chris Beeley (2011 ’Til Infinity). Random bits of related and unrelated statistics, programming, and healthcare wizardry.</a></li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

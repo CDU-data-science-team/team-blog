@@ -16,14 +16,14 @@ categories:
   - Open source
   - Team working
   - Packages
-preview: img/`Principes de Logique p435.jpg`
+preview: img/Principes-de-Logique-p435.jpg
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.alt="Image of the words nottshcverse with curly brackets around it"}
 knitr::include_graphics("img/nottshcverse.png")
 ```
 
