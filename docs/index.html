@@ -24,6 +24,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -452,7 +453,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -2361,7 +2362,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2563,6 +2564,30 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="CDU data science team blog">CDU data science team blog</h1>
+<a href="posts/2021-08-06-nottshcverse/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Open source","Team working","Packages"]}</script>
+<div class="metadata">
+<div class="publishedDate">Sept. 29, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">Milan Wiedemann</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-08-06-nottshcverse/img/nottshcverse.png"/>
+</div>
+<div class="description">
+<h2>Development of open tools for analysing healthcare data in R</h2>
+<div class="dt-tags">
+<div class="dt-tag">Open source</div>
+<div class="dt-tag">Team working</div>
+<div class="dt-tag">Packages</div>
+</div>
+<p>***TLTR: (Too Long To Read)*** 
+Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way.
+We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.
+All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.</p>
+</div>
+</a>
 <a href="posts/2021-07-30-pair-programming-code-review-journal-club-and-team-time/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["Team working"]}</script>
 <div class="metadata">
@@ -2650,7 +2675,7 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img src="posts/2021-06-10-making-an-rstudio-presentation-template/img/bibliothek-geographischer-handbücher-107.jpg"/>
+<img data-src="posts/2021-06-10-making-an-rstudio-presentation-template/img/bibliothek-geographischer-handbücher-107.jpg"/>
 </div>
 <div class="description">
 <h2>Making an RStudio presentation template</h2>
@@ -2783,7 +2808,7 @@ function init_posts_list() {
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(11)</span>
+<span class="category-count">(12)</span>
 </li>
 <li>
 <a href="#category:Data_clinics">Data clinics</a>
@@ -2795,7 +2820,11 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:Open_source">Open source</a>
-<span class="category-count">(4)</span>
+<span class="category-count">(5)</span>
+</li>
+<li>
+<a href="#category:Packages">Packages</a>
+<span class="category-count">(1)</span>
 </li>
 <li>
 <a href="#category:Patient_feedback">Patient feedback</a>
@@ -2815,7 +2844,7 @@ function init_posts_list() {
 </li>
 <li>
 <a href="#category:Team_working">Team working</a>
-<span class="category-count">(1)</span>
+<span class="category-count">(2)</span>
 </li>
 </ul>
 </div>

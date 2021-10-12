@@ -1,7 +1,7 @@
 ---
 title: "Development of open tools for analysing healthcare data in R"
 description: |
-  ***TLTR:*** 
+  ***TLTR: (Too Long To Read)*** 
   Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way.
   We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.
   All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.
@@ -12,7 +12,11 @@ output:
   distill::distill_article:
     self_contained: false
     toc: true
-draft: true
+categories:
+  - Open source
+  - Team working
+  - Packages
+preview: img/`Principes de Logique p435.jpg`
 ---
 
 ```{r setup, include=FALSE}
@@ -20,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r, echo=FALSE}
-knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse.png"))
+knitr::include_graphics("img/nottshcverse.png")
 ```
 
 Our team works with routinely collected NHS patient data.
@@ -31,11 +35,11 @@ We developed a set of different tools, the **`{nottshcverse}`**, to help us look
 ## Challenges and solutions
 
 Real data is messy but we should do our best to tidy the mess, where possible in an automated way.
-There are many challenges when working with healthcare data, here is only a small selection of those that I think underlay most analyses.
+There are many challenges when working with healthcare data, here is only a small selection of those that I think underlies most analyses.
 Figure \@ref(fig:fig-nottshcverse-overview-funs) shows our solutions to these challenges.
 
 ```{r fig-nottshcverse-overview-funs, echo=FALSE, fig.cap="Main goals that guided the development of the {nottshcverse} packages."}
-knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_overview_functions.png"))
+knitr::include_graphics("img/nottshcverse_overview_functions.png")
 ```
 
 1. `r emo::ji("thinking")` It's really hard to get the clinical data that is needed in a reproducible way that is consistent across different people who work on the same (or related) analysis. This is particularly true because most of the data is stored on SQL servers and only starts to make sense after joining multiple different datasets. `r emo::ji("nerd")` **We wrote functions that made it very easy and secure to *(i)* connect to and *(ii)* query data from different databases that we are working with. This way we could get the data we needed for our analyses using very few lines of code in R.**
@@ -60,7 +64,7 @@ db_contacts_iapt <- get_iapt_contacts(from = "2020-01-01",
 # environment on your computer.
 ```
 
-2. `r emo::ji("thinking")` Most of the time, the data is not in the format that is needed for further analyses. There may be specific data manipulations that are needed to make sense of the data and analyses it properly. Also, different databases might be set up in ways that it is hard to merge data. `r emo::ji("nerd")` **We wrote function that tidy the raw data from the databases so that it is more consistent across databases and easier to analyse. All of this still happens within the server so that our computers don't have to do all of this work.**
+2. `r emo::ji("thinking")` Most of the time, the data is not in the format that is needed for further analyses. There may be specific data manipulations that are needed to make sense of the data and analyse it properly. Also, different databases might be set up in ways that it is hard to merge data. `r emo::ji("nerd")` **We wrote function that tidy the raw data from the databases so that it is more consistent across databases and easier to analyse. All of this still happens within the server so that our computers don't have to do all of this work.**
 
 ```{r, eval=FALSE}
 # Each get_*_data() function comes with a tidy_*_data(), here tidy_s1_contacts()
@@ -81,13 +85,13 @@ db_contacts_iapt <- db_contacts_iapt %>%
 
 ## Overview of the {nottshcverse}
 
-```{r fig-nottshcverse-overview-pkgs, echo=FALSE, fig.cap=paste0("Overview of some R packages developed by the Clinical Development Unit Data Science Team ", emo::ji("star"), "and the NHS-R Community ", emo::ji("red_heart"))}
-knitr::include_graphics(here::here("_posts/2021-08-06-nottshcverse/nottshcverse_overview_pkgs.png"))
+```{r fig-nottshcverse-overview-pkgs, echo=FALSE, fig.cap=paste0("Overview of some R packages developed by the Clinical Development Unit Data Science Team", emo::ji("star"), "and the NHS-R Community ", emo::ji("red_heart"))}
+knitr::include_graphics("img/nottshcverse_overview_pkgs.png")
 ```
 
 - `{nottshcData}`:  Unified framework to query, transform, and aggregate data from different databases
 - `{nottshcMethods}`: Tools for performing common analytical tasks (e.g., grouping continuous age into groups)
-- `{honos}`, `{LSOApop}`: Packages designed in generic way to help use and others `{nottshcData}` work with specific questionnaires (e.g., Health of the Nation Outcome Scales, HoNOS) or open data sets (e.g., LSOA population estimates)
+- `{honos}`, `{LSOApop}`: Packages designed in generic way to help use and others `{nottshcData}` work with specific questionnaires (e.g., Health of the Nation Outcome Scales, HoNOS) or open data sets (e.g. LSOA population estimates)
 - `{outcomesdashboard}`: Our dashboards use all the packages mentioned above + special packages developed specifically to support the dashboards with helper functions
 
 ## Simplified working example
@@ -141,8 +145,7 @@ db_s2_demographics <- copy_to(conn_s2, demographics_s2)
 
 ### Example analysis
 
-Here we join the contacts with the demographics information to calculate the
-age at the time a patient has their contact (`age_at_contact`).
+Here we join the contacts with the demographics information to calculate the age at the time a patient has their contact (`age_at_contact`).
 
 ```{r }
 # Calculate age at time of contact
@@ -234,7 +237,7 @@ Here's a short summary in **BOLD AND ALL CAPS**:
 - **SHARE** as much as we can!
 
 Of course this doesn't always work.
-There will always be some messy data, inconsistent variable names, undocumented code, and ... blablabla.
+There will always be some messy data, inconsistent variable names, undocumented code, and ... blah blah blah.
 
 ## Related work and resources {#resources}
 
