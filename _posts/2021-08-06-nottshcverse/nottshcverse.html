@@ -86,635 +86,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>CDU data science team blog: Welcome to the CDU data science team blog</title>
+  <title>Development of open tools for analysing healthcare data in R</title>
+
+  <meta property="description" itemprop="description" content="***TLTR: (Too Long To Read)*** &#10;Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way.&#10;We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.&#10;All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way."/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-09-29"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-09-29"/>
+  <meta name="article:author" content="Milan Wiedemann"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="CDU data science team blog: Welcome to the CDU data science team blog"/>
+  <meta property="og:title" content="Development of open tools for analysing healthcare data in R"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="***TLTR: (Too Long To Read)*** &#10;Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way.&#10;We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.&#10;All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="CDU data science team blog"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="CDU data science team blog: Welcome to the CDU data science team blog"/>
+  <meta property="twitter:title" content="Development of open tools for analysing healthcare data in R"/>
+  <meta property="twitter:description" content="***TLTR: (Too Long To Read)*** &#10;Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way.&#10;We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.&#10;All our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["Welcome to the CDU data science team blog"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Development of open tools for analysing healthcare data in R"]},{"type":"character","attributes":{},"value":["***TLTR: (Too Long To Read)*** \nOur goal was to make it easier to work with healthcare data in a reproducible and collaborative way.\nWe wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.\nAll our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Milan Wiedemann"]}]}]},{"type":"character","attributes":{},"value":["2021-09-29"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["Open source","Team working","Packages"]},{"type":"character","attributes":{},"value":["img/`Principes de Logique p435.jpg`"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["img/nottshcverse.png","img/nottshcverse_overview_functions.png","img/nottshcverse_overview_pkgs.png","img/nottshcverse_problem.png","img/Principes de Logique p435.jpg"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2029,368 +1433,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
-    --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-  </style>
-  <style type="text/css">
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-  html {
-    /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    /*-- Main font colors --*/
-    --title-color:     #ffffff;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
-    --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
-  }
-
-  /*-- ARTICLE METADATA --*/
-  d-byline {
-    --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
-    --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
-  }
-
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    18px;
-    --contents-size:   13px;
-  }
-
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
-    --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
-  .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
-  }
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-
-  d-title {
-  padding-top: 12rem;
-  font-weight: 800;
-  color: #fff;
-  background: 
-      /* top, transparent red, faked with gradient */ 
-      linear-gradient(
-        rgba(77,77,77, 0.8), 
-        rgba(77,77,77, 0.8)
-      ),
-      /* bottom, image */
-      url(https://www.asylumprojects.org/images/6/67/mapperly3.png) no-repeat center center fixed;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size:cover !important;
-  }
-
-  .dt-tags .dt-tag {
-      color: #fff;
-      border-color: #fff;
-      border-radius: 5px;
-    }</style>
-  <style type="text/css">
-  /* base style */
-
-  /* FONT FAMILIES */
-
-  :root {
-    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-  }
-
-  body,
-  .posts-list .post-preview p,
-  .posts-list .description p {
-    font-family: var(--body-font), var(--body-default);
-  }
-
-  h1, h2, h3, h4, h5, h6,
-  .posts-list .post-preview h2,
-  .posts-list .description h2 {
-    font-family: var(--heading-font), var(--heading-default);
-  }
-
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-family: var(--mono-font), var(--mono-default);
-  }
-
-
-  /*-- TITLE --*/
-  d-title h1,
-  .posts-list > h1 {
-    color: var(--title-color, black);
-  }
-
-  d-title h1 {
-    font-size: var(--title-size, 50px);
-  }
-
-  /*-- HEADERS --*/
-  d-article h1,
-  d-article h2,
-  d-article h3,
-  d-article h4,
-  d-article h5,
-  d-article h6 {
-    color: var(--header-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- BODY --*/
-  d-article > p,  /* only text inside of <p> tags */
-  d-article > ul, /* lists */
-  d-article > ol {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-    font-size: var(--body-size, 1.06rem);
-  }
-
-
-  /*-- CODE --*/
-  d-article div.sourceCode code,
-  d-article pre code {
-    font-size: var(--code-size, 14px);
-  }
-
-  /*-- ASIDE --*/
-  d-article aside {
-    font-size: var(--aside-size, 12px);
-    color: var(--aside-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- FIGURE CAPTIONS --*/
-  figure .caption,
-  figure figcaption,
-  .figure .caption {
-    font-size: var(--fig-cap-size, 13px);
-    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
-  }
-
-  /*-- METADATA --*/
-  d-byline h3 {
-    font-size: var(--heading-size, 0.6rem);
-    color: var(--heading-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-byline {
-    font-size: var(--body-size, 0.8rem);
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  d-byline a,
-  d-article d-byline a {
-    color: var(--body-color, rgba(0, 0, 0, 0.8));
-  }
-
-  /*-- TABLE OF CONTENTS --*/
-  .d-contents nav h3 {
-    font-size: var(--heading-size, 18px);
-  }
-
-  .d-contents nav a {
-    font-size: var(--contents-size, 13px);
-  }
-
-  /*-- APPENDIX --*/
-  d-appendix h3 {
-    font-size: var(--heading-size, 15px);
-    color: var(--heading-color, rgba(0, 0, 0, 0.65));
-  }
-
-  d-appendix {
-    font-size: var(--text-size, 0.8em);
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  d-appendix d-footnote-list a.footnote-backlink {
-    color: var(--text-color, rgba(0, 0, 0, 0.5));
-  }
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  .distill-site-header .title {
-    font-size: var(--title-size, 18px);
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .distill-site-header a,
-  .nav-dropdown .nav-dropbtn {
-    font-family: var(--navbar-font), var(--heading-default);
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    font-size: var(--text-size, 15px);
-  }
-
-  .distill-site-header a:hover,
-  .nav-dropdown:hover .nav-dropbtn {
-    color: var(--hover-color, white);
-  }
-
-  .distill-site-header {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer {
-    font-size: var(--text-size, 15px);
-    color: var(--text-color, rgba(255, 255, 255, 0.8));
-    background-color: var(--bkgd-color, #0F2E3D);
-  }
-
-  .distill-site-footer a:hover {
-    color: var(--hover-color, white);
-  }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="nottshcverse_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="nottshcverse_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="nottshcverse_files/popper-2.6.0/popper.min.js"></script>
+  <link href="nottshcverse_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="nottshcverse_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="nottshcverse_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="nottshcverse_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="nottshcverse_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="nottshcverse_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="nottshcverse_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <style type="text/css">
-  .distill-site-nav {
-    color: #ffffff; 
-      background-color: #8A1538;
-  }
-
-  /* Use specific font in the body of the text */
-  html, body, p {
-    
-    font-family: Verdana, Helvetica, sans-serif;
-  }
-
-  /* Change appearance of headers */
-  h1, h2, h3, h4, h5 {
-    font-family: Verdana, Helvetica, sans-serif;
-  }
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -2399,64 +1455,279 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Welcome to the CDU data science team blog","authors":[]}
+{"title":"Development of open tools for analysing healthcare data in R","description":"***TLTR: (Too Long To Read)*** \nOur goal was to make it easier to work with healthcare data in a reproducible and collaborative way.\nWe wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.\nAll our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.","authors":[{"author":"Milan Wiedemann","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-09-29T00:00:00.000+01:00","citationText":"Wiedemann, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">CDU data science team blog</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="https://cdu-data-science-team.github.io/understanding-your-data/">Understanding Your Data</a>
-<a href="https://cdu-data-science-team.github.io/presentations/2021-03-01%20CDU%20Data%20Science%20Team%20Roadmap/roadmap.html#1">Roadmap</a>
-<a href="https://github.com/CDU-data-science-team">
-<i class="fab fa-github" aria-hidden="true"></i>
-</a>
-<a href="https://twitter.com/DataScienceNott">
-<i class="fab fa-twitter" aria-hidden="true"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Welcome to the CDU data science team blog</h1>
+<h1>Development of open tools for analysing healthcare data in R</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">Open source</div>
+<div class="dt=tag">Team working</div>
+<div class="dt=tag">Packages</div>
+</div>
 <!--/radix_placeholder_categories-->
-
+<p><p><strong><em>TLTR: (Too Long To Read)</em></strong> Our goal was to make it easier to work with healthcare data in a reproducible and collaborative way. We wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases. All our functions are grouped into R packages because this made it easier for us to: <em>(i)</em> write good documentation of our code and analytical tasks, <em>(ii)</em> easily distribute updates across all team members, <em>(iii)</em> formally test our code, and <em>(iv)</em> integrate common data manipulations (or analyses) into interactive dashboards in a modular way.</p></p>
 </div>
 
+<div class="d-byline">
+  Milan Wiedemann  
+  
+<br/>2021-09-29
+</div>
 
 <div class="d-article">
-<p>We are the data science team within the clinical development unit of <a href="https://www.nottinghamshirehealthcare.nhs.uk/">Nottinghamshire Healthcare NHS Trust</a>:</p>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
-<li><a href="https://twitter.com/ChrisBeeley">Chris Beeley</a></li>
-<li><a href="https://lextuga007.github.io/Postcard/">Zoë Turner</a></li>
-<li><a href="https://twitter.com/Lori_E_S_">Lori Edwards Suárez</a></li>
-<li><a href="https://www.linkedin.com/in/oluwasegun-michael-apejoye-7b487365/">Oluwasegun Apejoye</a></li>
-</ul>
-<p>Email the team email at <a href="mailto:cdudatateam@nottshc.nhs.uk">CDUDataTeam@nottshc.nhs.uk</a></p>
-<p>We believe in open source data science and use R and Python for most of our work. We publish as much code and data as we can on our team <a href="https://github.com/CDU-data-science-team">GitHub page</a>. We have a wide range of skills including statistics, machine learning, SQL/ data engineering, Shiny, text mining, and forecasting. We are currently working on nationally funded open source data science projects as well as a range of things within our own Trust, and in the coming weeks and months each team member will present some of this work to you.</p>
-<p>We love to collaborate, to communicate, to meet new people, and to offer (and receive!) advice and support, especially to colleagues in health and social care across the UK (and the world) so please reach out to any of us on Twitter or anywhere else you might come across us or our work.</p>
-<h1 id="past-members-of-the-team">Past members of the team</h1>
-<p>They have moved on to other roles but can still be found here:</p>
+<li><a href="#challenges-and-solutions">Challenges and solutions</a></li>
+<li><a href="#overview-of-the-nottshcverse">Overview of the {nottshcverse}</a></li>
+<li><a href="#simplified-working-example">Simplified working example</a>
 <ul>
-<li><a href="https://github.com/andreassot10">Andreas Soteriades</a></li>
-<li><a href="https://github.com/milanwiedemann">Milan Wiedemann</a></li>
+<li><a href="#create-example-data">Create example data</a></li>
+<li><a href="#create-sqlite-connection">Create <code>SQLite</code> connection</a></li>
+<li><a href="#example-analysis">Example analysis</a></li>
+<li><a href="#writing-a-function">Writing a function</a></li>
+<li><a href="#example-sql-code">Example <code>SQL</code> code</a></li>
+<li><a href="#example-results">Example results</a></li>
+</ul></li>
+<li><a href="#watch-out-now">Watch out now</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#resources">Related work and resources</a></li>
 </ul>
-<h1 id="credit">Credit</h1>
-<p>Pictures are from the British Library flickr collection of <a href="https://www.flickr.com/photos/britishlibrary/albums/72157648088610908">Diagrams, Plots and Charts</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+</nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="img/nottshcverse.png" width="1177" /></p>
+</div>
+<p>Our team works with routinely collected NHS patient data. Currently we focus on understanding better how patients are using the service, changes in clinical outcome measures, and analysis of patient experiences. The main questions that guide our work are <em>‘What works for whom and how does it work?’</em>, <em>‘What doesn’t work?’</em>, and <em>‘How can we integrate patient experiences into our analyses?’</em>. We developed a set of different tools, the <strong><code>{nottshcverse}</code></strong>, to help us look at these questions by automating recurring and time-consuming tasks so that we can spend more time thinking the clinical questions.</p>
+<h2 id="challenges-and-solutions">Challenges and solutions</h2>
+<p>Real data is messy but we should do our best to tidy the mess, where possible in an automated way. There are many challenges when working with healthcare data, here is only a small selection of those that I think underlies most analyses. Figure <a href="#fig:fig-nottshcverse-overview-funs">1</a> shows our solutions to these challenges.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span style="display:block;" id="fig:fig-nottshcverse-overview-funs"></span>
+<img src="img/nottshcverse_overview_functions.png" alt="Main goals that guided the development of the {nottshcverse} packages." width="1474" />
+<p class="caption">
+Figure 1: Main goals that guided the development of the {nottshcverse} packages.
+</p>
+</div>
+</div>
+<ol type="1">
+<li>🤔 It’s really hard to get the clinical data that is needed in a reproducible way that is consistent across different people who work on the same (or related) analysis. This is particularly true because most of the data is stored on SQL servers and only starts to make sense after joining multiple different datasets. 🤓 <strong>We wrote functions that made it very easy and secure to <em>(i)</em> connect to and <em>(ii)</em> query data from different databases that we are working with. This way we could get the data we needed for our analyses using very few lines of code in R.</strong></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># First, create connection to databases</span>
+<span class='va'>conn_s1</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"SystmOne"</span><span class='op'>)</span>
+<span class='va'>conn_iapt</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"IAPTus"</span><span class='op'>)</span>
+
+<span class='co'># Now we can use the connection to get contacts data from SystmOne ...</span>
+<span class='va'>db_contacts_s1</span> <span class='op'>&lt;-</span> <span class='fu'>get_s1_contacts</span><span class='op'>(</span>from <span class='op'>=</span> <span class='st'>"2020-01-01"</span>, 
+                                  to <span class='op'>=</span> <span class='st'>"2020-12-31"</span>, 
+                                  conn <span class='op'>=</span> <span class='va'>conn_s1</span><span class='op'>)</span>
+
+<span class='co'># ... and IAPTus databases</span>
+<span class='va'>db_contacts_iapt</span> <span class='op'>&lt;-</span> <span class='fu'>get_iapt_contacts</span><span class='op'>(</span>from <span class='op'>=</span> <span class='st'>"2020-01-01"</span>, 
+                                      to <span class='op'>=</span> <span class='st'>"2020-12-31"</span>, 
+                                      conn <span class='op'>=</span> <span class='va'>conn_iapt</span><span class='op'>)</span>
+
+<span class='co'># Note that the objects 'contacts_s1' and 'contacts_iapt' are just pointing to </span>
+<span class='co'># the databases (I like to use the prefix db) and not actually downloaded to the</span>
+<span class='co'># environment on your computer.</span>
+</code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li>🤔 Most of the time, the data is not in the format that is needed for further analyses. There may be specific data manipulations that are needed to make sense of the data and analyse it properly. Also, different databases might be set up in ways that it is hard to merge data. 🤓 <strong>We wrote function that tidy the raw data from the databases so that it is more consistent across databases and easier to analyse. All of this still happens within the server so that our computers don’t have to do all of this work.</strong></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Each get_*_data() function comes with a tidy_*_data(), here tidy_s1_contacts()</span>
+<span class='co'># Here I use the connection to the raw (messy) contacts  data that I created above</span>
+<span class='co'># and tidy it using the tidy_s1_contacts() function</span>
+<span class='va'>db_contacts_s1</span> <span class='op'>&lt;-</span> <span class='va'>db_contacts_s1</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>tidy_s1_contacts</span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='va'>db_contacts_iapt</span> <span class='op'>&lt;-</span> <span class='va'>db_contacts_iapt</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>tidy_iapt_contacts</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li><p>🤔 The methods of data analyses and visualisations should be understandable, reproducible, and available to other people. Unfortunately this is not always the case yet because the software tools that are used (e.g., Excel, PowerBI, and other silly solutions that are not worth their money) are not script based and usually shared in private emails. 🤓 <strong>We wrote R functions for common analytical tasks and visualisations.</strong></p></li>
+<li><p>🤔 Code should be really well documented so that it is easy to understand what’s going on. This includes the current version of the code as well as all previous versions and changes. This can be done using tools like Git and GitHub, but unfortunately most code is currently shared undocumented in private emails. 🤓 <strong>We created detailed documentations that are easily accessible to everyone who uses our R packages. Also, because develop our tools on GitHub, every change to our code is documented.</strong></p></li>
+<li><p>🤔 Mistakes happen! Sometimes things that you have no control over can change and break your code that previously worked fine (e.g., the format of the raw data or a functions that someone else wrote). Therefore, it’s important to continuously test whether the code is still working the way it’s supposed to work. 🤓 <strong>R packages (or similar solutions in other statistical programming languages) are relatively easy to test, for example using the <a href="https://testthat.r-lib.org/">{testthat}</a> package. We started to implement tests into our work so that we can check if changes that we make to our code don’t break anything.</strong></p></li>
+</ol>
+<h2 id="overview-of-the-nottshcverse">Overview of the {nottshcverse}</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span style="display:block;" id="fig:fig-nottshcverse-overview-pkgs"></span>
+<img src="img/nottshcverse_overview_pkgs.png" alt="Overview of some R packages developed by the Clinical Development Unit Data Science Team⭐and the NHS-R Community ❤️" width="1270" />
+<p class="caption">
+Figure 2: Overview of some R packages developed by the Clinical Development Unit Data Science Team⭐and the NHS-R Community ❤️
+</p>
+</div>
+</div>
+<ul>
+<li><code>{nottshcData}</code>: Unified framework to query, transform, and aggregate data from different databases</li>
+<li><code>{nottshcMethods}</code>: Tools for performing common analytical tasks (e.g., grouping continuous age into groups)</li>
+<li><code>{honos}</code>, <code>{LSOApop}</code>: Packages designed in generic way to help use and others <code>{nottshcData}</code> work with specific questionnaires (e.g., Health of the Nation Outcome Scales, HoNOS) or open data sets (e.g. LSOA population estimates)</li>
+<li><code>{outcomesdashboard}</code>: Our dashboards use all the packages mentioned above + special packages developed specifically to support the dashboards with helper functions</li>
+</ul>
+<h2 id="simplified-working-example">Simplified working example</h2>
+<p>To illustrate how R can be used to work with databases I’ll use the following example. Imagine we’re working with a database called <code>SystmTwo</code> <code>(S2)</code> and need to use two different tables for our analysis:</p>
+<ul>
+<li><code>[S2].[contacts]</code>: Information about contacts with clinical teams</li>
+<li><code>[S2].[demographics]</code>: Some demographic information</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h3 id="create-example-data">Create example data</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Set up example contacts table</span>
+<span class='va'>contacts_s2</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span>client_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>, 
+                      contact_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>123</span>, <span class='fl'>124</span>, <span class='fl'>125</span>, <span class='fl'>156</span><span class='op'>)</span>, 
+                      referral_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>456</span>, <span class='fl'>459</span>, <span class='fl'>500</span>, <span class='fl'>501</span><span class='op'>)</span>, 
+                      referral_date <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2018-04-19"</span>, <span class='st'>"2019-05-23"</span>, 
+                                        <span class='st'>"2020-06-01"</span>, <span class='st'>"2018-12-11"</span><span class='op'>)</span>,
+                      contact_date <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2018-05-19"</span>, <span class='st'>"2019-06-05"</span>, 
+                                       <span class='st'>"2020-07-08"</span>, <span class='st'>"2019-01-15"</span><span class='op'>)</span>,
+                      team_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"tm1"</span>, <span class='st'>"tm2"</span>, <span class='st'>"tm1"</span>, <span class='st'>"tm1"</span><span class='op'>)</span>, 
+                      hcp_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"hcp1"</span>, <span class='st'>"hcp2"</span>, <span class='st'>"hcp1"</span>, <span class='st'>"hcp1"</span><span class='op'>)</span>, 
+                      contact_type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"phone"</span>, <span class='st'>"f2f"</span>, <span class='st'>"video"</span>, <span class='st'>"phone"</span><span class='op'>)</span>,
+                      assessment_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>321</span>, <span class='fl'>322</span>, <span class='fl'>344</span>, <span class='cn'>NA</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='co'># Set up example demographics table with 2 patients</span>
+<span class='va'>demographics_s2</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='op'>(</span>client_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>, 
+                          dob <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1988-01-01"</span>, <span class='st'>"1965-01-01"</span><span class='op'>)</span>,
+                          dod <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='cn'>NA</span><span class='op'>)</span>,
+                          sex <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"f"</span>, <span class='st'>"m"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="create-sqlite-connection">Create <code>SQLite</code> connection</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Create connection (conn) to "local" database called SystmTwo (s2)</span>
+<span class='va'>conn_s2</span> <span class='op'>&lt;-</span> <span class='fu'>DBI</span><span class='fu'>::</span><span class='fu'><a href='https://dbi.r-dbi.org/reference/dbConnect.html'>dbConnect</a></span><span class='op'>(</span><span class='fu'>RSQLite</span><span class='fu'>::</span><span class='fu'><a href='https://rsqlite.r-dbi.org/reference/SQLite.html'>SQLite</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='st'>":memory:"</span><span class='op'>)</span>
+
+<span class='co'># Copy local data frame to conn_s2 database</span>
+<span class='va'>db_s2_contacts</span> <span class='op'>&lt;-</span> <span class='fu'>copy_to</span><span class='op'>(</span><span class='va'>conn_s2</span>, <span class='va'>contacts_s2</span><span class='op'>)</span>
+<span class='va'>db_s2_demographics</span> <span class='op'>&lt;-</span> <span class='fu'>copy_to</span><span class='op'>(</span><span class='va'>conn_s2</span>, <span class='va'>demographics_s2</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="example-analysis">Example analysis</h3>
+<p>Here we join the contacts with the demographics information to calculate the age at the time a patient has their contact (<code>age_at_contact</code>).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Calculate age at time of contact</span>
+<span class='va'>db_age_at_contacts</span> <span class='op'>&lt;-</span> <span class='va'>db_s2_contacts</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>left_join</span><span class='op'>(</span><span class='va'>db_s2_demographics</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>mutate</span><span class='op'>(</span>age_at_contact <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='va'>contact_date</span><span class='op'>)</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='va'>dob</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="writing-a-function">Writing a function</h3>
+<p>We can also write our own functions and use them in a modular way whenever we need them. Here’s a simple example to demonstrate how we can do the same calculation as shown above using our own function. In this example the function arguments take the variable names for date of birth (<code>dob</code>) and the contact date (<code>contact_date</code>).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>calc_age_at_contact</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>var_dob</span>, <span class='va'>var_contact_date</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='co'># Add code here to check that arguments are specified correctly</span>
+  <span class='va'>data</span> <span class='op'>%&gt;%</span> 
+    <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>age_at_contact <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='op'>{</span><span class='op'>{</span><span class='va'>var_contact_date</span><span class='op'>}</span><span class='op'>}</span><span class='op'>)</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='op'>{</span><span class='op'>{</span><span class='va'>var_dob</span><span class='op'>}</span><span class='op'>}</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<h3 id="example-sql-code">Example <code>SQL</code> code</h3>
+<p>As mentioned above (Challenges and solutions, Point 1), the object that we work with most of the time are just SQL queries and not real data stored in your R environment. We can look at the underlying SQL code using the <code>dplyr::show_query()</code> function. I don’t really know SQL very well myself, but some people who do have created a great package that translates R code into SQL code (see the <a href="https://dbplyr.tidyverse.org/articles/dbplyr.html">dbplyr</a> package for more).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Use dplyr::show_query() function to see underlying SQL code</span>
+<span class='fu'>show_query</span><span class='op'>(</span><span class='va'>db_age_at_contacts</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>&lt;SQL&gt;
+SELECT `client_id`, `contact_id`, `referral_id`, `referral_date`, `contact_date`, `team_id`, `hcp_id`, `contact_type`, `assessment_id`, `dob`, `dod`, `sex`, CAST(`contact_date` AS DATE) - CAST(`dob` AS DATE) AS `age_at_contact`
+FROM (SELECT `LHS`.`client_id` AS `client_id`, `contact_id`, `referral_id`, `referral_date`, `contact_date`, `team_id`, `hcp_id`, `contact_type`, `assessment_id`, `dob`, `dod`, `sex`
+FROM `contacts_s2` AS `LHS`
+LEFT JOIN `demographics_s2` AS `RHS`
+ON (`LHS`.`client_id` = `RHS`.`client_id`)
+)</code></pre>
+</div>
+<p>Note that we can also see the SQL code from our own functions.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>db_age_at_contacts</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>calc_age_at_contact</span><span class='op'>(</span>var_dob <span class='op'>=</span> <span class='va'>dob</span>, 
+                      var_contact_date <span class='op'>=</span> <span class='va'>contact_date</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>show_query</span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>&lt;SQL&gt;
+SELECT `client_id`, `contact_id`, `referral_id`, `referral_date`, `contact_date`, `team_id`, `hcp_id`, `contact_type`, `assessment_id`, `dob`, `dod`, `sex`, CAST(`contact_date` AS DATE) - CAST(`dob` AS DATE) AS `age_at_contact`
+FROM (SELECT `client_id`, `contact_id`, `referral_id`, `referral_date`, `contact_date`, `team_id`, `hcp_id`, `contact_type`, `assessment_id`, `dob`, `dod`, `sex`, CAST(`contact_date` AS DATE) - CAST(`dob` AS DATE) AS `age_at_contact`
+FROM (SELECT `LHS`.`client_id` AS `client_id`, `contact_id`, `referral_id`, `referral_date`, `contact_date`, `team_id`, `hcp_id`, `contact_type`, `assessment_id`, `dob`, `dod`, `sex`
+FROM `contacts_s2` AS `LHS`
+LEFT JOIN `demographics_s2` AS `RHS`
+ON (`LHS`.`client_id` = `RHS`.`client_id`)
+))</code></pre>
+</div>
+<h3 id="example-results">Example results</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Look at results from SQL query shown above</span>
+<span class='va'>db_age_at_contacts</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>select</span><span class='op'>(</span><span class='va'>client_id</span>, <span class='va'>contact_date</span>, <span class='va'>dob</span>, <span class='va'>age_at_contact</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># Source:   lazy query [?? x 4]
+# Database: sqlite 3.36.0 [:memory:]
+  client_id contact_date dob        age_at_contact
+      &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;               &lt;int&gt;
+1         1 2018-05-19   1988-01-01             30
+2         1 2019-06-05   1988-01-01             31
+3         1 2020-07-08   1988-01-01             32
+4         2 2019-01-15   1965-01-01             54</code></pre>
+</div>
+<p>Of course this is a VERY simple example. This can get way more complex, think BIG and solve BIG problems. There are many other examples out there showing how to work with databases in RStudio. I added some links that I found useful at the end of this post.</p>
+<h2 id="watch-out-now">Watch out now</h2>
+<p>So what’s coming next and where can we take this? Is this perfect? I don’t know exactly what’s coming next and this is definitely far from perfect. But it’s the best approach my colleagues and I could come up with in the time that we spent working on this. Maybe I’ll improve this one day, maybe someone else will? Until then let’s share ideas and work together to improve healthcare analytics in the NHS. Ohhh, some people are already working like this 👀 it’s time others join them. I hope those who make decisions about the direction of healthcare analytics in the NHS will start to understand the problems and opportunities and act soon. If not now, when then? We need to move towards a more open and modern way of healthcare analytics!</p>
+<!-- - We want to build an entire universe of packages that help us AND OTHERS to understand and improve clinical care. -->
+<!-- We believe that best practices from (1) open source software development and (2) open research principles from academia are the future of healthcare analytics.  -->
+<!-- . -->
+<!-- We work together trying to improve the service, learning more about what patients want and what could be improved ... lots more exciting stuff, small and big problems, finding more questions, and finding some answers. -->
+<!-- Why do we not work together, implement similar structures for analysing code, share resources, work multidisciplinary. -->
+<!-- My aim is to start a conversation about the importance of proper documenting data as well as recurring analytical tasks. -->
+<!--  -->
+<h2 id="summary">Summary</h2>
+<p>Here’s a short summary in <strong>BOLD AND ALL CAPS</strong>:</p>
+<ul>
+<li><strong>DOCUMENT</strong> everything, absolutely everything! Every function and every single change!</li>
+<li><strong>AUTOMATE</strong> common analytical tasks! Write functions and packages!</li>
+<li><strong>TEST</strong> everything! Expect mistakes, there will be 🐛🐛🐛</li>
+<li><strong>SHARE</strong> as much as we can!</li>
+</ul>
+<p>Of course this doesn’t always work. There will always be some messy data, inconsistent variable names, undocumented code, and … blah blah blah.</p>
+<h2 id="resources">Related work and resources</h2>
+<ul>
+<li>📖 <a href="https://nhsrcommunity.com/blog/sql-server-database-connections-in-r/">Chris Mainey (2019). SQL Server Database connections in R.</a></li>
+<li>📖 <a href="https://emilyriederer.netlify.app/post/sql-r-flow/">Emily Riederer (2021). Workflows for querying databases via R - Tricks for modularizing and refactoring your projects SQL/R interface.</a></li>
+<li>📖 <a href="https://dbplyr.tidyverse.org/articles/dbplyr.html">Hadley Wickham, Maximilian Girlich and Edgar Ruiz (2021). dbplyr: A ‘dplyr’ Back End for Databases.</a></li>
+<li>📖 <a href="https://db.rstudio.com/">RStudio (2021). Databases using R from RStudio.</a></li>
+<li>📖 <a href="https://db.rstudio.com/r-packages/odbc/">RStudio (2021). Using an ODBC driver</a></li>
+<li>📻 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
+<li>🧙 <a href="https://chrisbeeley.net/">Chris Beeley (2011 ’Til Infinity). Random bits of related and unrelated statistics, programming, and healthcare wizardry.</a></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2468,10 +1739,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="updates-and-corrections">Corrections</h3>
-<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/CDU-data-science-team/team-blog/issues/new">create an issue</a> on the source repository.</p>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
