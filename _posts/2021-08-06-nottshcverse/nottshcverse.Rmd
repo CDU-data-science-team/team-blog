@@ -46,8 +46,8 @@ knitr::include_graphics("img/nottshcverse_overview_functions.png")
 
 ```{r, eval=FALSE}
 # First, create connection to databases
-conn_s1 <- connect_sql(server = "SystmOne")
-conn_iapt <- connect_sql(server = "IAPTus")
+conn_s1 <- connect_sql(server = "DB-one")
+conn_iapt <- connect_sql(server = "DB-two")
 
 # Now we can use the connection to get contacts data from SystmOne ...
 db_contacts_s1 <- get_s1_contacts(from = "2020-01-01", 

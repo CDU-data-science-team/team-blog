@@ -2511,8 +2511,8 @@ Figure 1: Main goals that guided the development of the {nottshcverse} packages.
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># First, create connection to databases</span>
-<span class='va'>conn_s1</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"SystmOne"</span><span class='op'>)</span>
-<span class='va'>conn_iapt</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"IAPTus"</span><span class='op'>)</span>
+<span class='va'>conn_s1</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"DB-one"</span><span class='op'>)</span>
+<span class='va'>conn_iapt</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"DB-two"</span><span class='op'>)</span>
 
 <span class='co'># Now we can use the connection to get contacts data from SystmOne ...</span>
 <span class='va'>db_contacts_s1</span> <span class='op'>&lt;-</span> <span class='fu'>get_s1_contacts</span><span class='op'>(</span>from <span class='op'>=</span> <span class='st'>"2020-01-01"</span>, 
@@ -2711,7 +2711,7 @@ ON (`LHS`.`client_id` = `RHS`.`client_id`)
 <li>📖 <a href="https://dbplyr.tidyverse.org/articles/dbplyr.html">Hadley Wickham, Maximilian Girlich and Edgar Ruiz (2021). dbplyr: A ‘dplyr’ Back End for Databases.</a></li>
 <li>📖 <a href="https://db.rstudio.com/">RStudio (2021). Databases using R from RStudio.</a></li>
 <li>📖 <a href="https://db.rstudio.com/r-packages/odbc/">RStudio (2021). Using an ODBC driver</a></li>
-<li>📼 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
+<li>📷 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
 <li>🧙 <a href="https://chrisbeeley.net/">Chris Beeley (2011 ’Til Infinity). Random bits of related and unrelated statistics, programming, and healthcare wizardry.</a></li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
