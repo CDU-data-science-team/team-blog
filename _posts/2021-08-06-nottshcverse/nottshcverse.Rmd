@@ -46,8 +46,8 @@ knitr::include_graphics("img/nottshcverse_overview_functions.png")
 
 ```{r, eval=FALSE}
 # First, create connection to databases
-conn_s1 <- connect_sql(server = "SystmOne")
-conn_iapt <- connect_sql(server = "IAPTus")
+conn_s1 <- connect_sql(server = "DB-one")
+conn_iapt <- connect_sql(server = "DB-two")
 
 # Now we can use the connection to get contacts data from SystmOne ...
 db_contacts_s1 <- get_s1_contacts(from = "2020-01-01", 
@@ -77,7 +77,7 @@ db_contacts_iapt <- db_contacts_iapt %>%
   tidy_iapt_contacts()
 ```
 
-3. `r emo::ji("thinking")` The methods of data analyses and visualisations should be understandable, reproducible, and available to other people. Unfortunately this is not always the case yet because the software tools that are used (e.g., Excel, PowerBI, and other silly solutions that are not worth their money) are not script based and usually shared in private emails. `r emo::ji("nerd")` **We wrote R functions for common analytical tasks and visualisations.**
+3. `r emo::ji("thinking")` The methods of data analyses and visualisations should be understandable, reproducible, and available to other people. Unfortunately this is not always the case yet because the software tools that are used are not script based and often shared in private emails. `r emo::ji("nerd")` **We wrote R functions for common analytical tasks and visualisations.**
 
 4. `r emo::ji("thinking")` Code should be really well documented so that it is easy to understand what's going on. This includes the current version of the code as well as all previous versions and changes. This can be done using tools like Git and GitHub, but unfortunately most code is currently shared undocumented in private emails. `r emo::ji("nerd")` **We created detailed documentations that are easily accessible to everyone who uses our R packages. Also, because develop our tools on GitHub, every change to our code is documented.**
 

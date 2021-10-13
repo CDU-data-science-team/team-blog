@@ -7,7 +7,7 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 29 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Development of open tools for analysing healthcare data in R</title>
       <dc:creator>Milan Wiedemann</dc:creator>
@@ -20,7 +20,7 @@ All our functions are grouped into R packages because this made it easier for us
       <category>Team working</category>
       <category>Packages</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse</guid>
-      <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate>
       <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/img/Principes-de-Logique-p435.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>

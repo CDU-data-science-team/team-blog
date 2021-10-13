@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #20794d; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,14 +77,13 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.sc { color: #20794d; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
-
 
   <!--radix_placeholder_meta_tags-->
 <title>CDU data science team blog: Development of open tools for analysing healthcare data in R</title>
@@ -129,7 +128,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["img/nottshcverse.png","img/nottshcverse_overview_functions.png","img/nottshcverse_overview_pkgs.png","img/nottshcverse_problem.png","img/Principes-de-Logique-p435.jpg","nottshcverse_files/anchor-4.2.2/anchor.min.js","nottshcverse_files/bowser-1.9.3/bowser.min.js","nottshcverse_files/distill-2.2.21/template.v2.js","nottshcverse_files/header-attrs-2.11.3/header-attrs.js","nottshcverse_files/header-attrs-2.11/header-attrs.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.min.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.min.map","nottshcverse_files/popper-2.6.0/popper.min.js","nottshcverse_files/tippy-6.2.7/tippy-bundle.umd.min.js","nottshcverse_files/tippy-6.2.7/tippy-light-border.css","nottshcverse_files/tippy-6.2.7/tippy.css","nottshcverse_files/tippy-6.2.7/tippy.umd.min.js","nottshcverse_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["img/nottshcverse_overview_functions.png","img/nottshcverse_overview_pkgs.png","img/nottshcverse_problem.png","img/nottshcverse.png","img/Principes-de-Logique-p435.jpg","nottshcverse_files/anchor-4.2.2/anchor.min.js","nottshcverse_files/bowser-1.9.3/bowser.min.js","nottshcverse_files/distill-2.2.21/template.v2.js","nottshcverse_files/header-attrs-2.11.3/header-attrs.js","nottshcverse_files/header-attrs-2.11/header-attrs.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.min.js","nottshcverse_files/jquery-3.6.0/jquery-3.6.0.min.map","nottshcverse_files/popper-2.6.0/popper.min.js","nottshcverse_files/tippy-6.2.7/tippy-bundle.umd.min.js","nottshcverse_files/tippy-6.2.7/tippy-light-border.css","nottshcverse_files/tippy-6.2.7/tippy.css","nottshcverse_files/tippy-6.2.7/tippy.umd.min.js","nottshcverse_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -1882,10 +1881,7 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      var refs = $(this).attr('data-cites').split(" ");
-      var refHtml = refs.map(function(ref) {
-        return "<p>" + $('#ref-' + ref).html() + "</p>";
-      }).join("\n");
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
       window.tippy(this, {
         allowHTML: true,
         content: refHtml,
@@ -2387,7 +2383,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.11.3/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2502,7 +2498,7 @@ h1, h2, h3, h4, h5 {
 <h2 id="challenges-and-solutions">Challenges and solutions</h2>
 <p>Real data is messy but we should do our best to tidy the mess, where possible in an automated way. There are many challenges when working with healthcare data, here is only a small selection of those that I think underlies most analyses. Figure <a href="#fig:fig-nottshcverse-overview-funs">1</a> shows our solutions to these challenges.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure"><span style="display:block;" id="fig:fig-nottshcverse-overview-funs"></span>
+<div class="figure"><span id="fig:fig-nottshcverse-overview-funs"></span>
 <img src="img/nottshcverse_overview_functions.png" alt="Main goals that guided the development of the {nottshcverse} packages." width="1474" />
 <p class="caption">
 Figure 1: Main goals that guided the development of the {nottshcverse} packages.
@@ -2515,8 +2511,8 @@ Figure 1: Main goals that guided the development of the {nottshcverse} packages.
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># First, create connection to databases</span>
-<span class='va'>conn_s1</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"SystmOne"</span><span class='op'>)</span>
-<span class='va'>conn_iapt</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"IAPTus"</span><span class='op'>)</span>
+<span class='va'>conn_s1</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"DB-one"</span><span class='op'>)</span>
+<span class='va'>conn_iapt</span> <span class='op'>&lt;-</span> <span class='fu'>connect_sql</span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"DB-two"</span><span class='op'>)</span>
 
 <span class='co'># Now we can use the connection to get contacts data from SystmOne ...</span>
 <span class='va'>db_contacts_s1</span> <span class='op'>&lt;-</span> <span class='fu'>get_s1_contacts</span><span class='op'>(</span>from <span class='op'>=</span> <span class='st'>"2020-01-01"</span>, 
@@ -2551,13 +2547,13 @@ Figure 1: Main goals that guided the development of the {nottshcverse} packages.
 </div>
 </div>
 <ol start="3" type="1">
-<li><p>🤔 The methods of data analyses and visualisations should be understandable, reproducible, and available to other people. Unfortunately this is not always the case yet because the software tools that are used (e.g., Excel, PowerBI, and other silly solutions that are not worth their money) are not script based and usually shared in private emails. 🤓 <strong>We wrote R functions for common analytical tasks and visualisations.</strong></p></li>
+<li><p>🤔 The methods of data analyses and visualisations should be understandable, reproducible, and available to other people. Unfortunately this is not always the case yet because the software tools that are used are not script based and often shared in private emails. 🤓 <strong>We wrote R functions for common analytical tasks and visualisations.</strong></p></li>
 <li><p>🤔 Code should be really well documented so that it is easy to understand what’s going on. This includes the current version of the code as well as all previous versions and changes. This can be done using tools like Git and GitHub, but unfortunately most code is currently shared undocumented in private emails. 🤓 <strong>We created detailed documentations that are easily accessible to everyone who uses our R packages. Also, because develop our tools on GitHub, every change to our code is documented.</strong></p></li>
 <li><p>🤔 Mistakes happen! Sometimes things that you have no control over can change and break your code that previously worked fine (e.g., the format of the raw data or a functions that someone else wrote). Therefore, it’s important to continuously test whether the code is still working the way it’s supposed to work. 🤓 <strong>R packages (or similar solutions in other statistical programming languages) are relatively easy to test, for example using the <a href="https://testthat.r-lib.org/">{testthat}</a> package. We started to implement tests into our work so that we can check if changes that we make to our code don’t break anything.</strong></p></li>
 </ol>
 <h2 id="overview-of-the-nottshcverse">Overview of the {nottshcverse}</h2>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure"><span style="display:block;" id="fig:fig-nottshcverse-overview-pkgs"></span>
+<div class="figure"><span id="fig:fig-nottshcverse-overview-pkgs"></span>
 <img src="img/nottshcverse_overview_pkgs.png" alt="Overview of some R packages developed by the Clinical Development Unit Data Science Team⭐and the NHS-R Community ❤️" width="1270" />
 <p class="caption">
 Figure 2: Overview of some R packages developed by the Clinical Development Unit Data Science Team⭐and the NHS-R Community ❤️
@@ -2681,7 +2677,7 @@ ON (`LHS`.`client_id` = `RHS`.`client_id`)
 </code></pre>
 </div>
 <pre><code># Source:   lazy query [?? x 4]
-# Database: sqlite 3.36.0 [:memory:]
+# Database: sqlite 3.35.5 [:memory:]
   client_id contact_date dob        age_at_contact
       &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;               &lt;int&gt;
 1         1 2018-05-19   1988-01-01             30
@@ -2715,7 +2711,7 @@ ON (`LHS`.`client_id` = `RHS`.`client_id`)
 <li>📖 <a href="https://dbplyr.tidyverse.org/articles/dbplyr.html">Hadley Wickham, Maximilian Girlich and Edgar Ruiz (2021). dbplyr: A ‘dplyr’ Back End for Databases.</a></li>
 <li>📖 <a href="https://db.rstudio.com/">RStudio (2021). Databases using R from RStudio.</a></li>
 <li>📖 <a href="https://db.rstudio.com/r-packages/odbc/">RStudio (2021). Using an ODBC driver</a></li>
-<li>📽 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
+<li>📷 <a href="https://www.rstudio.com/resources/webinars/best-practices-for-working-with-databases/">Edgar Ruiz (2018). Best practices for working with databases.</a></li>
 <li>🧙 <a href="https://chrisbeeley.net/">Chris Beeley (2011 ’Til Infinity). Random bits of related and unrelated statistics, programming, and healthcare wizardry.</a></li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
