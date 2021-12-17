@@ -21,6 +21,18 @@
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Personal Access Tokens</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-personal-access-tokens</link>
+      <description>Connecting to the GitHub to install packages from a private GitHub repository requires security 
+set ups and this blog details how to do it (and how not to do it).</description>
+      <category>Packages</category>
+      <category>Security</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-personal-access-tokens</guid>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-personal-access-tokens/img/british-mineralogy-or-coloured-figures-p132.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Development of open tools for analysing healthcare data in R</title>
       <dc:creator>Milan Wiedemann</dc:creator>
       <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse</link>
