@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://cdu-data-science-team.github.io/team-blog/about.html</loc>
-    <lastmod>2021-10-13T22:06:12+00:00</lastmod>
+    <lastmod>2021-10-13T22:55:47+01:00</lastmod>
   </url>
   <url>
     <loc>https://cdu-data-science-team.github.io/team-blog/</loc>
-    <lastmod>2021-10-13T22:06:12+00:00</lastmod>
+    <lastmod>2021-10-13T22:55:48+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-package-workflow/</loc>
+    <lastmod>2021-12-17T17:25:34+00:00</lastmod>
   </url>
   <url>
     <loc>https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/</loc>

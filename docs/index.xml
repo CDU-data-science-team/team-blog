@@ -7,7 +7,19 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 29 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Packgage Workflow</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-package-workflow</link>
+      <description>From a code review session discussing the workflow to contributing to a 
+(currently) private package</description>
+      <category>Packages</category>
+      <category>Workflow</category>
+      <category>Team Working</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-package-workflow</guid>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Development of open tools for analysing healthcare data in R</title>
       <dc:creator>Milan Wiedemann</dc:creator>
