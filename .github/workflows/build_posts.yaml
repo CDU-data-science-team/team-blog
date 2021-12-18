@@ -47,8 +47,8 @@ jobs:
           
       - name: Build slides
         run: |
-          git config --local user.email "CDUDataScience@nottshc.nhs.uk"
-          git config --local user.name "CDU Data Science Team"
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
           make all
           
       - name: Deploy 🚀
