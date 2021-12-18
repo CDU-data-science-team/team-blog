@@ -9,11 +9,7 @@
     <generator>Distill</generator>
     <lastBuildDate>Fri, 17 Dec 2021 00:00:00 +0000</lastBuildDate>
     <item>
-<<<<<<< HEAD
       <title>Package Workflow</title>
-=======
-      <title>Packgage Workflow</title>
->>>>>>> 28de1db981bb8d69dc636a7243485ec309114c57
       <dc:creator>Zoë Turner</dc:creator>
       <link>https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-package-workflow</link>
       <description>From a code review session discussing the workflow to contributing to a 
@@ -23,10 +19,7 @@
       <category>Team Working</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-package-workflow</guid>
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
-<<<<<<< HEAD
       <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-package-workflow/img/system-of-mineralogy-comprehending-oryctognosie-p687.jpg" medium="image" type="image/jpeg"/>
-=======
->>>>>>> 28de1db981bb8d69dc636a7243485ec309114c57
     </item>
     <item>
       <title>Development of open tools for analysing healthcare data in R</title>
