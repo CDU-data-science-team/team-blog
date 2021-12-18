@@ -74,7 +74,26 @@ In the file that opens, type into it (where YOUR-PAT is the generated code you'v
 gitcreds::gitcreds_set()
 ```
 
-You will then be prompted to enter the copied token. No quotes are required.
+You will then be prompted to enter the copied token (no quotes are required). If you've already got a token entered the following message will show:
+
+```
+-> Your current credentials for 'https://github.com':
+
+  protocol: https
+  host    : github.com
+  username: PersonalAccessToken
+  password: <-- hidden -->
+
+-> What would you like to do? 
+
+1: Keep these credentials
+2: Replace these credentials
+3: See the password / token
+
+Selection: ```
+Enter an item from the menu, or 0 to exit
+Selection: 
+```
 
 Reference: https://usethis.r-lib.org/articles/articles/git-credentials.html
 
@@ -85,7 +104,7 @@ combining {remotes} with {gitcreds} is a workaround:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("CDU-data-science-team/nottshcData", 
+remotes::install_github("<name of GitHub account>/<name of repository>", 
     auth_token = gitcreds::gitcreds_get(use_cache = FALSE)$password)
 
 ```
