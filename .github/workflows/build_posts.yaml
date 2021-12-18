@@ -20,9 +20,6 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - uses: r-lib/actions/setup-renv@v1
       
-      - name: Install system dependencies
-        run: sudo /bin/sh system_requirements.sh
-
       - name: Cache rendered html files
         uses: actions/cache@v2
         with:
