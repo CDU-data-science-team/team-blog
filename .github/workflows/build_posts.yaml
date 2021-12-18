@@ -23,12 +23,6 @@ jobs:
       - name: Install system dependencies
         run: sudo /bin/sh system_requirements.sh
 
-      - name: Cache icons
-        uses: actions/cache@v2
-        with:
-          path: ~/.local/share/rpkg_icon
-          key: ${{ runner.os }}-icons-1
-
       - name: Cache rendered html files
         uses: actions/cache@v2
         with:
