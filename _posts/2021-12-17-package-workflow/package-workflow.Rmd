@@ -1,7 +1,7 @@
 ---
 title: "Package Workflow"
 description: |
-  From a code review session discussing the workflow to contributing to a 
+  From a team time session discussing the workflow to contributing to a 
   (currently) private package
 author:
   - name: Zoë Turner
@@ -22,9 +22,9 @@ preview: img/system-of-mineralogy-comprehending-oryctognosie-p687.jpg
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Code Review
+# Team time
 
-Our team has regular code reviews but which don't always focus on code. Quite often we use the opportunity to talk through processes and approaches to analysis and these notes reflect a recent code review where were discussed some of our learning on package development and workflow using GitHub for our (currently) private repository that takes data from the SQL data warehouses and makes it tidy following on from Milan Wiedemann's [nottshcverse](https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/). 
+Our team has regular team times but which don't always focus on code. Quite often we use the opportunity to talk through processes and approaches to analysis and these notes reflect a recent code review where were discussed some of our learning on package development and workflow using GitHub for our (currently) private repository that takes data from the SQL data warehouses and makes it tidy following on from Milan Wiedemann's [nottshcverse](https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/). 
 
 These are some of the agreed points and discussions we had about some of the processes that have developed organically through working collaboratively. This process is very flexible and may change over time depending on our own developing skills or from others' input (we are always keen to know how to improve our workflows!) so this blog may be changed or superseded in the future.
 
@@ -44,7 +44,7 @@ Issues often have one thing detailed but can have many parts to them in a task l
 
 The tasks can be ticked in the viewing mode without having to go to the code. To get the task list box type `- [ ]` and when it is ticked it becomes `- [X]`. Note that this is sensitive to spaces so any extra spaces will just show the code on the view mode.
 
-We agreed in our code review that all issues, even questions, should be closed with a good summary of why it's closed. For example, we had an issue discussing whether it could be a feature to combine functions that were reliant on each other to save typing them out in analysis. This led to a discussion which resulted in no changes to the code (i.e. no branches) but the issue was closed with a detail on why no work was started on it. This is useful for knowledge sharing with other colleagues, and maybe even the future you, if the suggestion were ever to come up again
+We agreed in our team time that all issues, even questions, should be closed with a good summary of why it's closed. For example, we had an issue discussing whether it could be a feature to combine functions that were reliant on each other to save typing them out in analysis. This led to a discussion which resulted in no changes to the code (i.e. no branches) but the issue was closed with a detail on why no work was started on it. This is useful for knowledge sharing with other colleagues, and maybe even the future you, if the suggestion were ever to come up again
 
 # Create a branch
 
@@ -88,7 +88,7 @@ To "release" on GitHub and match this documented version the steps are outlined 
 
 ## Tagging commits in git
 
-However, in code review we agreed that releases should only be on `main` and to keep a track on version in `development` we will instead use tags through Git.
+However, in team time we agreed that releases should only be on `main` and to keep a track on version in `development` we will instead use tags through Git.
 
 We did a test tag in the Terminal: `git tag -a v0.9.1 -m "Testing (and there is a still a bug)"` and checked in R Studio, in the Commit History, to see if the tag was listed as this will be a good way to check people's versions of the package when working collaboratively.
 
