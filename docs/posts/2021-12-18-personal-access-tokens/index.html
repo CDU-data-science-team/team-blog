@@ -2485,6 +2485,15 @@ h1, h2, h3, h4, h5 {
 <p>Firstly, go to <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a> which takes you to your own personal GitHub account settings where you will need to <code>Generate new token</code>. Give this a suitable name like <code>Repo access</code> and tick the <code>repo</code> group for full control of private repositories.</p>
 <p><em>Remember to copy the code that is generated as this cannot be viewed again</em></p>
 <h1 id="from-the-git-credential-store">From the Git credential store</h1>
+<h2 id="packages-required">Packages required</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"gitcreds"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"remotes"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
 <p>{usethis} suggests using the <a href="https://usethis.r-lib.org/articles/git-credentials.html">local Git credential store</a> quite strongly!</p>
 <blockquote>
 <p>If you have previously set your GitHub PAT in .Renviron, stop doing that.</p>
@@ -2524,6 +2533,14 @@ Selection: </code></pre>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;&lt;name of GitHub account&gt;/&lt;name of repository&gt;&quot;</span>, </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">auth_token =</span> gitcreds<span class="sc">::</span><span class="fu">gitcreds_get</span>(<span class="at">use_cache =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>password)</span></code></pre></div>
 <h1 id="the-absolutely-not-recommended-method">The absolutely not recommended method</h1>
+<h2 id="packages-required-1">Packages required</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"remotes"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
 <p>If you are sure this is what you want to do then type in RStudio:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span></code></pre></div>
 <p>In the file that opens, type into it (where YOUR-PAT is the generated code you’ve copied) and save the file:</p>

@@ -43,7 +43,19 @@ Firstly, go to https://github.com/settings/tokens which takes you to your own pe
 
 _Remember to copy the code that is generated as this cannot be viewed again_
 
+
 # From the Git credential store
+
+## Packages required
+
+```{r eval=FALSE, echo=TRUE}
+
+install.packages("usethis")
+install.packages("gitcreds")
+install.packages("remotes")
+
+```
+
 
 {usethis} suggests using the [local Git credential store](https://usethis.r-lib.org/articles/git-credentials.html) quite strongly!
 
@@ -110,6 +122,15 @@ remotes::install_github("<name of GitHub account>/<name of repository>",
 ```
 
 # The absolutely not recommended method
+
+## Packages required
+
+```{r eval=FALSE, echo=TRUE}
+
+install.packages("usethis")
+install.packages("remotes")
+
+```
 
 If you are sure this is what you want to do then type in RStudio:
 
