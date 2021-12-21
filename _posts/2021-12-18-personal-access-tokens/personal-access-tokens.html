@@ -1519,9 +1519,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>The page for GitHub tokens management is <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a> and you can do the same as the code in this screen by selecting <code>Generate new token</code>. Give this a suitable name like <code>Package installation</code> and tick the <code>repo</code> group for full control of private repositories.</p>
 <p><em>Remember to copy the code that is generated as this cannot be viewed again</em></p>
 <p>Next set up a <code>GITHUB_PAT</code> in RStudio:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span></code></pre></div>
-<p>In the file that opens, type into it (where YOUR-PAT is the generated code you’ve copied) and save the file:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code></pre></div>
 <p>You will then be prompted to enter the copied token (no quotes are required). If you’ve already got a token entered the following message will show:</p>
 <pre><code>-&gt; Your current credentials for &#39;https://github.com&#39;:
 
@@ -1542,9 +1540,9 @@ Selection: </code></pre>
 <p>Reference: <a href="https://usethis.r-lib.org/articles/articles/git-credentials.html" class="uri">https://usethis.r-lib.org/articles/articles/git-credentials.html</a></p>
 <h2 id="installing">Installing</h2>
 <p>The {usethis} documentation suggests using {pak} but this may not work on network drives/VPNs (there are a few issues that have been opened and quickly closed referring to these as potential problems) and so in the meantime combining {remotes} with {gitcreds} is a workaround:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;remotes&quot;)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;&lt;name of GitHub account&gt;/&lt;name of repository&gt;&quot;</span>, </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">auth_token =</span> gitcreds<span class="sc">::</span><span class="fu">gitcreds_get</span>(<span class="at">use_cache =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>password)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;remotes&quot;)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;&lt;name of GitHub account&gt;/&lt;name of repository&gt;&quot;</span>, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">auth_token =</span> gitcreds<span class="sc">::</span><span class="fu">gitcreds_get</span>(<span class="at">use_cache =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>password)</span></code></pre></div>
 <h1 id="the-absolutely-not-recommended-method">The absolutely not recommended method</h1>
 <h2 id="packages-required-1">Packages required</h2>
 <div class="layout-chunk" data-layout="l-body">
@@ -1555,18 +1553,18 @@ Selection: </code></pre>
 </div>
 </div>
 <p>If you are sure this is what you want to do then type in RStudio:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span></code></pre></div>
 <p>In the file that opens, type into it (where YOUR-PAT is the generated code you’ve copied) and save the file:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>GITHUB_PAT<span class="ot">=</span>YOUR<span class="sc">-</span>PAT</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>GITHUB_PAT<span class="ot">=</span>YOUR<span class="sc">-</span>PAT</span></code></pre></div>
 <p>Restart R and run <code>Sys.getenv("GITHUB_PAT")</code> to check that the <code>""</code> has changed.</p>
 <p>Reference: <a href="https://www.jumpingrivers.com/t/2019-user-git/03-githubpat.html#6" class="uri">https://www.jumpingrivers.com/t/2019-user-git/03-githubpat.html#6</a></p>
 <h3 id="installing-1">Installing</h3>
 <p>Now, for as long as the token exists, the following code will install the package:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;remotes&quot;)</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;&lt;name of GitHub account&gt;/&lt;name of repository&gt;&quot;</span>, <span class="at">auth_token =</span> <span class="fu">Sys.getenv</span>(<span class="st">&quot;GITHUB_PAT&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;remotes&quot;)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;&lt;name of GitHub account&gt;/&lt;name of repository&gt;&quot;</span>, <span class="at">auth_token =</span> <span class="fu">Sys.getenv</span>(<span class="st">&quot;GITHUB_PAT&quot;</span>))</span></code></pre></div>
 <h1 id="building-package">Building package</h1>
 <p>It is preferable to build from the repository rather than locally as this should be what everyone in the team has access to. To build and test any new functions use <code>Ctrl+Shift+L</code> from the {devtools} package to load locally for the session.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

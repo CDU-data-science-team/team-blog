@@ -77,12 +77,6 @@ _Remember to copy the code that is generated as this cannot be viewed again_
 Next set up a `GITHUB_PAT` in RStudio:
 
 ``` r
-usethis::edit_r_environ()
-
-```
-In the file that opens, type into it (where YOUR-PAT is the generated code you've copied) and save the file:
-
-``` r
 gitcreds::gitcreds_set()
 ```
 
