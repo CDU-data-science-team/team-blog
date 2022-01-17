@@ -35,10 +35,6 @@ If nothing has been set up by you on GitHub this may return an empty string "".
 
 ## Set up a token
 
-Firstly, go to https://github.com/settings/tokens which takes you to your own personal GitHub account settings where you will need to `Generate new token`. Give this a suitable name like Repo access and tick the repo group for full control of private repositories.
-
-Remember to copy the code that is generated as this cannot be viewed again
-
 Firstly, go to https://github.com/settings/tokens which takes you to your own personal GitHub account settings where you will need to `Generate new token`. Give this a suitable name like `Repo access` and tick the `repo` group for full control of private repositories.
 
 _Remember to copy the code that is generated as this cannot be viewed again_
