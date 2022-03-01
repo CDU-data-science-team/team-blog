@@ -1,0 +1,31 @@
+---
+title: "GitHub SOP"
+description: |
+  A short description of the post.
+author:
+  - name: Chris Beeley
+    url:
+      https://twitter.com/chrisbeeley: {}
+date: 2022-03-01
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+[why have an SOP, some of the issues with git and github that you only get in teams versus individuals]
+
+## SOP
+
+Should cover:
+
+* Branches (incl. gitflow)
+* Pull requests
+* Issues
+
+###

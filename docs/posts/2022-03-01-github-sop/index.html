@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -55,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -76,7 +77,7 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -84,50 +85,49 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+
   <!--radix_placeholder_meta_tags-->
-<title>CDU data science team blog: Making an RStudio presentation template</title>
+<title>CDU data science team blog: GitHub SOP</title>
 
-<meta property="description" itemprop="description" content="One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio."/>
+<meta property="description" itemprop="description" content="A short description of the post."/>
 
-<link rel="canonical" href="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/"/>
+<link rel="canonical" href="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-06-10"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-06-10"/>
-<meta name="article:author" content="Zoë Turner"/>
+<meta property="article:published" itemprop="datePublished" content="2022-03-01"/>
+<meta property="article:created" itemprop="dateCreated" content="2022-03-01"/>
+<meta name="article:author" content="Chris Beeley"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="CDU data science team blog: Making an RStudio presentation template"/>
+<meta property="og:title" content="CDU data science team blog: GitHub SOP"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio."/>
-<meta property="og:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/"/>
-<meta property="og:image" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/img/bibliothek-geographischer-handbücher-107.jpg"/>
+<meta property="og:description" content="A short description of the post."/>
+<meta property="og:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="CDU data science team blog"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="CDU data science team blog: Making an RStudio presentation template"/>
-<meta property="twitter:description" content="One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio."/>
-<meta property="twitter:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/"/>
-<meta property="twitter:image" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/img/bibliothek-geographischer-handbücher-107.jpg"/>
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="CDU data science team blog: GitHub SOP"/>
+<meta property="twitter:description" content="A short description of the post."/>
+<meta property="twitter:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="CDU data science team blog: Making an RStudio presentation template"/>
-<meta name="citation_fulltext_html_url" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/"/>
-<meta name="citation_online_date" content="2021/06/10"/>
-<meta name="citation_publication_date" content="2021/06/10"/>
-<meta name="citation_author" content="Zoë Turner"/>
+<meta name="citation_title" content="CDU data science team blog: GitHub SOP"/>
+<meta name="citation_fulltext_html_url" content="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/"/>
+<meta name="citation_online_date" content="2022/03/01"/>
+<meta name="citation_publication_date" content="2022/03/01"/>
+<meta name="citation_author" content="Chris Beeley"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Making an RStudio presentation template"]},{"type":"character","attributes":{},"value":["One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Zoë Turner"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/Lextuga007"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["06-10-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["Open source","RStudio","Presentations"]},{"type":"character","attributes":{},"value":["img/bibliothek-geographischer-handbücher-107.jpg"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["GitHub SOP"]},{"type":"character","attributes":{},"value":["A short description of the post."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Chris Beeley"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/chrisbeeley"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]}]},{"type":"character","attributes":{},"value":["2022-03-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["img/bibliothek-geographischer-handbücher-107.jpg","img/rstudio-template.PNG","making-an-rstudio-presentation-template_files/anchor-4.2.2/anchor.min.js","making-an-rstudio-presentation-template_files/bowser-1.9.3/bowser.min.js","making-an-rstudio-presentation-template_files/distill-2.2.21/template.v2.js","making-an-rstudio-presentation-template_files/header-attrs-2.8/header-attrs.js","making-an-rstudio-presentation-template_files/jquery-1.11.3/jquery.min.js","making-an-rstudio-presentation-template_files/popper-2.6.0/popper.min.js","making-an-rstudio-presentation-template_files/tippy-6.2.7/tippy-bundle.umd.min.js","making-an-rstudio-presentation-template_files/tippy-6.2.7/tippy-light-border.css","making-an-rstudio-presentation-template_files/tippy-6.2.7/tippy.css","making-an-rstudio-presentation-template_files/tippy-6.2.7/tippy.umd.min.js","making-an-rstudio-presentation-template_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"NULL"}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2385,8 +2385,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.9/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2423,7 +2423,7 @@ h1, h2, h3, h4, h5 {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Making an RStudio presentation template","description":"One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.","authors":[{"author":"Zoë Turner","authorURL":{"https://twitter.com/Lextuga007":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-10T00:00:00.000+01:00","citationText":"Turner, 2021"}
+{"title":"GitHub SOP","description":"A short description of the post.","authors":[{"author":"Chris Beeley","authorURL":{"https://twitter.com/chrisbeeley":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-03-01T00:00:00.000+00:00","citationText":"Beeley, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2454,50 +2454,32 @@ h1, h2, h3, h4, h5 {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Making an RStudio presentation template</h1>
+<h1>GitHub SOP</h1>
 <!--radix_placeholder_categories-->
-<div class="dt-tags">
-  <a href="../../index.html#category:Open_source" class="dt-tag">Open source</a>
-  <a href="../../index.html#category:RStudio" class="dt-tag">RStudio</a>
-  <a href="../../index.html#category:Presentations" class="dt-tag">Presentations</a>
-</div>
 <!--/radix_placeholder_categories-->
-<p><p>One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.</p></p>
+<p><p>A short description of the post.</p></p>
 </div>
 
 <div class="d-byline">
-  Zoë Turner true 
+  Chris Beeley true 
   
-<br/>06-10-2021
+<br/>2022-03-01
 </div>
 
 <div class="d-article">
-<h1 id="creating-a-template-through-r-studio">Creating a template through R Studio</h1>
-<p>Did you know it’s possible to set up your own templates into RStudio? I didn’t until I started looking into the presentation templates for the CDU Data Science Team. The benefit of this is that I no longer have to set up clone repositories each time which is awkward too if you want to keep all presentations in one repository like we do for the <a href="https://github.com/CDU-data-science-team/presentations">team’s presentations</a>.</p>
-<p>A few in the team suggested setting these up as a package but {xaringan} slides come with many supporting files (images and CSS), and it wasn’t too obvious how to do this. Luckily a number of people have done it and one such person tweeted about it so I added the details to the repository’s <a href="https://github.com/CDU-data-science-team/presentation-template/issues/7">issues</a> for reference.</p>
-<p>This led me to <span class="citation" data-cites="DrMowinckels">@DrMowinckels</span>’s package <a href="https://github.com/Athanasiamo/uiothemes/">{uiothemes}</a> which is particularly useful as she uses this package for various templates and themes and so, following the layout for adding the xaringan slides I added the following folders to our own package <a href="https://github.com/CDU-data-science-team/nottshcMethods">{nottshcMethods}</a> following our process of:</p>
-<ol class="example" type="1">
-<li>create a branch with the issue number like 1-slide-templates</li>
-<li>make the changes</li>
-<li>set up a pull request to the development branch</li>
-</ol>
-<h4 id="file-structure">File structure</h4>
-<p>I added the file structure:</p>
-<p>nottshcMethods/inst/rmarkdown/templates/Nottshc/skeleton</p>
-<p>and in the Nottshc folder I added a file called <kbd>template.yaml</kbd> containing:</p>
-<pre><code>name: Nottshc Presentation template
-description: &gt;
-   Standard xaringan Nottshc template for presentations
-create_dir: TRUE</code></pre>
-<p>The <kbd>create_dir</kbd> is particularly important as this is asking if a new folder directory should be created or not. As this is set to TRUE all the files and folder structure in the folder skeleton will be copied. Note that in {uiothemes} all xaringan files are within one folder but I prefer my files to be in subfolders so {nottshcMethods} has the subfolders css and img.</p>
-<p><kdb>name</kbd> is what will appear in the RStudio templates later so this needs to be clear and concise.</p>
-<p>In the folder <kbd>skeleton</kbd> the important file is the <kbd>skeleton.Rmd</kbd> which is the template RMarkdown file for the slides.</p>
-<p>As this is within a package, to run the package <kbd>Ctrl+Shift+B</kbd> will build the package on your computer. When that’s run the template will appear in <kbd>File/New File/R Markdown…/From Template</kbd></p>
-<p><img src="img/rstudio-template.PNG" /></p>
-<h2 id="addendum-and-a-plea-to-blog-things-like-this">Addendum and a plea to blog things like this</h2>
-<p>I wrote this out a number of weeks before publishing and I’m so glad I did as I immediately forgot everything I did. It was only when I needed to do a presentation and went to my templates in RStudio that I realised how great this is and how I couldn’t remember how I had set it all up. Luckily I had also started this blog in order to share with others and so the moral of the story is, when you write a blog you are sharing your current knowledge with others, but also your future self.</p>
-<p>Be kind to your future self, share your thoughts and your technical wins, even if they seem small to you today they may be huge tomorrow.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="introduction">Introduction</h2>
+<p>[why have an SOP, some of the issues with git and github that you
+only get in teams versus individuals]</p>
+<h2 id="sop">SOP</h2>
+<p>Should cover:</p>
+<ul>
+<li>Branches (incl. gitflow)</li>
+<li>Pull requests</li>
+<li>Issues</li>
+</ul>
+<h3 id="section"></h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2514,13 +2496,13 @@ create_dir: TRUE</code></pre>
   <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/CDU-data-science-team/team-blog/issues/new">create an issue</a> on the source repository.</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Turner (2021, June 10). CDU data science team blog: Making an RStudio presentation template. Retrieved from https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/</pre>
+  <pre class="citation-appendix short">Beeley (2022, March 1). CDU data science team blog: GitHub SOP. Retrieved from https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/</pre>
   <p>BibTeX citation</p>
-  <pre class="citation-appendix long">@misc{turner2021making,
-  author = {Turner, Zoë},
-  title = {CDU data science team blog: Making an RStudio presentation template},
-  url = {https://cdu-data-science-team.github.io/team-blog/posts/2021-06-10-making-an-rstudio-presentation-template/},
-  year = {2021}
+  <pre class="citation-appendix long">@misc{beeley2022github,
+  author = {Beeley, Chris},
+  title = {CDU data science team blog: GitHub SOP},
+  url = {https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/},
+  year = {2022}
 }</pre>
 </div>
 <!--/radix_placeholder_appendices-->
