@@ -13,10 +13,10 @@
     ],
     "date": "2022-03-01",
     "categories": [],
-    "contents": "\r\nIntroduction\r\n[why have an SOP, some of the issues with git and github that you\r\nonly get in teams versus individuals]\r\nSOP\r\nShould cover:\r\nBranches (incl. gitflow)\r\nPull requests\r\nIssues\r\n\r\n\r\n\r\n\r\n",
+    "contents": "\nIntroduction\n[why have an SOP, some of the issues with git and github that you only get in teams versus individuals]\nSOP\nShould cover:\nBranches (incl. gitflow)\nPull requests\nIssues\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-03-01T18:41:32+00:00",
-    "input_file": {}
+    "last_modified": "2022-03-02T16:41:21+00:00",
+    "input_file": "github-sop.knit.md"
   },
   {
     "path": "posts/2021-12-17-package-workflow/",
