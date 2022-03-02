@@ -1880,6 +1880,12 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
+      if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+        var fn = $(this).children()[0]
+        $(this).html(fn.shadowRoot.querySelector("sup"))
+        $(this).id = fn.id
+        fn.remove()
+      }
       var refs = $(this).attr('data-cites').split(" ");
       var refHtml = refs.map(function(ref) {
         return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -2423,7 +2429,7 @@ h1, h2, h3, h4, h5 {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Mapping","description":"Mapping using public health tools","authors":[{"author":"Zoë Turner","authorURL":{"https://twitter.com/Letxuga007":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-14T00:00:00.000+01:00","citationText":"Turner, 2021"}
+{"title":"Mapping","description":"Mapping using public health tools","authors":[{"author":"Zoë Turner","authorURL":{"https://twitter.com/Letxuga007":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-14T00:00:00.000+00:00","citationText":"Turner, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
