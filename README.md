@@ -16,7 +16,6 @@ For the benefit of team members, a refresher on how to add a blog post.
 * Write the post :slightly_smiling_face:
 * Click "knit" whenever you want to preview how the post looks
 * When you are finished knit the post for a final time and check it to make sure you are happy with it
-* Knit index.Rmd
 * Add all to git `git add .`
 * Git commit `git commit -m "Commit message"`
 * Git push `git push`
