@@ -2,7 +2,7 @@
   {
     "path": "posts/2022-03-01-github-sop/",
     "title": "GitHub SOP",
-    "description": "A short description of the post.",
+    "description": "How we use GitHub in the CDU data science team.",
     "author": [
       {
         "name": "Chris Beeley",
@@ -13,9 +13,9 @@
     ],
     "date": "2022-03-01",
     "categories": [],
-    "contents": "\nIntroduction\n[why have an SOP, some of the issues with git and github that you only get in teams versus individuals]\nSOP\nShould cover:\nBranches (incl. gitflow)\nPull requests\nIssues\n\n\n\n\n",
+    "contents": "\nIntroduction\n[apologies this post is still in draft, I pushed it early to start discussing it with team members]\n[why have an SOP, some of the issues with git and github that you only get in teams versus individuals]\nSOP\nShould cover:\nBranches (incl. gitflow- no development branch for non-packages)\nPull requests\nIssues\nHaving an owner for each repo\nCode on feature branches should be merged early and often to development. Feature branches should be merged and deleted as soon as possible\nIssues should include reprexes as much as possible https://reprex.tidyverse.org/\nKeeping data safe (DON’T put it in a git controlled repo, in the main)\nStyle and linting?\nWhat to do if you do publish the wrong thing, incl. removing it from all branches\nSemantic versioning\nRelated matters\nDevelop code by using pkgload::load_all()\nBut run only code installed from GitHub- otherwise different team members can be running different code bases\nHelpful resources\nNHSX draft guidance\nGDS guidance\nHealth foundation blog\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-03-02T16:41:21+00:00",
+    "last_modified": "2022-03-02T17:22:43+00:00",
     "input_file": "github-sop.knit.md"
   },
   {
