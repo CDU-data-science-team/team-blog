@@ -5,14 +5,14 @@
       "title": "Welcome to the CDU data science team blog",
       "author": [],
       "contents": "\nWe are the data science team within the clinical development unit of Nottinghamshire Healthcare NHS Trust:\nChris Beeley\nZoë Turner\nLori Edwards Suárez\nOluwasegun Apejoye\nEmail the team email at CDUDataTeam@nottshc.nhs.uk\nWe believe in open source data science and use R and Python for most of our work. We publish as much code and data as we can on our team GitHub page. We have a wide range of skills including statistics, machine learning, SQL/ data engineering, Shiny, text mining, and forecasting. We are currently working on nationally funded open source data science projects as well as a range of things within our own Trust, and in the coming weeks and months each team member will present some of this work to you.\nWe love to collaborate, to communicate, to meet new people, and to offer (and receive!) advice and support, especially to colleagues in health and social care across the UK (and the world) so please reach out to any of us on Twitter or anywhere else you might come across us or our work.\nPast members of the team\nThey have moved on to other roles but can still be found here:\nAndreas Soteriades\nMilan Wiedemann\nCredit\nPictures are from the British Library flickr collection of Diagrams, Plots and Charts.\n\n\n\n",
-      "last_modified": "2022-03-02T17:30:08+00:00"
+      "last_modified": "2022-03-04T19:50:16+00:00"
     },
     {
       "path": "index.html",
       "title": "CDU data science team blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-03-02T17:30:09+00:00"
+      "last_modified": "2022-03-04T19:50:16+00:00"
     }
   ],
   "collections": ["posts/posts.json"]
