@@ -1880,12 +1880,6 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-        var fn = $(this).children()[0]
-        $(this).html(fn.shadowRoot.querySelector("sup"))
-        $(this).id = fn.id
-        fn.remove()
-      }
       var refs = $(this).attr('data-cites').split(" ");
       var refHtml = refs.map(function(ref) {
         return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -2429,7 +2423,7 @@ h1, h2, h3, h4, h5 {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Making an RStudio presentation template","description":"One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.","authors":[{"author":"Zoë Turner","authorURL":{"https://twitter.com/Lextuga007":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-10T00:00:00.000+00:00","citationText":"Turner, 2021"}
+{"title":"Making an RStudio presentation template","description":"One of a series of posts relating to creating presentation templates using {xaringan}, GitHub and R Studio.","authors":[{"author":"Zoë Turner","authorURL":{"https://twitter.com/Lextuga007":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-10T00:00:00.000+01:00","citationText":"Turner, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
