@@ -18,5 +18,5 @@ For the benefit of team members, a refresher on how to add a blog post.
 * When you are finished knit the post for a final time and check it to make sure you are happy with it
 * Add all to git `git add .`
 * Git commit `git commit -m "Commit message"`
-* Git push `git push`. (if you get an error then contact any current contributors to this repo (or your line manager - for team members) and ensure you have access to the repo). if after getting access, you still get an error with `git push`, then try `git push -u origin <name-of-branch>`
+* Git push `git push`
 * Make a pull request to main on GitHub
