@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://cdu-data-science-team.github.io/team-blog/about.html</loc>
-    <lastmod>2022-03-05T15:01:30+00:00</lastmod>
+    <lastmod>2022-03-01T17:51:30+00:00</lastmod>
   </url>
   <url>
     <loc>https://cdu-data-science-team.github.io/team-blog/</loc>
-    <lastmod>2022-03-05T15:01:30+00:00</lastmod>
+    <lastmod>2022-03-01T17:51:30+00:00</lastmod>
   </url>
   <url>
     <loc>https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-more-reasons-to-embrace-open-source-within-the-NHS/</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/</loc>
-    <lastmod>2022-03-07T10:08:13+00:00</lastmod>
+    <lastmod>2022-03-07T15:04:04+00:00</lastmod>
   </url>
   <url>
     <loc>https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/</loc>
