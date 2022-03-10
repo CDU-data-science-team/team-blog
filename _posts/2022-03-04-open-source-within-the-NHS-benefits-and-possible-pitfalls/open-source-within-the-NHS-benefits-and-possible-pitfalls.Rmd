@@ -1,0 +1,68 @@
+---
+title: "Open source within the NHS - benefits and possible pitfalls"
+description: |
+  What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?
+author:
+  - name: Oluwasegun Apejoye
+    url: {https://uk.linkedin.com/in/oluwasegun-michael-apejoye}
+date: 03-04-2022
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Open source    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction  
+
+Healthcare needs to prioritise clinical safety and data security and there have been concerns in the past about using and producing open source within the NHS. In a simple form, working in the open means making the source codes, that powers our software or application, freely available and downloadable from public platforms such as GitHub. This enables collaboration across the board to maximize benefits for the delivery of health and social care services.  
+
+The term _"open source"_ has been in use for a long time, and it is increasingly gaining traction in the NHS. And, we the [clinical developmental unit – data science](https://github.com/CDU-data-science-team) team at NottsHC are [part of the open-source campaign](https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/) within the NHS. We are dedicated to working in the open and to using open source tools for our analysis.
+
+As part of the effort to push for open source, the NSHX has announced that [NHS Open Source Policy will officially become available](https://github.com/nhsx/open-source-policy) by this summer. According to the draft document, the policy “aims to provide a single position and source of guidance for anyone developing open software for or with the NHS in England”. The announcement about the policy has been broadly embraced by the NHS-R community (an open community of R users). 
+
+But what does open source translate to for the average staff (with limited technical skills) in the NHS? What benefit does this bring to patients?
+
+A member of our team already did some justice to this subject matter in her post [working-in-the-open](https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/), where she shared some of her personal experiences and did some justice to the benefit of open source. However, with this post, I hope to share the general benefit and touch on some more issues about working with open source. 
+
+## Benefits
+
+_Greater collaboration_: open source enables technical (IT experts, developers, analysts) and non-technical (clinicians, nurses, GPs) staff to input into projects and collaborate easily. It facilitates easy sharing of software, codes, analytical products etc, and it opens doors for reproducibility. With open source, a small idea can easily become a proof of concept which can grow to become a project that ends up improving care delivery.
+
+_Cost saving_: using an already published code to serve some aspects of our task will lead to reduced duplication of effort, a reduction in staff time committed to projects and improved staff efficiency, a faster roll-out of cost-saving solutions and it enables teams to pursue the best approaches, not just those available locally.  Also, the awareness of public scrutiny will ensure teams make their projects fit for purpose. In addition, embracing open-source tools means the NHS will benefit from savings from licensing fees as the cost of open-source tools tends to be lower and they also provide greater commitment/contract flexibility compared to proprietary tools which currently lock-in the organisation to the supplier. 
+
+_Availability of cutting-edge tools_: All open-source projects benefit from contributions from a wide variety of users. A good example is the Python and R programming languages, which are widely used tools for a wide range of cool stuff. These two projects have benefited from contributions that now make them a go-to tool for different tasks. 
+
+_Community effort_: The open-source community runs on the philosophy of universally shared knowledge because it benefits from a large and growing network of developers and users that are continually contributing to projects. With an open-source approach to project development, teams from other organizations can take our project, make changes to it and make the changes available to the community (including the original author) to benefit from the additional feature or improvement. This accessibility allows for constant developments and improvements to the software. 
+
+_Safety and Security_: Does open source mean we sacrifice patients' privacy or lose control of projects? No. The organisation authoring the project maintains control of the data at all times and ensures it remains private and confidential, and can permit or restrict reuse of code using different software licences.
+
+_Additional income stream_: The authoring team of an open source project can offer to provide subscription services, support and maintenance to interested users and therefore generate passive income for their trust. 
+ 
+## What to look out for 
+
+It's a no-brainer that embracing open source will bring several benefits to teams within the healthcare system. However, there are still some pitfalls to look out for. Below are some of the ones I have identified: 
+
+_Importance of protecting data_: Sharing open source in healthcare settings requires safeguards to protect data, and unless suitable synthetic data can be produced it can be hard to allow others to run code that depends on data.
+
+_Documentation and support_: Sometimes documentation and support for open source is inferior to proprietary alternatives and this can lead to delays and extra work for teams.
+
+_Lack of sustainability_: it is possible to use packages (set of codes) developed by another team in your project. However, there is a risk of the package being abandoned without prior notice by the team which can create problems with incompatibility and require rewriting of existing code. 
+
+To mitigate the above issues, there is a need for robust policies to help analysts, developers and other users follow a consistent approach to open source. And I believe that is where the [NHS Open Source Policy](https://github.com/nhsx/open-source-policy) proves useful. 
+
+## Conclusion  
+
+Open source has many benefits to offer if embraced by all teams (both technical and non-technical) within the healthcare system. Despite these benefits, there is a need for robust open source policies to ensure all teams work in a consistent way that will maximize the benefits for the quality of care delivered to patients, and the efficiency of the health care systems without compromising patient safety and data governance.
+
+If you want to read more about our open source journey, then keep in touch by following us on [Twitter](https://twitter.com/DataScienceNott) and [GitHub](https://github.com/CDU-data-science-team).
+
+### Further reading
+
+[NHSX open source policy](https://github.com/nhsx/open-source-policy) 
+
+[NHS technology: Being open to open source](https://healthcareglobal.com/technology-and-ai/nhs-technology-being-open-open-source)
