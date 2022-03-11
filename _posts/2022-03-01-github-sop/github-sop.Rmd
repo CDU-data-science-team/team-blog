@@ -13,7 +13,7 @@ output:
 categories:
   - Open source
   - GitHub
-preview: image.jpg
+preview: img/image.jpg
 ---
 
 ```{r setup, include=FALSE}

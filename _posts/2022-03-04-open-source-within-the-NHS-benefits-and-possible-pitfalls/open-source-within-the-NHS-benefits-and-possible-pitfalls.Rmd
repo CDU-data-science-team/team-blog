@@ -11,7 +11,7 @@ output:
     self_contained: false
 categories:
   - Open source
-preview: image.jpg 
+preview: img/image.jpg 
 ---
 
 ```{r setup, include=FALSE}
