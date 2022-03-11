@@ -2444,7 +2444,7 @@ function init_posts_list() {
     var src = $(img).attr('data-src');
     if (src) {
       $(img).attr('src', src);
-      $(img).on("load", function() {
+      $(img).load(function() {
         img.removeAttribute('data-src');
       });
     }
@@ -2490,7 +2490,6 @@ function init_posts_list() {
 
       // mark posts that match the category visible
       var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
       var posts = $('.post-metadata').map(function(idx, script) {
         var metadata = $.parseJSON($(script).html());
         var post = null;
@@ -2506,7 +2505,7 @@ function init_posts_list() {
       set_posts_visible(posts, true);
 
       // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
+      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
 
       // update the list_caption
       var list_caption = $('.posts-list-caption');
@@ -2578,7 +2577,7 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img/>
+<img src="posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/image.jpg"/>
 </div>
 <div class="description">
 <h2>Open source within the NHS - benefits and possible pitfalls</h2>
@@ -2589,7 +2588,7 @@ function init_posts_list() {
 </div>
 </a>
 <a href="posts/2022-03-01-github-sop/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<script class="post-metadata" type="text/json">{"categories":["Open source","GitHub"]}</script>
 <div class="metadata">
 <div class="publishedDate">March 1, 2022</div>
 <div class="dt-authors">
@@ -2597,11 +2596,14 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img/>
+<img src="posts/2022-03-01-github-sop/image.jpg"/>
 </div>
 <div class="description">
 <h2>GitHub SOP</h2>
-<div class="dt-tags"></div>
+<div class="dt-tags">
+<div class="dt-tag">Open source</div>
+<div class="dt-tag">GitHub</div>
+</div>
 <p>How we use GitHub in the CDU data science team.</p>
 </div>
 </a>
@@ -2920,11 +2922,11 @@ All our functions are grouped into R packages because this made it easier for us
 </li>
 <li>
 <a href="#category:GitHub">GitHub</a>
-<span class="category-count">(1)</span>
+<span class="category-count">(2)</span>
 </li>
 <li>
 <a href="#category:Open_source">Open source</a>
-<span class="category-count">(6)</span>
+<span class="category-count">(7)</span>
 </li>
 <li>
 <a href="#category:Packages">Packages</a>

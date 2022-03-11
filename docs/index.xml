@@ -16,14 +16,18 @@
       <category>Open source</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls</guid>
       <pubDate>Fri, 04 Mar 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/image.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>GitHub SOP</title>
       <dc:creator>Chris Beeley</dc:creator>
       <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop</link>
       <description>How we use GitHub in the CDU data science team.</description>
+      <category>Open source</category>
+      <category>GitHub</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop</guid>
       <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-01-github-sop/image.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Package Workflow</title>
