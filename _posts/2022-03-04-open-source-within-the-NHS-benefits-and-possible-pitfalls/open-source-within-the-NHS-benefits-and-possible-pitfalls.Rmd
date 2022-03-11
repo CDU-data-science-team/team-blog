@@ -10,7 +10,7 @@ output:
   distill::distill_article:
     self_contained: false
 categories:
-  - Open source    
+  - Open source
 ---
 
 ```{r setup, include=FALSE}
