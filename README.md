@@ -9,6 +9,9 @@ For the benefit of team members, a refresher on how to add a blog post.
   * type `git checkout main && git pull`
 * Check out a new branch
   - `git checkout -b name-of-branch`
+* Install [nottshcMethods](https://github.com/CDU-data-science-team/nottshcMethods) to get the {distill} post template
+  * `remotes::install_github("CDU-data-science-team/nottshcMethods")`
+* In RStudio run select `File` -&gt; `R markdown ...` -&gt; `From Template`.
 * In the RStudio Menus select `File` -&gt; `R markdown ...` -&gt; `From Template`.
   * Naming convention for the post files is `yyyy-mm-dd-name-of-blog`
 * Fill in the YAML at the top
