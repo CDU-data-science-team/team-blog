@@ -12,6 +12,7 @@ For the benefit of team members, a refresher on how to add a blog post.
 * Install [nottshcMethods](https://github.com/CDU-data-science-team/nottshcMethods)
   * `remotes::install_github("CDU-data-science-team/nottshcMethods")`
 * In RStudio run select `File` -&gt; `R markdown ...` -&gt; `From Template`.
+* Add a graphic to the post. Use [freely licensed graphics](https://www.flickr.com/photos/britishlibrary/albums/72157648088610908) and add the filename to the YAML as `preview: filename.jpg`
 * Fill in the YAML at the top
 * Write the post :slightly_smiling_face:
 * Click "knit" whenever you want to preview how the post looks
