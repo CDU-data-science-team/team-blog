@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["img/british-mineralogy-or-coloured-figures-p132.jpg","personal-access-tokens_files/anchor-4.2.2/anchor.min.js","personal-access-tokens_files/bowser-1.9.3/bowser.min.js","personal-access-tokens_files/distill-2.2.21/template.v2.js","personal-access-tokens_files/header-attrs-2.11.3/header-attrs.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.min.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.min.map","personal-access-tokens_files/popper-2.6.0/popper.min.js","personal-access-tokens_files/tippy-6.2.7/tippy-bundle.umd.min.js","personal-access-tokens_files/tippy-6.2.7/tippy-light-border.css","personal-access-tokens_files/tippy-6.2.7/tippy.css","personal-access-tokens_files/tippy-6.2.7/tippy.umd.min.js","personal-access-tokens_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["img/british-mineralogy-or-coloured-figures-p132.jpg","personal-access-tokens_files/anchor-4.2.2/anchor.min.js","personal-access-tokens_files/bowser-1.9.3/bowser.min.js","personal-access-tokens_files/distill-2.2.21/template.v2.js","personal-access-tokens_files/header-attrs-2.11.3/header-attrs.js","personal-access-tokens_files/header-attrs-2.11.8/header-attrs.js","personal-access-tokens_files/header-attrs-2.13/header-attrs.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.min.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.min.map","personal-access-tokens_files/popper-2.6.0/popper.min.js","personal-access-tokens_files/tippy-6.2.7/tippy-bundle.umd.min.js","personal-access-tokens_files/tippy-6.2.7/tippy-light-border.css","personal-access-tokens_files/tippy-6.2.7/tippy.css","personal-access-tokens_files/tippy-6.2.7/tippy.umd.min.js","personal-access-tokens_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1264,6 +1264,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1438,7 +1444,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="personal-access-tokens_files/header-attrs-2.11.8/header-attrs.js"></script>
+  <script src="personal-access-tokens_files/header-attrs-2.13/header-attrs.js"></script>
   <script src="personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="personal-access-tokens_files/popper-2.6.0/popper.min.js"></script>
   <link href="personal-access-tokens_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1472,8 +1478,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Personal Access Tokens</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">Packages</div>
-<div class="dt=tag">Security</div>
+<div class="dt-tag">Packages</div>
+<div class="dt-tag">Security</div>
 </div>
 <!--/radix_placeholder_categories-->
 <p><p>Connecting to the GitHub to install packages from a private GitHub repository requires security set ups and this blog details how to do it (and how not to do it).</p></p>
