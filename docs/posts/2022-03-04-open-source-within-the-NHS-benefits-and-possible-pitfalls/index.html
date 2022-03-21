@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #20794d; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,7 +77,7 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.sc { color: #20794d; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -85,51 +85,48 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
-
   <!--radix_placeholder_meta_tags-->
-<title>CDU data science team blog: Working in the open</title>
+<title>CDU data science team blog: Open source within the NHS - benefits and possible pitfalls</title>
 
-<meta property="description" itemprop="description" content="What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?"/>
+<meta property="description" itemprop="description" content="What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?"/>
 
-<link rel="canonical" href="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/"/>
+<link rel="canonical" href="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-02-27"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-02-27"/>
-<meta name="article:author" content="Zoë Turner"/>
+<meta property="article:published" itemprop="datePublished" content="2022-03-04"/>
+<meta property="article:created" itemprop="dateCreated" content="2022-03-04"/>
+<meta name="article:author" content="Oluwasegun Apejoye"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="CDU data science team blog: Working in the open"/>
+<meta property="og:title" content="CDU data science team blog: Open source within the NHS - benefits and possible pitfalls"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?"/>
-<meta property="og:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/"/>
-<meta property="og:image" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/img/letters-from-high-latitudes.jpg"/>
+<meta property="og:description" content="What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?"/>
+<meta property="og:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="CDU data science team blog"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="CDU data science team blog: Working in the open"/>
-<meta property="twitter:description" content="What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?"/>
-<meta property="twitter:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/"/>
-<meta property="twitter:image" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/img/letters-from-high-latitudes.jpg"/>
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="CDU data science team blog: Open source within the NHS - benefits and possible pitfalls"/>
+<meta property="twitter:description" content="What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?"/>
+<meta property="twitter:url" content="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="CDU data science team blog: Working in the open"/>
-<meta name="citation_fulltext_html_url" content="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/"/>
-<meta name="citation_online_date" content="2021/02/27"/>
-<meta name="citation_publication_date" content="2021/02/27"/>
-<meta name="citation_author" content="Zoë Turner"/>
+<meta name="citation_title" content="CDU data science team blog: Open source within the NHS - benefits and possible pitfalls"/>
+<meta name="citation_fulltext_html_url" content="https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/"/>
+<meta name="citation_online_date" content="2022/03/04"/>
+<meta name="citation_publication_date" content="2022/03/04"/>
+<meta name="citation_author" content="Oluwasegun Apejoye"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Working in the open"]},{"type":"character","attributes":{},"value":["What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Zoë Turner"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/Letxuga007"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["02-27-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Open source"]},{"type":"character","attributes":{},"value":["img/letters-from-high-latitudes.jpg"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Open source within the NHS - benefits and possible pitfalls"]},{"type":"character","attributes":{},"value":["What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Oluwasegun Apejoye"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://uk.linkedin.com/in/oluwasegun-michael-apejoye"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["03-04-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Open source"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["2021-02-27-working-in-the-open_files/anchor-4.2.2/anchor.min.js","2021-02-27-working-in-the-open_files/bowser-1.9.3/bowser.min.js","2021-02-27-working-in-the-open_files/distill-2.2.21/template.v2.js","2021-02-27-working-in-the-open_files/header-attrs-2.12.1/header-attrs.js","2021-02-27-working-in-the-open_files/header-attrs-2.6.6/header-attrs.js","2021-02-27-working-in-the-open_files/header-attrs-2.7/header-attrs.js","2021-02-27-working-in-the-open_files/header-attrs-2.9/header-attrs.js","2021-02-27-working-in-the-open_files/jquery-1.11.3/jquery.min.js","2021-02-27-working-in-the-open_files/jquery-3.6.0/jquery-3.6.0.js","2021-02-27-working-in-the-open_files/jquery-3.6.0/jquery-3.6.0.min.js","2021-02-27-working-in-the-open_files/jquery-3.6.0/jquery-3.6.0.min.map","2021-02-27-working-in-the-open_files/popper-2.6.0/popper.min.js","2021-02-27-working-in-the-open_files/tippy-6.2.7/tippy-bundle.umd.min.js","2021-02-27-working-in-the-open_files/tippy-6.2.7/tippy-light-border.css","2021-02-27-working-in-the-open_files/tippy-6.2.7/tippy.css","2021-02-27-working-in-the-open_files/tippy-6.2.7/tippy.umd.min.js","2021-02-27-working-in-the-open_files/webcomponents-2.0.0/webcomponents.js","img/chris-beeley-tweet.PNG","img/letters-from-high-latitudes.jpg"]}
+  {"type":"character","attributes":{},"value":["img/image.jpg","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/anchor-4.2.2/anchor.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/bowser-1.9.3/bowser.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/distill-2.2.21/template.v2.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/header-attrs-2.11/header-attrs.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/jquery-3.6.0/jquery-3.6.0.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/jquery-3.6.0/jquery-3.6.0.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/jquery-3.6.0/jquery-3.6.0.min.map","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/popper-2.6.0/popper.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy-bundle.umd.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy-light-border.css","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy.css","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy.umd.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2393,7 +2390,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.12.1/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2431,7 +2428,7 @@ h1, h2, h3, h4, h5 {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Working in the open","description":"What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?","authors":[{"author":"Zoë Turner","authorURL":{"https://twitter.com/Letxuga007":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-27T00:00:00.000+00:00","citationText":"Turner, 2021"}
+{"title":"Open source within the NHS - benefits and possible pitfalls","description":"What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?","authors":[{"author":"Oluwasegun Apejoye","authorURL":{"https://uk.linkedin.com/in/oluwasegun-michael-apejoye":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-03-04T00:00:00.000+00:00","citationText":"Apejoye, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2462,69 +2459,48 @@ h1, h2, h3, h4, h5 {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Working in the open</h1>
+<h1>Open source within the NHS - benefits and possible pitfalls</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:Open_source" class="dt-tag">Open source</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>What does it mean to work in the open? What is open source? What problems can we solve if we share more openly?</p></p>
+<p><p>What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?</p></p>
 </div>
 
 <div class="d-byline">
-  Zoë Turner true 
+  Oluwasegun Apejoye true 
   
-<br/>02-27-2021
+<br/>03-04-2022
 </div>
 
 <div class="d-article">
-<h1 id="what-is-working-out-in-the-open">What is working out in the open?</h1>
-<p>“Working in the open” isn’t a technical term; it’s just my simple way of explaining a concept without having to mention all the tools that are available to do this.</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="img/chris-beeley-tweet.PNG" title="Tweet from Chris Beeley on working writing stuff in the open" alt="Tweet from Chris Beeley on working writing stuff in the open" width="306" /></p>
-</div>
-<p>As you can see from <span class="citation" data-cites="ChrisBeeley">@ChrisBeeley</span>’s tweet, he refers to “writing stuff in the open and making it reusable”; we use slightly different language but it covers the same principles.</p>
-<h4 id="being-open-in-the-public-sector">Being open in the Public Sector</h4>
-<p>I’ve always found that analysts working in the NHS and Local Authorities are always happy to share their methodologies, approaches to work and even code and how we shared this was often dictated by who we know and the tools we have to hand, like Excel or Word. If a change was made to the original I’d never know about it and, vice versa, if I improved the code I wouldn’t have an easy way to share back what I’d done.</p>
-<p>Whilst analysts were happy to share code I still built up a code repository for myself and for many years I recycled my own code. I often refer back to projects where I know I’ve written a particular bit of code that is useful and I’d rarely wrote out complete chunks of code that ran independently of project data. Working openly changes how you approach code because sharing projects that don’t work too well without some changes isn’t all that useful to others.</p>
-<p>Working with an intention to be open makes you aware of public scrutiny and so, inevitably, you may take a bit longer to make code tidy, write a few more explanatory comments and ensure that code does what you think it should. What’s nice about doing this is that although the openness of work is intended for someone else’s benefit, often that person is still you.</p>
-<h4 id="repeatedly-solving-the-same-problem">Repeatedly solving the same problem</h4>
-<p>Many of the tasks that analysts and data scientists in the public sector are tasked with are the same. National Returns and benchmarking submissions are common and are completed by many trusts using slightly different approaches but, ultimately, leading to the same data output. This results in a constant cycle of problem solving where the solution, if not shared publicly, means others have to do the very same discovery work.</p>
-<p>In a completely different context, it would be like finding a chemical compound, not sharing that knowledge and other people working hard in other labs to repeat the discovery. By constantly working in this ‘discovery’ phase we never further our collective knowledge by refining the techniques, analysing the results and, hopefully, using the “compound” to make a difference.</p>
-<p>Publishing code means that anyone in my team, my trust, the NHS, even the world can see what I have already discovered. In sharing to the world audience, I know I have something I myself can use. Of course, it takes time to write these things out but once it’s written it never needs to be rediscovered again - but it can be improved upon.</p>
-<h4 id="how-do-the-cdu-data-science-work-in-the-open">How do the CDU data science work in the open?</h4>
-<p>The CDU data science team have a strong desire to work openly and we have created a <a href="https://github.com/CDU-data-science-team">GitHub</a> account to share code and knowledge like the pages on <a href="https://github.com/CDU-data-science-team/Miscellany/blob/master/Indices-of-Multiple-Deprivation.md">IMD</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and <a href="https://github.com/CDU-data-science-team/Miscellany/blob/master/Mapping.md">mapping</a>.</p>
-<p>We are also involved with the <a href="https://nhsrcommunity.com/">NHS-R Community</a>, facilitating training, presenting webinars and talks as well as hosting the annual <a href="https://hacktoberfest.digitalocean.com/">Hacktoberfest</a> which was virtual last year. We had originally set up the Hacktoberfest to just be our team, setting aside one day to contribute to projects and practice using GitHub. Pretty quickly after agreeing this would be a good idea we extended this to the NHS-R Community as we felt that there really wasn’t any need for it to be restricted to just our team. We had a few people come in and out of the MS Teams meeting through the day and, like many things in the NHS-R Community, it was very supportive and informal.</p>
-<h4 id="buiding-up-skills">Buiding up skills</h4>
-<p>Working on other people’s projects in a Hackathon may seem, on the face of it, “non-essential” work, but it’s invaluable as it not only opens up connections with others who can help with your projects, but you invariably see useful code you can then use. Reviewing code is one thing, but to really understand a piece of code, debug or solve a problem you often have to break it apart and build it back up. In doing so you learn how it is constructed programmatically and how the other person/people have approached a problem. Doing this with others’ scripts has made me a better coder and none of the effort has been wasted.</p>
-<p>A recent example of valuable “non-essential” work for me was helping someone in the NHS-R Community Slack group who had an issue with their RMarkdown and getting a plotly chart to appear in the eventual html output, although it would appear when each chunk was run. I took the code and moved each chunk into a template RMarkdown to see if it ran, section by section. In doing so I located the problem but I also saw a new bit of code<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>code_folding</span><span class='op'>:</span> <span class='st'>"hide"</span>
-</code></pre>
-</div>
-</div>
-<p>which I’d never seen that before. Now I could have equally have learned about this from reading about RMarkdown but it will forever stick in my memory as it was in the context of solving a problem. We helped each other and now I’m sharing that learning in this blog - working out in the open.</p>
-<p>The full YAML for reference</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Test&quot;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;25/02/2021&quot;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;hide&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_float</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_collapsed</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
-<p>If you want to read more about how our journey is going with working out in the open keep in touch by following us on <a href="https://twitter.com/DataScienceNott">Twitter</a> and in these <a href="https://cdu-data-science-team.github.io/team-blog/">blogs</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<section class="footnotes" role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1" role="doc-endnote"><p>Indices of Multiple Deprivation<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>The problem was results=‘hide’ being in the knitr::opts_chunk$set() code which affects the output. I’m still learning how these codes work so didn’t spot that at first, so I learned more about RMarkdown by debugging.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
+<h2 id="introduction">Introduction</h2>
+<p>Healthcare needs to prioritise clinical safety and data security and there have been concerns in the past about using and producing open source within the NHS. In a simple form, working in the open means making the source codes, that powers our software or application, freely available and downloadable from public platforms such as GitHub. This enables collaboration across the board to maximize benefits for the delivery of health and social care services.</p>
+<p>The term <em>“open source”</em> has been in use for a long time, and it is increasingly gaining traction in the NHS. And, we the <a href="https://github.com/CDU-data-science-team">clinical developmental unit – data science</a> team at NottsHC are <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/">part of the open-source campaign</a> within the NHS. We are dedicated to working in the open and to using open source tools for our analysis.</p>
+<p>As part of the effort to push for open source, the NSHX has announced that <a href="https://github.com/nhsx/open-source-policy">NHS Open Source Policy will officially become available</a> by this summer. According to the draft document, the policy “aims to provide a single position and source of guidance for anyone developing open software for or with the NHS in England”. The announcement about the policy has been broadly embraced by the NHS-R community (an open community of R users).</p>
+<p>But what does open source translate to for the average staff (with limited technical skills) in the NHS? What benefit does this bring to patients?</p>
+<p>A member of our team already did some justice to this subject matter in her post <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/">working-in-the-open</a>, where she shared some of her personal experiences and did some justice to the benefit of open source. However, with this post, I hope to share the general benefit and touch on some more issues about working with open source.</p>
+<h2 id="benefits">Benefits</h2>
+<p><em>Greater collaboration</em>: open source enables technical (IT experts, developers, analysts) and non-technical (clinicians, nurses, GPs) staff to input into projects and collaborate easily. It facilitates easy sharing of software, codes, analytical products etc, and it opens doors for reproducibility. With open source, a small idea can easily become a proof of concept which can grow to become a project that ends up improving care delivery.</p>
+<p><em>Cost saving</em>: using an already published code to serve some aspects of our task will lead to reduced duplication of effort, a reduction in staff time committed to projects and improved staff efficiency, a faster roll-out of cost-saving solutions and it enables teams to pursue the best approaches, not just those available locally. Also, the awareness of public scrutiny will ensure teams make their projects fit for purpose. In addition, embracing open-source tools means the NHS will benefit from savings from licensing fees as the cost of open-source tools tends to be lower and they also provide greater commitment/contract flexibility compared to proprietary tools which currently lock-in the organisation to the supplier.</p>
+<p><em>Availability of cutting-edge tools</em>: All open-source projects benefit from contributions from a wide variety of users. A good example is the Python and R programming languages, which are widely used tools for a wide range of cool stuff. These two projects have benefited from contributions that now make them a go-to tool for different tasks.</p>
+<p><em>Community effort</em>: The open-source community runs on the philosophy of universally shared knowledge because it benefits from a large and growing network of developers and users that are continually contributing to projects. With an open-source approach to project development, teams from other organizations can take our project, make changes to it and make the changes available to the community (including the original author) to benefit from the additional feature or improvement. This accessibility allows for constant developments and improvements to the software.</p>
+<p><em>Safety and Security</em>: Does open source mean we sacrifice patients’ privacy or lose control of projects? No. The organisation authoring the project maintains control of the data at all times and ensures it remains private and confidential, and can permit or restrict reuse of code using different software licences.</p>
+<p><em>Additional income stream</em>: The authoring team of an open source project can offer to provide subscription services, support and maintenance to interested users and therefore generate passive income for their trust.</p>
+<h2 id="what-to-look-out-for">What to look out for</h2>
+<p>It’s a no-brainer that embracing open source will bring several benefits to teams within the healthcare system. However, there are still some pitfalls to look out for. Below are some of the ones I have identified:</p>
+<p><em>Importance of protecting data</em>: Sharing open source in healthcare settings requires safeguards to protect data, and unless suitable synthetic data can be produced it can be hard to allow others to run code that depends on data.</p>
+<p><em>Documentation and support</em>: Sometimes documentation and support for open source is inferior to proprietary alternatives and this can lead to delays and extra work for teams.</p>
+<p><em>Lack of sustainability</em>: it is possible to use packages (set of codes) developed by another team in your project. However, there is a risk of the package being abandoned without prior notice by the team which can create problems with incompatibility and require rewriting of existing code.</p>
+<p>To mitigate the above issues, there is a need for robust policies to help analysts, developers and other users follow a consistent approach to open source. And I believe that is where the <a href="https://github.com/nhsx/open-source-policy">NHS Open Source Policy</a> proves useful.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Open source has many benefits to offer if embraced by all teams (both technical and non-technical) within the healthcare system. Despite these benefits, there is a need for robust open source policies to ensure all teams work in a consistent way that will maximize the benefits for the quality of care delivered to patients, and the efficiency of the health care systems without compromising patient safety and data governance.</p>
+<p>If you want to read more about our open source journey, then keep in touch by following us on <a href="https://twitter.com/DataScienceNott">Twitter</a> and <a href="https://github.com/CDU-data-science-team">GitHub</a>.</p>
+<h3 id="further-reading">Further reading</h3>
+<p><a href="https://github.com/nhsx/open-source-policy">NHSX open source policy</a></p>
+<p><a href="https://healthcareglobal.com/technology-and-ai/nhs-technology-being-open-open-source">NHS technology: Being open to open source</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2541,13 +2517,13 @@ h1, h2, h3, h4, h5 {
   <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/CDU-data-science-team/team-blog/issues/new">create an issue</a> on the source repository.</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Turner (2021, Feb. 27). CDU data science team blog: Working in the open. Retrieved from https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/</pre>
+  <pre class="citation-appendix short">Apejoye (2022, March 4). CDU data science team blog: Open source within the NHS - benefits and possible pitfalls. Retrieved from https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/</pre>
   <p>BibTeX citation</p>
-  <pre class="citation-appendix long">@misc{turner2021working,
-  author = {Turner, Zoë},
-  title = {CDU data science team blog: Working in the open},
-  url = {https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/},
-  year = {2021}
+  <pre class="citation-appendix long">@misc{apejoye2022open,
+  author = {Apejoye, Oluwasegun},
+  title = {CDU data science team blog: Open source within the NHS - benefits and possible pitfalls},
+  url = {https://cdu-data-science-team.github.io/team-blog/posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/},
+  year = {2022}
 }</pre>
 </div>
 <!--/radix_placeholder_appendices-->

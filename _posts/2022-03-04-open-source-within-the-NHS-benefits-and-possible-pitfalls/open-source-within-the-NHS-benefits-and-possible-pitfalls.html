@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #20794d; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,7 +77,7 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.sc { color: #20794d; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -85,39 +85,38 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
-
   <!--radix_placeholder_meta_tags-->
-  <title>Personal Access Tokens</title>
+  <title>Open source within the NHS - benefits and possible pitfalls</title>
 
-  <meta property="description" itemprop="description" content="Connecting to the GitHub to install packages from a private GitHub repository requires security &#10;set ups and this blog details how to do it (and how not to do it)."/>
+  <meta property="description" itemprop="description" content="What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?"/>
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-12-17"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-12-17"/>
-  <meta name="article:author" content="Zoë Turner"/>
+  <meta property="article:published" itemprop="datePublished" content="2022-03-04"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-03-04"/>
+  <meta name="article:author" content="Oluwasegun Apejoye"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Personal Access Tokens"/>
+  <meta property="og:title" content="Open source within the NHS - benefits and possible pitfalls"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Connecting to the GitHub to install packages from a private GitHub repository requires security &#10;set ups and this blog details how to do it (and how not to do it)."/>
+  <meta property="og:description" content="What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?"/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Personal Access Tokens"/>
-  <meta property="twitter:description" content="Connecting to the GitHub to install packages from a private GitHub repository requires security &#10;set ups and this blog details how to do it (and how not to do it)."/>
+  <meta property="twitter:title" content="Open source within the NHS - benefits and possible pitfalls"/>
+  <meta property="twitter:description" content="What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Personal Access Tokens"]},{"type":"character","attributes":{},"value":["Connecting to the GitHub to install packages from a private GitHub repository requires security \nset ups and this blog details how to do it (and how not to do it). \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Zoë Turner"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/Letxuga007"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["2021-12-17"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Packages","Security"]},{"type":"character","attributes":{},"value":["img/british-mineralogy-or-coloured-figures-p132.jpg"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Open source within the NHS - benefits and possible pitfalls"]},{"type":"character","attributes":{},"value":["What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Oluwasegun Apejoye"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://uk.linkedin.com/in/oluwasegun-michael-apejoye"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["03-04-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Open source"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["img/british-mineralogy-or-coloured-figures-p132.jpg","personal-access-tokens_files/anchor-4.2.2/anchor.min.js","personal-access-tokens_files/bowser-1.9.3/bowser.min.js","personal-access-tokens_files/distill-2.2.21/template.v2.js","personal-access-tokens_files/header-attrs-2.11.3/header-attrs.js","personal-access-tokens_files/header-attrs-2.11.8/header-attrs.js","personal-access-tokens_files/header-attrs-2.13/header-attrs.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.min.js","personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.min.map","personal-access-tokens_files/popper-2.6.0/popper.min.js","personal-access-tokens_files/tippy-6.2.7/tippy-bundle.umd.min.js","personal-access-tokens_files/tippy-6.2.7/tippy-light-border.css","personal-access-tokens_files/tippy-6.2.7/tippy.css","personal-access-tokens_files/tippy-6.2.7/tippy.umd.min.js","personal-access-tokens_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["img/image.jpg","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/anchor-4.2.2/anchor.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/bowser-1.9.3/bowser.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/distill-2.2.21/template.v2.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/header-attrs-2.11/header-attrs.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/jquery-3.6.0/jquery-3.6.0.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/jquery-3.6.0/jquery-3.6.0.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/jquery-3.6.0/jquery-3.6.0.min.map","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/popper-2.6.0/popper.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy-bundle.umd.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy-light-border.css","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy.css","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy.umd.min.js","open-source-within-the-NHS-benefits-and-possible-pitfalls_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1264,16 +1263,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
-          $(this).html(fn.shadowRoot.querySelector("sup"))
-          $(this).id = fn.id
-          fn.remove()
-        }
-        var refs = $(this).attr('data-cites').split(" ");
-        var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
-        }).join("\n");
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1444,16 +1434,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="personal-access-tokens_files/header-attrs-2.13/header-attrs.js"></script>
-  <script src="personal-access-tokens_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <script src="personal-access-tokens_files/popper-2.6.0/popper.min.js"></script>
-  <link href="personal-access-tokens_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="personal-access-tokens_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="personal-access-tokens_files/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="personal-access-tokens_files/anchor-4.2.2/anchor.min.js"></script>
-  <script src="personal-access-tokens_files/bowser-1.9.3/bowser.min.js"></script>
-  <script src="personal-access-tokens_files/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="personal-access-tokens_files/distill-2.2.21/template.v2.js"></script>
+  <script src="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/popper-2.6.0/popper.min.js"></script>
+  <link href="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="open-source-within-the-NHS-benefits-and-possible-pitfalls_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -1465,7 +1455,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Personal Access Tokens","description":"Connecting to the GitHub to install packages from a private GitHub repository requires security \nset ups and this blog details how to do it (and how not to do it).","authors":[{"author":"Zoë Turner","authorURL":{"https://twitter.com/Letxuga007":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-12-17T00:00:00.000+00:00","citationText":"Turner, 2021"}
+{"title":"Open source within the NHS - benefits and possible pitfalls","description":"What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?","authors":[{"author":"Oluwasegun Apejoye","authorURL":{"https://uk.linkedin.com/in/oluwasegun-michael-apejoye":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-03-04T00:00:00.000+00:00","citationText":"Apejoye, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1475,100 +1465,48 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Personal Access Tokens</h1>
+<h1>Open source within the NHS - benefits and possible pitfalls</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt-tag">Packages</div>
-<div class="dt-tag">Security</div>
+<div class="dt=tag">Open source</div>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>Connecting to the GitHub to install packages from a private GitHub repository requires security set ups and this blog details how to do it (and how not to do it).</p></p>
+<p><p>What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?</p></p>
 </div>
 
 <div class="d-byline">
-  Zoë Turner true 
+  Oluwasegun Apejoye true 
   
-<br/>2021-12-17
+<br/>03-04-2022
 </div>
 
 <div class="d-article">
-<h1 id="installation">Installation</h1>
-<p>Because some of the packages we are using are (currently) private repositories it is not possible to build using just {remotes} as a Personal Access Token, specifically a GITHUB_PAT, is needed. The {usethis} package suggests using the local Git credential store but this wasn’t compatible with some of our team’s set ups so later in this blog are details on how to do it the “inadvisable” way to be used at your own discretion.</p>
-<h2 id="check-you-have-a-token">Check you have a token</h2>
-<p>This part is the same for whatever method you use on your own computer as this section details how to get the GITHUB_PAT set up. To check for existing GITHUB_PAT use code:</p>
-<p><code>Sys.getenv("GITHUB_PAT")</code></p>
-<p>If nothing has been set up by you on GitHub this may return an empty string "".</p>
-<h2 id="set-up-a-token">Set up a token</h2>
-<p>Firstly, go to <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a> which takes you to your own personal GitHub account settings where you will need to <code>Generate new token</code>. Give this a suitable name like <code>Repo access</code> and tick the <code>repo</code> group for full control of private repositories.</p>
-<p><em>Remember to copy the code that is generated as this cannot be viewed again</em></p>
-<h1 id="from-the-git-credential-store">From the Git credential store</h1>
-<h2 id="packages-required">Packages required</h2>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"gitcreds"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"remotes"</span><span class='op'>)</span>
-</code></pre>
-</div>
-</div>
-<p>{usethis} suggests using the <a href="https://usethis.r-lib.org/articles/git-credentials.html">local Git credential store</a> quite strongly!</p>
-<blockquote>
-<p>If you have previously set your GitHub PAT in .Renviron, stop doing that.</p>
-</blockquote>
-<h2 id="set-up">Set up</h2>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<p>GitHub will open and, if you are not already logged in, you will need to enter your (GitHub) password.</p>
-<p>The page for GitHub tokens management is <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a> and you can do the same as the code in this screen by selecting <code>Generate new token</code>. Give this a suitable name like <code>Package installation</code> and tick the <code>repo</code> group for full control of private repositories.</p>
-<p><em>Remember to copy the code that is generated as this cannot be viewed again</em></p>
-<p>Next set up a <code>GITHUB_PAT</code> in RStudio:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code></pre></div>
-<p>You will then be prompted to enter the copied token (no quotes are required). If you’ve already got a token entered the following message will show:</p>
-<pre><code>-&gt; Your current credentials for &#39;https://github.com&#39;:
-
-  protocol: https
-  host    : github.com
-  username: PersonalAccessToken
-  password: &lt;-- hidden --&gt;
-
--&gt; What would you like to do? 
-
-1: Keep these credentials
-2: Replace these credentials
-3: See the password / token
-
-Selection: ```
-Enter an item from the menu, or 0 to exit
-Selection: </code></pre>
-<p>Reference: <a href="https://usethis.r-lib.org/articles/articles/git-credentials.html" class="uri">https://usethis.r-lib.org/articles/articles/git-credentials.html</a></p>
-<h2 id="installing">Installing</h2>
-<p>The {usethis} documentation suggests using {pak} but this may not work on network drives/VPNs (there are a few issues that have been opened and quickly closed referring to these as potential problems) and so in the meantime combining {remotes} with {gitcreds} is a workaround:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;remotes&quot;)</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;&lt;name of GitHub account&gt;/&lt;name of repository&gt;&quot;</span>, </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">auth_token =</span> gitcreds<span class="sc">::</span><span class="fu">gitcreds_get</span>(<span class="at">use_cache =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>password)</span></code></pre></div>
-<h1 id="the-absolutely-not-recommended-method">The absolutely not recommended method</h1>
-<h2 id="packages-required-1">Packages required</h2>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"remotes"</span><span class='op'>)</span>
-</code></pre>
-</div>
-</div>
-<p>If you are sure this is what you want to do then type in RStudio:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_r_environ</span>()</span></code></pre></div>
-<p>In the file that opens, type into it (where YOUR-PAT is the generated code you’ve copied) and save the file:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>GITHUB_PAT<span class="ot">=</span>YOUR<span class="sc">-</span>PAT</span></code></pre></div>
-<p>Restart R and run <code>Sys.getenv("GITHUB_PAT")</code> to check that the <code>""</code> has changed.</p>
-<p>Reference: <a href="https://www.jumpingrivers.com/t/2019-user-git/03-githubpat.html#6" class="uri">https://www.jumpingrivers.com/t/2019-user-git/03-githubpat.html#6</a></p>
-<h3 id="installing-1">Installing</h3>
-<p>Now, for as long as the token exists, the following code will install the package:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;remotes&quot;)</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;&lt;name of GitHub account&gt;/&lt;name of repository&gt;&quot;</span>, <span class="at">auth_token =</span> <span class="fu">Sys.getenv</span>(<span class="st">&quot;GITHUB_PAT&quot;</span>))</span></code></pre></div>
-<h1 id="building-package">Building package</h1>
-<p>It is preferable to build from the repository rather than locally as this should be what everyone in the team has access to. To build and test any new functions use <code>Ctrl+Shift+L</code> from the {devtools} package to load locally for the session.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="introduction">Introduction</h2>
+<p>Healthcare needs to prioritise clinical safety and data security and there have been concerns in the past about using and producing open source within the NHS. In a simple form, working in the open means making the source codes, that powers our software or application, freely available and downloadable from public platforms such as GitHub. This enables collaboration across the board to maximize benefits for the delivery of health and social care services.</p>
+<p>The term <em>“open source”</em> has been in use for a long time, and it is increasingly gaining traction in the NHS. And, we the <a href="https://github.com/CDU-data-science-team">clinical developmental unit – data science</a> team at NottsHC are <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/">part of the open-source campaign</a> within the NHS. We are dedicated to working in the open and to using open source tools for our analysis.</p>
+<p>As part of the effort to push for open source, the NSHX has announced that <a href="https://github.com/nhsx/open-source-policy">NHS Open Source Policy will officially become available</a> by this summer. According to the draft document, the policy “aims to provide a single position and source of guidance for anyone developing open software for or with the NHS in England”. The announcement about the policy has been broadly embraced by the NHS-R community (an open community of R users).</p>
+<p>But what does open source translate to for the average staff (with limited technical skills) in the NHS? What benefit does this bring to patients?</p>
+<p>A member of our team already did some justice to this subject matter in her post <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-02-27-working-in-the-open/">working-in-the-open</a>, where she shared some of her personal experiences and did some justice to the benefit of open source. However, with this post, I hope to share the general benefit and touch on some more issues about working with open source.</p>
+<h2 id="benefits">Benefits</h2>
+<p><em>Greater collaboration</em>: open source enables technical (IT experts, developers, analysts) and non-technical (clinicians, nurses, GPs) staff to input into projects and collaborate easily. It facilitates easy sharing of software, codes, analytical products etc, and it opens doors for reproducibility. With open source, a small idea can easily become a proof of concept which can grow to become a project that ends up improving care delivery.</p>
+<p><em>Cost saving</em>: using an already published code to serve some aspects of our task will lead to reduced duplication of effort, a reduction in staff time committed to projects and improved staff efficiency, a faster roll-out of cost-saving solutions and it enables teams to pursue the best approaches, not just those available locally. Also, the awareness of public scrutiny will ensure teams make their projects fit for purpose. In addition, embracing open-source tools means the NHS will benefit from savings from licensing fees as the cost of open-source tools tends to be lower and they also provide greater commitment/contract flexibility compared to proprietary tools which currently lock-in the organisation to the supplier.</p>
+<p><em>Availability of cutting-edge tools</em>: All open-source projects benefit from contributions from a wide variety of users. A good example is the Python and R programming languages, which are widely used tools for a wide range of cool stuff. These two projects have benefited from contributions that now make them a go-to tool for different tasks.</p>
+<p><em>Community effort</em>: The open-source community runs on the philosophy of universally shared knowledge because it benefits from a large and growing network of developers and users that are continually contributing to projects. With an open-source approach to project development, teams from other organizations can take our project, make changes to it and make the changes available to the community (including the original author) to benefit from the additional feature or improvement. This accessibility allows for constant developments and improvements to the software.</p>
+<p><em>Safety and Security</em>: Does open source mean we sacrifice patients’ privacy or lose control of projects? No. The organisation authoring the project maintains control of the data at all times and ensures it remains private and confidential, and can permit or restrict reuse of code using different software licences.</p>
+<p><em>Additional income stream</em>: The authoring team of an open source project can offer to provide subscription services, support and maintenance to interested users and therefore generate passive income for their trust.</p>
+<h2 id="what-to-look-out-for">What to look out for</h2>
+<p>It’s a no-brainer that embracing open source will bring several benefits to teams within the healthcare system. However, there are still some pitfalls to look out for. Below are some of the ones I have identified:</p>
+<p><em>Importance of protecting data</em>: Sharing open source in healthcare settings requires safeguards to protect data, and unless suitable synthetic data can be produced it can be hard to allow others to run code that depends on data.</p>
+<p><em>Documentation and support</em>: Sometimes documentation and support for open source is inferior to proprietary alternatives and this can lead to delays and extra work for teams.</p>
+<p><em>Lack of sustainability</em>: it is possible to use packages (set of codes) developed by another team in your project. However, there is a risk of the package being abandoned without prior notice by the team which can create problems with incompatibility and require rewriting of existing code.</p>
+<p>To mitigate the above issues, there is a need for robust policies to help analysts, developers and other users follow a consistent approach to open source. And I believe that is where the <a href="https://github.com/nhsx/open-source-policy">NHS Open Source Policy</a> proves useful.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Open source has many benefits to offer if embraced by all teams (both technical and non-technical) within the healthcare system. Despite these benefits, there is a need for robust open source policies to ensure all teams work in a consistent way that will maximize the benefits for the quality of care delivered to patients, and the efficiency of the health care systems without compromising patient safety and data governance.</p>
+<p>If you want to read more about our open source journey, then keep in touch by following us on <a href="https://twitter.com/DataScienceNott">Twitter</a> and <a href="https://github.com/CDU-data-science-team">GitHub</a>.</p>
+<h3 id="further-reading">Further reading</h3>
+<p><a href="https://github.com/nhsx/open-source-policy">NHSX open source policy</a></p>
+<p><a href="https://healthcareglobal.com/technology-and-ai/nhs-technology-being-open-open-source">NHS technology: Being open to open source</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

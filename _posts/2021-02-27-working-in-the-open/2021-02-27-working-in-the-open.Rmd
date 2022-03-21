@@ -19,8 +19,6 @@ preview: img/letters-from-high-latitudes.jpg
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
-library(dplyr)
-library(kableExtra)
 ```
 
 "Working in the open" isn't a technical term; it's just my simple way of explaining a concept without having to mention all the tools that are available to do this. 
@@ -68,9 +66,9 @@ code_folding: "hide"
 
 which I'd never seen that before. Now I could have equally have learned about this from reading about RMarkdown but it will forever stick in my memory as it was in the context of solving a problem. We helped each other and now I'm sharing that learning in this blog - working out in the open. 
 
-```{r, eval=FALSE, echo=TRUE}
-# The full YAML for reference
+The full YAML for reference
 
+```yaml
 ---
 title: "Test"
 date: "25/02/2021"
@@ -82,6 +80,5 @@ output:
     toc_collapsed: false
 ---
 ```
-
 
 If you want to read more about how our journey is going with working out in the open keep in touch by following us on [Twitter](https://twitter.com/DataScienceNott) and in these [blogs](https://cdu-data-science-team.github.io/team-blog/).
