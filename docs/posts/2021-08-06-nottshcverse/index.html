@@ -1881,6 +1881,12 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
+      if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+        var fn = $(this).children()[0]
+        $(this).html(fn.shadowRoot.querySelector("sup"))
+        $(this).id = fn.id
+        fn.remove()
+      }
       var refs = $(this).attr('data-cites').split(" ");
       var refHtml = refs.map(function(ref) {
         return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -2424,7 +2430,7 @@ h1, h2, h3, h4, h5 {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Development of open tools for analysing healthcare data in R","description":"***TLTR: (Too Long To Read)*** \nOur goal was to make it easier to work with healthcare data in a reproducible and collaborative way.\nWe wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.\nAll our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.","authors":[{"author":"Milan Wiedemann","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-09-29T00:00:00.000+01:00","citationText":"Wiedemann, 2021"}
+{"title":"Development of open tools for analysing healthcare data in R","description":"***TLTR: (Too Long To Read)*** \nOur goal was to make it easier to work with healthcare data in a reproducible and collaborative way.\nWe wrote lots of R functions for recurring data manipulations and analytical tasks that magically translate into SQL code and communicate with large databases.\nAll our functions are grouped into R packages because this made it easier for us to: *(i)* write good documentation of our code and analytical tasks, *(ii)* easily distribute updates across all team members, *(iii)* formally test our code, and *(iv)* integrate common data manipulations (or analyses) into interactive dashboards in a modular way.","authors":[{"author":"Milan Wiedemann","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-09-29T00:00:00.000+00:00","citationText":"Wiedemann, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
