@@ -41,7 +41,7 @@ With all that said how have we found it best to use it in practice? A few points
 
 * Merge to development and main as frequently as possible. Especially from my point of view, as the team manager, I spend a lot of time on everyone's repos, and if everything is tucked away in branches I can't see it. 
 * Documentation should go straight to main, there is no need to use branches at all, or if a branch is used it can be continuously merged to main (in case anyone else is writing documentation)
-* Branches should be deleted as soon as possible, for the same reason, *especially* if they include commits that are on main. If they are ahead of main that implies that they could have useful stuff on, or be a failed experiment that needs binning. If you're off sick and we're running your code we don't want to be wondering which it is
+* Branches should be deleted as soon as possible, for the same reason, *especially* if they include commits that are not on main. If they are ahead of main that implies that they could have useful stuff on, or be a failed experiment that needs binning. If you're off sick and we're running your code we don't want to be wondering which it is
 
 ### Collaboration
 
