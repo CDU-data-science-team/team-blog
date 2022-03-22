@@ -69,7 +69,7 @@ Data security is a very important area and in my very inexpert opinion using Git
 
 This is not strictly about GitHub, but it fits in the general area of collaboration and so I wanted to include it. We have adopted R packages almost wholesale in the team (another blog post that needs to be written), but there is one minor problem that they introduce that I wanted to flag up here.
 
-People get into the habit of building the package as they go, and then they use the built package for their analysis. This is fine as far as it goes, but you should never deploy or share anything based on code that you built yourself. Before you share or deploy you need to merge to main, switch to a new session and install the code from GitHub. This ensures that the code that you are running is the same code we all have access to. We've all spent far too long debugging code that only exists on one person's laptop, and if you're off sick and we redeploy your stuff you want to make sure we deploy what you actually want, because we can access the built stuff on your laptop.
+People get into the habit of building the package as they go, and then they use the built package for their analysis. This is fine as far as it goes, but you should never deploy or share anything based on code that you built yourself. Before you share or deploy you need to merge to main, switch to a new session and install the code from GitHub. This ensures that the code that you are running is the same code we all have access to. We've all spent far too long debugging code that only exists on one person's laptop, and if you're off sick and we redeploy your stuff you want to make sure we deploy what you actually want, because we can't access the built stuff on your laptop.
 
 ### Helpful resources
 
