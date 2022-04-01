@@ -10,6 +10,9 @@ date: 2022-04-01
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - Open source
+  - GitHub
 preview: img/grundzüge_der_mathematischen_geographie_und_der_landkartenprojection.jpg
 ---
 

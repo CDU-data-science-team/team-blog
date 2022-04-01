@@ -13,7 +13,7 @@ output:
 categories:
   - Packages
   - Workflow
-  - Team Working
+  - Teamwork
 preview: img/system-of-mineralogy-comprehending-oryctognosie-p687.jpg
 ---
 

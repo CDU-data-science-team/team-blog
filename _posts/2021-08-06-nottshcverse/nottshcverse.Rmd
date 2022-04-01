@@ -14,7 +14,7 @@ output:
     toc: true
 categories:
   - Open source
-  - Team working
+  - Teamwork
   - Packages
 preview: img/Principes-de-Logique-p435.jpg
 ---

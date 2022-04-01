@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -55,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -76,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Pair programming, code review, journal club, and team time</title>
@@ -110,12 +112,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Pair programming, code review, journal club, and team time"]},{"type":"character","attributes":{},"value":["What can the CDU data science team do to verify its outputs, disseminate learning, and support individual development in team sessions?"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Chris Beeley"]}]}]},{"type":"character","attributes":{},"value":["07-30-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Team working"]},{"type":"character","attributes":{},"value":["img/the-geographical-institutions-p84.jpg"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Pair programming, code review, journal club, and team time"]},{"type":"character","attributes":{},"value":["What can the CDU data science team do to verify its outputs, disseminate learning, and support individual development in team sessions?"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Chris Beeley"]}]}]},{"type":"character","attributes":{},"value":["07-30-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Teamwork"]},{"type":"character","attributes":{},"value":["img/the-geographical-institutions-p84.jpg"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["img/the-geographical-institutions-p84.jpg","pair-programming-code-review-journal-club-and-team-time_files/anchor-4.2.2/anchor.min.js","pair-programming-code-review-journal-club-and-team-time_files/bowser-1.9.3/bowser.min.js","pair-programming-code-review-journal-club-and-team-time_files/distill-2.2.21/template.v2.js","pair-programming-code-review-journal-club-and-team-time_files/header-attrs-2.8/header-attrs.js","pair-programming-code-review-journal-club-and-team-time_files/jquery-1.11.3/jquery.min.js","pair-programming-code-review-journal-club-and-team-time_files/popper-2.6.0/popper.min.js","pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy-bundle.umd.min.js","pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy-light-border.css","pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy.css","pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy.umd.min.js","pair-programming-code-review-journal-club-and-team-time_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["img/the-geographical-institutions-p84.jpg","pair-programming-code-review-journal-club-and-team-time_files/anchor-4.2.2/anchor.min.js","pair-programming-code-review-journal-club-and-team-time_files/bowser-1.9.3/bowser.min.js","pair-programming-code-review-journal-club-and-team-time_files/distill-2.2.21/template.v2.js","pair-programming-code-review-journal-club-and-team-time_files/header-attrs-2.8/header-attrs.js","pair-programming-code-review-journal-club-and-team-time_files/header-attrs-2.9/header-attrs.js","pair-programming-code-review-journal-club-and-team-time_files/jquery-1.11.3/jquery.min.js","pair-programming-code-review-journal-club-and-team-time_files/popper-2.6.0/popper.min.js","pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy-bundle.umd.min.js","pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy-light-border.css","pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy.css","pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy.umd.min.js","pair-programming-code-review-journal-club-and-team-time_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1262,7 +1264,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1433,8 +1438,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="pair-programming-code-review-journal-club-and-team-time_files/header-attrs-2.9/header-attrs.js"></script>
-  <script src="pair-programming-code-review-journal-club-and-team-time_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="pair-programming-code-review-journal-club-and-team-time_files/header-attrs-2.13/header-attrs.js"></script>
+  <script src="pair-programming-code-review-journal-club-and-team-time_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="pair-programming-code-review-journal-club-and-team-time_files/popper-2.6.0/popper.min.js"></script>
   <link href="pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="pair-programming-code-review-journal-club-and-team-time_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1467,10 +1472,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Pair programming, code review, journal club, and team time</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">Team working</div>
+<div class="dt=tag">Teamwork</div>
 </div>
 <!--/radix_placeholder_categories-->
-<p>What can the CDU data science team do to verify its outputs, disseminate learning, and support individual development in team sessions?</p>
+<p>What can the CDU data science team do to verify its outputs,
+disseminate learning, and support individual development in team
+sessions?</p>
 </div>
 
 <div class="d-byline">
@@ -1480,8 +1487,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>We’ve been a proper data science team for a year now, there’s <a href="https://cdu-data-science-team.github.io/team-blog/about.html">six of us</a> at the moment which is GREAT and we’re starting to review some of the stuff that we’ve been doing to make sure that it’s serving a purpose. I’m sort of writing this for our benefit just as a way of recording what the plan is (and to discuss the plan via pull request 😎) but we work in the open so why not talk about this in the open too.</p>
-<p>Fairly near the beginning of become A Proper Data Science Team we kicked off “Code review” sessions which would take place fortnightly and team members would bring stuff, taking it in turns to do one each. I hardly think I can improve on <a href="https://google.github.io/eng-practices/review/reviewer/looking-for.html">Google’s guide to code review</a> but I’ll summarise the main points here for those who don’t click through. Code review is the process of one or more people who have not written the code in question to read it and check that it’s okay, before the code is merged into the codebase. Code reviewers are considering:</p>
+<p>We’ve been a proper data science team for a year now, there’s <a
+href="https://cdu-data-science-team.github.io/team-blog/about.html">six
+of us</a> at the moment which is GREAT and we’re starting to review some
+of the stuff that we’ve been doing to make sure that it’s serving a
+purpose. I’m sort of writing this for our benefit just as a way of
+recording what the plan is (and to discuss the plan via pull request 😎)
+but we work in the open so why not talk about this in the open too.</p>
+<p>Fairly near the beginning of become A Proper Data Science Team we
+kicked off “Code review” sessions which would take place fortnightly and
+team members would bring stuff, taking it in turns to do one each. I
+hardly think I can improve on <a
+href="https://google.github.io/eng-practices/review/reviewer/looking-for.html">Google’s
+guide to code review</a> but I’ll summarise the main points here for
+those who don’t click through. Code review is the process of one or more
+people who have not written the code in question to read it and check
+that it’s okay, before the code is merged into the codebase. Code
+reviewers are considering:</p>
 <ul>
 <li>Design</li>
 <li>Functionality</li>
@@ -1489,30 +1511,102 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>Tests</li>
 <li>Good naming practices (variables, functions)</li>
 <li>Comments</li>
-<li>Style (judged against a style guide like the <a href="https://style.tidyverse.org/">tidyverse style guide</a>)</li>
+<li>Style (judged against a style guide like the <a
+href="https://style.tidyverse.org/">tidyverse style guide</a>)</li>
 <li>Consistency</li>
 <li>Documentation</li>
 </ul>
-<p>In the linked document Google emphasise that you should read every line- not scan over things and assume they’re okay. It’s worth remembering as well that we are doing data science- so we need to be reviewing statistical and ML methods as well. People (including me) fall into the trap of thinking that data science is just programming and they stop asking themselves hard questions about the methods they are using and that is very dangerous.</p>
-<p>I put code review in quotes advisedly because although we went into them thinking we would be doing code review over the weeks and months we ended up doing something totally different. Sometimes we would pretty much do code review. Sometimes we would spend a long time discussing code style. Other times we would start off doing code review and end up doing an ad hoc lesson in a particular method that the person who came to code review. Sometimes we would have such a good time doing one of these things that we couldn’t fit all the excitement into an hour and would call extraordinary code review meetings so we could carry on discussing it and not have to wait two weeks.</p>
-<p>It was pretty anarchic but we were all learning and having fun in a supportive environment so I thought we may as well just see where we ended up. After a year I thought it was time to review what we were doing around assuring our code so I kicked off a discussion about it which this blog post is part of.</p>
-<p>We have had a pretty wide ranging discussion about it and the first point of interest is that everybody wanted to keep the fortnightly sessions but everybody agreed that, however awesome they were, they weren’t really “code review”. We boiled down what we feel we need to four distinct activities. For the sake of brevity I will summarise them here- I could probably do a blog post on each and if anybody would like to hear more then find me on Twitter, have a look at the about page.</p>
+<p>In the linked document Google emphasise that you should read every
+line- not scan over things and assume they’re okay. It’s worth
+remembering as well that we are doing data science- so we need to be
+reviewing statistical and ML methods as well. People (including me) fall
+into the trap of thinking that data science is just programming and they
+stop asking themselves hard questions about the methods they are using
+and that is very dangerous.</p>
+<p>I put code review in quotes advisedly because although we went into
+them thinking we would be doing code review over the weeks and months we
+ended up doing something totally different. Sometimes we would pretty
+much do code review. Sometimes we would spend a long time discussing
+code style. Other times we would start off doing code review and end up
+doing an ad hoc lesson in a particular method that the person who came
+to code review. Sometimes we would have such a good time doing one of
+these things that we couldn’t fit all the excitement into an hour and
+would call extraordinary code review meetings so we could carry on
+discussing it and not have to wait two weeks.</p>
+<p>It was pretty anarchic but we were all learning and having fun in a
+supportive environment so I thought we may as well just see where we
+ended up. After a year I thought it was time to review what we were
+doing around assuring our code so I kicked off a discussion about it
+which this blog post is part of.</p>
+<p>We have had a pretty wide ranging discussion about it and the first
+point of interest is that everybody wanted to keep the fortnightly
+sessions but everybody agreed that, however awesome they were, they
+weren’t really “code review”. We boiled down what we feel we need to
+four distinct activities. For the sake of brevity I will summarise them
+here- I could probably do a blog post on each and if anybody would like
+to hear more then find me on Twitter, have a look at the about page.</p>
 <h3 id="pair-programming">Pair programming</h3>
-<p>Pair programming is what it sounds like- programming in pairs. It’s a great way of teaching and helping each other, and solving problems together, but it’s also a way of reviewing code too. The maxim we came up with today is simple.</p>
+<p>Pair programming is what it sounds like- programming in pairs. It’s a
+great way of teaching and helping each other, and solving problems
+together, but it’s also a way of reviewing code too. The maxim we came
+up with today is simple.</p>
 <blockquote>
 <p>Every line of code should have been read by two people</p>
 </blockquote>
-<p>You can do that in a pair, live, or you can do it by review (or you can do both). Interestingly enough the team just spontaneously started doing pair programming. Nobody mentioned the word, nobody asked them to. It just makes sense to do that so they just started doing it, which I absolutely love.</p>
+<p>You can do that in a pair, live, or you can do it by review (or you
+can do both). Interestingly enough the team just spontaneously started
+doing pair programming. Nobody mentioned the word, nobody asked them to.
+It just makes sense to do that so they just started doing it, which I
+absolutely love.</p>
 <h3 id="code-review">Code review</h3>
-<p>This is the other review methodology that came out of the discussion. I already talked about what Google think this should be so there’s not much to add. One thing we said is that the other thing we need to change is doing it fortnightly as a group. Proper code review can only be done by someone who understands the code. We have a LOT of skills in the team (SQL, R, Python, Shiny, statistics, ML) and nobody understands it all (especially me). We decided that this would happen when people feel they’re ready and would take place with one or more designated people who understand the code, and not every fortnight with everybody.</p>
-<p>One interesting thing that came out of this discussion was my realisation that we need to deepen and broaden the skills of the team. Several of us are writing code that nobody has the expertise to review. I’ve long been obsessed with <a href="https://en.wikipedia.org/wiki/Bus_factor">truck factor</a> but I hadn’t considered it from the position of validating code before. It’s entirely my failing as a manager and it’s something else to think about when we’re recruiting next (it’s also relevant for training and development, but that’s another post).</p>
+<p>This is the other review methodology that came out of the discussion.
+I already talked about what Google think this should be so there’s not
+much to add. One thing we said is that the other thing we need to change
+is doing it fortnightly as a group. Proper code review can only be done
+by someone who understands the code. We have a LOT of skills in the team
+(SQL, R, Python, Shiny, statistics, ML) and nobody understands it all
+(especially me). We decided that this would happen when people feel
+they’re ready and would take place with one or more designated people
+who understand the code, and not every fortnight with everybody.</p>
+<p>One interesting thing that came out of this discussion was my
+realisation that we need to deepen and broaden the skills of the team.
+Several of us are writing code that nobody has the expertise to review.
+I’ve long been obsessed with <a
+href="https://en.wikipedia.org/wiki/Bus_factor">truck factor</a> but I
+hadn’t considered it from the position of validating code before. It’s
+entirely my failing as a manager and it’s something else to think about
+when we’re recruiting next (it’s also relevant for training and
+development, but that’s another post).</p>
 <h3 id="journal-club">Journal club</h3>
-<p>Something else that we spontaneously did as part of the code reviews that weren’t really code reviews was what we’re loosely calling “journal club”- basically one of “I know something that you need to know, I’m going to teach you” or “we all need to get better at x- let’s learn together”. We’re going to start with me: “Everything your data scientists wanted to know about managing servers and deploying in the cloud- but were afraid to ask” which will end up on GitHub somewhere.</p>
+<p>Something else that we spontaneously did as part of the code reviews
+that weren’t really code reviews was what we’re loosely calling “journal
+club”- basically one of “I know something that you need to know, I’m
+going to teach you” or “we all need to get better at x- let’s learn
+together”. We’re going to start with me: “Everything your data
+scientists wanted to know about managing servers and deploying in the
+cloud- but were afraid to ask” which will end up on GitHub
+somewhere.</p>
 <h3 id="team-time">Team time</h3>
-<p>Not sure about the name for this one! The last thing that everybody seemed to want was something else we were already doing. It’s basically just the ability to just bring anything you like and talk about it. We’ve had all sorts of things. “This code is fine, it’s just horribly slow”, “I can’t figure out what is going to give the best experience for our users”, “I’ve done this analysis but it’s kind of shallow- what else can I do?”. I don’t think this is anything particular, it doesn’t have a proper name, it isn’t particularly for one purpose, it’s more just the team’s way of saying “We help and support each other and we carve out one hour every two weeks so team members can bring a problem and talk it through with us”.</p>
+<p>Not sure about the name for this one! The last thing that everybody
+seemed to want was something else we were already doing. It’s basically
+just the ability to just bring anything you like and talk about it.
+We’ve had all sorts of things. “This code is fine, it’s just horribly
+slow”, “I can’t figure out what is going to give the best experience for
+our users”, “I’ve done this analysis but it’s kind of shallow- what else
+can I do?”. I don’t think this is anything particular, it doesn’t have a
+proper name, it isn’t particularly for one purpose, it’s more just the
+team’s way of saying “We help and support each other and we carve out
+one hour every two weeks so team members can bring a problem and talk it
+through with us”.</p>
 <h3 id="wrap-up">Wrap up</h3>
-<p>That’s where we’re at now, once we’ve agreed this as the way forward (or agreed something else, obviously) then we’ll give it a go. As is probably clear, our Friday sessions and code review are just one part of trying to have a team that works well together and I’m totally new at this so if anybody out there has anything to add I’d be super grateful to hear it.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>That’s where we’re at now, once we’ve agreed this as the way forward
+(or agreed something else, obviously) then we’ll give it a go. As is
+probably clear, our Friday sessions and code review are just one part of
+trying to have a team that works well together and I’m totally new at
+this so if anybody out there has anything to add I’d be super grateful
+to hear it.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

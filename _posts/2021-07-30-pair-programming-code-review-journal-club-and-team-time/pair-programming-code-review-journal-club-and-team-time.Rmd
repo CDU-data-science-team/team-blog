@@ -11,7 +11,7 @@ output:
   distill::distill_article:
     self_contained: false
 categories:   
-    - Team working   
+    - Teamwork   
 preview: img/the-geographical-institutions-p84.jpg
 ---
 
