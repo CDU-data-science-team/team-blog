@@ -1,0 +1,90 @@
+---
+title: "Using {usethis} to set up .gitignore"
+description: |
+  How to ensure that certain files cannot be accidentally committed to GitHub (or any other version controlled area).
+author:
+  - name: Zoë Turner
+    url:
+      https://twitter.com/letxuga007: {}
+date: 2022-04-01
+output:
+  distill::distill_article:
+    self_contained: false
+preview: img/grundzüge_der_mathematischen_geographie_und_der_landkartenprojection.jpg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      eval = FALSE)
+```
+
+# Use .gitignore
+
+.gitignore is used to prevent committing certain files or folders to GitHub and can be set both locally in a project and globally. 
+
+Using the {usethis} package a lot of the set up of these files can be done from the RStudio Console command line.
+
+# Set up
+
+These [slides](https://forwards.github.io/workshops/package-dev-modules/slides/02-setting-up-system/setting-up-system.html#17) from Forwards are for package development but are fantastic to follow to get your computer set up with GitHub.
+
+Check the Git connections are set up with:
+
+```{r}
+usethis::git_sitrep()
+```
+
+If `Vaccinated: FALSE` which it is most likely to be if this is the first time {usethis} was used type:
+
+```{r}
+usethis::git_vaccinate()
+```
+
+This adds `.DS_Store`, `.Rproj.user`, `.Rdata`, `.Rhistory`, and `.httr-oauth` to the global `.gitignore` which can be checked with:
+
+```{r}
+usethis::edit_git_ignore(scope = "user")
+```
+
+This open file can be altered directly and saved.
+
+## Changing project .gitignore
+
+To view and edit directly:
+
+```{r}
+usethis::edit_git_ignore(scope = "user")
+```
+
+Or use the following to add individual files and folders like `secrets/`:
+
+```{r}
+usethis::use_git_ignore("secrets/")
+```
+
+
+# Potential issues with networks/VPNs
+
+If `git_vaccinate` has and error starting with 
+
+> libgit2::git_config_set_string
+
+and then a reference to a lock to a private network drive (usually when off the VPN/Network) then type:
+
+```{r}
+usethis::edit_git_config()
+```
+
+and copy the following code, with <> changed as appropriate:
+
+```
+[user]
+	email = <Email>
+	name = <GitHub Account name>
+[core]
+	excludesFile = C:/Users/<own folder>/.gitignore
+[init]
+	defaultBranch = main
+
+```

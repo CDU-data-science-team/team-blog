@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2022-04-01-using-usethis-to-set-up-gitignore/",
+    "title": "Using {usethis} to set up .gitignore",
+    "description": "How to ensure that certain files cannot be accidentally committed to GitHub (or any other version controlled area).",
+    "author": [
+      {
+        "name": "Zoë Turner",
+        "url": {
+          "https://twitter.com/letxuga007": {}
+        }
+      }
+    ],
+    "date": "2022-04-01",
+    "categories": [],
+    "contents": "\r\nUse .gitignore\r\n.gitignore is used to prevent committing certain files or folders to\r\nGitHub and can be set both locally in a project and globally.\r\nUsing the {usethis} package a lot of the set up of these files can be\r\ndone from the RStudio Console command line.\r\nSet up\r\nThese slides\r\nfrom Forwards are for package development but are fantastic to follow to\r\nget your computer set up with GitHub.\r\nCheck the Git connections are set up with:\r\n\r\n\r\nusethis::git_sitrep()\r\n\r\n\r\n\r\nIf Vaccinated: FALSE which it is most likely to be if\r\nthis is the first time {usethis} was used type:\r\n\r\n\r\nusethis::git_vaccinate()\r\n\r\n\r\n\r\nThis adds .DS_Store, .Rproj.user,\r\n.Rdata, .Rhistory, and\r\n.httr-oauth to the global .gitignore which can\r\nbe checked with:\r\n\r\n\r\nusethis::edit_git_ignore(scope = \"user\")\r\n\r\n\r\n\r\nThis open file can be altered directly and saved.\r\nChanging project .gitignore\r\nTo view and edit directly:\r\n\r\n\r\nusethis::edit_git_ignore(scope = \"user\")\r\n\r\n\r\n\r\nOr use the following to add individual files and folders like\r\nsecrets/:\r\n\r\n\r\nusethis::use_git_ignore(\"secrets/\")\r\n\r\n\r\n\r\nPotential issues with\r\nnetworks/VPNs\r\nIf git_vaccinate has and error starting with\r\n\r\nlibgit2::git_config_set_string\r\n\r\nand then a reference to a lock to a private network drive (usually\r\nwhen off the VPN/Network) then type:\r\n\r\n\r\nusethis::edit_git_config()\r\n\r\n\r\n\r\nand copy the following code, with <> changed as\r\nappropriate:\r\n[user]\r\n    email = <Email>\r\n    name = <GitHub Account name>\r\n[core]\r\n    excludesFile = C:/Users/<own folder>/.gitignore\r\n[init]\r\n    defaultBranch = main\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-04-01-using-usethis-to-set-up-gitignore/img/grundzüge_der_mathematischen_geographie_und_der_landkartenprojection.jpg",
+    "last_modified": "2022-04-01T21:05:24+01:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-03-21-github-sop/",
     "title": "GitHub Standard Operating Procedure",
     "description": "How we use GitHub in the CDU data science team.",
