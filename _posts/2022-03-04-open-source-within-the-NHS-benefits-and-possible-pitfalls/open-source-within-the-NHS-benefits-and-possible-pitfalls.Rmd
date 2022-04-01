@@ -1,7 +1,7 @@
 ---
 title: "Open source within the NHS - benefits and possible pitfalls"
 description: |
-  What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?
+  What does open source mean for the average staff member in the NHS? What benefits does it bring to patients?
 author:
   - name: Oluwasegun Apejoye
     url: {https://uk.linkedin.com/in/oluwasegun-michael-apejoye}
@@ -11,6 +11,7 @@ output:
     self_contained: false
 categories:
   - Open source
+preview: img/image.jpg  
 ---
 
 ```{r setup, include=FALSE}

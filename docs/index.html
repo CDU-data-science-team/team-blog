@@ -1861,12 +1861,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
-          $(this).html(fn.shadowRoot.querySelector("sup"))
-          $(this).id = fn.id
-          fn.remove()
-        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -2605,14 +2599,14 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img/>
+<img src="posts/2022-03-04-open-source-within-the-NHS-benefits-and-possible-pitfalls/img/image.jpg"/>
 </div>
 <div class="description">
 <h2>Open source within the NHS - benefits and possible pitfalls</h2>
 <div class="dt-tags">
 <div class="dt-tag">Open source</div>
 </div>
-<p>What does open source mean for the average staffmember in the NHS? What benefits does it bring to patients?</p>
+<p>What does open source mean for the average staff member in the NHS? What benefits does it bring to patients?</p>
 </div>
 </a>
 <a href="posts/2021-12-17-package-workflow/" class="post-preview">
@@ -3002,7 +2996,8 @@ All our functions are grouped into R packages because this made it easier for us
 
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
