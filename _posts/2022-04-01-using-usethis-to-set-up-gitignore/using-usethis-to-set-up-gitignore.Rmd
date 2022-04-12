@@ -57,7 +57,7 @@ This open file can be altered directly and saved.
 To view and edit directly:
 
 ```{r}
-usethis::edit_git_ignore(scope = "user")
+usethis::edit_git_ignore(scope = "project")
 ```
 
 Or use the following to add individual files and folders like `secrets/`:
@@ -91,3 +91,22 @@ and copy the following code, with <> changed as appropriate:
 	defaultBranch = main
 
 ```
+
+# Overwriting a global .gitignore
+
+This was a question that came out of a team Code Review and we found the following [blog from Scott Radcliff](http://scottradcliff.com/how-to-overwrite-a-global-gitignore.html) with the answer that yes, it is possible to overwrite a global setting if this is ever required.
+
+Not tested but examples using the `!` to exempt:
+
+* for single files `!data.csv`
+* for a group of files `!*.csv`
+* for a subfolder `!secrets/not-secret/` from [Stackoverflow](https://stackoverflow.com/questions/3203228/git-ignore-exception)
+* override all rules in global `!*` from [Stackoverflow](https://stackoverflow.com/questions/26678955/un-ignore-all-files-in-global-gitignore)
+
+# .rda and .RData files
+
+We also discussed `.rda` and `.Rdata` files which are save R data files. `gitvaccinate()` adds the `.Rdata` but doesn't mention `.rda` files so be aware of that.
+
+The difference in the types of files are that `.Rdata` can store single or multiple R objects but `.rda` can only save single. 
+
+It might be worthy of a blog/team review on its own but there are issues with saving multiple R objects to one place if they are updated regularly. It's very easy to not re-save/update an R object and affect the overall data workflow and so I, particularly as I've got into this very muddle, only save one R object per `.Rdata` file.

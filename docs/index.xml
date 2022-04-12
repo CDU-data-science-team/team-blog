@@ -7,7 +7,18 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Settings in SSMS</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-04-12-settings-in-ssms</link>
+      <description>Some of the options that may be useful in SSMS</description>
+      <category>SQL</category>
+      <category>Accessibility</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-04-12-settings-in-ssms</guid>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-04-12-settings-in-ssms/img/notes_on_the_treatment_of_gold_ore.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Using {usethis} to set up .gitignore</title>
       <dc:creator>Zoë Turner</dc:creator>

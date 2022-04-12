@@ -1,0 +1,73 @@
+---
+title: "Settings in SSMS"
+description: |
+  Some of the options that may be useful in SSMS
+author:
+  - name: Zoë Turner
+    url:
+      https://twitter.com/letxuga007: {}
+date: 2022-04-12
+output:
+  distill::distill_article:
+    self_contained: false
+categories: 
+  - SQL
+  - Accessibility
+preview: img/notes_on_the_treatment_of_gold_ore.jpg    
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+In my team I tend to still use a lot of SSMS for SQL coding. Having just got a new computer I quickly realised that the settings I'd made to make the layout a bit easier on my eyes had been lost but thankfully I'd noted some of the options which I'm going to share here for future me or anyone else interested in the settings in SSMS. In terms of IDE I, personally, find R Studio much better to set up for accessibility and appreciate their regular updates around this area. However, whilst I use R Studio (and specifically RMarkdown) for SQL workflows I don't always get the speed or error notifications like SSMS depending on the packages I use.
+
+# Changing the back screen colour
+
+This was a tip shared with me as a background that can help some people who are dyslexic. I'm not dyslexic but much prefer this colour as it offsets the glare of the default white background. There aren't set options in SSMS so you have to set the colour manually and the options can be found in <kbd>Tools/Options/Font and colors</kbd>.
+
+![Screenshot of the menu from Tools/Options/Font and colors with the background colour already set to yellow](img/colour-background.png)
+
+The default yellow in the`Item background` is too bright for me so I change it in `Custom...` setting the following:
+
+* Hue: 35
+* Sat 205
+* Lum 194 
+
+The change will be implemented after the program is shut down and restarted.
+
+# Changing position of the status bar
+
+The status bar defaults to the bottom of the screen and says which server you are accessing, the database and it's also the information where how long a query took to run and how many rows are returned. I didn't like the position being at the bottom so I move this to the top in <kbd> Tools/Options/Text Editor/Editor Tab</kbd> changing the `Status bar location` to Top.
+
+![Screenshot showing the menu from Tools/Options/Text Editor/Editor Tab with the status bar location set to Top](img/status-bar-position.png)
+The change will be implemented after the program is shut down and restarted.
+
+# Changing the colour of the status bar
+
+This is really useful if you have access to other databases that share names and so can help with navigation. For example, I use a server, a dev(elopment) server and a staging server with similar names. It means that if I query the wrong one I'll get strange results. Changing the colour can help when I need the server and dev open at the same time and could get muddled.
+
+This needs to be done when first connecting to the server when you select the <kbd>Connect to database</kbd>. After choosing the server you will want the colour bar to change for select the button called `Options >>` that follows `Connect`, `Cancel` and `Help`.
+
+In the menu that appears you can tick <kbd>Use custom color:</kbd> and then `Select` to go to the colour's menu.
+
+![Screenshot of the menu for the SQL Server with a custom colour already selected](img/status-bar-colour.png)
+
+# Adding lines to the SQL script
+
+When SQL gives errors it often refers to the line of code the error relates to. One trick is to double click on the red text in the query results and it will take you to the line (this doesn't always work well for CTEs Common Table Expressions and will just take you to the top line of the CTE). 
+
+Line numbers on the script is not a default setting and have to be turned on, again in <kbd>Tools/Options/Text editor/Transact-SQL/General</kbd>:
+
+![Screenshot of the menu with the line numbers ticked](img/line-numbers.png)
+
+The change will be implemented after the program is shut down and restarted.
+
+# Query results include the header
+
+Often when I copy out the results from SSMS I also need the column headers and this may not be default. Got to <kbd>Tools/Options/Query Results/SQL Server/Results to Grid</kbd> and select `Include column headers when copying or saving the results`.
+
+# Any other tips?
+
+There are probably plenty of other settings that are useful to know or sites that list these out and we are always keen to learn more so please do get in touch with creating an [issue](https://github.com/CDU-data-science-team/team-blog/issues) or [emailing the team](mailto:cduDataScience@nottshc.nhs.uk). 
