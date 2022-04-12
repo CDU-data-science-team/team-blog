@@ -2514,7 +2514,7 @@ be checked with:</p>
 <p>To view and edit directly:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>usethis</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/usethis/man/edit.html'>edit_git_ignore</a></span><span class='op'>(</span>scope <span class='op'>=</span> <span class='st'>"user"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>usethis</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/usethis/man/edit.html'>edit_git_ignore</a></span><span class='op'>(</span>scope <span class='op'>=</span> <span class='st'>"project"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2550,6 +2550,35 @@ appropriate:</p>
 [init]
     defaultBranch = main
 </code></pre>
+<h1 id="overwriting-a-global-.gitignore">Overwriting a global
+.gitignore</h1>
+<p>This was a question that came out of a team Code Review and we found
+the following <a
+href="http://scottradcliff.com/how-to-overwrite-a-global-gitignore.html">blog
+from Scott Radcliff</a> with the answer that yes, it is possible to
+overwrite a global setting if this is ever required.</p>
+<p>Not tested but examples using the <code>!</code> to exempt:</p>
+<ul>
+<li>for single files <code>!data.csv</code></li>
+<li>for a group of files <code>!*.csv</code></li>
+<li>for a subfolder <code>!secrets/not-secret/</code> from <a
+href="https://stackoverflow.com/questions/3203228/git-ignore-exception">Stackoverflow</a></li>
+<li>override all rules in global <code>!*</code> from <a
+href="https://stackoverflow.com/questions/26678955/un-ignore-all-files-in-global-gitignore">Stackoverflow</a></li>
+</ul>
+<h1 id="rda-and-.rdata-files">.rda and .RData files</h1>
+<p>We also discussed <code>.rda</code> and <code>.Rdata</code> files
+which are save R data files. <code>gitvaccinate()</code> adds the
+<code>.Rdata</code> but doesn’t mention <code>.rda</code> files so be
+aware of that.</p>
+<p>The difference in the types of files are that <code>.Rdata</code> can
+store single or multiple R objects but <code>.rda</code> can only save
+single.</p>
+<p>It might be worthy of a blog/team review on its own but there are
+issues with saving multiple R objects to one place if they are updated
+regularly. It’s very easy to not re-save/update an R object and affect
+the overall data workflow and so I, particularly as I’ve got into this
+very muddle, only save one R object per <code>.Rdata</code> file.</p>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
