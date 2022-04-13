@@ -71,3 +71,7 @@ Often when I copy out the results from SSMS I also need the column headers and t
 # Any other tips?
 
 There are probably plenty of other settings that are useful to know or sites that list these out and we are always keen to learn more so please do get in touch with creating an [issue](https://github.com/CDU-data-science-team/team-blog/issues) or [emailing the team](mailto:cduDataScience@nottshc.nhs.uk). 
+
+# Hat Tip (and further resources)
+
+The following was shared when this was [tweeted](https://twitter.com/DataScienceNott/status/1513833254251642882) by the [team account](https://twitter.com/DataScienceNott) and is a wonderful resource for many SQL techniques. The [presentation](https://github.com/BarneyLawrence/Sessions-TSQL-BeyondTheBasics/blob/master/T-SQL%20-%20Beyond%20the%20Basics.pptx) includes much of what is listed here because [Barney Lawrence](https://twitter.com/SQLBarney) had shared many of these with [Zoë Turner](https://twitter.com/Letxuga007) when he worked in Nottinghamshire Healthcare NHS Foundation Trust. It's wonderful that these techniques are being shared publicly through various media.
