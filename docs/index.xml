@@ -20,6 +20,14 @@
       <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-04-12-settings-in-ssms/img/notes_on_the_treatment_of_gold_ore.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
+      <title>Keeping Git branches tidy</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-04-13-keeping-git-branches-tidy</link>
+      <description>Following the GitHub SOP tidying branches needs to happen both on GitHub and locally and this details some of the ways to do that.</description>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-04-13-keeping-git-branches-tidy</guid>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Using {usethis} to set up .gitignore</title>
       <dc:creator>Zoë Turner</dc:creator>
       <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-04-01-using-usethis-to-set-up-gitignore</link>

@@ -22,6 +22,25 @@
     "input_file": {}
   },
   {
+    "path": "posts/2022-04-13-keeping-git-branches-tidy/",
+    "title": "Keeping Git branches tidy",
+    "description": "Following the GitHub SOP tidying branches needs to happen both on GitHub and locally and this details some of the ways to do that.",
+    "author": [
+      {
+        "name": "Zoë Turner",
+        "url": {
+          "https://twitter.com/letxuga007": {}
+        }
+      }
+    ],
+    "date": "2022-04-13",
+    "categories": [],
+    "contents": "\r\nIn the GitHub\r\nSOP we detailed how\r\n\r\nBranches should be deleted as soon as possible\r\n\r\nand this is good practice both locally and on GitHub. This short blog\r\ndetails the ways to do this.\r\nAfter a successful pull\r\nrequest\r\nDeleting on GitHub is very easy and doesn’t require typing to the\r\ncommand line (although that is possible too).\r\n\r\nTidying up branches in\r\nGitHub\r\nEven if a pull request hasn’t occurred it’s possible to use GitHub to\r\ntidy the branches\r\nScreenshot highlighting where to find the\r\nbranches link on GitHubIt’s possible to delete branches, particularly “Stale” ones using the\r\nbin icon to the far right of the branch you want to delete.\r\nRestoring a deleted branch\r\nNote that the branch will appear with a Restore button\r\nwhen first deleted but this disappears after the page is refreshed or\r\nsome time has passed.\r\nDeleting a branch locally\r\nOnce a branch is deleted remotely that doesn’t automatically mean the\r\nlocal branches have gone. Even after a pull request to another branch\r\n(like main) so to tidy up locally it’s advisable to use the\r\nTerminal if you want do to do this in RStudio and type:\r\ngit branch -d <name-of-branch>\r\nRemoving stale connections\r\nIf a branch is deleted remotely it will still appear in the local git\r\nbranches\r\nScreenshot of branch drop down menu from\r\nRStudio with the remote branches highlightedTo remove these stale connections type in the Terminal\r\ngit remote prune origin\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-04-13T12:43:03+01:00",
+    "input_file": "keeping-git-branches-tidy.knit.md"
+  },
+  {
     "path": "posts/2022-04-01-using-usethis-to-set-up-gitignore/",
     "title": "Using {usethis} to set up .gitignore",
     "description": "How to ensure that certain files cannot be accidentally committed to GitHub (or any other version controlled area).",
