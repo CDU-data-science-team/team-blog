@@ -1,0 +1,58 @@
+---
+title: "Keeping Git branches tidy"
+description: |
+  Following the GitHub SOP tidying branches needs to happen both on GitHub and locally and this details some of the ways to do that.
+author:
+  - name: Zoë Turner
+    url:
+      https://twitter.com/letxuga007: {}
+date: 2022-04-13
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+In the [GitHub SOP](https://cdu-data-science-team.github.io/team-blog/posts/2022-03-21-github-sop/#branches) we detailed how 
+
+>Branches should be deleted as soon as possible
+
+and this is good practice both locally and on GitHub. This short blog details the ways to do this.
+
+# After a successful pull request
+
+Deleting on GitHub is very easy and doesn't require typing to the command line (although that is possible too). 
+
+<image required>
+
+# Tidying up branches in GitHub
+
+Even if a pull request hasn't occurred it's possible to use GitHub to tidy the branches 
+
+![Screenshot highlighting where to find the branches link on GitHub](img/github-branches.PNG)
+
+It's possible to delete branches, particularly "Stale" ones using the bin icon to the far right of the branch you want to delete.
+
+## Restoring a deleted branch
+
+Note that the branch will appear with a `Restore` button when first deleted but this disappears after the page is refreshed or some time has passed.
+
+# Deleting a branch locally
+
+Once a branch is deleted remotely that doesn't automatically mean the local branches have gone. Even after a pull request to another branch (like main) so to tidy up locally it's advisable to use the <kbd>Terminal</kbd> if you want do to do this in RStudio and type:
+
+`git branch -d <name-of-branch>`
+
+# Removing stale connections
+
+If a branch is deleted remotely it will still appear in the local git branches 
+
+![Screenshot of branch drop down menu from RStudio with the remote branches highlighted](img/github-branches.PNG)
+
+To remove these stale connections type in the <kbd>Terminal</kbd>
+
+`git remote prune origin` 
