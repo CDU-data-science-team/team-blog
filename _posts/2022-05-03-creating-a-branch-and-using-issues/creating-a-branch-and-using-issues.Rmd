@@ -1,0 +1,48 @@
+---
+title: "Creating a branch and using issues"
+description: |
+  Steps to take when creating branches following the GitHub-Flow method with particular relation to how to tie these in with issues.
+author:
+  - name: Zoë Turner
+    url:
+      https://twitter.com/letxuga007: {}
+date: 2022-05-03
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Open source
+  - GitHub
+preview: img/A_Treatise_on_Crystallography.jpg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+In the [GitHub SOP](https://cdu-data-science-team.github.io/team-blog/posts/2022-03-21-github-sop/#branches) the blog refers to the [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) which is self explanatory around how to create and manage branches but within the team we have a few steps related to Issues that are not included in the flow.
+
+# Why issues are useful
+
+Issues are a searchable source of information in GitHub and are used in the team to highlight problems but also act as conversations. As a branch is a direct copy of another branch, usually `main`, the README should not have any reference to the issue that prompted the branch creation.
+
+The issue needs to be detailed enough that another person, who has no prior knowledge of the repository, can understand it. This may require references to other systems, full details of data locations (server, schema, table in SQL for example) and avoid acronyms where possible. 
+
+## Naming branches
+
+In all repositories (except for blogs) every branch should correspond to an issue and have a title format of number from the issue with a short version of the title. For example, `40-blog-distill` when the issue is [`Blog about the distill template`](https://github.com/CDU-data-science-team/team-blog/issues/40). Issues can, and should, be linked to pull requests but until the pull request is made there is no other link to an issue from a branch other than a reference in the name.
+
+### Blogs sites are an exception
+
+Where an issue exists, like in the example [`Blog about the distill template`](https://github.com/CDU-data-science-team/team-blog/issues/40) this should have a correspondingly named branch, however, more often than not blogs and posts are created separate to "issues". In this circumstance it is ok to use branch names like the one used for this blog `creating-branch-issues`. 
+
+## Closing an issue
+
+All issues should be closed either by linking to pull request or closed with an explanation as to why it can be closed. Sometimes issues are raised that don't have enough explanations or don't become work, even then, a closing message is needed for future reference.
+
+# Summary
+
+* Always create an issue (unless it's a blog site)
+* Always create a corresponding branch using the issue number and short name
+* Link issues to pull requests

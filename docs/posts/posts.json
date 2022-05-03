@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2022-05-03-creating-a-branch-and-using-issues/",
+    "title": "Creating a branch and using issues",
+    "description": "Steps to take when creating branches following the GitHub-Flow method with particular relation to how to tie these in with issues.",
+    "author": [
+      {
+        "name": "Zoë Turner",
+        "url": {
+          "https://twitter.com/letxuga007": {}
+        }
+      }
+    ],
+    "date": "2022-05-03",
+    "categories": [
+      "Open source",
+      "GitHub"
+    ],
+    "contents": "\r\nIn the GitHub\r\nSOP the blog refers to the GitHub\r\nflow which is self explanatory around how to create and manage\r\nbranches but within the team we have a few steps related to Issues that\r\nare not included in the flow.\r\nWhy issues are useful\r\nIssues are a searchable source of information in GitHub and are used\r\nin the team to highlight problems but also act as conversations. As a\r\nbranch is a direct copy of another branch, usually main,\r\nthe README should not have any reference to the issue that prompted the\r\nbranch creation.\r\nThe issue needs to be detailed enough that another person, who has no\r\nprior knowledge of the repository, can understand it. This may require\r\nreferences to other systems, full details of data locations (server,\r\nschema, table in SQL for example) and avoid acronyms where possible.\r\nNaming branches\r\nIn all repositories (except for blogs) every branch should correspond\r\nto an issue and have a title format of number from the issue with a\r\nshort version of the title. For example, 40-blog-distill\r\nwhen the issue is Blog about the distill template.\r\nIssues can, and should, be linked to pull requests but until the pull\r\nrequest is made there is no other link to an issue from a branch other\r\nthan a reference in the name.\r\nBlogs sites are an exception\r\nWhere an issue exists, like in the example Blog about the distill template\r\nthis should have a correspondingly named branch, however, more often\r\nthan not blogs and posts are created separate to “issues”. In this\r\ncircumstance it is ok to use branch names like the one used for this\r\nblog creating-branch-issues.\r\nClosing an issue\r\nAll issues should be closed either by linking to pull request or\r\nclosed with an explanation as to why it can be closed. Sometimes issues\r\nare raised that don’t have enough explanations or don’t become work,\r\neven then, a closing message is needed for future reference.\r\nSummary\r\nAlways create an issue (unless it’s a blog site)\r\nAlways create a corresponding branch using the issue number and\r\nshort name\r\nLink issues to pull requests\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-05-03-creating-a-branch-and-using-issues/img/A_Treatise_on_Crystallography.jpg",
+    "last_modified": "2022-05-03T18:30:42+01:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-04-13-keeping-git-branches-tidy/",
     "title": "Keeping Git branches tidy",
     "description": "Following the GitHub SOP tidying branches needs to happen both on GitHub and locally and this details some of the ways to do that.",
@@ -18,7 +40,7 @@
     ],
     "contents": "\r\nIn the GitHub\r\nSOP we detailed how\r\n\r\nBranches should be deleted as soon as possible\r\n\r\nand this is good practice both locally and on GitHub. This short post\r\ndetails the ways to do this.\r\nDelete after a merge\r\nDeleting on GitHub is very easy and doesn’t require typing to the\r\ncommand line (although that is possible too). After merging a button\r\nwill appear in purple saying Delete branch but it’s also\r\npossible to set this as the default for the repository. In this case the\r\npurple button will say Restore branch.\r\nGo to the Settings for the repository and then scroll\r\ndown to the Pull Requests section. Select the\r\nAutomatically delete head branches.\r\nMore information on this can be found on GitHub\r\nhelp pages\r\nDeleting stale branches in\r\nGitHub\r\nEven if a pull request hasn’t occurred it’s possible to use GitHub to\r\ntidy the branches\r\nScreenshot highlighting where to find the\r\nbranches link on GitHubIt’s possible to delete branches, particularly “Stale” ones using the\r\nbin icon to the far right of the branch you want to delete.\r\nRestoring a deleted branch\r\nNote that the branch will appear with a Restore button\r\nwhen first deleted but this disappears after the page is refreshed or\r\nsome time has passed.\r\nLocal branches\r\nOnce a branch is deleted remotely that doesn’t automatically mean the\r\nlocal branches have gone. Even after a pull request to another branch\r\n(like main) so to tidy up locally it’s advisable to use the\r\nTerminal if you want do to do this in RStudio and type:\r\ngit branch -d <name-of-branch>\r\nRemoving stale connections\r\nIf a branch is deleted remotely it will still appear in the local git\r\nbranches\r\nScreenshot of branch drop down menu from\r\nRStudio with the remote branches highlightedTo remove these stale connections type in the Terminal\r\ngit remote prune origin\r\n\r\n\r\n\r\n",
     "preview": "posts/2022-04-13-keeping-git-branches-tidy/img/Admiralty_Manual_for_the_Deviation_of_the_Compass.jpg",
-    "last_modified": "2022-05-03T14:53:48+01:00",
+    "last_modified": "2022-05-03T16:50:03+01:00",
     "input_file": {}
   },
   {
