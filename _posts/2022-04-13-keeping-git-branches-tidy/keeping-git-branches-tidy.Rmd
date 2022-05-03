@@ -10,6 +10,10 @@ date: 2022-04-13
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - Open source
+  - GitHub
+preview: img/Admiralty_Manual_for_the_Deviation_of_the_Compass.jpg
 ---
 
 
@@ -21,15 +25,17 @@ In the [GitHub SOP](https://cdu-data-science-team.github.io/team-blog/posts/2022
 
 >Branches should be deleted as soon as possible
 
-and this is good practice both locally and on GitHub. This short blog details the ways to do this.
+and this is good practice both locally and on GitHub. This short post details the ways to do this.
 
-# After a successful pull request
+## Delete after a merge
 
-Deleting on GitHub is very easy and doesn't require typing to the command line (although that is possible too). 
+Deleting on GitHub is very easy and doesn't require typing to the command line (although that is possible too). After merging a button will appear in purple saying `Delete branch` but it's also possible to set this as the default for the repository. In this case the purple button will say `Restore branch`.
 
-<image required>
+Go to the `Settings` for the repository and then scroll down to the `Pull Requests` section. Select the `Automatically delete head branches`.
 
-# Tidying up branches in GitHub
+More information on this can be found on [GitHub help pages](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches)
+
+## Deleting stale branches in GitHub
 
 Even if a pull request hasn't occurred it's possible to use GitHub to tidy the branches 
 
@@ -41,13 +47,13 @@ It's possible to delete branches, particularly "Stale" ones using the bin icon t
 
 Note that the branch will appear with a `Restore` button when first deleted but this disappears after the page is refreshed or some time has passed.
 
-# Deleting a branch locally
+# Local branches
 
 Once a branch is deleted remotely that doesn't automatically mean the local branches have gone. Even after a pull request to another branch (like main) so to tidy up locally it's advisable to use the <kbd>Terminal</kbd> if you want do to do this in RStudio and type:
 
 `git branch -d <name-of-branch>`
 
-# Removing stale connections
+## Removing stale connections
 
 If a branch is deleted remotely it will still appear in the local git branches 
 
