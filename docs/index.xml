@@ -7,7 +7,18 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Caseload over time</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-05-17-caseload-over-time</link>
+      <description>How to count open referrals in a given period of time.</description>
+      <category>Open source</category>
+      <category>GitHub</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-05-17-caseload-over-time</guid>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-05-17-caseload-over-time/img/a_text_book_of_mineralogy.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Keeping Git branches tidy</title>
       <dc:creator>Zoë Turner</dc:creator>
