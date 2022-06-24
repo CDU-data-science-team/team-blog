@@ -7,7 +7,17 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Statistical Process Control (SPC) R Packages</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages</link>
+      <description>A quick introduction to the R packages available and how they are used by the team</description>
+      <category>SPC</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages</guid>
+      <pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages/img/Two_Centuries_of_Soho_p311.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Caseload over time</title>
       <dc:creator>Zoë Turner</dc:creator>

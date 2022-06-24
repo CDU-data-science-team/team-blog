@@ -1,0 +1,51 @@
+---
+title: "Statistical Process Control (SPC) R Packages"
+description: |
+  A quick introduction to the R packages available and how they are used by the team
+author:
+  - name: Zoë Turner
+    url:
+      https://twitter.com/letxuga007: {}
+date: 2022-06-24
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - SPC
+preview: img/Two_Centuries_of_Soho_p311.jpg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Statistical Process Control (SPC)
+
+SPCs are very popular in analysis in the NHS and we are lucky now to have many resources available to understand, produce and explain SPC charts. In the NHS the resources used for SPC are promoted through an initiative called the [Making Data Count](https://www.england.nhs.uk/publication/making-data-count/) hosted by NHS England and Improvement who have a [FuturesNHS Workspace](https://future.nhs.uk/MDC/grouphome) of the same name and have templates in [SQL and Excel](https://future.nhs.uk/MDC/view?objectId=22996592).
+
+# R packages
+
+## qicharts2
+
+Until very recently the main package used by the team has been [{qicharts2}](https://cran.r-project.org/web/packages/qicharts2/index.html), available through CRAN, which has a really good [vignette](https://cran.r-project.org/web/packages/qicharts2/vignettes/qicharts2.html) to get started. The package include many types of SPC including charts for rare events. The package creator, Jacob Anhøj, has also run [workshops](https://www.youtube.com/watch?v=pCaqwX7bDLs) and given [talks](https://www.youtube.com/watch?v=5HnW1YP3vTk) (1:45:23) at the NHS-R conferences.
+
+Note that the run chart in qicharts2 uses an additional rule that Jacob Anhøj has written about in statistical journals and has [blogged](https://nhsrcommunity.com/blog/a-run-chart-is-not-a-run-chart-is-not-a-run-chart/) about more generally for the NHS-R Community. 
+
+## NHSRplotthedots
+
+In response to the work around Making Data Count, many analysts in the NHS were using R to produce SPC charts but wanted to change the colours/add logos and use the NHS England/Improvement rules. Through the NHS-R Community the analysts were able to work together in collaboration to produce the [{NHSRplotthedots}](https://github.com/nhs-r-community/NHSRplotthedots) package which is now on CRAN. 
+
+## charter packages
+
+[John Mackintosh](https://www.johnmackintosh.net/), an NHS data analyst/BI developer in Scotland, has created a series of charter packages that he uses in his work and has shared on GitHub and CRAN:
+
+[runcharter](https://github.com/johnmackintosh/runcharter) (github repository) CRAN
+[cusumcharter](https://github.com/johnmackintosh/cusumcharter) (github repository) CRAN
+[spccharter](https://github.com/johnmackintosh/spccharter)
+
+These are particuarly good packages to use for analysing multiple charts at once.
+
+## Funnel Plots
+
+Another form of SPC which is very useful and often appears in Public Health analysis is the funnel plot. Public Health England (now UKHSA) have a few resources on how to[ use and interpret funnel plots](https://fingertips.phe.org.uk/documents/TechnicalBriefing2Statisticalprocesscontrolmetho.pdf) with a [spreadsheet template](https://fingertips.phe.org.uk/documents/PHE%20Funnel%20plot%20tool%20for%20proportions.xls) and in R, the package [{FunnelPlotR}](https://github.com/nhs-r-community/FunnelPlotR) has been created by Chris Mainey and can now be found on the NHS-R Community GitHub and is available on CRAN.
