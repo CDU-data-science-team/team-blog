@@ -13,7 +13,6 @@ We are the data science team within the clinical development unit of [Nottingham
 * [Chris Beeley](https://twitter.com/ChrisBeeley)
 * [Zo`r "\u00EB"` Turner](https://lextuga007.github.io/Postcard/)
 * [Lori Edwards Suárez](https://twitter.com/Lori_E_S_)
-* [Oluwasegun Apejoye](https://www.linkedin.com/in/oluwasegun-michael-apejoye-7b487365/)
 
 Email the team email at [CDUDataTeam@nottshc.nhs.uk](mailto:cdudatateam@nottshc.nhs.uk)
 
@@ -28,7 +27,7 @@ They have moved on to other roles but can still be found here:
 
 * [Andreas Soteriades](https://github.com/andreassot10)
 * [Milan Wiedemann](https://github.com/milanwiedemann)
-
+* [Oluwasegun Apejoye](https://www.linkedin.com/in/oluwasegun-michael-apejoye-7b487365/)
 
 # Credit
 
