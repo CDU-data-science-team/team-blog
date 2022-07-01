@@ -2533,6 +2533,86 @@ referral in the time period but ended afterwards.
 period.</p>
 <p>Open referrals to count are therefore include Patient 2, Patient 3,
 Patient 4 and Patient 6.</p>
+<h1 id="using-sql">Using SQL</h1>
+<p>There are three ways of doing this and because we use sk (synthetic
+or sythnesised keys) in our SQL tables for speed we join to a <a
+href="https://www.mssqltips.com/sqlservertip/4054/creating-a-date-dimension-or-calendar-table-in-sql-server/">specific
+date look up table</a>.</p>
+<h2 id="where-clause">WHERE clause</h2>
+<p>One line in the where clause (special thanks to <a
+href="https://twitter.com/SQLBarney">SQLBarney</a> for this code):</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">declare</span> @StartDate <span class="dt">int</span> <span class="op">=</span> <span class="st">&#39;20180401&#39;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">declare</span> @EndDate <span class="dt">int</span> <span class="op">=</span> <span class="st">&#39;20190401&#39;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">--DischargeDate_sk = 0 won&#39;t be needed if the table doesn&#39;t use synthetic dates</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Team, <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> patient) <span class="kw">AS</span> OpenReferrals</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SQLTable</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> ((DischargeDate_sk <span class="op">&gt;=</span> @StartDate <span class="kw">OR</span> DischargeDate_sk <span class="op">&lt;</span> <span class="op">=</span> <span class="dv">0</span>) <span class="kw">AND</span> ReferralDate_sk <span class="op">&lt;=</span> @EndDate)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Team</span></code></pre></div>
+</div>
+<h2 id="explicitly-detail-within-the-where-clause">Explicitly detail
+within the WHERE clause</h2>
+<p>Just to show exactly to replicate the patients included:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">declare</span> @StartDate <span class="dt">int</span> <span class="op">=</span> <span class="st">&#39;20180401&#39;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">declare</span> @EndDate <span class="dt">int</span> <span class="op">=</span> <span class="st">&#39;20190401&#39;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Team, <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> patient) <span class="kw">AS</span> OpenReferrals</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SQLTable</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> ((ReferralDate_sk <span class="op">&lt;</span> @StartDate <span class="kw">AND</span> (DischargeDate_sk <span class="op">&gt;</span> <span class="op">=</span> @EndDate <span class="kw">OR</span> DischargeDate_sk <span class="op">=</span> <span class="dv">0</span>)) <span class="co">--Started before period and ended after period or still open (Patient 6)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (ReferralDate_sk <span class="op">&lt;</span> <span class="op">=</span> @EndDate <span class="kw">AND</span> DischargeDate_sk <span class="op">&gt;</span> <span class="op">=</span> @StartDate) <span class="co">--Started and ended in period (Patient 3) and (Patient 2)</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (ReferralDate_sk <span class="op">&gt;</span> <span class="op">=</span> @StartDate <span class="kw">AND</span> (DischargeDate_sk <span class="op">&gt;</span> <span class="op">=</span> @EndDate <span class="kw">OR</span> r.DischargeDate_sk <span class="op">=</span> <span class="dv">0</span>)))<span class="co">--Started in period and ended after period or still open (Patient 4)</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Team</span></code></pre></div>
+</div>
+<h2 id="creating-a-line-for-each-day">Creating a line for each day</h2>
+<p>This is particularly useful if you want to have individual days, for
+example, of open referrals that can then be aggregated up to other time
+units like months or years. It can produce very large datasets though
+depending on the time period being expanded. Counts of patients need to
+be on distinct ids as they will be repeated over time so:</p>
+<p>Day 1 Patient A Patient B</p>
+<p>Day 2 Patient B</p>
+<p>Day 3 Patient C</p>
+<p>If I want the count for the full three days the counts need to be 3
+patients, but without a distinct 4 will be returned.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Team, <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> patient) <span class="kw">AS</span> OpenReferrals</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SQLTable</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> DateTable <span class="kw">AS</span> dt1 <span class="kw">ON</span> ReferralDate_sk <span class="op">=</span> dt1.date_sk <span class="co">---Referral Date--</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> DateTable <span class="kw">AS</span> dt2 <span class="kw">ON</span> DischargeDate_sk <span class="op">=</span> dt2.date_sk <span class="co">---Discharge Date--</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">--The sk dates need to be joined to the date tables to return a true date for the inner join</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> DateTable <span class="kw">AS</span> d3 <span class="kw">ON</span> ReferralDate <span class="op">&lt;=</span> d3.<span class="dt">date</span> <span class="kw">AND</span> DischargeDate <span class="op">&gt;</span> <span class="op">=</span> d3.<span class="dt">date</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> d3.fin_year_name <span class="op">=</span> <span class="st">&#39;2018/19&#39;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Team</span></code></pre></div>
+</div>
+<h2 id="one-days-referrals">One day’s referrals</h2>
+<p>Looking for 1 day’s referrals can be a shorter line of code without
+the need for parameters:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> Team, <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> patient) <span class="kw">AS</span> OpenReferrals</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> SQLTable</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> DateTable <span class="kw">AS</span> dt1 <span class="kw">ON</span> ReferralDate_sk <span class="op">=</span> dt1.date_sk <span class="co">---Referral Date--</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> DateTable <span class="kw">AS</span> dt2 <span class="kw">ON</span> DischargeDate_sk <span class="op">=</span> dt2.date_sk <span class="co">---Discharge Date--</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> dt1.<span class="dt">date</span> <span class="op">&lt;=</span> <span class="st">&#39;31 Mar 2019&#39;</span> <span class="kw">AND</span> (dt2.<span class="dt">date</span> <span class="op">&gt;</span> <span class="op">=</span> <span class="st">&#39;31 mar 2019&#39;</span> <span class="kw">OR</span> DischargeDate_sk <span class="op">=</span> <span class="dv">0</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> Team</span></code></pre></div>
+</div>
 <h1 id="using-r">Using R</h1>
 <p>This can be recreated in R using dplyr but note that the functions
 used can be slow for many rows. It can be hard to filter the dates,
@@ -2581,7 +2661,7 @@ referral start before the time period.</p>
 <span>  <span class='fu'>summarise</span><span class='op'>(</span>count_distinct_patients <span class='op'>=</span> <span class='fu'>n_distinct</span><span class='op'>(</span><span class='va'>client_id</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre
+<div class="sourceCode" id="cb5"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
