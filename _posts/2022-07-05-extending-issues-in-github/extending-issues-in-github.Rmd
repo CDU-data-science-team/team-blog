@@ -1,0 +1,68 @@
+---
+title: "Extending issues in GitHub"
+description: |
+  A short description of the post.
+author:
+  - name: Zoë Turner
+    url:
+      https://twitter.com/letxuga007: {}
+date: 2022-07-05
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - GitHub
+preview: img/a_text-book_of_mineralogy.jpg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Using templates
+
+In `Settings` (the last tab along the top of a GitHub repository which starts Code... Issues... Pull Requests) there is now section in the `General` for issue templates. Selecting the Green button for `Set up templates` takes you to a drop down selection box saying `Add template` and select.
+
+There are 3 templates available and all can be customised, bug report, feature request and custom template.
+
+In the internal package the team uses we have:
+
+* Bug report
+* Feature request
+* Refactor
+* SQL server issue template
+
+as the package is the link between the SQL data warehouse and R.
+
+Every time a template is added or updated this adds a commit to the history.
+
+# Issue tags/labels
+
+Using the issue template you can also add the labels that are appropriate like `bug`. Our internal package mainly uses:
+
+* bug
+* database
+* documentation
+* duplicate
+* enhancement
+* question
+* refactor
+
+and one that is being used more frequently now when the issue is related to the SQL database or another package's issue `wontfix`.
+
+For example, the package used to access the SQL database retrieves data from different databases using {dbplyr} and so if any code attempts to join the two we get the error:
+
+```
+Error in `auto_copy()`:
+! `x` and `y` must share the same src.
+i set `copy` = TRUE (may be slow).
+```
+
+which is related to an [issue](https://github.com/r-dbi/bigrquery/issues/219#issuecomment-703219907) that was closed in 2018 from {bigrquery}. This is referenced in the issue but with the label `wontfix` for reference. In fact, two issues have been created now!
+
+# References to other packages
+
+If you reference another issue from someone else's repository it will appear in their GitHub issue with the description `mentioned this issue...`.
+
+If it's from a restricted private package only you will see the reference. 
