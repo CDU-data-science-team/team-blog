@@ -1,7 +1,7 @@
 ---
 title: "Extending issues in GitHub"
 description: |
-  A short description of the post.
+  Details on features used in GitHub for creating issue templates and labels, particularly the use of `wontfix`.
 author:
   - name: Zoë Turner
     url:
