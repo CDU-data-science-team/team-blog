@@ -40,6 +40,17 @@
       <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-05-17-caseload-over-time/img/a_text_book_of_mineralogy.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
+      <title>Creating a branch and using issues</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-05-03-creating-a-branch-and-using-issues</link>
+      <description>Steps to take when creating branches following the GitHub-Flow method with particular relation to how to tie these in with issues.</description>
+      <category>Open source</category>
+      <category>GitHub</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-05-03-creating-a-branch-and-using-issues</guid>
+      <pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-05-03-creating-a-branch-and-using-issues/img/A_Treatise_on_Crystallography.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Keeping Git branches tidy</title>
       <dc:creator>Zoë Turner</dc:creator>
       <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-04-13-keeping-git-branches-tidy</link>
