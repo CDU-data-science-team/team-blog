@@ -41,6 +41,14 @@ Where an issue exists, like in the example [`Blog about the distill template`](h
 
 All issues should be closed either by linking to pull request or closed with an explanation as to why it can be closed. Sometimes issues are raised that don't have enough explanations or don't become work, even then, a closing message is needed for future reference.
 
+## Create branches from GitHub
+
+It is possible to create a branch from an Issue whilst in GitHub, this option appears in the right hand menu under `Development` which is also where other pull requests can be linked to issue (both closed and open).
+
+If you use this code will appear to be used locally on the computer in the terminal, copy and right click in the RStudio terminal to paste. 
+
+Note that if you use a `development` branch that the new branch will be from `main` which you may not necessary want.
+
 # Summary
 
 * Always create an issue (unless it's a blog site)
