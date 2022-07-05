@@ -23,14 +23,18 @@ For the benefit of team members, a refresher on how to add a blog post.
     - Security
   ```
 * Write the post :slightly_smiling_face:
-* Click "knit" whenever you want to preview how the post looks
-* When you are finished knit the post for a final time and check it to make sure you are happy with it
 * Save an image from the [British Library collection](https://www.flickr.com/photos/britishlibrary/albums/72157648088610908) into the same `_post/` folder as the post, preferably in a new folder called `img` to keep it tidy and download the picture as Small to keep the size minimal.
   - Make sure that the post has the following code in the YAML:
   ```yaml
   preview: img/name_of_image.jpg
   ```
-* Build the website by going to the `Build` tab at the top right of RStudio (along with Environment/History/Connections...), then `Build Website`
+  
+## Knitting and building
+* Click "knit" whenever you want to preview how the post looks
+* When you are finished knit the post for a final time and check it to make sure you are happy with it
+* *Don't forget!* Build the website by going to the `Build` tab at the top right of RStudio (along with Environment/History/Connections...), then `Build Website
+
+## Version control`
 * In the Terminal add all the files to git `git add .`
 * Git commit `git commit -m "Commit message"`
 * Git push `git push`

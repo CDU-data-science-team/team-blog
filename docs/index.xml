@@ -7,7 +7,17 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 24 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Extending issues in GitHub</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-07-05-extending-issues-in-github</link>
+      <description>A short description of the post.</description>
+      <category>GitHub</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-07-05-extending-issues-in-github</guid>
+      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-07-05-extending-issues-in-github/img/a_text-book_of_mineralogy.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Statistical Process Control (SPC) R Packages</title>
       <dc:creator>Zoë Turner</dc:creator>
