@@ -7,7 +7,16 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 05 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Data Scientist band 7 job</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-07-21-data-scientist-band-7-job</link>
+      <description>An accessible version of the Data Scientist band 7 job in the team</description>
+      <category>Jobs</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-07-21-data-scientist-band-7-job</guid>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Extending issues in GitHub</title>
       <dc:creator>Zoë Turner</dc:creator>
