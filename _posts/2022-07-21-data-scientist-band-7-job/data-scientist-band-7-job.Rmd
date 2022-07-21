@@ -10,6 +10,7 @@ output:
     self_contained: false
 categories:
   - Jobs
+preview: img/Flowers_of_Paradise_R_ F_Hallward.jpg
 ---
 
 
@@ -36,7 +37,7 @@ Site: Duncan Macmillan House
 Town: Nottingham  
 Salary: £40,057 - £45,839 per annum (pro rata for part time)  
 Salary period: Yearly  
-Closing: 04/08/2022 23:59  
+Closing: 14/08/2022 23:59  
 Interview date: 06/09/2022  
 
 # Job overview
@@ -80,7 +81,8 @@ Able to sit for long periods of time at a desk in front of a computer workstatio
 ## Qualifications
 
 ### Essential criteria
-Educated to degree level or equivalent experience Continuing Professional Development
+Educated to degree level or equivalent experience  
+Continuing Professional Development
 
 ### Desirable criteria
 Post graduate qualification or equivalent relevant experience
