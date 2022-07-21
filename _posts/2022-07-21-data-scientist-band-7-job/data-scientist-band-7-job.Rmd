@@ -1,5 +1,5 @@
 ---
-title: "Data Scientist band 7 job"
+title: "Data Scientist job"
 description: |
   An accessible version of the Data Scientist band 7 job in the team
 author:
