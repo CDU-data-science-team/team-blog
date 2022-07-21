@@ -1,0 +1,339 @@
+---
+title: "Shiny Developer job"
+description: |
+  An accessible version of the Shiny Developer band 7 job in the team
+author:
+  - name: Zoë Turner
+    url: {}
+date: 2022-07-21
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Jobs
+preview: img/Le_Marechal_Ferrant_opéra_comique_en_deux_actes.jpg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Background
+Due to formatting issues this is an accessible (we hope but please say if not!) version of the band 7 role in the data science team. It's also available for future reference after the post advert closes.
+
+# Apply here
+
+The Nottinghamshire Healthcare NHS Foundation Trust [TRACS system](https://recruitment.nottshc.nhs.uk/recruitment-current-vacancies?_ts=1787453#!/job/v4335218) and [NHS Jobs](https://beta.jobs.nhs.uk/candidate/jobadvert/C9186-22-4447)
+
+
+# Job Advert
+
+Main area: Data Science  
+Grade: Band 7  
+Contract: Fixed term: 12 months  
+Hours: Full time - 37.5 hours per week  
+Job ref: 186-1253-22-CS  
+Site: Duncan Macmillan House  
+Town: Nottingham  
+Salary: £40,057 - £45,839 per annum (pro rata for part time)  
+Salary period: Yearly  
+Closing: 14/08/2022 23:59 
+ 
+# Job overview
+
+We're building the future of text analytics for patient experience data at Nottinghamshire Healthcare NHS Trust, and open sourcing it so everyone can use it. This post supports a team working on an NHSE funded project to build and deploy text analytics for patient experience data for several pilot trusts, with a view to recruiting more as the work matures.
+
+We need your skills in Python, text mining, machine learning, deep learning, and everything else that's needed to make reliable, accurate, performant models that can read and theme text data. We use R and Shiny on the frontend and Python and MySQL in the back, and you can see the code here
+
+https://github.com/CDU-data-science-team/pxtextmining
+https://github.com/CDU-data-science-team/experiencesdashboard
+
+The team are fully hybrid and this post can be offered on a remote basis.
+
+# Main duties of the job
+
+* Producing a frontend/ dashboard implementation of the text mining system for use by partner trusts
+* Assisting with the deployment of the text mining system in the cloud for access by partner organisations
+* Carrying out, feeding back, and acting on the results of user testing
+* Analysing and suggesting ways to improve the algorithms and dashboard implementation
+* Helping team members and the wider Trust to develop skills and understanding in the development, deployment, use, and interpretation of interactive dashboards produced with Shiny
+* Assist with the development and testing of user documentation for the Shiny application
+
+# Detailed job description and main responsibilities
+
+We are a small and friendly team of data scientists with expertise in RAP/ data pipelines, forecasting, statistics, and Shiny. Our team believes in using open source data science to make the world better and you will see on our GitHub that we share as much of our work as we can.
+
+Two of the team are senior fellows in NHS-R and if you join this team you will be part of a large and thriving national community of data scientists using R and Python in healthcare.
+
+The job will involve writing and deploying text mining and machine learning algorithms as part of a team building models for use anywhere NHS organisations collect patient experience data.
+
+For more details please refer to the job description
+
+# Person specification
+
+## Values
+
+## Essential criteria
+
+All colleagues are expected to demonstrate at interview that they act in line with Nottinghamshire Healthcare NHS Foundation Trust Values: Trust, Honesty, Respect, Compassion and Teamwork
+
+## Physical requirements
+
+### Essential criteria
+
+Able to sit for long periods of time at a desk in front of a computer workstation and has advanced keyboard skills.
+
+## Qualifications
+
+### Essential criteria
+Educated to degree level or equivalent experience 
+Continuing Professional Development
+
+### Desirable criteria
+Post graduate qualification or equivalent relevant experience
+
+### How identified
+
+Application
+
+## Experience
+
+### Essential criteria
+
+Experience of writing and maintaining code, especially R for data analysis/ web application development  
+Experience of web application programming for data science, especially R/ Shiny but also e.g. JavaScript, 
+React  
+Experience of interpreting and analysing complex information and presenting it in a simplified manner 
+
+### Desirable criteria
+Experience of designing and delivering training to small groups  
+Experience with setup and maintenance of Linux server  
+
+### How identified
+
+Application/Interview/Test
+
+## Knowledge
+
+### Essential criteria
+Knowledge of web application programming paradigms, particularly for data science (especially Shiny but also e.g. JavaScript, node.js, React) 
+
+### Desirable criteria
+
+Knowledge of Linux terminal and server maintenance  
+
+### How identified
+
+Application/Interview/Test
+
+## Skills
+
+### Essential criteria
+
+Excellent numerical/statistical/ skills  
+Excellent skills with R/Python or similar for data analysis and interface design (e.g. Shiny)  
+Ability to identify and fix bugs in code  
+Strong team working skills  
+Ability to manage own workload  
+Ability to build positive relations within and outside the organisation, with health professionals and managers  
+Ability to concentrate when carrying out detailed analysis over sustained periods  
+Excellent written and oral communication skills  
+
+### Desirable criteria
+
+Ability to write documentation and deliver training
+ 
+### How identified
+
+Application/Interview/Test
+
+# Job Description
+
+## Role Purpose:
+A shiny developer is required to continue a programme of work funded by NHS England, initially for one year but with a view to continuing funding into subsequent years. The purpose of the work is to refine a text classification and reporting system that has been developed that processes patient experience data and tags it by theme and sentiment. This work will take modern machine learning approaches such as zero shot, weak supervision, and human in the loop learning and couple them with an intuitive user interface in order to allow completely new novel datasets and theme taxonomies to be accurately predicted by an ML model with minimal labelled data. The interface will also provide users with useful and easy to use summaries of their data.  
+
+The work will be open sourced and provided to the whole NHS system free of charge and this is a key deliverable of the project. This work has the potential to greatly increase the amount of insight generated by patient feedback across all services in the NHS, and thereby improve the responsiveness of services to feedback. 
+
+## Role Context:
+
+This post is based within the Clinical Development Unit of Nottinghamshire Healthcare NHS Foundation Trust. The Trust provides integrated healthcare services, including mental health, intellectual disability and physical health. The Trust employs over 9000 staff provide these services in a variety of settings, ranging from the community through to acute wards, as well as secure settings.
+
+The Clinical Development Unit is a specialist analytic unit set up within Nottinghamshire Healthcare NHS Trust with a remit to analyse a range of Trust and regional data using public health, epidemiological, statistical, and machine learning methods, and to use open source programming approaches to produce robust and reproducible reports. It also contributes to and supports the vital work of the Trust’s main Applied Informatics team. 
+
+The post is offered on a 12 month contract.
+
+# Trust values
+
+All colleagues are expected to demonstrate at interview and throughout employment that they act in line with Nottinghamshire Healthcare NHS Foundation Trust Values: Trust, Honesty, Respect, Compassion and Teamwork
+
+## Key Accountabilities
+
+### Working Practice 
+Assisting with the deployment of the text mining system in the cloud for access by partner organisations
+
+Performance measures: Deployment of software to agreed specification
+
+Carrying out, feeding back, and acting on the results of user testing
+
+Analysing and suggesting ways to improve the algorithms and dashboard implementation
+
+Performance measures: Evidence of user testing and development work based on user testing
+
+Writing and conducting unit tests for code as well as testing and fixing bugs
+
+Performance measures: Robust and tested code
+
+Helping team members and the wider Trust and partner organisations to develop skills and understanding in the 
+development, deployment, use, and interpretation of text mining algorithms in a patient experience context
+
+Performance measures: Evidence of work with Trust and partner organisations to promote best practice in the use of text mining algorithms in a patient experience context
+
+Helping team members and the wider Trust to develop skills and understanding in the development, deployment, use, and interpretation of interactive dashboards produced with Shiny
+
+Performance measures: Evidence of work with Trust and partner organisations to promote best practice in the use of dashboards in a patient experience context
+
+Assist with the development and testing of user documentation for the Shiny application
+
+Performance measures: Appropriate documentation produced
+
+
+# Dimensions
+
+The postholder will produce dashboards to interact with machine learning models and to report on patient experience data for Nottinghamshire Healthcare NHS Foundation Trust and at least five other trusts (subject to the trusts’ capacity to engage). The code will be open sourced, enabling collaboration where appropriate with other individuals across the NHS.
+
+# Safeguarding  
+
+All employees are responsible for taking all reasonable measures to ensure that the risks of harm to children and vulnerable adults are minimised. They should take all appropriate actions to address concerns, working to agreed local policies and procedures including the guidance on Safeguarding, in partnership with other relevant agencies. This includes accessing appropriate training, advice and support.  
+
+# Disclosure and Barring Services  
+
+Where this post relates to the types of work, activity, employment or profession as set out in The Exceptions Order made under the Rehabilitation of Offender Act 1974; the post will be subject to a DBS Disclosure check at the point of recruitment and thereafter, as the Trust determines appropriate. The level of the check will be determined by the type of activities undertaken and the level of contact the post holder will have with children and/or adults in receipt of health services.
+
+# Infection Control  
+
+All employees of Nottinghamshire Healthcare NHS Foundation Trust have an individual responsibility to have knowledge of and employ the basic principles of infection prevention and control practice. All employees must comply with Infection Prevention and control mandatory training requirements specific to their role.  
+
+# Equality & Diversity  
+
+All staff should be able to demonstrate an understanding of and commitment to Equality, Diversity and Inclusion as identified within the Trust’s Equality and Diversity Policy and associated Equality, Diversity and Human Rights legislation.  
+
+# Sustainability  
+
+It is the responsibility of all staff to minimise the Trust’s environmental impact wherever possible. This will include recycling, switching off lights, computers, monitors and equipment when not in use. Helping to reduce paper waste by minimising printing/copying and reducing water usage, reporting faults and heating/cooling concerns promptly and minimising travel. Where the role includes the ordering and use of supplies or equipment the post holder will consider the environmental impact of purchases.  
+
+# Data Quality Statement  
+
+All staff of Nottinghamshire Healthcare NHS Foundation Trust have a responsibility for data quality; improved data quality leads to better decision-making across the Trust. The more high-quality data, the more confidence the organisation has in decisions. Good data decreases risk and can result in consistent improvements in results. Employees within data roles have a responsibility for inputting high quality data (accurate, valid, timely, complete) and for ensuring that high quality data is maintained.  
+
+# Communication  
+
+Liaise and negotiate with internal and external customers to meet information requirements in an efficient and cost-effective way.  
+
+Use tact, diplomacy and clarity of communication to aid in the dissemination of complex information to internal and external customers at all levels.  
+
+Use appropriate influencing skills when providing advice and support for internal and external customers in the use and interpretation of data, particularly where such data conflicts or does not support initial assumptions or expectations.  
+
+Use design principles and interactive programming paradigms appropriate to the audience to present information and concisely communicate findings.  
+
+Present, interpret and explain complicated statistical and analytical theories/models to large groups at meetings.  
+
+Demonstrate developed tools and interactive models to future users.  
+
+Provide training for end users in each site in the use and interpretation of model results.  
+
+Communicate effectively with CDU, Involvement, NHSE, and partner organisations  
+
+Ability to write documentation and deliver training.  
+
+Work collaboratively with key members of CDU, Involvement, NHSE, and partner organisations, in a way which respects different perspectives and makes best use of the varied expertise.  
+
+Represent the Trust’s core values in all communication.  
+
+
+# Knowledge, Training and Experience  
+  
+Experience of writing and maintaining code, especially R/ Shiny, for interface design.  
+Experience of creating and managing statistical work programmes / data science pipelines.  
+Experience of programming web applications for data science.  
+Experience of summarising and presenting complex analyses to varied audiences.  
+Experience of interpreting and analysing complex information and presenting it in a simplified manner.  
+Knowledge and a strong interest in analytics and identifying key messages in analytics.  
+Educated to Master’s level in a computing/ quantitative subject or equivalent experience.
+  
+# Analytical and Judgement Skills  
+
+Excellent skills with R/ Shiny and other web application/ database frameworks (e.g., React).  
+Ability to create solutions to problems.  
+Ability to identify and fix bugs in code.  
+Ability to critique and improve existing processes.  
+Ability to review assumptions and apply judgement.  
+Excellent analytical and numeric skills.  
+
+# Planning and Organisational Skills  
+
+Planning and organisation of tasks for self and occasionally others which includes making short term   adjustments to plans to reflect changes in workload e.g. urgent requests for problems solving, software fixes (workarounds and permanent fixes) or assistance requests from others in the team, key users and stakeholders.  
+
+Responsible for own workload, within the tasks as agreed with the senior data scientist. Expected to work with very little supervision and to be able to provide progress reports, reprioritise according to competing demands, and to complete work within the timelines agreed between the customer and the team.  
+
+# Physical Skills
+
+Advanced keyboard skills.  
+
+There is a requirement to travel to different locations within the Trust and collaborating sites in the 
+Midlands.
+
+# Responsibility for Patient/Client Care
+
+Incidental contact with patients.  
+Ensure appropriate Information Governance/Data Protection guidelines are applied to ensure patient confidentiality.
+
+# Responsibility for Policy/Service Development  
+
+Implements policies in own work area whilst proposing changes to reporting processes, training programmes, and system designs which may have an impact on the Trust and the pilot sites.  
+Contribute to recommendations on changes to data science practices to line manager and assist in implementing.
+
+# Responsibility for Financial and Physical Resources
+
+Responsible for the proper and safe use of IT equipment by users.
+
+# Responsibility for HR  
+
+The post holder will be required to deliver specialist training or provide skills transfer to others within the Team or to key users and stakeholders when implementing new systems.  
+Training may be either formal or informal using different methods.  
+The post holder may be required to support any future recruitment process by being involved in short listing and interview processes in the recruitment and selection of new staff.
+
+# Responsibility for Information Resources  
+
+The senior data scientist role will provide analysis of user needs, designing of systems, development of code, testing and maintenance of systems.  
+The post holder will be required to use appropriate software of choice to develop or create reporting mechanisms.  
+The post holder will be partially responsible for the safe and appropriate storage, use and publication of patient feedback data for the Trust and partner pilot sites, and is expected to adhere to Information Governance procedures and partnership agreements.    
+
+# Responsibility for Research and Development  
+
+Keep up to date with best practices in the technical field in order to enable the department to improve the way in which it implements systems, leading to quicker development, easier maintainability and higher quality.   Spreading the results of these investigations throughout the department.  
+Researching new technologies, white papers and leading industry concepts and processes in order to support continuous improvement.  
+Actively undertaking R&D activities into specialised technical areas as directed by the principal data scientist. Mentoring other staff in the results of these investigations. Contributing to recommendations as to the future technical direction of the department as a result of the R&D activities. Influencing key decision makers on these technical matters.  
+
+# Freedom to Act    
+ 
+Works independently, within the direction set by the department’s broad technical strategy. Has a  high level of disciplined self-management and ownership of outcomes.  
+As a specialist in this area will act independently and take action when dealing with uncertain situations or optimising opportunities. Recommending appropriate change and solutions whilst proactively engaging with the wider organisation to identify areas for improvement and taking the necessary action to implement the changes.
+Has responsibility for the implementation of own development work and occasionally supports other team members in achieving their goals. Makes independent technical decisions on a regular basis and implements those decisions without reference to line management.  
+
+# Physical Effort  
+
+There is a frequent requirement for sitting or standing in a restricted position for a substantial proportion of the working time
+
+# Mental Effort  
+
+Frequent concentration required, occasional prolonged when dealing with complex coding requirements, checking function and capability using various techniques
+
+# Emotional Effort  
+
+Ability to work under pressure  
+The post holder may be required to manage expectation of users, when dealing with conflicting interests and may need to deliver unwelcome news to a customer if expectations cannot be achieved including the explanation of issues and delays to systems and services to customers and users.
+
+# Working Conditions  
+
+Use of VDU more or less continuously
