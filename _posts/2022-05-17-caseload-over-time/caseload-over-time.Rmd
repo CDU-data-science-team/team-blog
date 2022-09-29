@@ -108,7 +108,7 @@ INNER JOIN DateTable AS dt2 ON DischargeDate_sk = dt2.date_sk ---Discharge Date-
 
 --The sk dates need to be joined to the date tables to return a true date for the inner join
 
-INNER JOIN DateTable AS d3 ON ReferralDate <= d3.date AND DischargeDate > = d3.date
+INNER JOIN DateTable AS d3 ON dt1.date <= d3.date AND dt2.date > = d3.date
 
 WHERE d3.fin_year_name = '2018/19'
 GROUP BY Team
