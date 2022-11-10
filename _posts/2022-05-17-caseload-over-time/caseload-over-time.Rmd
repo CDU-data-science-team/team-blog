@@ -11,8 +11,7 @@ output:
   distill::distill_article:
     self_contained: false
 categories:
-  - Open source
-  - GitHub
+  - Analysis
 preview: img/a_text_book_of_mineralogy.jpg
 ---
 
