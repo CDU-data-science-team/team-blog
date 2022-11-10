@@ -13,6 +13,8 @@ output:
 categories:
   - Packages
   - Security
+  - GitHub
+  - Open Source
 preview: img/british-mineralogy-or-coloured-figures-p132.jpg
 ---
 

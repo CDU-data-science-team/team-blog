@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -129,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["github-sop_files/anchor-4.2.2/anchor.min.js","github-sop_files/bowser-1.9.3/bowser.min.js","github-sop_files/distill-2.2.21/template.v2.js","github-sop_files/header-attrs-2.11/header-attrs.js","github-sop_files/header-attrs-2.13/header-attrs.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.min.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.min.map","github-sop_files/popper-2.6.0/popper.min.js","github-sop_files/tippy-6.2.7/tippy-bundle.umd.min.js","github-sop_files/tippy-6.2.7/tippy-light-border.css","github-sop_files/tippy-6.2.7/tippy.css","github-sop_files/tippy-6.2.7/tippy.umd.min.js","github-sop_files/webcomponents-2.0.0/webcomponents.js","github-sop.Rmd~HEAD","preview_pic.jpg"]}
+  {"type":"character","attributes":{},"value":["github-sop.Rmd~HEAD","github-sop_files/anchor-4.2.2/anchor.min.js","github-sop_files/bowser-1.9.3/bowser.min.js","github-sop_files/distill-2.2.21/template.v2.js","github-sop_files/header-attrs-2.11/header-attrs.js","github-sop_files/header-attrs-2.13/header-attrs.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.min.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.min.map","github-sop_files/popper-2.6.0/popper.min.js","github-sop_files/tippy-6.2.7/tippy-bundle.umd.min.js","github-sop_files/tippy-6.2.7/tippy-light-border.css","github-sop_files/tippy-6.2.7/tippy.css","github-sop_files/tippy-6.2.7/tippy.umd.min.js","github-sop_files/webcomponents-2.0.0/webcomponents.js","preview_pic.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2423,7 +2424,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.17/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2514,27 +2515,32 @@ h1, h2, h3, h4, h5 {
 <p>We’ve been using GitHub in the CDU data science team since <a href="https://github.com/CDU-data-science-team/healthcareSPC/commit/b94d1f4390b58c09fc9820afd8c5eb91ac851a15">8th May 2020</a> (I think- that’s the oldest commit I could find). Team members past and present have used git and GitHub to varying degrees, often solo. Data science is a team sport, without question, but like any team sport it requires proper coordination between participants to be effective. Git and GitHub are very powerful tools, but they are hard to use well even when you’re collaborating just with yourself, and working well with others is another set of skills in itself. We’ve all made a lot of mistakes and learned a lot in the last two years, and this post is designed to codify some of this learning into a Standard Operating Procedure (SOP) for the benefit of team members past and present. And of course, we share it for the general benefit of others who might learn something from our experiences, and also in the hope that those with more/ different skills and knowledge might be able to help us refine it further (get in touch through the usual channels ☺️).</p>
 <h2 id="standard-operating-procedure">Standard operating procedure</h2>
 <h3 id="branches">Branches</h3>
-<p>We adopted <a href="https://nvie.com/posts/a-successful-git-branching-model/">gitflow</a> fairly early on as the team expanded and it worked very well for our purposes. I now see that there is a health warning on the linked post and gitflow is <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">deprecated elsewhere</a> in favour of something like <a href="https://docs.github.com/en/get-started/quickstart/github-flow">GitHub flow</a>. I’m not going to go into the differences here because it is not the focus of this post but there are some important differences and I can feel <em>another</em> blog post coming on about different models of using git and GitHub once I’ve discussed the matter with team members.</p>
-<p>The essential feature of gitflow as we’re using it is that there are three types of branches- main branch, which is the working code, development, which is a kind of “staging” branch where code can be worked on and tested and feature branches which either fix bugs or add new features. The main idea is that feature code is merged into the development branch and the development branch is periodically merged into the main branch. Each time you merge to main you do a point release with <a href="https://semver.org/">semantic versioning</a>.</p>
+<p>We adopted <a href="https://cdu-data-science-team.github.io/team-blog/posts/2022-05-03-creating-a-branch-and-using-issues/">gitflow</a> fairly early on as the team expanded and it worked very well for our purposes. I now see that there is a health warning on the linked post and gitflow is <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">deprecated elsewhere</a> in favour of something like <a href="https://docs.github.com/en/get-started/quickstart/github-flow">GitHub flow</a>. I’m not going to go into the differences here because it is not the focus of this post but there are some important differences and I can feel <em>another</em> blog post coming on about different models of using git and GitHub once I’ve discussed the matter with team members.</p>
+<p>The essential feature of gitflow as we’re using it is that there are three types of branches -</p>
+<ul>
+<li>main branch, which is the working code,</li>
+<li>development, which is a kind of “staging” branch where code can be worked on and</li>
+<li>tested and feature branches which either fix bugs or add new features</li>
+</ul>
+<p>The main idea is that feature code is merged into the development branch and the development branch is periodically merged into the main branch. Each time you merge to main you do a point release with <a href="https://semver.org/">semantic versioning</a>.</p>
 <p>We’ve all found that it works pretty well but it is overkill for simpler repos. The development branch is not necessary, and you can merge straight to main from a feature branch for simpler things, especially where it is mainly one person writing, maintaining, and using the code. For important stuff that we all use though, particularly <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/">{nottshcData}</a> the development branch is really useful because it means that we can all send PRs to a branch without worrying about untested code getting out into the wild.</p>
 <p>With all that said how have we found it best to use it in practice? A few points:</p>
 <ul>
-<li>Merge to development and main as frequently as possible. Especially from my point of view, as the team manager, I spend a lot of time on everyone’s repos, and if everything is tucked away in branches I can’t see it.</li>
-<li>Documentation should go straight to main, there is no need to use branches at all, or if a branch is used it can be continuously merged to main (in case anyone else is writing documentation)</li>
-<li>Branches should be deleted as soon as possible, for the same reason, <em>especially</em> if they include commits that are not on main. If they are ahead of main that implies that they could have useful stuff on, or be a failed experiment that needs binning. If you’re off sick and we’re running your code we don’t want to be wondering which it is</li>
+<li>Merge to development and main as frequently as possible. Especially from my point of view, as the team manager, I spend a lot of time on everyone’s repos, and if everything is tucked away in branches I can’t see it. * Documentation should go straight to main, there is no need to use branches at all, or if a branch is used it can be continuously merged to main (in case anyone else is writing documentation)</li>
+<li><a href="https://cdu-data-science-team.github.io/team-blog/posts/2022-04-13-keeping-git-branches-tidy/">Branches should be deleted as soon as possible</a>, for the same reason, <em>especially</em> if they include commits that are not on main. If they are ahead of main that implies that they could have useful stuff on, or be a failed experiment that needs binning. If you’re off sick and we’re running your code we don’t want to be wondering which it is</li>
 </ul>
 <h3 id="collaboration">Collaboration</h3>
 <p>There should be one person in charge of each repo. That person is responsible for making sure that the main branch is clean, bug free, and properly documented. If a team member spots something on someone else’s repo that either doesn’t work or doesn’t look right they should either file an issue (if it’s something that might need discussing) or make a pull request (PR) - if it’s a simple fix to formatting or documentation - I send lots of PRs like this. It is the responsibility of the lead for the repo to check the PR and to merge it in in a timely fashion, request changes to it, or reject it.</p>
 <p>Having a PR accepted is a privilege, not a right, so team members who want to improve a repo need to send a clean PR with a decent explanatory note in it. We might discuss over Slack or in person but in my opinion it’s better if that discussion happens on GitHub where possible because it means everyone, all team members and the open source community at large, can see it. I’m subscribed to all of the repos on our GitHub and I quite often spot areas for improvement or niggles by reading these discussions and it’s my job to understand the workflow and to suggest improvements.</p>
 <h3 id="issues">Issues</h3>
-<p>Bug reports and feature requests should all be filed as issues, again to increase transparency of ongoing work (within and without the team). Issues should be clearly worded with enough detail and should wherever possible include a <a href="https://www.tidyverse.org/help/#reprex">reprex</a>. We were bad with issues in the early days, jotting notes to each other that made a lot of sense at the time but within a month or so they were incomprehensible even to the author. Like code commenting and documentation a little work now can save a lot of confusion in the long run.</p>
+<p>Bug reports and feature requests should all be <a href="https://cdu-data-science-team.github.io/team-blog/posts/2022-05-03-creating-a-branch-and-using-issues/">filed as issues</a>, again to increase transparency of ongoing work (within and without the team). Issues should be clearly worded with enough detail and should wherever possible include a <a href="https://www.tidyverse.org/help/#reprex">reprex</a>. We were bad with issues in the early days, jotting notes to each other that made a lot of sense at the time but within a month or so they were incomprehensible even to the author. Like code commenting and documentation a little work now can save a lot of confusion in the long run.</p>
 <h4 id="reprexes">Reprexes</h4>
 <p>I really can’t say enough about the reprex. The beauty of a reprex for me is that at least half the time making the reprex solves the problem. Boiling the problem down to its essential elements improves your understanding of the problem to such a degree that it either disappears completely or you can PR the bug fix yourself. And when it doesn’t it’s so valuable to have it as the person receiving the issue. If you don’t include a reprex, basically, don’t expect a fix, unless there’s a really good reason why you can’t include one.</p>
 <h3 id="data-security">Data security</h3>
-<p>Data security is obviously really important when you’re using GitHub, even if it’s a prviate repo. The simplest way to keep data security is don’t keep data in a git controlled folder. If you don’t do that, you will never accidentally push data to a repo. It’s impossible. A lot of our code just gets stuff straight from the server and processes it all in place, so there really is no need a lot of the time to save data anywhere.</p>
-<p>If you absolutely must save data, for example if you have long running or complex data operations to complete, just make sure that you use .gitignore appropriately. My usual strategy is to have a folder called <code>secret</code>, and I add <code>secret/</code> to .gitignore. Do that and <em>check what you’re committing and pushing</em>.</p>
+<p>Data security is obviously really important when you’re using GitHub, even if it’s a private repo. The simplest way to keep data security is don’t keep data in a git controlled folder. If you don’t do that, you will never accidentally push data to a repo. It’s impossible. A lot of our code just gets stuff straight from the server and processes it all in place, so there really is no need a lot of the time to save data anywhere.</p>
+<p>If you absolutely must save data, for example if you have long running or complex data operations to complete, just make sure that you use <a href="https://cdu-data-science-team.github.io/team-blog/posts/2022-04-01-using-usethis-to-set-up-gitignore/">.gitignore</a> appropriately. My usual strategy is to have a folder called <code>secret</code>, and I add <code>secret/</code> to .gitignore. Do that and <em>check what you’re committing and pushing</em>.</p>
 <p>If the worst happens, and I should say the worst has never happened to us and I don’t think it ever will, you need to <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">destroy all the commits with the data in</a>.</p>
-<p>Data security is a very important area and in my very inexpert opinion using GitHub doesn’t make data any less secure. Using GitHub means that you are always thinking about what’s in your data and it reduces sloppy practices like storing credentials in code (which you should NEVER do, even if you’re not using git- <a href="https://db.rstudio.com/best-practices/managing-credentials/">store them in environment variables</a>). I read about so many information breaches from the NHS and they seem to be largely people emailing stuff about without concentrating. It’s complacency, they’re so used to everything being secure they forget what they’re doing.</p>
+<p>Data security is a very important area and in my very inexpert opinion using GitHub doesn’t make data any less secure. Using GitHub means that you are always thinking about what’s in your data and it reduces sloppy practices like storing credentials in code (which you should NEVER do, even if you’re not using git- <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens/">store them in environment variables</a>. I read about so many information breaches from the NHS and they seem to be largely people emailing stuff about without concentrating. It’s complacency, they’re so used to everything being secure they forget what they’re doing.</p>
 <h3 id="a-note-on-packages">A note on packages</h3>
 <p>This is not strictly about GitHub, but it fits in the general area of collaboration and so I wanted to include it. We have adopted R packages almost wholesale in the team (another blog post that needs to be written), but there is one minor problem that they introduce that I wanted to flag up here.</p>
 <p>People get into the habit of building the package as they go, and then they use the built package for their analysis. This is fine as far as it goes, but you should never deploy or share anything based on code that you built yourself. Before you share or deploy you need to merge to main, switch to a new session and install the code from GitHub. This ensures that the code that you are running is the same code we all have access to. We’ve all spent far too long debugging code that only exists on one person’s laptop, and if you’re off sick and we redeploy your stuff you want to make sure we deploy what you actually want, because we can’t access the built stuff on your laptop.</p>
@@ -2544,6 +2550,8 @@ h1, h2, h3, h4, h5 {
 <li><a href="https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable">GDS guidance</a></li>
 <li><a href="https://nhsrcommunity.com/blog/towards-open-health-analytics-our-guide-to-sharing-code-safely-on-github/">Health foundation guide to sharing code</a></li>
 <li><a href="https://chrisbeeley.github.io/notebook/docs/opensource/">A collection of links I curate</a></li>
+<li><a href="https://db.rstudio.com/best-practices/managing-credentials/">Best practice for managing credentials</a></li>
+<li><a href="https://nvie.com/posts/a-successful-git-branching-model/">GitFlow</a></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

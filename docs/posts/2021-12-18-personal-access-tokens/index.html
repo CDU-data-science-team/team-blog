@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -124,7 +125,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Personal Access Tokens"]},{"type":"character","attributes":{},"value":["Connecting to the GitHub to install packages from a private GitHub repository requires security \nset ups and this blog details how to do it (and how not to do it)."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Zoë Turner"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/Letxuga007"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["2021-12-17"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Packages","Security"]},{"type":"character","attributes":{},"value":["img/british-mineralogy-or-coloured-figures-p132.jpg"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Personal Access Tokens"]},{"type":"character","attributes":{},"value":["Connecting to the GitHub to install packages from a private GitHub repository requires security \nset ups and this blog details how to do it (and how not to do it)."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Zoë Turner"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/Letxuga007"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["2021-12-17"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Packages","Security","GitHub","Open Source"]},{"type":"character","attributes":{},"value":["img/british-mineralogy-or-coloured-figures-p132.jpg"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2423,7 +2424,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.17/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2497,9 +2498,12 @@ h1, h2, h3, h4, h5 {
 <div class="dt-tags">
   <a href="../../index.html#category:Packages" class="dt-tag">Packages</a>
   <a href="../../index.html#category:Security" class="dt-tag">Security</a>
+  <a href="../../index.html#category:GitHub" class="dt-tag">GitHub</a>
+  <a href="../../index.html#category:Open_Source" class="dt-tag">Open Source</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>Connecting to the GitHub to install packages from a private GitHub repository requires security set ups and this blog details how to do it (and how not to do it).</p></p>
+<p><p>Connecting to the GitHub to install packages from a private GitHub repository requires security
+set ups and this blog details how to do it (and how not to do it).</p></p>
 </div>
 
 <div class="d-byline">
@@ -2514,7 +2518,7 @@ h1, h2, h3, h4, h5 {
 <h2 id="check-you-have-a-token">Check you have a token</h2>
 <p>This part is the same for whatever method you use on your own computer as this section details how to get the GITHUB_PAT set up. To check for existing GITHUB_PAT use code:</p>
 <p><code>Sys.getenv("GITHUB_PAT")</code></p>
-<p>If nothing has been set up by you on GitHub this may return an empty string "".</p>
+<p>If nothing has been set up by you on GitHub this may return an empty string ““.</p>
 <h2 id="set-up-a-token">Set up a token</h2>
 <p>Firstly, go to <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a> which takes you to your own personal GitHub account settings where you will need to <code>Generate new token</code>. Give this a suitable name like <code>Repo access</code> and tick the <code>repo</code> group for full control of private repositories.</p>
 <p><em>Remember to copy the code that is generated as this cannot be viewed again</em></p>
@@ -2522,10 +2526,9 @@ h1, h2, h3, h4, h5 {
 <h2 id="packages-required">Packages required</h2>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"gitcreds"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"remotes"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"gitcreds"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"remotes"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>{usethis} suggests using the <a href="https://usethis.r-lib.org/articles/git-credentials.html">local Git credential store</a> quite strongly!</p>
@@ -2537,7 +2540,8 @@ h1, h2, h3, h4, h5 {
 
 </div>
 <p>GitHub will open and, if you are not already logged in, you will need to enter your (GitHub) password.</p>
-<p>The page for GitHub tokens management is <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a> and you can do the same as the code in this screen by selecting <code>Generate new token</code>. Give this a suitable name like <code>Package installation</code> and tick the <code>repo</code> group for full control of private repositories.</p>
+<p>The page for GitHub tokens management is <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a> and you can do the same as the code
+in this screen by selecting <code>Generate new token</code>. Give this a suitable name like <code>Package installation</code> and tick the <code>repo</code> group for full control of private repositories.</p>
 <p><em>Remember to copy the code that is generated as this cannot be viewed again</em></p>
 <p>Next set up a <code>GITHUB_PAT</code> in RStudio:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code></pre></div>
@@ -2560,7 +2564,8 @@ Enter an item from the menu, or 0 to exit
 Selection: </code></pre>
 <p>Reference: <a href="https://usethis.r-lib.org/articles/articles/git-credentials.html" class="uri">https://usethis.r-lib.org/articles/articles/git-credentials.html</a></p>
 <h2 id="installing">Installing</h2>
-<p>The {usethis} documentation suggests using {pak} but this may not work on network drives/VPNs (there are a few issues that have been opened and quickly closed referring to these as potential problems) and so in the meantime combining {remotes} with {gitcreds} is a workaround:</p>
+<p>The {usethis} documentation suggests using {pak} but this may not work on network drives/VPNs (there are a few issues that have been opened and quickly closed referring to these as potential problems) and so in the meantime
+combining {remotes} with {gitcreds} is a workaround:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;remotes&quot;)</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;&lt;name of GitHub account&gt;/&lt;name of repository&gt;&quot;</span>, </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">auth_token =</span> gitcreds<span class="sc">::</span><span class="fu">gitcreds_get</span>(<span class="at">use_cache =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>password)</span></code></pre></div>
@@ -2568,9 +2573,8 @@ Selection: </code></pre>
 <h2 id="packages-required-1">Packages required</h2>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"remotes"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"remotes"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>If you are sure this is what you want to do then type in RStudio:</p>

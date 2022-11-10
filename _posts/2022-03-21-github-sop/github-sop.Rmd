@@ -31,17 +31,22 @@ We've been using GitHub in the CDU data science team since [8th May 2020](https:
 
 ### Branches
 
-We adopted [gitflow](https://nvie.com/posts/a-successful-git-branching-model/) fairly early on as the team expanded and it worked very well for our purposes. I now see that there is a health warning on the linked post and gitflow is [deprecated elsewhere](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) in favour of something like [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow). I'm not going to go into the differences here because it is not the focus of this post but there are some important differences and I can feel *another* blog post coming on about different models of using git and GitHub once I've discussed the matter with team members.
+We adopted [gitflow](https://cdu-data-science-team.github.io/team-blog/posts/2022-05-03-creating-a-branch-and-using-issues/) fairly early on as the team expanded and it worked very well for our purposes. I now see that there is a health warning on the linked post and gitflow is [deprecated elsewhere](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) in favour of something like [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow). I'm not going to go into the differences here because it is not the focus of this post but there are some important differences and I can feel *another* blog post coming on about different models of using git and GitHub once I've discussed the matter with team members.
 
-The essential feature of gitflow as we're using it is that there are three types of branches- main branch, which is the working code, development, which is a kind of "staging" branch where code can be worked on and tested and feature branches which either fix bugs or add new features. The main idea is that feature code is merged into the development branch and the development branch is periodically merged into the main branch. Each time you merge to main you do a point release with [semantic versioning](https://semver.org/). 
+The essential feature of gitflow as we're using it is that there are three types of branches - 
+
+* main branch, which is the working code, 
+* development, which is a kind of "staging" branch where code can be worked on and 
+* tested and feature branches which either fix bugs or add new features 
+
+The main idea is that feature code is merged into the development branch and the development branch is periodically merged into the main branch. Each time you merge to main you do a point release with [semantic versioning](https://semver.org/). 
 
 We've all found that it works pretty well but it is overkill for simpler repos. The development branch is not necessary, and you can merge straight to main from a feature branch for simpler things, especially where it is mainly one person writing, maintaining, and using the code. For important stuff that we all use though, particularly [{nottshcData}](https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/) the development branch is really useful because it means that we can all send PRs to a branch without worrying about untested code getting out into the wild. 
 
 With all that said how have we found it best to use it in practice? A few points:
 
-* Merge to development and main as frequently as possible. Especially from my point of view, as the team manager, I spend a lot of time on everyone's repos, and if everything is tucked away in branches I can't see it. 
-* Documentation should go straight to main, there is no need to use branches at all, or if a branch is used it can be continuously merged to main (in case anyone else is writing documentation)
-* Branches should be deleted as soon as possible, for the same reason, *especially* if they include commits that are not on main. If they are ahead of main that implies that they could have useful stuff on, or be a failed experiment that needs binning. If you're off sick and we're running your code we don't want to be wondering which it is
+* Merge to development and main as frequently as possible. Especially from my point of view, as the team manager, I spend a lot of time on everyone's repos, and if everything is tucked away in branches I can't see it. * Documentation should go straight to main, there is no need to use branches at all, or if a branch is used it can be continuously merged to main (in case anyone else is writing documentation)
+* [Branches should be deleted as soon as possible](https://cdu-data-science-team.github.io/team-blog/posts/2022-04-13-keeping-git-branches-tidy/), for the same reason, *especially* if they include commits that are not on main. If they are ahead of main that implies that they could have useful stuff on, or be a failed experiment that needs binning. If you're off sick and we're running your code we don't want to be wondering which it is
 
 ### Collaboration
 
@@ -51,7 +56,7 @@ Having a PR accepted is a privilege, not a right, so team members who want to im
 
 ### Issues
 
-Bug reports and feature requests should all be filed as issues, again to increase transparency of ongoing work (within and without the team). Issues should be clearly worded with enough detail and should wherever possible include a [reprex](https://www.tidyverse.org/help/#reprex). We were bad with issues in the early days, jotting notes to each other that made a lot of sense at the time but within a month or so they were incomprehensible even to the author. Like code commenting and documentation a little work now can save a lot of confusion in the long run.
+Bug reports and feature requests should all be [filed as issues](https://cdu-data-science-team.github.io/team-blog/posts/2022-05-03-creating-a-branch-and-using-issues/), again to increase transparency of ongoing work (within and without the team). Issues should be clearly worded with enough detail and should wherever possible include a [reprex](https://www.tidyverse.org/help/#reprex). We were bad with issues in the early days, jotting notes to each other that made a lot of sense at the time but within a month or so they were incomprehensible even to the author. Like code commenting and documentation a little work now can save a lot of confusion in the long run.
 
 #### Reprexes
 
@@ -59,13 +64,13 @@ I really can't say enough about the reprex. The beauty of a reprex for me is tha
 
 ### Data security
 
-Data security is obviously really important when you're using GitHub, even if it's a prviate repo. The simplest way to keep data security is don't keep data in a git controlled folder. If you don't do that, you will never accidentally push data to a repo. It's impossible. A lot of our code just gets stuff straight from the server and processes it all in place, so there really is no need a lot of the time to save data anywhere.
+Data security is obviously really important when you're using GitHub, even if it's a private repo. The simplest way to keep data security is don't keep data in a git controlled folder. If you don't do that, you will never accidentally push data to a repo. It's impossible. A lot of our code just gets stuff straight from the server and processes it all in place, so there really is no need a lot of the time to save data anywhere.
 
-If you absolutely must save data, for example if you have long running or complex data operations to complete, just make sure that you use .gitignore appropriately. My usual strategy is to have a folder called `secret`, and I add `secret/` to .gitignore. Do that and *check what you're committing and pushing*. 
+If you absolutely must save data, for example if you have long running or complex data operations to complete, just make sure that you use [.gitignore](https://cdu-data-science-team.github.io/team-blog/posts/2022-04-01-using-usethis-to-set-up-gitignore/) appropriately. My usual strategy is to have a folder called `secret`, and I add `secret/` to .gitignore. Do that and *check what you're committing and pushing*. 
 
 If the worst happens, and I should say the worst has never happened to us and I don't think it ever will, you need to [destroy all the commits with the data in ](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
 
-Data security is a very important area and in my very inexpert opinion using GitHub doesn't make data any less secure. Using GitHub means that you are always thinking about what's in your data and it reduces sloppy practices like storing credentials in code (which you should NEVER do, even if you're not using git- [store them in environment variables](https://db.rstudio.com/best-practices/managing-credentials/)). I read about so many information breaches from the NHS and they seem to be largely people emailing stuff about without concentrating. It's complacency, they're so used to everything being secure they forget what they're doing. 
+Data security is a very important area and in my very inexpert opinion using GitHub doesn't make data any less secure. Using GitHub means that you are always thinking about what's in your data and it reduces sloppy practices like storing credentials in code (which you should NEVER do, even if you're not using git- [store them in environment variables](https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens/). I read about so many information breaches from the NHS and they seem to be largely people emailing stuff about without concentrating. It's complacency, they're so used to everything being secure they forget what they're doing. 
 
 ### A note on packages
 
@@ -79,5 +84,5 @@ People get into the habit of building the package as they go, and then they use 
 * [GDS guidance](https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable)
 * [Health foundation guide to sharing code](https://nhsrcommunity.com/blog/towards-open-health-analytics-our-guide-to-sharing-code-safely-on-github/)
 * [A collection of links I curate](https://chrisbeeley.github.io/notebook/docs/opensource/)
-
-
+* [Best practice for managing credentials](https://db.rstudio.com/best-practices/managing-credentials/)
+* [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/)
