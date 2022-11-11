@@ -1,0 +1,64 @@
+---
+title: "When things go wrong in GitHub"
+description: |
+  Avoiding mistakes and what to do when accidents happen in GitHub
+author:
+  - name: Zoë Turner
+    url:
+      https://twitter.com/letxuga007: {}
+      https://fosstodon.org/web/@Letxuga007: {}
+date: 2022-11-09
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Open source
+  - GitHub
+preview: img/grundzüge-der-mathematischen-Geographie-p78.jpg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Concerns around GitHub
+
+Any NHS organisation should be rightly concerned about how securely data is managed by analysts and data scientists, however, the worries often overlook that the dangers for Git/GitHub are the same as for using email, Microsoft Office documents like Excel and even Social Media which a lot of Trusts allow access to as part of people's work. As an example, sending out emails to a group of patients should always be in the blind copy, never in the To or CC but [it has been known to occur](https://www.theguardian.com/society/2019/sep/06/nhs-gender-identity-clinic-discloses-email-contacts-data-breach). Having asked our own IT how we could avoid this particular breach the response was that there wasn't a technological solution and we'd still have to rely upon people not revealing patients' emails by accident.
+
+Whilst the focus of concerns is around the very public nature of GitHub, the practices to mitigate against breaches should apply to all code, regardless of the use of these versioning tools as analysts/data scientists share their code with others using other methods, like email. 
+
+A good rule to avoid potential breaches is to **never ever have hard coded sensitive information** in your code. Sensitive information includes:
+
+* [connection strings](https://github.com/CDU-data-science-team/experiencesdashboard/blob/e8b10b791df83eb8f1d27a55a3a703d0b19575f6/data-raw/nhs_uk_upload.R#L68) to SQL servers  
+* [Personal Access Token codes](https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens/)   
+* patient information, even pseudonymised information, in code (for example using code like `filter(patientid == '12345')` or in SQL `WHERE patientid = '12345'`)  
+
+# Standard Operating Procedures
+
+Read more detail on our [Standard Operating Procedure](https://cdu-data-science-team.github.io/team-blog/posts/2022-03-21-github-sop/) on using Git/GitHub which has links to technical explanations and all posts can be found with the tags `Open Source` and `GitHub`.
+
+# When things go wrong
+
+Breaches can occur and if there are measures in place to ensure code is checked, hopefully, any breach will be spotted and can be removed. This works very well if you never commit to the `main` branch and pull requests are checked by one person. If something has been committed by accident, that second pair of eyes looking over the code should help to pick it up and the branch can be deleted from GitHub.
+
+[Removing a file with sensitive data](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) on `main` takes a bit more work than just deleting a branch as changes will have also been made in the GitHub commit history. Changing history means that collaborators will be affected as their repository will no longer match. Also, the solution offered by GitHub using the [BFG Repo-Cleaner](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository#purging-a-file-from-your-repositorys-history) requires software installation so might need to be part of any IG/IT assurance of risk mitigation plans. 
+
+If this isn't available to you it is still possible to purge a file and its commit history but as there are many different scenarios, whether something has been committed, pushed, being merged and so on, and a really comprehensive site on how to manage [undoing, fixing or removing commits](https://sethrobertson.github.io/GitFixUm/fixup.html) depending on the scenario is a good reference but no longer appears to be updated. This original reference has been extended though into a [TiddlyWiki](http://sukima.github.io/GitFixUm/) and continues to be maintained.
+
+# Disaster planning
+
+Lastly, something that the team hasn't done yet but we should consider strongly is practicing a disaster recovery plan. Whilst writing down what can and should be done in an incident is helpful to some extent, words cannot reduce the strong emotions and panic that naturally occur during such events and which in turn hinder logical thinking. Taking time to practice dealing with mistakes we can both refine the plans and also build up our resilience if the situation were ever to occur. 
+
+# Other suggestions
+
+### gitea self hosted Git service
+
+Having just moved to [Fosstodon](https://fosstodon.org/) (part of the [Mastadon](https://joinmastodon.org/) social network) I asked if anyone had any other resources to fix GitHub sensitive data mistakes and a suggestion was given to use a local [gitea](https://github.com/go-gitea/gitea) repo and then when ready commit to GitHub with a pull request. This means files can be double checked and also can reduce the commit history, the example being:
+
+> Original Repo: ~5000+ Pull Requests/Commits  
+Copied Repo: ~5 Pull Requests
+
+### Government Analysis Function
+
+Another link shared was for handling data breaches in the [Quality Assurance Code for Analysis and Research](https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html#handling-data-breaches-via-git). Steps not mentioned in this blog is to move an affected public repository to private if something has been committed as well as changing any passwords/keys that may have been revealed.

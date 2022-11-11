@@ -7,7 +7,18 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 21 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>When things go wrong in GitHub</title>
+      <dc:creator>Zoë Turner</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-11-09-when-things-go-wrong-in-github</link>
+      <description>Avoiding mistakes and what to do when accidents happen in GitHub</description>
+      <category>Open source</category>
+      <category>GitHub</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-11-09-when-things-go-wrong-in-github</guid>
+      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-11-09-when-things-go-wrong-in-github/img/grundzüge-der-mathematischen-Geographie-p78.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Data Scientist job</title>
       <dc:creator>Zoë Turner</dc:creator>
