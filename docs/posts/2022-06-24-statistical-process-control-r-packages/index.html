@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -124,7 +125,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Statistical Process Control (SPC) R Packages"]},{"type":"character","attributes":{},"value":["A quick introduction to the R packages available and how they are used by the team"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Zoë Turner"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/letxuga007"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]}]},{"type":"character","attributes":{},"value":["2022-06-24"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["SPC"]},{"type":"character","attributes":{},"value":["img/Two_Centuries_of_Soho_p311.jpg"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Statistical Process Control (SPC) R Packages"]},{"type":"character","attributes":{},"value":["A quick introduction to the R packages available and how they are used by the team"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Zoë Turner"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://twitter.com/letxuga007"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]}]},{"type":"character","attributes":{},"value":["2022-06-24"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["Statistical Process Control","Resources"]},{"type":"character","attributes":{},"value":["img/Two_Centuries_of_Soho_p311.jpg"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages/"]},{"type":"character","attributes":{},"value":["https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2423,7 +2424,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.17/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2495,11 +2496,11 @@ h1, h2, h3, h4, h5 {
 <h1>Statistical Process Control (SPC) R Packages</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-  <a href="../../index.html#category:SPC" class="dt-tag">SPC</a>
+  <a href="../../index.html#category:Statistical_Process_Control" class="dt-tag">Statistical Process Control</a>
+  <a href="../../index.html#category:Resources" class="dt-tag">Resources</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>A quick introduction to the R packages available and how they are
-used by the team</p></p>
+<p><p>A quick introduction to the R packages available and how they are used by the team</p></p>
 </div>
 
 <div class="d-byline">
@@ -2509,65 +2510,23 @@ used by the team</p></p>
 </div>
 
 <div class="d-article">
-<h1 id="statistical-process-control-spc">Statistical Process Control
-(SPC)</h1>
-<p>SPCs are very popular in analysis in the NHS and we are lucky now to
-have many resources available to understand, produce and explain SPC
-charts. In the NHS the resources used for SPC are promoted through an
-initiative called the <a
-href="https://www.england.nhs.uk/publication/making-data-count/">Making
-Data Count</a> hosted by NHS England and Improvement who have a <a
-href="https://future.nhs.uk/MDC/grouphome">FuturesNHS Workspace</a> of
-the same name and have templates in <a
-href="https://future.nhs.uk/MDC/view?objectId=22996592">SQL and
-Excel</a>.</p>
+<h1 id="statistical-process-control-spc">Statistical Process Control (SPC)</h1>
+<p>SPCs are very popular in analysis in the NHS and we are lucky now to have many resources available to understand, produce and explain SPC charts. In the NHS the resources used for SPC are promoted through an initiative called the <a href="https://www.england.nhs.uk/publication/making-data-count/">Making Data Count</a> hosted by NHS England and Improvement who have a <a href="https://future.nhs.uk/MDC/grouphome">FuturesNHS Workspace</a> of the same name and have templates in <a href="https://future.nhs.uk/MDC/view?objectId=22996592">SQL and Excel</a>.</p>
 <h1 id="r-packages">R packages</h1>
 <h2 id="qicharts2">qicharts2</h2>
-<p>Until very recently the main package used by the team has been <a
-href="https://cran.r-project.org/web/packages/qicharts2/index.html">{qicharts2}</a>,
-available through CRAN, which has a really good <a
-href="https://cran.r-project.org/web/packages/qicharts2/vignettes/qicharts2.html">vignette</a>
-to get started. The package include many types of SPC including charts
-for rare events. The package creator, Jacob Anhøj, has also run <a
-href="https://www.youtube.com/watch?v=pCaqwX7bDLs">workshops</a> and
-given <a href="https://www.youtube.com/watch?v=5HnW1YP3vTk">talks</a>
-(1:45:23) at the NHS-R conferences.</p>
-<p>Note that the run chart in qicharts2 uses an additional rule that
-Jacob Anhøj has written about in statistical journals and has <a
-href="https://nhsrcommunity.com/blog/a-run-chart-is-not-a-run-chart-is-not-a-run-chart/">blogged</a>
-about more generally for the NHS-R Community.</p>
+<p>Until very recently the main package used by the team has been <a href="https://cran.r-project.org/web/packages/qicharts2/index.html">{qicharts2}</a>, available through CRAN, which has a really good <a href="https://cran.r-project.org/web/packages/qicharts2/vignettes/qicharts2.html">vignette</a> to get started. The package include many types of SPC including charts for rare events. The package creator, Jacob Anhøj, has also run <a href="https://www.youtube.com/watch?v=pCaqwX7bDLs">workshops</a> and given <a href="https://www.youtube.com/watch?v=5HnW1YP3vTk">talks</a> (1:45:23) at the NHS-R conferences.</p>
+<p>Note that the run chart in qicharts2 uses an additional rule that Jacob Anhøj has written about in statistical journals and has <a href="https://nhsrcommunity.com/blog/a-run-chart-is-not-a-run-chart-is-not-a-run-chart/">blogged</a> about more generally for the NHS-R Community.</p>
 <h2 id="nhsrplotthedots">NHSRplotthedots</h2>
-<p>In response to the work around Making Data Count, many analysts in
-the NHS were using R to produce SPC charts but wanted to change the
-colours/add logos and use the NHS England/Improvement rules. Through the
-NHS-R Community the analysts were able to work together in collaboration
-to produce the <a
-href="https://github.com/nhs-r-community/NHSRplotthedots">{NHSRplotthedots}</a>
-package which is now on CRAN.</p>
+<p>In response to the work around Making Data Count, many analysts in the NHS were using R to produce SPC charts but wanted to change the colours/add logos and use the NHS England/Improvement rules. Through the NHS-R Community the analysts were able to work together in collaboration to produce the <a href="https://github.com/nhs-r-community/NHSRplotthedots">{NHSRplotthedots}</a> package which is now on CRAN.</p>
 <h2 id="charter-packages">charter packages</h2>
-<p><a href="https://www.johnmackintosh.net/">John Mackintosh</a>, an NHS
-data analyst/BI developer in Scotland, has created a series of charter
-packages that he uses in his work and has shared on GitHub and CRAN:</p>
-<p><a href="https://github.com/johnmackintosh/runcharter">runcharter</a>
-(github repository) CRAN <a
-href="https://github.com/johnmackintosh/cusumcharter">cusumcharter</a>
-(github repository) CRAN <a
-href="https://github.com/johnmackintosh/spccharter">spccharter</a></p>
-<p>These are particuarly good packages to use for analysing multiple
-charts at once.</p>
+<p><a href="https://www.johnmackintosh.net/">John Mackintosh</a>, an NHS data analyst/BI developer in Scotland, has created a series of charter packages that he uses in his work and has shared on GitHub and CRAN:</p>
+<p><a href="https://github.com/johnmackintosh/runcharter">runcharter</a> (github repository) CRAN
+<a href="https://github.com/johnmackintosh/cusumcharter">cusumcharter</a> (github repository) CRAN
+<a href="https://github.com/johnmackintosh/spccharter">spccharter</a></p>
+<p>These are particuarly good packages to use for analysing multiple charts at once.</p>
 <h2 id="funnel-plots">Funnel Plots</h2>
-<p>Another form of SPC which is very useful and often appears in Public
-Health analysis is the funnel plot. Public Health England (now UKHSA)
-have a few resources on how to<a
-href="https://fingertips.phe.org.uk/documents/TechnicalBriefing2Statisticalprocesscontrolmetho.pdf">use
-and interpret funnel plots</a> with a <a
-href="https://fingertips.phe.org.uk/documents/PHE%20Funnel%20plot%20tool%20for%20proportions.xls">spreadsheet
-template</a> and in R, the package <a
-href="https://github.com/nhs-r-community/FunnelPlotR">{FunnelPlotR}</a>
-has been created by Chris Mainey and can now be found on the NHS-R
-Community GitHub and is available on CRAN.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Another form of SPC which is very useful and often appears in Public Health analysis is the funnel plot. Public Health England (now UKHSA) have a few resources on how to<a href="https://fingertips.phe.org.uk/documents/TechnicalBriefing2Statisticalprocesscontrolmetho.pdf">use and interpret funnel plots</a> with a <a href="https://fingertips.phe.org.uk/documents/PHE%20Funnel%20plot%20tool%20for%20proportions.xls">spreadsheet template</a> and in R, the package <a href="https://github.com/nhs-r-community/FunnelPlotR">{FunnelPlotR}</a> has been created by Chris Mainey and can now be found on the NHS-R Community GitHub and is available on CRAN.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -15,6 +15,7 @@
       <description>Avoiding mistakes and what to do when accidents happen in GitHub</description>
       <category>Open source</category>
       <category>GitHub</category>
+      <category>Security</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-11-09-when-things-go-wrong-in-github</guid>
       <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
       <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-11-09-when-things-go-wrong-in-github/img/grundzüge-der-mathematischen-Geographie-p78.jpg" medium="image" type="image/jpeg"/>
@@ -54,7 +55,8 @@
       <dc:creator>Zoë Turner</dc:creator>
       <link>https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages</link>
       <description>A quick introduction to the R packages available and how they are used by the team</description>
-      <category>SPC</category>
+      <category>Statistical Process Control</category>
+      <category>Resources</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages</guid>
       <pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate>
       <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2022-06-24-statistical-process-control-r-packages/img/Two_Centuries_of_Soho_p311.jpg" medium="image" type="image/jpeg"/>
@@ -157,7 +159,7 @@ set ups and this blog details how to do it (and how not to do it).</description>
       <category>Packages</category>
       <category>Security</category>
       <category>GitHub</category>
-      <category>Open Source</category>
+      <category>Open source</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens</guid>
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
       <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2021-12-18-personal-access-tokens/img/british-mineralogy-or-coloured-figures-p132.jpg" medium="image" type="image/jpeg"/>
@@ -297,7 +299,7 @@ All our functions are grouped into R packages because this made it easier for us
       <dc:creator>Andreas Soteriades</dc:creator>
       <link>https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback</link>
       <description>An NHSE funded project to devise an application to automatically tag the content of patient feedback</description>
-      <category>Patient feedback</category>
+      <category>Patient Experience</category>
       <guid>https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback</guid>
       <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
       <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2020-12-14-classification-of-patient-feedback/img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection-96.jpg" medium="image" type="image/jpeg"/>

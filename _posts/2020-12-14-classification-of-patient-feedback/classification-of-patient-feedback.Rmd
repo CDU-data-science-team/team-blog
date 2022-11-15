@@ -9,7 +9,7 @@ output:
   distill::distill_article:
     self_contained: false
 categories:
-  - Patient feedback    
+  - Patient Experience 
 preview: img/grundzüge-der-mathematischen-geographie-und-der-landkartenprojection-96.jpg
 ---
 
