@@ -11,7 +11,8 @@ output:
   distill::distill_article:
     self_contained: false
 categories:
-  - SPC
+  - Statistical Process Control
+  - Resources
 preview: img/Two_Centuries_of_Soho_p311.jpg
 ---
 
