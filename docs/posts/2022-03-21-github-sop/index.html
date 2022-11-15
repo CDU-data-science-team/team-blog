@@ -130,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["github-sop.Rmd~HEAD","github-sop_files/anchor-4.2.2/anchor.min.js","github-sop_files/bowser-1.9.3/bowser.min.js","github-sop_files/distill-2.2.21/template.v2.js","github-sop_files/header-attrs-2.11/header-attrs.js","github-sop_files/header-attrs-2.13/header-attrs.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.min.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.min.map","github-sop_files/popper-2.6.0/popper.min.js","github-sop_files/tippy-6.2.7/tippy-bundle.umd.min.js","github-sop_files/tippy-6.2.7/tippy-light-border.css","github-sop_files/tippy-6.2.7/tippy.css","github-sop_files/tippy-6.2.7/tippy.umd.min.js","github-sop_files/webcomponents-2.0.0/webcomponents.js","preview_pic.jpg"]}
+  {"type":"character","attributes":{},"value":["github-sop.Rmd~HEAD","github-sop_files/anchor-4.2.2/anchor.min.js","github-sop_files/bowser-1.9.3/bowser.min.js","github-sop_files/distill-2.2.21/template.v2.js","github-sop_files/header-attrs-2.11/header-attrs.js","github-sop_files/header-attrs-2.13/header-attrs.js","github-sop_files/header-attrs-2.17/header-attrs.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.min.js","github-sop_files/jquery-3.6.0/jquery-3.6.0.min.map","github-sop_files/popper-2.6.0/popper.min.js","github-sop_files/tippy-6.2.7/tippy-bundle.umd.min.js","github-sop_files/tippy-6.2.7/tippy-light-border.css","github-sop_files/tippy-6.2.7/tippy.css","github-sop_files/tippy-6.2.7/tippy.umd.min.js","github-sop_files/webcomponents-2.0.0/webcomponents.js","preview_pic.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2544,6 +2544,8 @@ h1, h2, h3, h4, h5 {
 <h3 id="a-note-on-packages">A note on packages</h3>
 <p>This is not strictly about GitHub, but it fits in the general area of collaboration and so I wanted to include it. We have adopted R packages almost wholesale in the team (another blog post that needs to be written), but there is one minor problem that they introduce that I wanted to flag up here.</p>
 <p>People get into the habit of building the package as they go, and then they use the built package for their analysis. This is fine as far as it goes, but you should never deploy or share anything based on code that you built yourself. Before you share or deploy you need to merge to main, switch to a new session and install the code from GitHub. This ensures that the code that you are running is the same code we all have access to. We’ve all spent far too long debugging code that only exists on one person’s laptop, and if you’re off sick and we redeploy your stuff you want to make sure we deploy what you actually want, because we can’t access the built stuff on your laptop.</p>
+<p><em>Edit</em></p>
+<p>To add to this there is a specific post on <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-package-workflow/">package workflow</a> for development which has much of what is written here and acts as a reminder of all the steps to cover.</p>
 <h3 id="helpful-resources">Helpful resources</h3>
 <ul>
 <li><a href="https://github.com/nhsx/open-source-policy">NHSX draft guidance</a></li>
