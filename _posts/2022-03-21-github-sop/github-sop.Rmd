@@ -78,6 +78,10 @@ This is not strictly about GitHub, but it fits in the general area of collaborat
 
 People get into the habit of building the package as they go, and then they use the built package for their analysis. This is fine as far as it goes, but you should never deploy or share anything based on code that you built yourself. Before you share or deploy you need to merge to main, switch to a new session and install the code from GitHub. This ensures that the code that you are running is the same code we all have access to. We've all spent far too long debugging code that only exists on one person's laptop, and if you're off sick and we redeploy your stuff you want to make sure we deploy what you actually want, because we can't access the built stuff on your laptop.
 
+*Edit*
+
+To add to this there is a specific post on [package workflow](https://cdu-data-science-team.github.io/team-blog/posts/2021-12-17-package-workflow/) for development which has much of what is written here and acts as a reminder of all the steps to cover.
+
 ### Helpful resources
 
 * [NHSX draft guidance](https://github.com/nhsx/open-source-policy)

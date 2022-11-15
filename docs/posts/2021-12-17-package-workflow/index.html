@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -129,7 +130,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["img/amend-previous-commit.PNG","img/follow-repository.PNG","img/git-branch.PNG","img/git-history-tab.PNG","img/git-history.PNG","img/system-of-mineralogy-comprehending-oryctognosie-p687.jpg","img/tag-in-commits.PNG","img/task-list-issue.PNG","package-workflow_files/anchor-4.2.2/anchor.min.js","package-workflow_files/bowser-1.9.3/bowser.min.js","package-workflow_files/distill-2.2.21/template.v2.js","package-workflow_files/header-attrs-2.11.3/header-attrs.js","package-workflow_files/jquery-3.6.0/jquery-3.6.0.js","package-workflow_files/jquery-3.6.0/jquery-3.6.0.min.js","package-workflow_files/jquery-3.6.0/jquery-3.6.0.min.map","package-workflow_files/popper-2.6.0/popper.min.js","package-workflow_files/tippy-6.2.7/tippy-bundle.umd.min.js","package-workflow_files/tippy-6.2.7/tippy-light-border.css","package-workflow_files/tippy-6.2.7/tippy.css","package-workflow_files/tippy-6.2.7/tippy.umd.min.js","package-workflow_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["img/amend-previous-commit.PNG","img/follow-repository.PNG","img/git-branch.PNG","img/git-history-tab.PNG","img/git-history.PNG","img/screenshot_github_files_changed.JPG","img/system-of-mineralogy-comprehending-oryctognosie-p687.jpg","img/tag-in-commits.PNG","img/task-list-issue.PNG","package-workflow_files/anchor-4.2.2/anchor.min.js","package-workflow_files/bowser-1.9.3/bowser.min.js","package-workflow_files/distill-2.2.21/template.v2.js","package-workflow_files/header-attrs-2.11.3/header-attrs.js","package-workflow_files/header-attrs-2.13/header-attrs.js","package-workflow_files/header-attrs-2.17/header-attrs.js","package-workflow_files/jquery-3.6.0/jquery-3.6.0.js","package-workflow_files/jquery-3.6.0/jquery-3.6.0.min.js","package-workflow_files/jquery-3.6.0/jquery-3.6.0.min.map","package-workflow_files/popper-2.6.0/popper.min.js","package-workflow_files/tippy-6.2.7/tippy-bundle.umd.min.js","package-workflow_files/tippy-6.2.7/tippy-light-border.css","package-workflow_files/tippy-6.2.7/tippy.css","package-workflow_files/tippy-6.2.7/tippy.umd.min.js","package-workflow_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2423,7 +2424,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.17/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2500,8 +2501,8 @@ h1, h2, h3, h4, h5 {
   <a href="../../index.html#category:Teamwork" class="dt-tag">Teamwork</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>From a team time session discussing the workflow to contributing
-to a (currently) private package</p></p>
+<p><p>From a team time session discussing the workflow to contributing to a
+(currently) private package</p></p>
 </div>
 
 <div class="d-byline">
@@ -2511,66 +2512,35 @@ to a (currently) private package</p></p>
 </div>
 
 <div class="d-article">
+<h1 id="update">Update</h1>
+<p>This post was edited in November 2022 with learnings that the team had since the post was originally written in 2021. Rather than writing a new post sections have been added with <em>Edit</em>.</p>
+<p>Many other posts have been added with more technical detail and are tagged in the blog with <kbd>Github</kbd> and <kbd>Open source</kbd>.</p>
 <h1 id="team-time">Team time</h1>
-<p>Our team has regular team times but which don’t always focus on code.
-Quite often we use the opportunity to talk through processes and
-approaches to analysis and these notes reflect a recent code review
-where were discussed some of our learning on package development and
-workflow using GitHub for our (currently) private repository that takes
-data from the SQL data warehouses and makes it tidy following on from
-Milan Wiedemann’s <a
-href="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/">nottshcverse</a>.</p>
-<p>These are some of the agreed points and discussions we had about some
-of the processes that have developed organically through working
-collaboratively. This process is very flexible and may change over time
-depending on our own developing skills or from others’ input (we are
-always keen to know how to improve our workflows!) so this blog may be
-changed or superseded in the future.</p>
+<p>Our team has regular team times but which don’t always focus on code. Quite often we use the opportunity to talk through processes and approaches to analysis and these notes reflect a recent code review where were discussed some of our learning on package development and workflow using GitHub for our (currently) private repository that takes data from the SQL data warehouses and makes it tidy following on from Milan Wiedemann’s <a href="https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/">nottshcverse</a>.</p>
+<p>These are some of the agreed points and discussions we had about some of the processes that have developed organically through working collaboratively. This process is very flexible and may change over time depending on our own developing skills or from others’ input (we are always keen to know how to improve our workflows!) so this blog may be changed or superseded in the future.</p>
 <p>Currently we are using a basic workflow of:</p>
-<p>issue -&gt; create a branch -&gt; branch to development -&gt;
-development to main -&gt; package installed on people’s machines and on
-the R Studio Connect server</p>
+<p>issue -&gt; create a branch -&gt; branch to development -&gt; development to main -&gt; package installed on people’s machines and on the R Studio Connect server</p>
+<p><em>Edit</em></p>
+<p>Only one person should be responsible for the package and accepting pull requests. If several people can contribute it is now possible in GitHub to add specific branch protection rules (found in Settings in the repo) like requiring a pull request before merging. Always have a fresh look at the files changed in GitHub, even if you are working on the package alone. These can be found in the Pull request under Files changed:</p>
+<figure>
+<img src="img/screenshot_github_files_changed.JPG" alt="Screenshot of the tabs in a GitHub Pull request with Files changed (41) highlighted" />
+<figcaption aria-hidden="true">Screenshot of the tabs in a GitHub Pull request with Files changed (41) highlighted</figcaption>
+</figure>
 <h1 id="start-with-an-issue">Start with an issue</h1>
-<p>Issues are not just for bugs and should also be used for features and
-questions. The benefits of issues are that they are highly searchable
-and can show thinking on subjects from something that may be a question
-becoming a feature. If people are following the repository they will be
-notified of any issues. You can also @ specific people in the issue
-itself which is good if you are the owner of the issue but want input
-from someone.</p>
+<p>Issues are not just for bugs and should also be used for features and questions. The benefits of issues are that they are highly searchable and can show thinking on subjects from something that may be a question becoming a feature. If people are following the repository they will be notified of any issues. You can also @ specific people in the issue itself which is good if you are the owner of the issue but want input from someone.</p>
 <figure>
-<img src="img/follow-repository.PNG"
-alt="Screenshot of GitHub repository with the Watch button in the top right highlighted" />
-<figcaption aria-hidden="true">Screenshot of GitHub repository with the
-Watch button in the top right highlighted</figcaption>
+<img src="img/follow-repository.PNG" alt="Screenshot of GitHub repository with the Watch button in the top right highlighted" />
+<figcaption aria-hidden="true">Screenshot of GitHub repository with the Watch button in the top right highlighted</figcaption>
 </figure>
-<p>Issues often have one thing detailed but can have many parts to them
-in a task list:</p>
+<p>Issues often have one thing detailed but can have many parts to them in a task list:</p>
 <figure>
-<img src="img/task-list-issue.PNG"
-alt="Screenshot of an issue with tasks listed, some ticked" />
-<figcaption aria-hidden="true">Screenshot of an issue with tasks listed,
-some ticked</figcaption>
+<img src="img/task-list-issue.PNG" alt="Screenshot of an issue with tasks listed, some ticked" />
+<figcaption aria-hidden="true">Screenshot of an issue with tasks listed, some ticked</figcaption>
 </figure>
-<p>The tasks can be ticked in the viewing mode without having to go to
-the code. To get the task list box type <code>- [ ]</code> and when it
-is ticked it becomes <code>- [X]</code>. Note that this is sensitive to
-spaces so any extra spaces will just show the code on the view mode.</p>
-<p>We agreed in our team time that all issues, even questions, should be
-closed with a good summary of why it’s closed. For example, we had an
-issue discussing whether it could be a feature to combine functions that
-were reliant on each other to save typing them out in analysis. This led
-to a discussion which resulted in no changes to the code (i.e. no
-branches) but the issue was closed with a detail on why no work was
-started on it. This is useful for knowledge sharing with other
-colleagues, and maybe even the future you, if the suggestion were ever
-to come up again</p>
+<p>The tasks can be ticked in the viewing mode without having to go to the code. To get the task list box type <code>- [ ]</code> and when it is ticked it becomes <code>- [X]</code>. Note that this is sensitive to spaces so any extra spaces will just show the code on the view mode.</p>
+<p>We agreed in our team time that all issues, even questions, should be closed with a good summary of why it’s closed. For example, we had an issue discussing whether it could be a feature to combine functions that were reliant on each other to save typing them out in analysis. This led to a discussion which resulted in no changes to the code (i.e. no branches) but the issue was closed with a detail on why no work was started on it. This is useful for knowledge sharing with other colleagues, and maybe even the future you, if the suggestion were ever to come up again</p>
 <h1 id="create-a-branch">Create a branch</h1>
-<p>From an issue a branch will need to be created and however you do
-this, either through R Studio or the terminal, ensure that the name
-starts with the number from the issue. The following is an image from
-the terminal in R Studio which shows all the branches in the project
-from the command <code>git branch</code>.</p>
+<p>From an issue a branch will need to be created and however you do this, either through R Studio or the terminal, ensure that the name starts with the number from the issue. The following is an image from the terminal in R Studio which shows all the branches in the project from the command <code>git branch</code>.</p>
 <pre><code>$ git branch
   101-test-colm-names
   101-test-column-names
@@ -2582,140 +2552,76 @@ from the command <code>git branch</code>.</p>
   change_calc_tot
   connections
   development</code></pre>
-<p>The active branch has a star next to it or appears in a different
-colour depending on the terminal and settings being used.</p>
-<p>One of the downsides of not linking issues to branches is that any
-information on the work being done (difficulties or thoughts on the
-work) could be somewhere like a README but that is version controlled in
-code. Issues allow a form of version control but more in a sense of a
-conversation.</p>
+<p>The active branch has a star next to it or appears in a different colour depending on the terminal and settings being used.</p>
+<p>One of the downsides of not linking issues to branches is that any information on the work being done (difficulties or thoughts on the work) could be somewhere like a README but that is version controlled in code. Issues allow a form of version control but more in a sense of a conversation.</p>
+<p><em>Edit</em></p>
+<p>After working with GitHub for a while we’ve agreed to try to keep branches to a minimum as it can get very confusing having a lot of redundant branches.</p>
 <h1 id="updating-the-branches">Updating the branches</h1>
-<p>Some work/features take a long time to complete, and in the meantime
-the <code>development</code> and/or <code>main</code> branches could
-have changed. This can be a good thing but can also mean that you may be
-repeating some work that has already been done, for example, formatting
-some code so that it is within 80 characters which is what our team has
-agreed to do for code scripts.</p>
-<p>To update the local branch from another there are two git commands
-that can be used, either <code>fetch</code> or <code>pull</code>.</p>
-<p><code>$ git pull origin main</code> does the <code>fetch</code> and
-merges. It only shows the changes if there is a conflict and is ok to
-use if you trust that the code works on the branch you are pulling
-from.</p>
-<p><code>$ git fetch origin main</code> will not necessarily look like
-it’s done anything as the files will not be updated or changed, but it
-does update all the metadata on the changes. <code>fetch</code> is
-really good to use if you only want to take some of the changes, but not
-all.</p>
-<p>Further information on how to use <code>git fetch</code> <a
-href="https://www.atlassian.com/git/tutorials/syncing/git-fetch"
-class="uri">https://www.atlassian.com/git/tutorials/syncing/git-fetch</a>.</p>
-<h1 id="development-branch">Development branch</h1>
-<p>For this package we have agreed to have branches merge to
-<code>development</code> before being merged (once tested and used in
-actual analysis) into <code>main.</code> This means that the
-<code>development</code> branch can rapidly move on in versions compared
-to <code>main</code>. We originally did releases on both
-<code>main</code> (through GitHub) and on <code>development</code> using
-<code>usethis::use_version()</code> which updates the version in
-<code>DESCRIPTION</code> and creates/updates a <code>NEWS.md</code> file
-which is a good way of keeping track of changes.</p>
-<p>To “release” on GitHub and match this documented version the steps
-are outlined here: <a
-href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository"
-class="uri">https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository</a></p>
+<p>Some work/features take a long time to complete, and in the meantime the <code>development</code> and/or <code>main</code> branches could have changed. This can be a good thing but can also mean that you may be repeating some work that has already been done, for example, formatting some code so that it is within 80 characters which is what our team has agreed to do for code scripts.</p>
+<p>To update the local branch from another there are two git commands that can be used, either <code>fetch</code> or <code>pull</code>.</p>
+<p><code>$ git pull origin main</code> does the <code>fetch</code> and merges. It only shows the changes if there is a conflict and is ok to use if you trust that the code works on the branch you are pulling from.</p>
+<p><code>$ git fetch origin main</code> will not necessarily look like it’s done anything as the files will not be updated or changed, but it does update all the metadata on the changes. <code>fetch</code> is really good to use if you only want to take some of the changes, but not all.</p>
+<p>Further information on how to use <code>git fetch</code> <a href="https://www.atlassian.com/git/tutorials/syncing/git-fetch" class="uri">https://www.atlassian.com/git/tutorials/syncing/git-fetch</a>.</p>
+<h1 id="development-branch-and-different-versions">Development branch and different versions</h1>
+<p>When working collaboratively with someone on code it can be very easy to have a different version of the package so we’ve agreed to always build from the <code>main</code> branch. We do this directly from GitHub to ensure we are all building from the same code:</p>
+<p><em>Edit</em></p>
+<pre><code># Example code published on a README to help people load from main:
+# install.packages(&quot;remotes&quot;)
+remotes::install_github(&quot;CDU-data-science-team/nottshcPackage&quot;)</code></pre>
+<p>However, when working locally from <code>development</code> or from another branch we suggest using {devtools} and loading the package to the session using <kbd>Ctrl + Shift + l</kbd>.</p>
+<p>If the workflow was to always <code>Build</code>, <kbd>Ctrl + Shift + b</kbd> or from GitHub:</p>
+<pre><code># Example code published on a README to help people load from development:
+# install.packages(&quot;remotes&quot;)
+remotes::install_github(&quot;CDU-data-science-team/nottshcPackage@development&quot;)</code></pre>
+<p>it may cause issues with analysis as it will be the package all sessions use. It very easy to build from an experimental branch but then forget, do some analysis using the package and not realise that the package is different to <code>main</code>, which in turn is different to the team’s version and the R Studio Connect version.</p>
+<p>We discovered that, as it says above, <code>development</code> can move on rapidly from <code>main</code> so it’s good to ensure versioning is carried from <code>development</code> to <code>main</code>. This helps identify what version people are working from. As an example, <code>main</code> may be v0.15.0 in its stable form but <code>development</code> is v.0.17.0. Ideally the move to <code>main</code> will be as rapid as possible but can be disruptive to analytical end users so needs to be done with everyone’s knowledge. To do this we try to meet before any merge from <code>development</code> to <code>main</code> to go through the changes. This helps the end users of the package know what to expect and if anything has changed in the back end (like refactoring code) the end users are aware some changes have been made if things don’t work as expected.</p>
+<p>Talking through changes is also a really good sense check and that all documentation has been done.</p>
+<h1 id="versioning-packages">Versioning packages</h1>
+<p><em>Edit</em></p>
+<h2 id="using-usethis-for-version-and-news.md">Using {usethis} for version and NEWS.md</h2>
+<p>The {usethis} package can be used for updating documentation on the version in the <code>DESCRIPTION.R</code> file and the <code>NEWS.md</code> file. {usethis} can be used to set up a new <code>NEWS.md</code> file:</p>
+<pre><code>usethis::use_news_md()
+</code></pre>
+<p>and this is a great place to write about the package changes. These are now mostly about end user function additions or bugs, rather than internal changes like refactoring as the latter can cause confusion to users, particularly when the effects are minimal to their analysis.</p>
+<p>Versioning is best used on <code>development</code> and the types used are: <a href="https://usethis.r-lib.org/reference/use_version.html">major, minor, patch and dev</a>. For the most part the team’s packages have had minor versions with a few patches.</p>
+<h2 id="github-releases">GitHub releases</h2>
+<p>Once on <code>main</code> it is good practice to use the <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">Releases in GitHub</a> (on the right hand side of the main page) which often have the same information in them as the <code>NEWS.md</code> but is a good way to bundle up all the files together for any bug fixes. The team needed this once where a bug had been introduced into <code>main</code> but had been working on a previous version - however, a few versions back. Being able to reinstall the more stable, much older, version helped with analysis that was required urgently.</p>
 <h2 id="tagging-commits-in-git">Tagging commits in git</h2>
-<p>However, in team time we agreed that releases should only be on
-<code>main</code> and to keep a track on version in
-<code>development</code> we will instead use tags through Git.</p>
-<p>We did a test tag in the Terminal:
-<code>git tag -a v0.9.1 -m "Testing (and there is a still a bug)"</code>
-and checked in R Studio, in the Commit History, to see if the tag was
-listed as this will be a good way to check people’s versions of the
-package when working collaboratively.</p>
-<p>Further information on tagging commits in git: <a
-href="https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag"
-class="uri">https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag</a></p>
-<h1 id="checking-versions">Checking versions</h1>
-<p>When working collaboratively with someone on code it can be very easy
-to have a different version of the package so we’ve agreed to always
-build from the <code>main</code> branch. We do this directly from GitHub
-to ensure we are all building from the same code. However, when working
-locally from <code>development</code> or from another branch we suggest
-using {devtools} and loading the package to the session using
-<code>Ctrl + Shift + L</code>.</p>
-<p>If the workflow was to always <code>Build</code>, it may cause issues
-with analysis as it will be the package all sessions use. It very easy
-to build from an experimental branch but then forget, do some analysis
-using the package and not realise that the package is different to
-<code>main</code>, which in turn is different to the team’s version and
-the R Studio Connect version.</p>
-<h2 id="tagged-commits">Tagged commits</h2>
-<p>To check for tags, in R Studio, in the Git panel (top right as
-default) and the history icon of a clock.</p>
+<p>In team time we agreed that releases should only be on <code>main</code> and to keep a track on version in <code>development</code> we will instead use tags through Git.</p>
+<p>We did a test tag in the Terminal: <code>git tag -a v0.9.1 -m "Testing (and there is a still a bug)"</code> and checked in R Studio, in the Commit History, to see if the tag was listed as this will be a good way to check people’s versions of the package when working collaboratively.</p>
+<p>Further information on tagging commits in git: <a href="https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag" class="uri">https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag</a></p>
+<h2 id="finding-tagged-commits">Finding tagged commits</h2>
+<p>To check for tags, in R Studio, in the Git panel (top right as default) and the history icon of a clock.</p>
 <figure>
-<img src="img/git-history.PNG"
-alt="Screenshot of the top right panel icons with the clock highlighted for History" />
-<figcaption aria-hidden="true">Screenshot of the top right panel icons
-with the clock highlighted for History</figcaption>
+<img src="img/git-history.PNG" alt="Screenshot of the top right panel icons with the clock highlighted for History" />
+<figcaption aria-hidden="true">Screenshot of the top right panel icons with the clock highlighted for History</figcaption>
 </figure>
-<p>It’s also possible to get to the same screen by selecting the Commit
-button and then the history tab.</p>
+<p>It’s also possible to get to the same screen by selecting the Commit button and then the history tab.</p>
 <figure>
-<img src="img/git-history-tab.PNG"
-alt="Screenshot of the Commit window with the tab history hightlighted" />
-<figcaption aria-hidden="true">Screenshot of the Commit window with the
-tab history hightlighted</figcaption>
+<img src="img/git-history-tab.PNG" alt="Screenshot of the Commit window with the tab history hightlighted" />
+<figcaption aria-hidden="true">Screenshot of the Commit window with the tab history hightlighted</figcaption>
 </figure>
-<p>In the commit history pane the tagged commit has a slightly different
-colour as well as being its own commit.</p>
+<p>In the commit history pane the tagged commit has a slightly different colour as well as being its own commit.</p>
 <figure>
-<img src="img/tag-in-commits.PNG"
-alt="Screenshot with the tag version highlighted" />
-<figcaption aria-hidden="true">Screenshot with the tag version
-highlighted</figcaption>
+<img src="img/tag-in-commits.PNG" alt="Screenshot with the tag version highlighted" />
+<figcaption aria-hidden="true">Screenshot with the tag version highlighted</figcaption>
 </figure>
-<h1 id="words-of-caution-with-commits">Words of caution with
-commits</h1>
-<h4 id="why-you-should-write-informative-commits">Why you should write
-informative commits</h4>
-<p>As we were discussing how good messages in commits can help located
-older versions of code, we realised that the link to the issue or the
-branch is lost from the commits once merged to another branch.
-Consequently, commits like “Fixed” won’t necessarily make sense when
-removed from the context like it being on a branch called
-<code>207-code10-error</code>. There is no reference in “Fixed” as to
-what was changed or what the error/problem was. It’s therefore advisable
-to get into the habit of writing informative commits as if you were
-writing them to someone else even if, at the moment, you may be the only
-one working on the project.</p>
+<p><em>Edit</em></p>
+<p>The team hasn’t needed to use a Git tag yet but it’s a good “bookmark” within the commit history to show when certain changes have been made.</p>
+<h1 id="words-of-caution-with-commits">Words of caution with commits</h1>
+<h4 id="why-you-should-write-informative-commits">Why you should write informative commits</h4>
+<p>As we were discussing how good messages in commits can help located older versions of code, we realised that the link to the issue or the branch is lost from the commits once merged to another branch. Consequently, commits like “Fixed” won’t necessarily make sense when removed from the context like it being on a branch called <code>207-code10-error</code>. There is no reference in “Fixed” as to what was changed or what the error/problem was. It’s therefore advisable to get into the habit of writing informative commits as if you were writing them to someone else even if, at the moment, you may be the only one working on the project.</p>
 <h4 id="when-to-commit">When to commit</h4>
-<p>We had a divergence in the team about whether to commit chunks of
-working code or smaller steps. This was really down to personal
-preference but which were both based in differences in approaches to
-locating historic code changes. The ‘lots of commits’ approach can be a
-lot of text to go through to find when the code last ‘worked’. However,
-many individual commits for particular actions can make it easier to
-pull out one commit that needs removing rather than re-work whole
-chunks.</p>
-<p>One thing we did all agree on was that the first commit is usually a
-large chunk of code and is often committed as
-<code>--First commit</code> or something similar. We also all had used
-the Amend previous commit in R Studio.</p>
+<p>We had a divergence in the team about whether to commit chunks of working code or smaller steps. This was really down to personal preference but which were both based in differences in approaches to locating historic code changes. The ‘lots of commits’ approach can be a lot of text to go through to find when the code last ‘worked’. However, many individual commits for particular actions can make it easier to pull out one commit that needs removing rather than re-work whole chunks.</p>
+<p>One thing we did all agree on was that the first commit is usually a large chunk of code and is often committed as <code>--First commit</code> or something similar. We also all had used the Amend previous commit in R Studio.</p>
 <figure>
-<img src="img/amend-previous-commit.PNG"
-alt="Screenshot of the commit pan from R Studio with the Amend Previous Commit highlighted" />
-<figcaption aria-hidden="true">Screenshot of the commit pan from R
-Studio with the Amend Previous Commit highlighted</figcaption>
+<img src="img/amend-previous-commit.PNG" alt="Screenshot of the commit pan from R Studio with the Amend Previous Commit highlighted" />
+<figcaption aria-hidden="true">Screenshot of the commit pan from R Studio with the Amend Previous Commit highlighted</figcaption>
 </figure>
-<p>Ticking this button takes you to the last commit which can be changed
-and it also means that you can add new files or changed files to the
-commit that you may have missed. Changing the last commit doesn’t work
-so well though if the commits have already been pushed as that will put
-the two last commits out of synch and that requires it’s own blog in how
-to rectify!</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Ticking this button takes you to the last commit which can be changed and it also means that you can add new files or changed files to the commit that you may have missed. Changing the last commit doesn’t work so well though if the commits have already been pushed as that will put the two last commits out of synch and that requires it’s own blog in how to rectify!</p>
+<p><em>Edit</em></p>
+<p>GitHub now offers several options for merges: <code>merge</code>, <code>rebase</code> or <code>squash</code> and so if your practice is to have many commits (also known as atomic commits) on a feature branch when this is merged to <code>development</code> you can use <code>squash</code> to reduce it to once commit. Just be careful of these options between <code>development</code> and <code>main</code> though as a <code>squash</code> to <code>main</code> will change the commit history and break the connection between the two branches.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
