@@ -1,0 +1,22 @@
+---
+title: "Patient feedback text mining project update"
+description: "The second phase of the pxtextmining and experiencesdashboard projects has begun"
+author:
+  - name: YiWen Hon
+    url: {https://github.com/yiwen-h/}
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Packages
+  - Open Source
+  
+--- 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+<!-- This will be a template for the CDU Data Science Team blog. -->
