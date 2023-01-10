@@ -7,7 +7,18 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 09 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Patient feedback text mining project update</title>
+      <dc:creator>YiWen Hon</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2023-01-09-patient-feedback-project-update</link>
+      <description>The second phase of the pxtextmining and experiencesdashboard projects has begun! What have we achieved so far, and what are our plans?</description>
+      <category>Packages</category>
+      <category>Open Source</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2023-01-09-patient-feedback-project-update</guid>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2023-01-09-patient-feedback-project-update/img/014880349.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>When things go wrong in GitHub</title>
       <dc:creator>Zoë Turner</dc:creator>
