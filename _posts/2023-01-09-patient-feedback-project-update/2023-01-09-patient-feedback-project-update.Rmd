@@ -4,7 +4,7 @@ description: "The second phase of the pxtextmining and experiencesdashboard proj
 author:
   - name: YiWen Hon
     url: {https://github.com/yiwen-h/}
-date: 2022-01-09
+date: 2023-01-09
 output:
   distill::distill_article:
     self_contained: false
@@ -18,13 +18,11 @@ preview: img/014880349.jpg
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The second phase of the [pxtextmining](https://github.com/CDU-data-science-team/pxtextmining) / [experiencesdashboard](https://github.com/CDU-data-science-team/experiencesdashboard) project has just begun, after a year-long hiatus. This NHS England funded project aims to enable NHS Trusts to make better use of their qualitative [NHS Friends and Family Test](https://www.england.nhs.uk/fft/) data, through text classification and data visualisation. This blog post will outline what we’ve been up to so far and our next steps.
+The second phase of the [pxtextmining](https://github.com/CDU-data-science-team/pxtextmining) / [experiencesdashboard](https://github.com/CDU-data-science-team/experiencesdashboard) project has just begun, after a year-long hiatus. This NHS England funded project aims to enable NHS Trusts to make better use of their qualitative [NHS Friends and Family Test](https://www.england.nhs.uk/fft/) data, through the creation of an open source product featuring text classification and data visualisation. This blog post will outline what we’ve been up to so far and our next steps.
 
 # First steps
 
 Picking up someone else’s code isn’t always easy, and it’s taken time for Oluwasegun (working on the R/Shiny-based experiencesdashboard) and myself (working on the Python-based pxtextmining element) to feel confident in making changes to the packages. Much of my early work on pxtextmining has involved package management, such as switching to [poetry](https://python-poetry.org/) for dependency management and [mkdocs](https://www.mkdocs.org/) for documentation. These changes should improve the usability and accessibility of the package - for example, the number of dependencies has been reduced from 51 to 18, and we are now using pyproject.toml instead of setup.py/requirements.txt, in compliance with [PEP 518](https://peps.python.org/pep-0518/).
-
-We’re also working on improving the way the two packages work alongside each other by implementing an API in pxtextmining which can be called by the Shiny frontend, keeping the two packages separate but interconnected. At the moment, experiencesdashboard installs an R port of the pxtextmining package, so there is some duplication.
 
 The second phase of the project also involves a brand new dataset, which is currently being labelled by qualitative researchers from NHS England’s Insight and Feedback Team. This dataset utilises a new framework of labels which is derived from the data; there are more categories/targets than in phase 1, so we already know this will be an interesting challenge. The dataset should also be richer as we have new partner organisations contributing - whilst in phase 1 the data was derived from community and acute trusts, we also have an ambulance trust this time round. Work on this is still underway and the process of manually labelling the data is quite labour-intensive, but we are hoping to have some initial data to work with in the next few weeks.
 
@@ -32,9 +30,11 @@ The second phase of the project also involves a brand new dataset, which is curr
 
 Some features we’re looking to implement in pxtextmining, when we have the new data, are the implementation of active learning / human in the loop approaches to the machine learning pipeline, and the addition of multilabel classification functionality. 
 
-Oluwasegun, who is working on the Shiny-based experiencesdashboard part of the project, will be working on enabling users of the dashboard to edit the data that they have uploaded, and improving the general usability and functionality of the frontend.
+Oluwasegun, will be working on enabling users of experiencesdashboard to edit the data that they have uploaded, and improving the general usability and functionality of the frontend.
 
-We're also looking to improve our communication around this project, and will be setting up a new documentation site that discusses the project as a whole for a non-technical audience.
+We will also improve the way the two packages work alongside each other by implementing an API in pxtextmining which can be called by the Shiny frontend, keeping the two packages separate but interconnected. At the moment, experiencesdashboard installs an R port of the pxtextmining package, so there is some duplication.
+
+Communication around this project will also be improved, as we will be setting up a new documentation site that discusses the project as a whole for a non-technical audience. This project site will link out to the existing documentation pages for each project, which are more technically oriented.
 
 We’ve got lots to do over the next few months! Any comments, questions or suggestions are very welcome.
 
