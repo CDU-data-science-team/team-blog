@@ -7,7 +7,19 @@
     <description>CDU data science team blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>UX and data science</title>
+      <dc:creator>YiWen Hon</dc:creator>
+      <link>https://cdu-data-science-team.github.io/team-blog/posts/2023-09-01-UX-data-science</link>
+      <description>Trialing UX techniques to evaluate data science products</description>
+      <category>Articles</category>
+      <category>Patient Experience</category>
+      <category>UX</category>
+      <guid>https://cdu-data-science-team.github.io/team-blog/posts/2023-09-01-UX-data-science</guid>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://cdu-data-science-team.github.io/team-blog/posts/2023-09-01-UX-data-science/img/bl_014813921.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Patient feedback text mining project update</title>
       <dc:creator>YiWen Hon</dc:creator>

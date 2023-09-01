@@ -1,0 +1,55 @@
+---
+title: "UX and data science"
+description: |
+  Trialing UX techniques to evaluate data science products
+author:
+  - name: YiWen Hon
+    url: {https://www.linkedin.com/in/yiwen-h/}
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Articles
+  - Patient Experience
+  - UX
+preview: img/bl_014813921.jpg
+  
+--- 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+As we approach the last stages of the [Patient Experience Qualitative Data Categorisation project](https://cdu-data-science-team.github.io/PatientExperience-QDC/) phase 2, we are making our final improvements to our two data science outputs, experiencesdashboard and pxtextmining. Part of this involves thinking about user experience (UX) and how we can improve this for our end users. 
+
+# What is UX?  
+
+UX is a growing field with many definitions; [Wikipedia](https://en.wikipedia.org/wiki/User_experience) describes it as being “how a user interacts with and experiences a product, system or service.” The products that we design as data scientists always have an end user, and it is important that a successful project ensures that these end user needs are met, so that customers are satisfied and actually continue to use the products. 
+
+It’s important to note that user experience is not the same as user requirements or project aims, and that often what users think they want might not be the same as what they actually need for a successful experience. The quote (dubiously) attributed to Henry Ford, "If I had asked people what they wanted, they would have said faster horses," exemplifies this.
+
+Furthermore, UX is separate from accessibility. Ensuring that products are able to be used by everyone, regardless of their disabilities, should be a given. [Accessibility guidelines for digital products produced by UK public sector bodies](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) are available, and will not be further discussed here.
+
+People with UX expertise are few and far between in the NHS. Without being able to call on their assistance, it’s up to us to do our best in this area with the resources available to us.
+
+# UX techniques for data science
+
+Something that’s become clear in my brief sojourn into the scary world of UX is that there is no one size fits all approach - it all depends on your product and who it is for. Just as the data science products that we build come in all different shapes and sizes, and are for all different types of audiences, the UX methods used to evaluate and improve them should also be different.
+
+We may try the following approaches initially:
+
+The [jobs to be done](https://www.userinterviews.com/ux-research-field-guide-chapter/jobs-to-be-done-jtbd-framework) approach: Breaks down user needs into high-level goals customers want to accomplish using your product. We could then assess how well the product is able to meet each of the tasks. It’s also helpful to think about the bigger picture behind the product - what is the major underlying customer need? The focus should be more on what users are trying to accomplish, rather than how. 
+
+[Click testing / heatmaps](https://usabilityhub.com/guides/first-click-testing): This could be as simple as using logs to identify where users click the most, or which areas of the product are used the most/least. We could also do things like track load times for completing specific tasks.
+
+[User observation](https://www.interaction-design.org/literature/article/how-to-conduct-user-observations): Sitting with users and observing them as they interact with the product, whilst bearing in mind the ‘jobs to be done’ and ‘heatmap’ concepts above, could provide useful insights for improving product usability.
+
+# How can data scientists get involved with UX?
+
+UX is a field that has seen a lot of growth in the past decade or so, and as such there is an overwhelming amount of information online. It can be hard to know where to begin, or what the ‘right’ method is.
+
+Initially, I made use of my network, asking around on NHS-R Slack, Gov Data Science Slack, and LinkedIn. Natasha S. den Dekker was kind enough to provide some words of advice; her thoughts have heavily influenced this blogpost. You may have someone in your network who could provide some guidance relating to your specific project.
+
+As mentioned previously, there is not one perfect and foolproof UX methodology that’s going to solve all our problems and work for all our projects. We’re complete beginners in this field, without any professional experience. But it’s still better to start somewhere and make mistakes than not to do anything at all. We’ll try some of the methods above and evaluate how well they work, and learn from our experiences for the next project. After all, practice makes perfect, and UX will be a valuable skill to have in the data scientist’s toolbox. 
+
